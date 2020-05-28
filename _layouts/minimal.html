@@ -60,7 +60,7 @@ skinmakers:
 <!doctype html>
 <html lang="{{- site.locale | default: 'en-US' -}}">
 {%- include head.html -%}
-<body>
+<body class="d-flex flex-column">
   {%- assign skinner = layout.skinmakers[site.chulapa-skin.theme] -%}
   {%- include navbar.html -%}
   {{- content -}}

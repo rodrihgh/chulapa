@@ -1,4 +1,8 @@
 // Defaults needed as Bootstrap doesn't specifically format these tags
+body {
+    min-height:100vh;
+}
+
 img {
     @extend .img-fluid;
     display: block;
