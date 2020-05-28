@@ -28,10 +28,37 @@ include_on_search: false
             <div id="resultscount"></div>
             <div id="results" class="card-columns"></div>
             {% elsif site.search.provider == "google" %}
-            <script async src="https://cse.google.com/cse.js?cx={{- google_cse_id -}}"></script>
-            <div class="text-left">
-                            <div class="gcse-search"></div>
-            </div>
+            <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+                <label class="sr-only" for="cse-search-input-box-id">
+                    Enter your search term...
+                </label>
+                <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+                </form>
+                <div id="results" class="results">
+                    <gcse:searchresults-only></gcse:searchresults-only>
+                </div>
+                <script>
+                (function () {
+                    var cx = '{{ site.google_cse_id }}';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                    })();
+                    function googleCustomSearchExecute() {
+                        var input = document.getElementById('cse-search-input-box-id');
+                        var element = google.search.cse.element.getElement('searchresults-only0');
+                        if (input.value == '') {
+                            element.clearAllResults();
+                            } else {
+                                element.execute(input.value);
+                                }
+                                return false;
+                                }
+                    </script>
+                
             {%- else -%}
             <div class="text-left pt-5">
                 <p class="lead text-center"> Select a provider on your <code>_config.yml</code> file.</p>
