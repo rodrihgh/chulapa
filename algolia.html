@@ -63,7 +63,7 @@ const search = instantsearch({
   indexName: 'chulapa',
   searchClient,
 });
-
+{% raw %}
 search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
@@ -85,7 +85,7 @@ search.addWidgets([
     },
   }),
 ]);
-
+{% endraw %}
 search.start();
 
 </script>
