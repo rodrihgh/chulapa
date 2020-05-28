@@ -8,7 +8,7 @@
  <nav class="navbar navbar-expand-md sticky-top navbar-chulapa">
      <div class="container-fluid mx-md-2">
          <a class="navbar-brand" href="{{ brandurl }}">
-           {%- if site.navbar.brand.img -%}
+           {%- if site.navbar.brand.img | absolute_url -%}
             <img src="{{ site.navbar.brand.img }}" width="30" class="d-inline-block align-top rounded-lg mr-1" alt="NavbarLogo">
            {%- endif -%}
            {{ site.navbar.brand.title }}</a>
