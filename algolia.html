@@ -35,8 +35,30 @@ include_on_search: false
 
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
+
 <script>
-const searchClient = algoliasearch('KOIKA5PDQO', '7f1fe42bef3f03458cb3a911ebc7e0ac');
+/* global algoliasearch instantsearch */
+
+const algoliaClient = algoliasearch(
+  'KOIKA5PDQO',
+  '7f1fe42bef3f03458cb3a911ebc7e0ac'
+);
+
+const searchClient = {
+  search(requests) {
+    if (requests.every(({ params }) => !params.query)) {
+      return Promise.resolve({
+        results: requests.map(() => ({
+          hits: [],
+          nbHits: 0,
+          nbPages: 0,
+        })),
+      });
+    }
+
+    return algoliaClient.search(requests);
+  },
+};
 
 const search = instantsearch({
   indexName: 'chulapa',
@@ -50,14 +72,24 @@ search.addWidgets([
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
+      empty: `
+        {{#query}}
+          No results for <q>{{query}}</q>
+        {{/query}}
+      `,
       item: `
         <article>
-          <p>Name: {{#helpers.highlight}}{ "attribute": "title", "highlightedTagName": "mark" }{{/helpers.highlight}}</p>
-          <p>Description: {{#helpers.snippet}}{ "attribute": "content", "highlightedTagName": "mark" }{{/helpers.snippet}}</p>
+          <h1>{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h1>
+          <p>{{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}</p>
         </article>
-      `
-    }
-  })
+      `,
+    },
+  }),
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+  }),
 ]);
+
 search.start();
+
 </script>
