@@ -1,0 +1,63 @@
+---
+layout: search
+title: Search
+subtitle: 
+permalink: /search.html
+include_on_search: false
+---
+<header class="jumbotron jumbotron-fluid mb-0 py-0 text-md-center header-chulapa"><div class="container-lg pt-4">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+            <h1>Search <i class="fa fa-search" aria-hidden="true"></i></h1>
+			</div>
+		<div>
+	</div>
+</header>
+<main class="container-lg pt-2 pb-5 flex-fill">
+    <div class="row">
+        <div class="col-xl-8 offset-xl-2 my-auto text-center" style="padding-bottom:30vh">
+                <div class="container">
+      <div class="search-panel">
+        <div class="search-panel__results">
+          <p>The request is only triggered once the query is not empty.</p>
+          <div id="searchbox"></div>
+          <div id="hits"></div>
+        </div>
+      </div>
+
+      <div id="pagination"></div>
+    </div>
+            
+            
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
+<script>
+const searchClient = algoliasearch('KOIKA5PDQO', '7f1fe42bef3f03458cb3a911ebc7e0ac');
+
+const search = instantsearch({
+  indexName: 'chulapa',
+  searchClient,
+});
+
+search.addWidgets([
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+  }),
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      item: `
+        <article>
+          <p>Name: {{#helpers.highlight}}{ "attribute": "title", "highlightedTagName": "mark" }{{/helpers.highlight}}</p>
+          <p>Description: {{#helpers.snippet}}{ "attribute": "content", "highlightedTagName": "mark" }{{/helpers.snippet}}</p>
+        </article>
+      `
+    }
+  })
+]);
+search.start();
+</script>
