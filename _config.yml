@@ -8,6 +8,10 @@ subtitle        :  A Jekyll theme for Github Pages powered by Bootstrap
 url             : 
 baseurl         : 
 
+search:
+  provider:
+  maxwords: 50
+
 algolia:                                                                
   application_id: KOIKA5PDQO
   index_name: chulapa
@@ -28,9 +32,7 @@ algolia:
   customRanking:
   
   
-search:
-  provider:
-  maxwords: 300
+
 
 # Site Author
 author:
