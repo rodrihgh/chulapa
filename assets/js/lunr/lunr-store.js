@@ -1,13 +1,12 @@
 ---
 layout: null
 ---
-
 /*
 Copyright (c) 2013-2020 Michael Rose and contributors
 MIT License
 From minimal-mistakes: https://github.com/mmistakes/minimal-mistakes/
 */
-
+{%- if site.search.provider =="lunr" -%}
 var store = [
   {%- assign indexlunr = site.pages | concat: site.documents |  where_exp:'doc','doc.include_on_search != false' -%}
   {%- for doc in indexlunr -%}
@@ -37,3 +36,4 @@ var store = [
         "img": {{ img | jsonify }}
       }{%- unless forloop.last -%},{%- endunless -%} 
   {%- endfor -%}]
+{%- endif -%}

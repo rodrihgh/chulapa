@@ -16,6 +16,7 @@ include_on_search: false
 <main class="container-lg pt-2 pb-5 flex-fill">
     <div class="row">
         <div class="col-xl-8 offset-xl-2 my-auto text-center" style="padding-bottom:30vh">
+            {%- if site.search.provider == "lunr" -%}
             <form class="input-group mx-sm-5">
                 <div class="input-group-prepend rounded-left">
                     <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -26,6 +27,13 @@ include_on_search: false
             <p class="text-right small mt-1"> Powered by <a href="https://lunrjs.com/" class="lunr px-2">L U N R</a></p>
             <div id="resultscount"></div>
             <div id="results" class="card-columns"></div>
+            {%- else -%}
+            <h2> Select a provider on your <code>_config.yml</code> file.</h2>
+            <p>Available providers:</p>
+            <ul>
+                <li><code>lunr</code></li>
+            </ul>
+            {%- endif -%}
         </div>
     </div>
 </main>
