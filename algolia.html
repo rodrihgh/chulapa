@@ -20,7 +20,7 @@ include_on_search: false
       <div class="search-panel">
         <div class="search-panel__results">
           <div id="searchbox"></div>
-          <div id="hits"></div>
+          <div id="hits" class="card-columns"></div>
         </div>
       </div>
     </div>
@@ -77,9 +77,11 @@ search.addWidgets([
         {{/query}}
       `,
       item: `
-        <article>
-          <h1>{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h1>
-          <p>{{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}</p>
+        <article class="card" itemscope itemtype="http://schema.org/CreativeWork">'
+        <div class="card-body">
+          <h5 class="card-title chulapa-links-hover-only" itemprop="headline">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h5>
+          <p class="card-text small text-left" itemprop="description">{{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}</p>
+          </div>
         </article>
       `,
     },
