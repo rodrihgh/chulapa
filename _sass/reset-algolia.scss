@@ -6,3 +6,14 @@
 .ais-SearchBox-submit, .ais-SearchBox-reset{
   display:none;
 }
+.ais-Hits {
+  
+  ol{
+    padding:0;
+  }
+  
+  li {
+    list-style:none;
+  }
+  
+}
