@@ -127,6 +127,19 @@ defaults:
   -
     scope:
       path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      header_type: "base"
+      include_on_search: true
+      show_date: true
+      show_bottomnavs: true
+      show_sociallinks: true
+      show_comments: true
+      include_on_search: true
+  -
+    scope:
+      path: ""
       type: "demo"
     values:
       layout: "default"
@@ -136,6 +149,9 @@ defaults:
       show_comments:
       include_on_search: true
 
+
+#For posts
+permalink: /:year:month:day_:title/
 
 #Collections
 collections:
