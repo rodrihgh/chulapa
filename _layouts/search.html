@@ -61,6 +61,15 @@ skinmakers:
 <html lang="{{- site.locale | default: 'en-US' -}}">
 {%- include head.html -%}
 <body>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+  
+  .lunr{
+  font-family: 'Heebo', sans-serif;
+}
+</style>
+  
+  
   {%- assign skinner = layout.skinmakers[site.chulapa-skin.theme] -%}
   {%- include navbar.html -%}
   {{- content -}}
