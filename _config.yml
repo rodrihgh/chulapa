@@ -9,9 +9,9 @@ url             :
 baseurl         : 
 
 search:
-  provider:
+  provider: google
   maxwords: 50
-
+google_search_id:
 algolia:                                                                
   application_id: KOIKA5PDQO
   index_name: chulapa
