@@ -3,6 +3,7 @@ title: "Demos"
 subtitle: All demos in one place
 permalink: /demo
 show_bottomnavs: false
+include_on_search: false
 ---
 
 An index of the demo collections:
