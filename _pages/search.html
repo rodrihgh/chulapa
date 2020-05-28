@@ -28,14 +28,17 @@ include_on_search: false
             <div id="resultscount"></div>
             <div id="results" class="card-columns"></div>
             {% elsif site.search.provider == "google" %}
-            <script async src="https://cse.google.com/cse.js?cx=002514516175957445995:ep842kgah4q"></script>
-            <div class="gcse-search"></div>
+            <script async src="https://cse.google.com/cse.js?cx={{- google_cse_id -}}"></script>
+            <div class="text-left">
+                            <div class="gcse-search"></div>
+            </div>
             {%- else -%}
             <div class="text-left pt-5">
                 <p class="lead text-center"> Select a provider on your <code>_config.yml</code> file.</p>
             <p>Available providers:</p>
             <ul>
                 <li><code>lunr</code></li>
+                <li><code>google</code></li>
             </ul>
             </div>
             {%- endif -%}

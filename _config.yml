@@ -11,7 +11,7 @@ baseurl         :
 search:
   provider: google
   maxwords: 50
-google_search_id:
+google_cse_id: "002514516175957445995:ep842kgah4q"
 algolia:                                                                
   application_id: KOIKA5PDQO
   index_name: chulapa
