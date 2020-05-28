@@ -28,13 +28,16 @@ include_on_search: false
             <div id="resultscount"></div>
             <div id="results" class="card-columns"></div>
             {% elsif site.search.provider == "google" %}
-            <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
-                <label class="sr-only" for="cse-search-input-box-id">
-                    Enter your search term...
-                </label>
-                <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+            <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" class="input-group mx-sm-5">
+                <div class="input-group-prepend rounded-left">
+                    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+                </div>
+                <label class="sr-only" for="search"> Search </label>
+                <input type="search" id="cse-search-input-box-id" class="form-control rounded-right" placeholder="Search.."/>
                 </form>
-                <div id="results" class="results">
+                <p class="text-right small mt-1"> Powered by <a href="https://lunrjs.com/" class="google px-2">Google</a></p>
+
+                <div id="results" class="results text-left">
                     <gcse:searchresults-only></gcse:searchresults-only>
                 </div>
                 <script>
