@@ -17,7 +17,7 @@ include_on_search: false
     <div class="row">
         <div class="col-xl-8 offset-xl-2 my-auto text-center" style="padding-bottom:30vh">
             {%- if site.search.provider == "lunr" -%}
-            <form class="input-group mx-sm-5">
+            <form class="input-group">
                 <div class="input-group-prepend rounded-left">
                     <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
                 </div>
@@ -28,7 +28,7 @@ include_on_search: false
             <div id="resultscount"></div>
             <div id="results" class="card-columns"></div>
             {% elsif site.search.provider == "google" %}
-            <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" class="input-group mx-sm-5">
+            <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" class="input-group ">
                 <div class="input-group-prepend rounded-left">
                     <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
                 </div>
@@ -66,10 +66,13 @@ include_on_search: false
             <div class="text-left pt-5">
                 <p class="lead text-center"> Select a provider on your <code>_config.yml</code> file.</p>
             <p>Available providers:</p>
-            <ul>
-                <li><code>lunr</code></li>
-                <li><code>google</code></li>
-            </ul>
+            <div class="language-yaml highlighter-rouge text-left"><div class="highlight"><pre class="highlight"><code>
+<span class="na">title</span><span class="pi">:</span>
+<span class="na">  provider</span><span class="pi">:</span> <span class="s">lunr</span>
+<span class="nn"></span>
+<span class="na">  provider</span><span class="pi">:</span> <span class="s">google</span>
+<span class="nn"></span>
+</code></pre></div></div>
             </div>
             {%- endif -%}
         </div>
