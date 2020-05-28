@@ -38,6 +38,8 @@ $theme-colors:(
 @import "bootstrap/bootstrap";
 //B. Chulapa specifics
 @import "chulapa-master";
+@import "reset-algolia";
+
 //C. Highlighter
 /*!
  * Pygments css

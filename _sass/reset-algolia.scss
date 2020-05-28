@@ -1,0 +1,8 @@
+.ais-SearchBox-input{
+  @extend .form-control;
+  @extend .rounded;
+}
+
+.ais-SearchBox-submit, .ais-SearchBox-reset{
+  display:none;
+}

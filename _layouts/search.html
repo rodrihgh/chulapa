@@ -81,8 +81,8 @@ skinmakers:
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 {%- if site.search.provider == "lunr" -%}
 <script src="https://unpkg.com/lunr/lunr.js"></script>
-<script src="{{ '/assets/js/lunr/lunr-store.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/lunr/lunr-search.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/lunr/lunr-store.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/lunr/lunr-search.js' | absolute_url }}"></script>
 {% endif %}
 {% include custom/custom_bottomscripts.html %}
 </body>
