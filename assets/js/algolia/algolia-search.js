@@ -60,6 +60,5 @@ search.addWidgets([
     },
   }),
 ]);
-{% endraw %}
 search.start();
 
