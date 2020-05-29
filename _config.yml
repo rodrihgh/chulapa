@@ -8,13 +8,18 @@ subtitle        :  A Jekyll theme for Github Pages powered by Bootstrap
 url             : 
 baseurl         : 
 
+
+# Search providers
 search:
   provider: lunr
   maxwords: 10
+  
 google_cse_id: "002514516175957445995:ep842kgah4q"
+
 algolia:                                                                
-  application_id: KOIKA5PDQO
-  index_name: chulapa
+  application_id: "KOIKA5PDQO"
+  index_name: "chulapa"
+  search_only_api_key: "7f1fe42bef3f03458cb3a911ebc7e0ac"
   files_to_exclude:
     - _layouts/*.html
     - _includes/*.html
@@ -28,8 +33,7 @@ algolia:
       - unordered(categories)                                                    
       - unordered(date)                                                          
       - unordered(subtitle)                                                      
-      - unordered(tags)   
-  customRanking:
+      - unordered(tags)
   
   
 

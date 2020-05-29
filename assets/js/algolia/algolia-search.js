@@ -3,8 +3,8 @@ layout: null
 ---
 
 const algoliaClient = algoliasearch(
-  'KOIKA5PDQO',
-  '7f1fe42bef3f03458cb3a911ebc7e0ac'
+  '{{ site.algolia.application_id }}',
+  '{{ site.algolia.search_only_api_key }}'
 );
 
 const searchClient = {
@@ -24,7 +24,7 @@ const searchClient = {
 };
 
 const search = instantsearch({
-  indexName: 'chulapa',
+  indexName: '{{ site.algolia.index_name }}',
   searchClient,
 });
 
@@ -47,11 +47,12 @@ const hitTemplate = function(hit) {
 search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
+    placeholder: 'Search...',
     showReset: false,
     showSubmit: false,
     showLoadingIndicator: false,
     cssClasses: {
-      root: 'MyCustomSearchBox',
+      root: ['input-group'],
       form: ['input-group'],
       input: ['form-control', 'rounded'],
     },

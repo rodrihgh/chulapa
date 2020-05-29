@@ -5,7 +5,7 @@ subtitle:
 permalink: /search.html
 include_on_search: false
 ---
-<header class="jumbotron jumbotron-fluid mb-0 py-0 text-md-center header-chulapa"><div class="container-lg pt-4">
+<header class="jumbotron jumbotron-fluid mb-0 py-0 text-center header-chulapa"><div class="container-lg pt-4">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">
             <h1>Search <i class="fa fa-search" aria-hidden="true"></i></h1>
@@ -17,51 +17,11 @@ include_on_search: false
     <div class="row">
         <div class="col-xl-8 offset-xl-2 my-auto text-center" style="padding-bottom:30vh">
             {%- if site.search.provider == "lunr" -%}
-            <form class="input-group">
-                <div class="input-group-prepend rounded-left">
-                    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
-                </div>
-                <label class="sr-only" for="search"> Search </label>
-                <input type="search" id="search" class="form-control rounded-right" placeholder="Search..">
-            </form>
-            <p class="text-right small mt-1"> Powered by <a href="https://lunrjs.com/" class="lunr px-2">L U N R</a></p>
-            <div id="resultscount"></div>
-            <div id="results" class="card-columns"></div>
-            {% elsif site.search.provider == "google" %}
-            <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" class="input-group ">
-                <div class="input-group-prepend rounded-left">
-                    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
-                </div>
-                <label class="sr-only" for="search"> Search </label>
-                <input type="search" id="cse-search-input-box-id" class="form-control rounded-right" placeholder="Search.."/>
-                </form>
-                <p class="text-right small mt-1"><img src="https://www.google.com/cse/static/images/1x/en/branding.png" class="gcsc-branding-img-noclear" srcset="https://www.google.com/cse/static/images/2x/en/branding.png 2x" alt="enhanced by Google"></p>
-
-                <div id="results" class="results text-left">
-                    <gcse:searchresults-only></gcse:searchresults-only>
-                </div>
-                <script>
-                (function () {
-                    var cx = '{{ site.google_cse_id }}';
-                    var gcse = document.createElement('script');
-                    gcse.type = 'text/javascript';
-                    gcse.async = true;
-                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(gcse, s);
-                    })();
-                    function googleCustomSearchExecute() {
-                        var input = document.getElementById('cse-search-input-box-id');
-                        var element = google.search.cse.element.getElement('searchresults-only0');
-                        if (input.value == '') {
-                            element.clearAllResults();
-                            } else {
-                                element.execute(input.value);
-                                }
-                                return false;
-                                }
-                    </script>
-                
+            {%- include search/lunr.html -%}
+             {% elsif site.search.provider == "google" %}
+            {%- include search/google.html -%}
+            {% elsif site.search.provider == "algolia" %}
+            {%- include search/algolia.html -%}
             {%- else -%}
             <div class="text-left pt-5">
                 <p class="lead text-center"> Select a provider on your <code>_config.yml</code> file.</p>

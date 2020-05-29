@@ -77,8 +77,6 @@ skinmakers:
     border-radius:0.2em;
   }
 </style>
-  
-  
   {%- assign skinner = layout.skinmakers[site.chulapa-skin.theme] -%}
   {%- include navbar.html -%}
   {{- content -}}
@@ -90,6 +88,14 @@ skinmakers:
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script src="{{ '/assets/js/lunr/lunr-store.js' | absolute_url }}"></script>
 <script src="{{ '/assets/js/lunr/lunr-search.js' | absolute_url }}"></script>
+{% endif %}
+{%- if site.search.provider == "algolia" -%}
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script> 
+<script src="{{ '/assets/js/algolia/algolia-search.js' | absolute_url }}"></script>
+{% endif %}
+{%- if site.search.provider == "google" -%}
+<script src="{{ '/assets/js/google/google-search.js' | absolute_url }}"></script>
 {% endif %}
 {% include custom/custom_bottomscripts.html %}
 </body>
