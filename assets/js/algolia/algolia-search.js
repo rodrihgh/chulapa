@@ -2,7 +2,7 @@
 layout: null
 ---
 
-const baseurl = "{{ site.baseurl }}";
+var baseurl = "{{ site.baseurl }}";
 
 const algoliaClient = algoliasearch(
   'KOIKA5PDQO',
