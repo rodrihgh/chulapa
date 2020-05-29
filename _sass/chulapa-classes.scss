@@ -38,7 +38,13 @@
         }
 
     }
-
+    .btn{
+        border-color: $navbar-chulapa-text-color;
+        color: $navbar-chulapa-text-color;
+        @include hover-focus() {
+            color: $navbar-chulapa-hover-color;
+            }
+    }
     .navbar-nav {
         .nav-link {
             color: $navbar-chulapa-text-color;

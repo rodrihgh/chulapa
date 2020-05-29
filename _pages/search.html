@@ -25,13 +25,19 @@ include_on_search: false
             {%- else -%}
             <div class="text-left pt-5">
                 <p class="lead text-center"> Select a provider on your <code>_config.yml</code> file.</p>
-            <p>Available providers:</p>
-            <div class="language-yaml highlighter-rouge text-left"><div class="highlight"><pre class="highlight"><code>
-<span class="na">title</span><span class="pi">:</span>
-<span class="na">  provider</span><span class="pi">:</span> <span class="s">lunr</span>
-<span class="nn"></span>
-<span class="na">  provider</span><span class="pi">:</span> <span class="s">google</span>
-<span class="nn"></span>
+            <p>Available options:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Your _config.yml</span>
+<span class="na">search</span><span class="pi">:</span>
+  <span class="na">provider</span><span class="pi">:</span>       <span class="c1"># google, lunr, algolia</span>
+  <span class="na">maxwords</span><span class="pi">:</span> <span class="m">10</span>    <span class="c1"># lunr only - Max words to index, may be slow</span>
+  
+<span class="na">google_cse_id</span><span class="pi">:</span>    <span class="c1"># google only - Your cse id </span>
+
+<span class="na">algolia</span><span class="pi">:</span>                                                       
+  <span class="na">application_id</span><span class="pi">:</span>       <span class="c1"># app id</span>
+  <span class="na">index_name</span><span class="pi">:</span>           <span class="c1"># index name</span>
+  <span class="na">search_only_api_key</span><span class="pi">:</span>  <span class="c1"># search only key</span>
+  <span class="c1">#...more options</span>
 </code></pre></div></div>
             </div>
             {%- endif -%}
