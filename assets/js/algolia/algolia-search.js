@@ -2,6 +2,7 @@
 layout: null
 ---
 
+{{ raw }}
 const algoliaClient = algoliasearch(
   'KOIKA5PDQO',
   '7f1fe42bef3f03458cb3a911ebc7e0ac'
@@ -52,13 +53,14 @@ search.addWidgets([
       `,
       item: `
         <article>
-          <h4 class="chulapa-links-hover-only"><a href='{{url}}'>{{ raw }}{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}}</a></h4>
+          <h4 class="chulapa-links-hover-only"><a href='{{url}}'>{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}}</a></h4>
           <h6>{{subtitle}}</h5>
-          <p>{{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}{{ endraw }}<a href="{{url}}"> [+]</a></p>
+          <p>{{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}<a href="{{url}}"> [+]</a></p>
         </article>
       `,
     },
   }),
 ]);
+{{ endraw }}
 search.start();
 
