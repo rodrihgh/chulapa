@@ -37,7 +37,7 @@ const hitTemplate = function(hit) {
       <article>
         <h4 class="chulapa-links-hover-only"><a href="{{ site.baseurl }}${url}">${title}</a></h4>
         <h6>${subtitle}</h6>
-        <p>${content}</p>
+        <p>${content}<a href="{{ site.baseurl }}${url}"> [more]</a></p>
       </article>
   `;
 }
@@ -61,6 +61,7 @@ search.addWidgets([
   }),
   instantsearch.widgets.hits({
     container: '#hits',
+    escapeHTML: false,
     templates: {
       empty: `
         {{#query}}
