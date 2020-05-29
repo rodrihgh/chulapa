@@ -67,6 +67,9 @@ $(document).ready(function() {
         if (query.length > 0) {
             if (result.length < 1) {
                 resultcount.prepend('<h6 class="text-center">No results found</h6><div class="card-columns">');
+            } else {
+                resultcount.prepend('<div class="card-columns">');
+            }
         }
         for (var item in result) {
             var ref = result[item].ref;
