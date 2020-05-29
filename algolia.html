@@ -15,23 +15,15 @@ include_on_search: false
 </header>
 <main class="container-lg pt-2 pb-5 flex-fill">
     <div class="row">
-        <div class="col-xl-8 offset-xl-2 my-auto text-center" style="padding-bottom:30vh">
-    <div class="container">
-      <div class="search-panel">
-        <div class="search-panel__results">
-          <div id="searchbox"></div>
-          <div class="text-right small mt-2 mb-5">
-            <img src='{{ "./assets/img/search-by-algolia-light-background.png" | absolute_url }}' alt="Search by Algolia" class="float-right" style="height: 1.5em;"> 
-</div>
-          <div id="hits" class="card-columns mt-4"></div>
-        </div>
-      </div>
-    </div>
-
+		<div class="col-xl-8 offset-xl-2 my-auto text-center" style="padding-bottom:30vh">
+			<div class="container">
+				<div id="searchbox"></div>
+				<div id="powered-by" class="text-right mt-2"></div>
+				<div id="hits"></div>
+			</div>
+		</div>
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
-            
-        </div>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>    
     </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
