@@ -66,14 +66,7 @@ $(document).ready(function() {
         resultcount.empty()
         if (query.length > 0) {
             if (result.length < 1) {
-                resultcount.prepend('<p class="results__found">No results</p><div class="card-columns">');
-
-            } else if (result.length < 2) {
-                resultcount.prepend('<p class="results__found">' + result.length + ' result found </p><div class="card-columns">');
-
-            } else {
-                resultcount.prepend('<p class="results__found">' + result.length + ' results found </p><div class="card-columns">');
-            }
+                resultcount.prepend('<h6 class="text-center">No results found</h6><div class="card-columns">');
         }
         for (var item in result) {
             var ref = result[item].ref;
