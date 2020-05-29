@@ -27,7 +27,6 @@ const search = instantsearch({
   indexName: 'chulapa',
   searchClient,
 });
-{% raw %}
 search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
@@ -53,14 +52,14 @@ search.addWidgets([
       `,
       item: `
         <article>
-          <h4 class="chulapa-links-hover-only"><a href="{{url}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a></h4>
+          <h4 class="chulapa-links-hover-only"><a href="{{ {{url}} | absolute_url }}">{% raw %}{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a></h4>
           <h6>{{subtitle}}</h5>
-          <p>{{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}<a href="{{url}}"> [+]</a></p>
+          <p>{{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}{% endraw %}<a href="{{url}}"> [+]</a></p>
         </article>
       `,
     },
   }),
 ]);
-{% endraw %}
+
 search.start();
 
