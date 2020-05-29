@@ -3,9 +3,6 @@
   @extend .rounded;
 }
 
-.ais-SearchBox-submit, .ais-SearchBox-reset{
-  display:none;
-}
 .ais-Hits {
   
   ol{
@@ -20,6 +17,8 @@
   
 }
 
-.ais-Highlight-highlighted {
+.ais-Highlight {
   background-color: $warning;
+  font-sytle: inherit;
+  font-family: inherit;
 }

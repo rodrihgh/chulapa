@@ -61,6 +61,7 @@ skinmakers:
 <html lang="{{- site.locale | default: 'en-US' -}}">
 {%- include head.html -%}
 <body>
+  {%- if site.search.provider == "lunr" -%}
   <style>
   @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 
@@ -69,14 +70,8 @@ skinmakers:
   background-color: black;
   color: white;
   }
-  
-  mark{
-    padding: inherit;
-    background-color: rgba(255, 246, 143, 1);
-    color:#696969;
-    border-radius:0.2em;
-  }
-</style>
+  </style>
+  {% endif %}
   {%- assign skinner = layout.skinmakers[site.chulapa-skin.theme] -%}
   {%- include navbar.html -%}
   {{- content -}}
