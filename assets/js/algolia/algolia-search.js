@@ -27,6 +27,22 @@ const search = instantsearch({
   indexName: 'chulapa',
   searchClient,
 });
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const subtitle = hit.subtitle;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+  return `
+      <article>
+        <h4 class="chulapa-links-hover-only"><a href="{{ site.baseurl }}${url}">${title}</a></h4>
+        <h6>${subtitle}</h6>
+        <p>${content}</p>
+      </article>
+  `;
+}
+
+
 {% raw %}
 search.addWidgets([
   instantsearch.widgets.searchBox({
@@ -51,13 +67,7 @@ search.addWidgets([
           <h6 class="text-center">No results found</h6>
         {{/query}}
       `,
-      item: `
-        <article>
-          <h4 class="chulapa-links-hover-only"><a href="{{url}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a></h4>
-          <h6>{{subtitle}}</h5>
-          <p>{{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}<a href="{{url}}"> [+]</a></p>
-        </article>
-      `,
+      item: hitTemplate
     },
   }),
 ]);

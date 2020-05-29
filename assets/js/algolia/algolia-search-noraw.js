@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 const algoliaClient = algoliasearch(
   'KOIKA5PDQO',
   '7f1fe42bef3f03458cb3a911ebc7e0ac'
