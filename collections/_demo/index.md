@@ -11,7 +11,7 @@ An index of the demo collections:
 ## Index of demos
 {% for demo in  site.demo %}
 {% unless demo.url == "/demo" %}
-<article class="my-2>
+<article class="my-2">
   <div class="row">
     <div class="col">
       <h3 class="chulapa-links-hover-only"><a href="{{ demo.url | absolute_url | remove: ".html" }}">{{ demo.title }}</a></h3 >
