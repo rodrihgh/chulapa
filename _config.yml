@@ -103,7 +103,7 @@ highlight-skin  :      # Fallback "default" #See http://jwarby.github.io/jekyll-
 
 # Google Fonts https://fonts.google.com/, add as many as you want
 googlefonts:
-  - url : 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+  - url : #'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
 
   
 
@@ -113,8 +113,8 @@ chulapa-skin:
   theme       : chulapa  # Optional predefined skins
   autothemer  :   # Bool: Use autotheming
   vars        :    
-    chulapa-col: teal # Fallback "crimson"
-    font-family-sans-serif: Roboto, sans-serif
+    chulapa-col: # Fallback "crimson"
+    font-family-sans-serif: 
     hero-chulapa-bg-color: 
     
 #D. Defaults and collections
