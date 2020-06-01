@@ -23,8 +23,8 @@ An index of the demo collections:
     <div class="col-4 col-md-3">
       <div class="rounded-lg chulapa-overlay-img" style="background-image: url('{{ demo.header_img | absolute_url }}')" ></div>
     </div>
-  </div>
 {% endif %}
+  </div>
   <div class="row mt-2">
     <div class="col">
       <p>{{ demo.content |markdownify | strip_html | strip_newlines | strip |  truncatewords: 30 }}
