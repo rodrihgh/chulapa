@@ -48,6 +48,9 @@
                </li>
                {%- endif -%}
               {%- endfor -%}
+              {%- if site.search.provider -%}
+              <li class="nav-item"><a class="nav-link" href="{{ /search | absolute_url}}"><span class="navbar-toggler chulapa-size-base p-0 pr-1">Search</span><i class="fa fa-search"></i></a></li>
+              {%- endif -%}
              </ul>
          </div>
          {%- endif -%}

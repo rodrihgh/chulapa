@@ -12,8 +12,6 @@ var store = [
   {%- for doc in indexlunr -%}
   {%- if doc.header_img -%}
     {%- assign img = doc.header_img | absolute_url -%}
-  {%- else-%}
-    {%- assign img = doc.header_img -%}
   {%- endif-%}
       {
         "title": {{ doc.title | jsonify }},
