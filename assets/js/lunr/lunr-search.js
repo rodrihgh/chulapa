@@ -75,27 +75,45 @@ $(document).ready(function() {
             var ref = result[item].ref;
             if (store[ref].img) {
                 var searchitem =
-                    '<article class="card" itemscope itemtype="http://schema.org/CreativeWork">' +
-                    '<img src="' + store[ref].img + '" class="card-img-top" alt="">' +
-                    '<div class="card-body">' +
-                    '<h5 class="card-title chulapa-links-hover-only" itemprop="headline">' +
+                    '<article class="my-2 text-left">' 	+
+                    '<div class="row">'	+
+                    '<div class="col">' +
+                    '<h5 class="chulapa-links-hover-only" itemprop="headline">' +
                     '<a href="' + store[ref].url + '" rel="permalink">' + store[ref].title + '</a>' +
                     '</h5>' +
-                    '<p class="card-text small text-left" itemprop="description">' + store[ref].excerpt.split(" ").splice(0, 10).join(" ") +
-                    '<a href="' + store[ref].url + '"> [more]</a></p>' +
-                    '</div>' +
-                    '</article>';
+                    '</div>'		+
+					'<div class="col-4 col-md-3">' +
+					'<div class="rounded-lg chulapa-overlay-img"'+
+					'style="background-image:' +
+					'url("' + store[ref].img + '")" ></div>' +
+					'</div>' +
+                    '</div>' +		+
+                    '<div class="row mt-2">' +
+                    '<div class="col">' +
+                    '<p>' + store[ref].excerpt.split(" ").splice(0, 10).join(" ") +
+								'<a href="' + store[ref].url + '"> [more]</a></p>' +
+					'</div>' +
+					'</div>' +
+					'<hr>' +
+					'</article>';
             } else {
                 var searchitem =
-                    '<article class="card" itemscope itemtype="http://schema.org/CreativeWork">' +
-                    '<div class="card-body">' +
-                    '<h5 class="card-title chulapa-links-hover-only" itemprop="headline">' +
+                    '<article class="my-2 text-left">' 	+
+                    '<div class="row">'	+
+                    '<div class="col">' +
+                    '<h5 class="chulapa-links-hover-only" itemprop="headline">' +
                     '<a href="' + store[ref].url + '" rel="permalink">' + store[ref].title + '</a>' +
                     '</h5>' +
-                    '<p class="card-text small text-left" itemprop="description">' + store[ref].excerpt.split(" ").splice(0, 10).join(" ") +
-                    '<a href="' + store[ref].url + '"> [more]</a></p>' +
-                    '</div>' +
-                    '</article>';
+                    '</div>'		+
+                    '</div>'		+
+                    '<div class="row mt-2">' +
+                    '<div class="col">' +
+                    '<p>' + store[ref].excerpt.split(" ").splice(0, 10).join(" ") +
+								'<a href="' + store[ref].url + '"> [more]</a></p>' +
+					'</div>' +
+					'</div>' +
+					'<hr>' +
+					'</article>';
             }
             resultdiv.append(searchitem);
         }

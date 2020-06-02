@@ -31,7 +31,7 @@ An index of the demo collections:
 <a href="{{ demo.url | absolute_url | remove: ".html"  }}">[more]</a></p>
     </div>
   </div>
-  <hr class="bg-chulapa">
+  <hr>
 </article>
 {% endunless %}
 {% endfor %}
