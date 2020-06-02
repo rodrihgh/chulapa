@@ -33,7 +33,7 @@ function imgurl(p1) {
   if (p1 === undefined){
     return " "
   } else if (p1.indexOf("./") === 0) {
-    return p1.replace("./", "{{ site.baseurl }}");
+    return p1.replace("./", "{{ site.baseurl }}/");
   } else {
     return p1
   }
