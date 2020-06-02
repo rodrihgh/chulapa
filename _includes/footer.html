@@ -24,9 +24,9 @@
                     <p class="pb-3">&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.github.owner_name }}</p>
           					<!-- Do not remove this in order to give  attributions -->
           					{%- if include.skinner -%}
-          					<p><b>{{- include.skinner.name -}}</b> skin by <a href="{{ include.skinner.url }}">{{ include.skinner.author }}</a></p>
+          					<p class="small"><b>{{- include.skinner.name -}}</b> skin by <a href="{{ include.skinner.url }}">{{ include.skinner.author }}</a></p>
           					{%- endif -%}
-          					<p>Theme 
+          					<p class="small">Theme 
                         <a href="#" class="chulapa">Chulapa</a> 
                         powered by 
                         <a href="https://getbootstrap.com/docs/4.5/">Bootstrap</a></p>
