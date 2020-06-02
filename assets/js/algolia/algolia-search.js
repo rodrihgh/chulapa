@@ -28,18 +28,59 @@ const search = instantsearch({
   searchClient,
 });
 
+
+function imgurl(p1) {
+  if (p1 === undefined){
+    return " "
+  } else if (p1.indexOf("./") === 0) {
+    return p1.replace("./", "{{ site.baseurl }}");
+  } else {
+    return p1
+  }
+}
+
 const hitTemplate = function(hit) {
   const url = hit.url;
-  const subtitle = hit.subtitle;
   const title = hit._highlightResult.title.value;
   const content = hit._highlightResult.html.value;
+  const img = hit.header_img;
+  const imglink = imgurl(img);
+  if (img === undefined){
   return `
-      <article>
-        <h4 class="chulapa-links-hover-only"><a href="{{ site.baseurl }}${url}">${title}</a></h4>
-        <h6>${subtitle}</h6>
-        <p>${content}<a href="{{ site.baseurl }}${url}"> [more]</a></p>
-      </article>
-  `;
+          <article class="my-2 text-left">
+          <div class="row">
+          <div class="col">
+          <h5 class="chulapa-links-hover-only"><a href="{{ site.baseurl }}${url}">${title}</a></h6>
+          </div>
+          </div>
+          <div class="row mt-2">
+          <div class="col">
+          <p>${content}</p>
+          </div>
+          </div>
+          <hr>
+          </article>
+          `;
+    } else {
+    return `
+    <article class="my-2 text-left">
+    <div class="row">
+    <div class="col">
+    <h5 class="chulapa-links-hover-only"><a href="{{ site.baseurl }}${url}">${title}</a></h6>
+    </div>
+    <div class="col-4 col-md-3">
+    <div class="rounded-lg chulapa-overlay-img" style="background-image: url('${imglink}')" ></div>
+    </div>
+    </div>
+    <div class="row mt-2">
+    <div class="col">
+    <p>${content}</p>
+    </div>
+    </div>
+    <hr>
+    </article>
+    `;
+    }
 }
 
 
