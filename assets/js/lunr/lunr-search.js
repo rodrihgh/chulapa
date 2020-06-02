@@ -85,9 +85,9 @@ $(document).ready(function() {
 					'<div class="col-4 col-md-3">' +
 					'<div class="rounded-lg chulapa-overlay-img"'+
 					'style="background-image:' +
-					'url("' + store[ref].img + '")" ></div>' +
+					'url(\'' + store[ref].img + '\')" ></div>' +
 					'</div>' +
-                    '</div>' +		+
+                    '</div>' +		
                     '<div class="row mt-2">' +
                     '<div class="col">' +
                     '<p>' + store[ref].excerpt.split(" ").splice(0, 10).join(" ") +
