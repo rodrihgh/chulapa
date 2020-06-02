@@ -10,9 +10,6 @@ From minimal-mistakes: https://github.com/mmistakes/minimal-mistakes/
 var store = [
   {%- assign indexlunr = site.pages | concat: site.documents |  where_exp:'doc','doc.include_on_search != false' -%}
   {%- for doc in indexlunr -%}
-  {%- if doc.header_img -%}
-    {%- assign img = doc.header_img | absolute_url -%}
-  {%- endif-%}
       {
         "title": {{ doc.title | jsonify }},
         "subtitle": {{ doc.subtitle | jsonify }},
@@ -31,7 +28,7 @@ var store = [
         "date": {{ doc.date | date: "%Y-%m-%d" | jsonify }},
         "tags": {{ doc.tags | jsonify }},
         "url": {{ doc.url | absolute_url | jsonify }},
-        "img": {{ img | jsonify }}
+        "img": {{ doc.header_img | absolute_url | jsonify }}
       }{%- unless forloop.last -%},{%- endunless -%} 
   {%- endfor -%}]
 {%- endif -%}
