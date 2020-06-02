@@ -5,12 +5,12 @@ subtitle: Post by year
 permalink: /archive/year
 ---
 
-<ul>
+<ul class="list-group">
   {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}
-    <li>
+    <li class="list-group-item d-flex justify-content-between align-items-center chulapa-links-hover-only">
       <a href="#{{ year.name }}">
-        {{ year.name }} <span>{{ year.items | size }}</span>
+        {{ year.name }} <span class="badge badge-primary badge-pill">{{ year.items | size }}</span>
       </a>
     </li>
   {% endfor %}
