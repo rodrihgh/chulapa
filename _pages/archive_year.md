@@ -24,7 +24,7 @@ This is an example of how to create an archive page. In this case the posts are 
   <h3>{{ year.name }}</h3>
   {% for post in year.items %}
   <h4>{{ post.title }}</h4>
-  <p>{{ post.content | strip_html|  truncatewords: 20 }} <a href="{{ post.url }}" > [more]</a></p>
+  <p>{{ post.content | strip_html|  truncatewords: 20 }} <a href="{{ post.url | absolute_url }}" > [more]</a></p>
   {% endfor %}
   <div class="text-right">
       <button type="button" class="btn btn-outline-primary btn-sm">
