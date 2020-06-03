@@ -1,5 +1,5 @@
       <div class="row" id="chulapaDateSocial">
-          <div class=" col-xl-4 offset-xl-2 col font-italic text-primary">
+          <div class=" col-xl-4 offset-xl-2 col font-italic font-weight-bold text-primary">
             {%- if page.date and page.show_date -%}
             <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}<time>
             {%- endif -%}
