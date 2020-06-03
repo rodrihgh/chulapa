@@ -26,11 +26,10 @@ This is an example of how to create a tag cloud. This tag includes posts only
 	{{- tag.name -}} <span class="badge badge-pill badge-info ml-2">{{tag.size}}</span></h3>
   {% for document in alldocs %}
 	{% if document.tags contains tag.name %}
-  <article class="mb-3">
-  <h4>{{ document.title }}</h4>
-  <h5>{{ document.subtitle }}</h5>
+  <article class="chulapa-links-hover-only mb-3">
+  <a href="{{ document.url | absolute_url }}"><h5>{{ document.title }}</h5></a>
   {% if document.date %}
-  <time datetime="{{- document.date | date_to_xmlschema -}}">{{- document.date | date: "%B %d, %Y" -}}</time>
+  <time class="small font-italic" datetime="{{- document.date | date_to_xmlschema -}}">{{- document.date | date: "%B %d, %Y" -}}</time>
   {% endif %}
   </article>
   {% endif %}
