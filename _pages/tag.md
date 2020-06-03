@@ -14,7 +14,7 @@ This is an example of how to create a tag cloud. This tag includes posts only
 <div class="row pt-5" id="years">
 <div class="col">
 	{%- for tag in grouptag -%}
-	<a href="#{{- tag.name -}}" class="btn btn-primary">{{- tag.name -}} ({{tag.size}})</a>
+	<a href="#{{- tag.name -}}" class="btn btn-chulapa"><i class="fa fa-tag"></i> {{- tag.name -}} ({{tag.size}})</a>
 	{%- endfor -%}
 	</div>
 </div>
