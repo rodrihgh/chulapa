@@ -19,7 +19,7 @@ This is an example of how to create an archive page. In this case the posts are 
   {% endfor %}
 </div>  
 
-{% for year in postsByYear %}
+{% for year in postsInYear %}
 <section id="{{ year.name }}" class="chulapa-links-hover-only mt-5">
   <h3>{{ year.name }}</h3>
   {% for post in year.items %}
