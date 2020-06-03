@@ -13,7 +13,7 @@ This is an example of how to create an archive page. In this case the posts are 
   {% for year in postsInYear %}
   <div class="col-md-6 chulapa-links-hover-only py-2 px-5 px-md-3">
         <a href="#{{ year.name }}" class="d-flex justify-content-between align-items-center border-bottom ">
-        {{ year.name }} <span class="badge badge-primary badge-pill">{{ year.items | size }}</span>
+        {{ year.name }} <span class="badge badge-chulapa badge-pill">{{ year.items | size }}</span>
       </a>
   </div>
   {% endfor %}
@@ -27,7 +27,7 @@ This is an example of how to create an archive page. In this case the posts are 
   <p>{{ post.content | strip_html|  truncatewords: 20 }} <a href="{{ post.url | absolute_url }}" > [more]</a></p>
   {% endfor %}
   <div class="text-right">
-      <button type="button" class="btn btn-outline-primary btn-sm">
+      <button type="button" class="btn btn-outline-chulapa btn-sm">
       <a href="#years"><i class="fa fa-chevron-up"></i> Back to Top</a>
       </button>
   </div>
