@@ -2,16 +2,6 @@
  * Specific classes and formats for chulapa
  */
  
-#chulapaDateSocial {
-    color: $link-hover-color;
-    a {
-        color: $link-hover-color;
-        @include hover-focus() {
-            color: $link-hover-color;
-            }
-        
-    }
-}
 .chulapa-headingfont{
     font-family: $headings-font-family;
 }
