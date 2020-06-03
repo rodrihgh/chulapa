@@ -20,7 +20,7 @@ This is an example of how to create a tag cloud. This tag includes posts only
 </div>
 
 
-{% for for tag in grouptag %}
+{% for tag in grouptag %}
 <section id="{{- tag.name -}}" class="pt-5">
   <h3 class=" border-bottom border-chulapa"><i class="fa fa-tag mr-1" aria-hidden="true"></i>
 	{{- tag.name -}} <span class="badge badge-pill badge-info ml-2">{{tag.size}}</span></h3>
