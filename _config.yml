@@ -143,6 +143,7 @@ defaults:
       show_bottomnavs: true
       show_sociallinks: true
       show_comments: true
+      show_tags: true
       include_on_search: true
   -
     scope:
