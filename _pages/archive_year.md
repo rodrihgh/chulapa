@@ -23,14 +23,15 @@ This is an example of how to create an archive page. In this case the posts are 
 <section id="{{ year.name }}" class="pt-5">
   <h3 class=" border-bottom border-chulapa">{{ year.name }}</h3>
   {% for post in year.items %}
-  <h4 class="mt-5">{{ post.title }}</h4>
+  <article class="mb-3">
+  <h4>{{ post.title }}</h4>
   <p>{{ post.content | strip_html|  truncatewords: 20 }} <a href="{{ post.url | absolute_url }}" > [more]</a></p>
+  </article>
   {% endfor %}
   <div class="text-right">
       <button type="button" class="btn btn-outline-chulapa btn-sm">
       <a href="#years"><i class="fa fa-chevron-up"></i> Back to Top</a>
       </button>
   </div>
-  <hr>
 </section>
 {% endfor %}
