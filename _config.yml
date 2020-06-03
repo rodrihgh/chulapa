@@ -8,6 +8,7 @@ subtitle        :  A Jekyll theme for Github Pages powered by Bootstrap
 url             : 
 baseurl         : 
 
+words_per_minute         : 200
 
 # Search providers
 search:
