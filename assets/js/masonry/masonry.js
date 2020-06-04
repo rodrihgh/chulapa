@@ -1,3 +1,6 @@
+---
+---
+
 /**
  * Set appropriate spanning to any masonry item
  *
