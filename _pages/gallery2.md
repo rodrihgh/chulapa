@@ -16,6 +16,3 @@ An example of gallery with masonry
   </div>
   {%- endfor -%}
 </div>
-
-<script src="{{ '/assets/js/masonry.js' | absolute_url }}"></script>
-
