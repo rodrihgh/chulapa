@@ -23,10 +23,7 @@ algolia:
 
 
 	{% assign gallery = site.static_files | where: "image_col", "gallery" %}
-	
 	{% for item in gallery %}
-	
-	-{{ item.path | absolute_url }} - {{ item }}
-	
-	{% endfor %}
+	- {{ item.path | absolute_url }} - {{ item }}
+		{% endfor %}
 	
