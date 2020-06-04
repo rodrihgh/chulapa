@@ -17,9 +17,9 @@ An example of gallery
 
 
 {% assign internal_gallery = site.static_files | where: "image_col", "gallery" %}
-{% include components/gallery bricks=internal_gallery %}
+{% include components/masonry.html bricks=internal_gallery %}
 
 
 Now try with external on YAML header:
 
-{% include components/gallery bricks=page.gallery %}
+{% include components/masonry.html bricks=page.gallery %}
