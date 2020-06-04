@@ -156,7 +156,11 @@ defaults:
       show_sociallinks: true
       show_comments:
       include_on_search: true
-
+  -
+    scope:
+      path: "assets/img/gallery"
+    values:
+      image_col: gallery
 
 #For posts
 permalink: /:year:month:day_:title/

@@ -261,3 +261,22 @@
 .chulapa-size-base {
     font-size: $font-size-base;
 }
+
+.chulapa-masonry {
+    @extend .card-columns;
+    column-count: 2;
+    column-gap: map-get($spacers, 1);
+    
+    @include media-breakpoint-only(md) {
+    column-count: 3;
+    }
+    
+    @include media-breakpoint-only(lg) {
+    column-count: 4;
+    }
+}
+
+.chulapa-masonry-item {
+    @extend .card;
+    margin-bottom: map-get($spacers, 1);
+}

@@ -19,3 +19,14 @@ algolia:
   search_only_api_key:  # search only key
   #...more options
 ```
+
+
+
+	{% assign gallery = site.static_files | where: "image_col", gallery %}
+	
+	{% for item in gallery %}
+	
+	-{{ item.path | absolute_url }}
+	
+	{% endfor %}
+	
