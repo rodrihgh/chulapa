@@ -137,7 +137,7 @@ defaults:
       type: "posts"
     values:
       layout: "default"
-      header_type: "base"
+      header_type: "post"
       include_on_search: true
       show_date: true
       show_bottomnavs: true
