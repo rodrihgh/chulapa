@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xl-8 offset-xl-2 col">
   {% for tag in page.tags %}
-    <span class="badge badge-chulapa">{{- tag -}}</span>
+    <a href="{{ site.baseurl }}/tags#{{- tag -}}" class="badge badge-chulapa">{{- tag -}}</a>
   {% endfor %}
   </div>
 </div>
