@@ -1,0 +1,5 @@
+<div class="chulapa-masonry">
+  {%- for brick in include.bricks -%}
+  <img class="chulapa-masonry-brick" src="{{- brick.path | absolute_url -}}">
+  {%- endfor -%}
+</div>

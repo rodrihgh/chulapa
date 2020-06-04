@@ -275,7 +275,7 @@
     column-count: 4;
     }
     
-    .chulapa-masonry-item {
+    .chulapa-masonry-brick {
         @extend .card;
         margin-bottom: map-get($spacers, 1);
         
