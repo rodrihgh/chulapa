@@ -51,7 +51,7 @@ algolia:
   #...more options
 ```
 
-
+{{ site.github.owner_gravatar_url }}
 
 {% assign gallery = page.gallery %}
 
