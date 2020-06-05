@@ -30,6 +30,9 @@
     {%- if site.fa_v5_kit_code %}
     <!-- v5 -->
     <script src="https://kit.fontawesome.com/{{- site.fa_v5_kit_code -}}.js" crossorigin="anonymous"></script>
+    {% else %}
+    <!-- v4.7 -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     {% endif %}
 
     <!-- Theme css (Bootstrap included) -->
