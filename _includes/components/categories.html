@@ -1,10 +1,12 @@
+{% if page.categories %}
 <div class="container-lg my-1">
   <div class="row">
     <div class="col-xl-8 offset-xl-2 col">
       <i class="fa fa-folder-open-o small" aria-hidden="true"></i>
       {%- for category in page.categories %}
-      <a href="{{ site.baseurl }}/categories#{{- category -}}" class="badge badge-info">{{- tag -}}</a>
+      <a href="{{ site.baseurl }}/categories#{{- category -}}" class="badge badge-info">{{- category -}}</a>
       {% endfor -%}
       </div>
     </div>
 </div>
+{% endif %}
