@@ -42,8 +42,10 @@ algolia:
 
 # Site Author
 author:
-  name    : DHH
-  avatar  : 
+  name          : Name Surname
+  avatar        : https://github.com/dieghernan.png
+  location      : "Chamberí, ES"
+  
 
 # Social Sharing
 twitter:

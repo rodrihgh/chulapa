@@ -27,13 +27,8 @@
     <link href="{{ font.url }}" rel="stylesheet">
     {%- endfor %}
     <!-- Fontawesome-->
-    {%- if site.fa_v5_kit_code %}
     <!-- v5 -->
-    <script src="https://kit.fontawesome.com/{{- site.fa_v5_kit_code -}}.js" crossorigin="anonymous"></script>
-    {% else %}
-    <!-- v4.7 -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    {% endif -%}
+    <script src="https://kit.fontawesome.com/{{- site.fa_v5_kit_code | default: "f9508d0713" -}}.js" crossorigin="anonymous"></script>
     <!-- Theme css (Bootstrap included) -->
     <link rel="stylesheet" href="{{- "assets/css/main.css " | relative_url -}}" />
     <!-- Custom css -->

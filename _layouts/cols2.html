@@ -69,9 +69,18 @@ skinmakers:
   {%- include components/datesocial.html -%}
   {%- endif -%}
       <div class="row pt-2">
-        <aside class="col-xl-2 mb-3">
-          
-        </aside>
+			<aside class="col-xl-2 mb-3 small">
+			  <div class="row d-flex align-items-center px-3">
+			    <div class="rounded-circle bg-chulapa border-light mx-xl-auto chulapa-overlay-img" style="width: 8vmax;height:8vmax; background-image: url({{ site.author.avatar | absolute_url  }});"></div>
+			    <div class="col-9 col-xl-12 mt-xl-2 text-xl-center">{{ page.author.name | default: site.author.name | default: site.github.owner_name }}</div>
+			</div>
+			<div class="row mt-2">
+			<div class="col">
+				<div class="d-inline d-xl-block my-auto"> {{ page.author.location | default: site.author.location }}</div>
+				<div class="d-inline my-auto"> <span>Link1</span>  <span>Link1</span>  <span>Link1</span>  <span>Link1</span></div>
+			</div>
+			</div>
+			</aside>
         <article class="col-xl-8">
           {{- content -}}
         </article>
