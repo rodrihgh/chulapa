@@ -69,13 +69,12 @@ skinmakers:
   {%- include components/datesocial.html -%}
   {%- endif -%}
       <div class="row pt-2">
-        <aside class="row pt-2">
+        <aside class="col-xl-2 mb-3">
           
         </aside>
-        
-            <article class="col-xl-8">
-                {{- content -}}
-            </article>
+        <article class="col-xl-8">
+          {{- content -}}
+        </article>
       </div>
     </main>
     {%- if page.show_bottomnavs -%}
