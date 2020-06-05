@@ -10,12 +10,6 @@ This is an example of how to create a tag cloud. This tag includes posts only
 
 {% assign alldocs = site.posts %}		
 {% assign grouptag =  alldocs | map: 'tags' | join: ','  | split: ','  | group_by: tag | sort: 'size' | reverse %}
-<style>
-.smaller {
-    font-size:50%;
-    }
-</style>
-
 <div class="row pt-5" id="tags">
 <div class="col">
 	{%- for tag in grouptag -%}
