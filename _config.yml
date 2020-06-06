@@ -156,6 +156,7 @@ defaults:
       show_tags: true
       show_categories: true
       include_on_search: true
+      show_author: true
   -
     scope:
       path: ""
@@ -167,7 +168,6 @@ defaults:
       show_sociallinks: true
       show_comments:
       include_on_search: true
-      show_author: true
   -
     scope:
       path: "assets/img/gallery"
