@@ -165,6 +165,7 @@ defaults:
       header_type: "hero"
       show_bottomnavs: true
       show_sociallinks: true
+      show_author: false
       show_comments:
       include_on_search: true
   -

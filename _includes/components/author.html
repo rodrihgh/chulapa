@@ -1,0 +1,19 @@
+				<div class="row d-flex align-items-center">
+					<div class="rounded-circle border border-dark ml-3 mx-xl-auto chulapa-overlay-img chulapa-avatar-size" style="background-image: url({{ site.author.avatar | absolute_url  }});">
+					</div>
+					<div class="col-9 col-xl-12 mt-xl-2 text-xl-center">
+						{{ page.author.name | default: site.author.name | default: site.github.owner_name }}
+					</div>
+				</div>
+				<div class="row mt-2">
+					<div class="col text-xl-center">
+						<address class="d-inline d-xl-block my-1 small">
+							<i class="fas fa-map-marker-alt fa-lg"></i> {{ page.author.location | default: site.author.location }}
+						</address>
+						<div class="d-inline my-1 mx-2 mx-lg-0 chulapa-links-hover-only">
+							{%- for item in site.author.links -%}
+							<a class="ml-1" href="{{ item.url }}"><i class="{{ item.icon }} fa-lg"></i></a>
+							{%- endfor -%}
+						</div>
+					</div>
+				</div>
