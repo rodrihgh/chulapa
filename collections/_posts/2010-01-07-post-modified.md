@@ -3,6 +3,7 @@ layout: cols2
 title: "Plain post"
 subtitle: "Example"
 show_sociallinks: false
+show_date: false
 categories:
   - formats
 tags:

@@ -62,8 +62,8 @@ skinmakers:
 {%- include head.html -%}
 <body class="d-flex flex-column">
   {%- assign skinner = layout.skinmakers[site.chulapa-skin.theme] -%}
-  {%- include navbar.html -%}
-  {%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
+  {% include navbar.html -%}
+  {%- include components/headers.html headertype= page.header_type imghero=page.header_img %}
     <main class="container-lg pb-5 flex-fill">
   {%- if page.show_date or page.show_sociallinks -%}
   {%- include components/datesocial.html -%}

@@ -45,7 +45,16 @@ author:
   name          : Name Surname
   avatar        : https://github.com/dieghernan.png
   location      : "Chamberí, ES"
-  
+  links:
+    - url: aa
+      icon: "fab fa-twitter"
+    - url: bb
+      icon: "fab fa-facebook"
+    - url: cc
+      icon: "fab fa-github"
+    - url: "srr"
+      icon: "fab fa-instagram"
+
 
 # Social Sharing
 twitter:

@@ -75,9 +75,14 @@ skinmakers:
 			    <div class="col-9 col-xl-12 mt-xl-2 text-xl-center">{{ page.author.name | default: site.author.name | default: site.github.owner_name }}</div>
 			</div>
 			<div class="row mt-2">
-			<div class="col">
-				<div class="d-inline d-xl-block my-auto"><i class="fas fa-map-marker-alt"></i> {{ page.author.location | default: site.author.location }}</div>
-				<div class="d-inline my-auto"> <span>Link1</span>  <span>Link1</span>  <span>Link1</span>  <span>Link1</span></div>
+			<div class="col text-xl-center">
+				<div class="d-inline d-xl-block my-1">
+				  <i class="fas fa-map-marker-alt"></i> {{ page.author.location | default: site.author.location }}</div>
+				<div class="d-inline my-1 mx-1 chulapa-hover-only"> 
+  				{% for item in site.author.links %}
+  				<a class="ml-1" href="{{ item.url }}" title="Share on Twitter"><i class="{{ item.icon }}"></i></a>
+  				{% endif %}
+				</div>
 			</div>
 			</div>
 			</aside>
