@@ -29,15 +29,13 @@ algolia:
     - html
     - md
   searchableAttributes:                                                        
-      - title                                                                    
-      - headings                                                                 
-      - unordered(content)                                                       
-      - unordered(categories)                                                    
-      - unordered(date)                                                          
-      - unordered(subtitle)                                                      
-      - unordered(tags)
-  
-  
+    - title                                                                    
+    - headings                                                                 
+    - unordered(content)
+  customRanking:
+    - desc(include_on_search)
+    - desc(title)
+    - desc(content) 
 
 
 # Site Author
