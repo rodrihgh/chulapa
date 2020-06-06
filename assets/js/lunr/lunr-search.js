@@ -83,7 +83,7 @@ $(document).ready(function() {
                     '</h5>' +
                     '</div>'		+
 					'<div class="col-4 col-md-3">' +
-					'<div class="rounded-lg chulapa-overlay-img"'+
+					'<div class="rounded-lg chulapa-overlay-img chulapa-min-h-10"'+
 					'style="background-image:' +
 					'url(\'' + store[ref].img + '\')" ></div>' +
 					'</div>' +

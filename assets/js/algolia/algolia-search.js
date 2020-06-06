@@ -69,7 +69,7 @@ const hitTemplate = function(hit) {
     <h5 class="chulapa-links-hover-only"><a href="{{ site.baseurl }}${url}">${title}</a></h6>
     </div>
     <div class="col-4 col-md-3">
-    <div class="rounded-lg chulapa-overlay-img" style="background-image: url('${imglink}')" ></div>
+    <div class="rounded-lg chulapa-overlay-img chulapa-min-h-10" style="background-image: url('${imglink}')" ></div>
     </div>
     </div>
     <div class="row mt-2">
