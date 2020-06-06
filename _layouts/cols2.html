@@ -59,52 +59,56 @@ skinmakers:
 ---
 <!doctype html>
 <html lang="{{- site.locale | default: 'en-US' -}}">
-{%- include head.html -%}
-<body class="d-flex flex-column">
-  {%- assign skinner = layout.skinmakers[site.chulapa-skin.theme] -%}
-  {%- include navbar.html -%}
-  {%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
-    <main class="container-lg pb-5 flex-fill">
-  {%- if page.show_date or page.show_sociallinks -%}
-  {%- include components/datesocial.html -%}
-  {%- endif -%}
-      <div class="row pt-2">
+	{%- include head.html -%}
+	<body class="d-flex flex-column">
+	{%- include navbar.html -%}
+	{%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
+	<main class="container-lg pb-5 flex-fill">
+		{%- if page.show_date or page.show_sociallinks -%}
+		{%- include components/datesocial.html -%}
+		{%- endif -%}
+		<div class="row pt-2">
 			<aside class="col-xl-2 mb-3 small">
-			  <div class="row d-flex align-items-center">
-			    <div class="rounded-circle border border-dark ml-3 mx-xl-auto chulapa-overlay-img chulapa-avatar-size" style="background-image: url({{ site.author.avatar | absolute_url  }});"></div>
-			    <div class="col-9 col-xl-12 mt-xl-2 text-xl-center">{{ page.author.name | default: site.author.name | default: site.github.owner_name }}</div>
-			</div>
-			<div class="row mt-2">
-			<div class="col text-xl-center">
-				<div class="d-inline d-xl-block my-1 small">
-				  <i class="fas fa-map-marker-alt fa-lg"></i> {{ page.author.location | default: site.author.location }}</div>
-				<div class="d-inline my-1 mx-2 mx-lg-0 chulapa-links-hover-only"> 
-  				{% for item in site.author.links %}
-  				<a class="ml-1" href="{{ item.url }}"><i class="{{ item.icon }} fa-lg"></i></a>
-  				{% endfor %}
+				<div class="row d-flex align-items-center">
+					<div class="rounded-circle border border-dark ml-3 mx-xl-auto chulapa-overlay-img chulapa-avatar-size" style="background-image: url({{ site.author.avatar | absolute_url  }});">
+					</div>
+					<div class="col-9 col-xl-12 mt-xl-2 text-xl-center">
+						{{ page.author.name | default: site.author.name | default: site.github.owner_name }}
+					</div>
 				</div>
-			</div>
-			</div>
+				<div class="row mt-2">
+					<div class="col text-xl-center">
+						<address class="d-inline d-xl-block my-1 small">
+							<i class="fas fa-map-marker-alt fa-lg"></i> {{ page.author.location | default: site.author.location }}
+						</address>
+						<div class="d-inline my-1 mx-2 mx-lg-0 chulapa-links-hover-only">
+							{%- for item in site.author.links -%}
+							<a class="ml-1" href="{{ item.url }}"><i class="{{ item.icon }} fa-lg"></i></a>
+							{%- endfor -%}
+						</div>
+					</div>
+				</div>
 			</aside>
-        <article class="col-xl-8">
-          {{- content -}}
-        </article>
-      </div>
-    </main>
-    {%- if page.show_bottomnavs -%}
-    {%- include components/navbeforeafter.html -%}
-    {%- endif -%}
-    {%- if page.show_categories -%}
-    {%- include components/categories.html-%}
-    {%- endif -%}
-    {%- if page.show_tags -%}
-    {%- include components/tags.html-%}
-    {%- endif -%}
-    {%- include footer.html skinner=skinner -%}
-<!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-{% include custom/custom_bottomscripts.html %}
-</body>
+			<article class="col-xl-8">
+			{{- content -}}
+			</article>
+		</div>
+	</main>
+	{%- if page.show_bottomnavs -%}
+	{%- include components/navbeforeafter.html -%}
+	{%- endif -%}
+	{%- if page.show_categories -%}
+	{%- include components/categories.html-%}
+	{%- endif -%}
+	{%- if page.show_tags -%}
+	{%- include components/tags.html-%}
+	{%- endif -%}
+	{%- assign skinner = layout.skinmakers[site.chulapa-skin.theme] -%}
+	{%- include footer.html skinner=skinner -%}
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	{% include custom/custom_bottomscripts.html %}
+	</body>
 </html>
