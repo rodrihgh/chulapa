@@ -286,4 +286,13 @@
     }
 }
 
+.chulapa-gradiente-fallback{
+    background-color: $chulapa-col;
+    background-image: linear-gradient(to bottom right, rgba($light,1) , rgba($chulapa-col,1) 80%, rgba($dark,1) 100%);
 
+}
+
+.chulapa-avatar-size{
+    width: 8vmax;
+    height: 8vmax;
+}
