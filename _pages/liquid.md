@@ -51,13 +51,15 @@ algolia:
   #...more options
 ```
 
-{{ site.github.owner_gravatar_url }}
+This is just a text.
 
-{% assign gallery = page.gallery %}
+It should work.
 
-<div class="chulapa-masonry">
-  {%- for item in gallery -%}
-  <img class="chulapa-masonry-item" src="{{- item.path | absolute_url -}}">
-  {%- endfor -%}
-</div>
+
+
+
+
+{{ page }}
+
+
 
