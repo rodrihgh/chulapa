@@ -36,20 +36,6 @@ gallery:
     - path: https://picsum.photos/450/300?image=78 
 ---
 
-```yaml
-# Your _config.yml
-search:
-  provider:       # google, lunr, algolia
-  maxwords: 10    # lunr only - Max words to index, may be slow
-  
-google_cse_id:    # google only - Your cse id 
-
-algolia:                                                       
-  application_id:       # app id
-  index_name:           # index name
-  search_only_api_key:  # search only key
-  #...more options
-```
 
 This is just a text.
 
