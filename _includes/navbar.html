@@ -4,7 +4,6 @@
   {%- assign brandurl = site.url | append: site.baseurl -%}
 {%- endif -%}
 {%- assign thispageurl = page.url | replace: ".html", ""  -%}
-
  <nav class="navbar navbar-expand-md sticky-top navbar-chulapa">
      <div class="container-fluid mx-md-2">
          <a class="navbar-brand" href="{{ brandurl }}">
@@ -27,7 +26,7 @@
                             {%- assign containteractive  =  true -%}
                           {% endif %}
                         {%- endfor -%}
-                    <a class="nav-link dropdown-toggle  {% if containteractive == true %} active {% endif %}" href="#" id="Dropdown{{ item.title | strip }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }} </a>
+                    <a class="nav-link dropdown-toggle  {% if containteractive == true %} active {% endif %}" href="#" id="{{ item.title | strip | replace: " ", "-" }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }} </a>
                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown{{ item.title }}">
                        {%- for entry in item.child -%}
                        {%- if entry.url contains "http" -%}
