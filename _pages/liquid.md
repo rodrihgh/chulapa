@@ -45,7 +45,6 @@ It should work.
 
 
 
-{{ page }}
-
+{{ page.content |  newline_to_br | replace:"<br />", ",.," | split: ",.," | first }}
 
 
