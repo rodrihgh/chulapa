@@ -37,14 +37,15 @@ gallery:
 ---
 
 
+
+
 This is just a text.
 
 It should work.
 
 
 
-
+{{ page.content | markdownify | inspect }}
 
 {{ page.content |  newline_to_br | replace:"<br />", ",.," | split: ",.," | first }}
-
 
