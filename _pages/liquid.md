@@ -47,5 +47,5 @@ It should work.
 
 
 {{ page.content | markdownify |  newline_to_br | replace:"<br />", ",.," | 
-split: ",.," | first | inspect }}
+split: ",.," | first | strip_html | inspect }}
 
