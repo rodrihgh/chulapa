@@ -13,15 +13,20 @@
 {%- else -%}
 {%- assign: ogimage = initimg | absolute_url  -%}
 {%- endif -%}
-{%- assign: desc = page.content | markdownify |  newline_to_br | replace:"<br />", ",.," | 
-split: ",.," | first | strip_html | escape_once -%}
+{%- assign: ogdesc = page.excerpt | default: page.content | 
+                markdownify |  newline_to_br | 
+                replace:"<br />", ",.," | 
+                replace:"{{", ",.," | 
+                replace:"{%", ",.," | 
+                split: ",.," | first | strip_html | 
+                escape_once -%}
 <head>
     <title>{{ metatitle }}</title>
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="{{ site.author.name | default: site.github.owner_name }}">
-    <meta name="description" content="{{ page.excerpt | default: desc | truncate: 130 }}"/>
+    <meta name="description" content="{{- ogdesc | truncate: 130 -}}"/>
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{ canonical_url }}">
     <!-- CSS -->
@@ -39,7 +44,7 @@ split: ",.," | first | strip_html | escape_once -%}
     <meta property="og:title" content="{{ metatitle }}" />
     <meta property="og:url" content="{{ canonical_url }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="{{ page.content | markdownify | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | escape_once | truncatewords: 20 }}" />
+    <meta property="og:description" content="{{ ogdesc | truncatewords: 20 }}" />
     <meta property="og:locale" content="{{- site.locale | default: 'en-US' -}}" />
     <meta property="og:image" content="{{- ogimage -}}" />
     <meta name="twitter:card" content="summary_large_image">
