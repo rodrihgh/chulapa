@@ -18,7 +18,7 @@ author:
   avatar                :      https://github.com/dieghernan.png #Info: Your github avatar on https://github.com/[USERNAME].png
   location              :      false
   links:                
-    - url: aa
+    - url: https://twitter.com/jack
       icon: "fab fa-twitter"
     - url: bb
       icon: "fab fa-facebook"

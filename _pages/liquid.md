@@ -1,21 +1,29 @@
 ---
-layout: default
+layout: cols2
 title: Playground
 subtitle: Liquid 
 permalink: /liquid
-excerpt: Custom excerpt here
+show_author : true
 ---
 
 
+{%- assign ogdesc = page.excerpt | default: page.content | 
+                markdownify |  newline_to_br | 
+                replace:"<br />", ",.," | 
+                replace:"{{", ",.," | 
+                replace:"{%", ",.," | 
+                split: ",.," | first | strip_html | 
+                escape_once -%}
+                
+{{ ogdesc }}
 
+# test2 
 
-This is just a text. Just a text. Now trying
+{%- assign ogdesc = ogdesc | default: page.title -%}
 
-It should work.
+{{ ogdesc}}
 
+{{ author.links | where_exp:"item",
+"item.url contains twitter" }}
 
-
-
-{{ page.content | markdownify |  newline_to_br | replace:"<br />", ",.," | 
-split: ",.," | first | strip_html | escape_once | inspect }}
 

@@ -7,8 +7,8 @@
     {%- assign metatitle2 = site.subtitle | default: site.github.project_tagline -%}
 {%- endif -%}
 {%- capture metatitle -%}{{ metatitle1 }} {{ site.title_separator | default: "|" }} {{ metatitle2 }}{%- endcapture -%}
-{%- assign: ogimage = page.header_img | default: site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -%}
-{%- assign: ogdesc = page.excerpt | default: page.content | 
+{%- assign ogimage = page.header_img | default: site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -%}
+{%- assign ogdesc = page.excerpt | default: page.content | 
                 markdownify |  newline_to_br | 
                 replace:"<br />", ",.," | 
                 replace:"{{", ",.," | 
@@ -23,6 +23,17 @@
     <meta name="author" content="{{ site.author.name | default: site.github.owner_name }}">
     <meta name="description" content="{{- ogdesc | truncate: 130 -}}"/>
     <meta name="robots" content="index, follow">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="{{ metatitle }}" />
+    <meta property="og:url" content="{{ canonical_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ ogdesc | truncatewords: 20 }}" />
+    <meta property="og:locale" content="{{- site.locale | default: 'en-US' -}}" />
+    <meta property="og:image" content="{{- ogimage -}}" />
+    <meta name="twitter:card" content="summary_large_image">
+    {%- if site.twitter_site %}
+    <meta name="twitter:site" content="@{{- site.twitter_site  }}" />
+    {% endif -%}
     <link rel="canonical" href="{{ canonical_url }}">
     <!-- CSS -->
     {% for font in site.googlefonts -%}
@@ -35,17 +46,6 @@
     <link rel="stylesheet" href="{{- "assets/css/main.css " | relative_url -}}" />
     <!-- Custom css -->
     <link rel="stylesheet" href="{{- "assets/css/custom.css " | relative_url -}}" />
-    <!-- OpenGraph -->
-    <meta property="og:title" content="{{ metatitle }}" />
-    <meta property="og:url" content="{{ canonical_url }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="{{ ogdesc | truncatewords: 20 }}" />
-    <meta property="og:locale" content="{{- site.locale | default: 'en-US' -}}" />
-    <meta property="og:image" content="{{- ogimage -}}" />
-    <meta name="twitter:card" content="summary_large_image">
-    {%- if site.twitter_site %}
-    <meta name="twitter:site" content="@{{- site.twitter_site  }}" />
-    {% endif -%}
     {%- include components/webtracking.html -%}
     {%- include custom/custom_head.html -%}
 </head>
