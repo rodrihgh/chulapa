@@ -144,13 +144,20 @@ chulapa-skin:
     font-family-sans-serif:  #default ["bootstrap option"]
     hero-chulapa-bg-color: 
     
-#D. Jekyll Defaults and collections: see https://jekyllrb.com/
-#Collections https://jekyllrb.com/docs/step-by-step/09-collections/
+# D. Jekyll Defaults and collections: see https://jekyllrb.com/
+
+# Collections https://jekyllrb.com/docs/step-by-step/09-collections/
 collections:
   demo:
     output: true
 collections_dir     : collections
 permalink           : /:year:month:day_:title/
+
+
+# Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
+paginate: 1
+paginate_path: "/blog/page:num/"
+
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
   -
