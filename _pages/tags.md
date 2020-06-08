@@ -29,7 +29,7 @@ This is an example of how to create a tag cloud. This tag includes posts only
   {% assign words = document.content | strip_html | number_of_words %}
   {% assign readtime = "less than 1 minute" %}
   {% if words > words_per_minute %}
-  {% assign readtime = words | divided_by:words_per_minute | append: "minute read" %}
+  {% assign readtime = words | divided_by:words_per_minute | append: " min. read" %}
   {% endif %}
 	{% if document.tags contains tag.name %}
   <article class="chulapa-links-hover-only mb-3">
