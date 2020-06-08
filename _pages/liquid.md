@@ -30,13 +30,16 @@ show_author : true
 
 {%- assign links = page.author.links | default: site.author.links -%}
 {% for item in links %}
-  {% if item contains "twitter.com/" %}
+- {{ item.url }}
+  {% if item.url contains "twitter.com/" %}
   
-  {% assign twitterauthor = item | split: "/" | last %}
+  {% assign twitterauthor = item.url | split: "/" | last %}
   {% break %}
   {% endif %}
 
 {% endfor %}
+
+Under this
 
 {{ twitterauthor }}
 
