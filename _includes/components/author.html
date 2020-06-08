@@ -1,7 +1,7 @@
-{%- assign avatar: page.author.avatar | default: site.author.avatar -%}
-{%- assign name: page.author.name | default: site.author.name | default: site.github.owner_name -%}
-{%- assign location: page.author.location | default: site.author.location -%}
-{%- assign links: page.author.links | default: site.author.links -%}
+{%- assign avatar = page.author.avatar | default: site.author.avatar -%}
+{%- assign name = page.author.name | default: site.author.name | default: site.github.owner_name -%}
+{%- assign location = page.author.location | default: site.author.location -%}
+{%- assign links = page.author.links | default: site.author.links -%}
 				<div class="row d-flex align-items-center">
 				  {%- if avatar -%}
 					<div class="rounded-circle border border-dark ml-3 mx-xl-auto chulapa-overlay-img chulapa-avatar-size" style="background-image: url({{ avatar | absolute_url  }});">
