@@ -27,18 +27,20 @@ This is an example of how to create a tag cloud. This tag includes posts only
 </div>
   {% for document in alldocs %}
   {% assign words = document.content | strip_html | number_of_words %}
-  {% assign readtime = "less than 1 minute" %}
+  {% assign readtime = "< 1’" %}
   {% if words > words_per_minute %}
-  {% assign readtime = words | divided_by:words_per_minute | append: " min. read" %}
+  {% assign readtime = words | divided_by:words_per_minute | append: "’" %}
   {% endif %}
 	{% if document.tags contains tag.name %}
   <article class="chulapa-links-hover-only mb-3">
   <a href="{{ document.url | absolute_url }}"><h5>{{ document.title }}</h5></a>
+  <div class="small">
   {% if document.date %}
   <i class="far fa-calendar"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{{- document.date | date: "%B %d, %Y" -}}</time> | 
   {% endif %}
   <i class="far fa-clock"></i> {{ readtime }} | 
   <a href="{{ document.url | absolute_url }}" class="text-primary"><i class="fas fa-external-link-alt mx-2"></i><span class="sr-only">Link</span></a>
+  </div>
   </article>
   {% endif %}
   {% endfor %}
