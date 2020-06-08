@@ -119,6 +119,7 @@
     p {
         color: $hero-chulapa-text-color;
         word-wrap: break-word;
+        -ms-word-wrap: break-word;
     }
     p {
         @include fluid-type(font-size,breakpoint-min("md"),  breakpoint-min("lg"), $font-size-base, $font-size-lg);
@@ -195,6 +196,8 @@
 	color: $body-color;
 	h1, p {
         color: $body-color;
+        word-wrap: break-word;
+        -ms-word-wrap: break-word;
     }
     hr {
         background-color: color-yiq($body-bg, $hero-chulapa-bg-color, $body-color);
