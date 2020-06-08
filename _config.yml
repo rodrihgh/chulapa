@@ -42,7 +42,7 @@ algolia:
 author:
   name          : Name Surname
   avatar        : https://github.com/dieghernan.png
-  location      : "Chamberí, ES"
+  location      : false
   links:
     - url: aa
       icon: "fab fa-twitter"
@@ -146,7 +146,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "default"
+      layout: "cols2"
       header_type: "post"
       include_on_search: true
       show_date: true
