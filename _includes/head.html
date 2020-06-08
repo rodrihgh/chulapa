@@ -14,7 +14,7 @@
                 replace:"{{", ",.," | 
                 replace:"{%", ",.," | 
                 split: ",.," | first | strip_html | 
-                escape_once | default: page.title -%}
+                escape_once | default: page.subtitle | default: page.title -%}
 {%- assign links = page.author.links | default: site.author.links -%}
 {%- for item in links -%}
   {%- if item.url contains "twitter.com/" -%}
