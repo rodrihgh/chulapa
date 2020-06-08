@@ -19,9 +19,7 @@
     {%- endif -%}
   </div>
 </header>
-{%- endif -%}
-
-{%- if include.headertype == "hero" -%}
+{%- elsif include.headertype == "hero" -%}
   {%- if imghero -%}
 <header class="jumbotron jumbotron-fluid mb-0 py-0 d-flex align-items-center hero-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ imghero }}')">
   {%- else -%}
@@ -35,9 +33,7 @@
     {%- endif -%}
   </div>
 </header>
-{%- endif -%}
-
-{%- if include.headertype == "base" -%}
+{%- elsif include.headertype == "base" -%}
 <header class="jumbotron jumbotron-fluid mb-0 py-0 text-sm-center header-chulapa">
       {%- if imghero -%}
       <div class="container-fluid header-chulapa-img" style="background-image: url('{{ imghero }}')">
@@ -55,11 +51,7 @@
 		<div>
 	</div>
 </header>
-
-{%- endif -%}
-
-
-{%- if include.headertype == "post" -%}
+{%- elsif include.headertype == "post" -%}
 <header class="jumbotron jumbotron-fluid mb-0 py-0 header-chulapa">
       {%- if imghero -%}
       <div class="container-fluid header-chulapa-img" style="background-image: url('{{ imghero }}')">
@@ -77,5 +69,6 @@
 		<div>
 	</div>
 </header>
-
+{% else %}
+<!-- No header -->
 {%- endif -%}
