@@ -28,9 +28,9 @@ This is an example of how to create a category page
 </div>
   {% for document in alldocs %}
   {% assign words = document.content | strip_html | number_of_words %}
-  {% assign readtime = "less than 1 minute" %}
+  {% assign readtime = "< 1’" %}
   {% if words > words_per_minute %}
-  {% assign readtime = words | divided_by:words_per_minute | append: " min. read" %}
+  {% assign readtime = words | divided_by:words_per_minute | append: "’" %}
   {% endif %}
 	{% if document.categories contains category.name %}
   <article class="chulapa-links-hover-only mb-3">
