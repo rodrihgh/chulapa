@@ -23,7 +23,7 @@ show_author : true
 
 {{ ogdesc}}
 
-{{ author.links | where_exp:"item",
+{{ page.author.links | where_exp:"item",
 "item.url contains twitter" }}
 
 

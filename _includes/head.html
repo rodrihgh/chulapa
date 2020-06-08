@@ -14,7 +14,7 @@
                 replace:"{{", ",.," | 
                 replace:"{%", ",.," | 
                 split: ",.," | first | strip_html | 
-                escape_once -%}
+                escape_once | default: page.title -%}
 <head>
     <title>{{ metatitle }}</title>
     <!-- Meta tags -->
