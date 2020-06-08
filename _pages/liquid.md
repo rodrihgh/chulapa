@@ -32,7 +32,7 @@ show_author : true
 {% for item in links %}
   {% if item contains "twitter.com/" %}
   
-  {% assign twitterauthor: item | split: "/" | last %}
+  {% assign twitterauthor = item | split: "/" | last %}
   {% break %}
   {% endif %}
 
