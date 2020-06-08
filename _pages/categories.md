@@ -32,7 +32,7 @@ This is an example of how to create a category page
   <a href="{{ document.url | absolute_url }}"><h5>{{ document.title }}</h5></a>
   {% if document.date %}
   <time class="small font-italic" datetime="{{- document.date | date_to_xmlschema -}}">{{- document.date | date: "%B %d, %Y" -}}</time>
-  {% endif %}  <a href="{{ document.url | absolute_url }}" class="text-primary"><i class="fa fa-plus-circle mx-2"></i><span class="sr-only">Link</span></a>
+  {% endif %} |   <a href="{{ document.url | absolute_url }}" class="text-primary"><i class="fas fa-external-link-alt mx-2"></i><span class="sr-only">Link</span></a>
   </article>
   {% endif %}
   {% endfor %}
