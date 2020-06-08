@@ -1,25 +1,25 @@
 {%- assign classnext = "page-item disabled" -%}
-{%- assign classlinknext = "page-link bg-light" -%}
+{%- assign classlinknext = "page-link d-none" -%}
 {%- if page.next.url -%}
  {%- assign classnext = "page-item" -%}
- {%- assign classlinknext = "page-link" -%}
+ {%- assign classlinknext = "page-link border-0" -%}
 {%- endif -%}
 {%- if page.url contains page.next.url -%}
  {%- assign classnext = "page-item disabled" -%}
- {%- assign classlinknext = "page-link bg-light" -%}
+ {%- assign classlinknext = "page-link d-none" -%}
 {%- endif -%}
 {%- assign classprevious = "page-item disabled" -%}
-{%- assign classlinkprevious = "page-link bg-light" -%}
+{%- assign classlinkprevious = "page-link d-none" -%}
 {%- if page.previous.url -%}
  {%- assign classprevious = "page-item" -%}
- {%- assign classlinkprevious = "page-link" -%}
+ {%- assign classlinkprevious = "page-link border-0" -%}
 {%- endif -%}
 {%- if page.url contains page.previous.url -%}
  {%- assign classprevious = "page-item disabled" -%}
- {%- assign classlinkprevious = "page-link" -%}
+ {%- assign classlinkprevious = "page-link d-none" -%}
 {%- endif -%}
  <nav aria-label="Navigation" class="container-lg">
-    <ul class="col-xl-8 offset-xl-2 pagination pagination-lg justify-content-center justify-content-sm-between ">
+    <ul class="col-xl-8 offset-xl-2 pagination justify-content-between ">
           <li class="{{ classprevious }}">
             <a class="{{ classlinkprevious }}" href="{{ page.previous.url | absolute_url }}" aria-label="Previous">
               <i class="fa fa-chevron-left" aria-hidden="true"></i>

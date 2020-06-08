@@ -15,6 +15,13 @@
                 replace:"{%", ",.," | 
                 split: ",.," | first | strip_html | 
                 escape_once | default: page.title -%}
+{%- assign links = page.author.links | default: site.author.links -%}
+{%- for item in links -%}
+  {%- if item.url contains "twitter.com/" -%}
+    {%- assign twitterauthor = item.url | split: "/" | last -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
 <head>
     <title>{{ metatitle }}</title>
     <!-- Meta tags -->
@@ -32,7 +39,10 @@
     <meta property="og:image" content="{{- ogimage -}}" />
     <meta name="twitter:card" content="summary_large_image">
     {%- if site.twitter_site %}
-    <meta name="twitter:site" content="@{{- site.twitter_site  }}" />
+    <meta name="twitter:site" content="@{{- site.twitter_site  -}}" />
+    {% endif -%}
+    {%- if twitterauthor %}
+    <meta name="twitter:creator" content="@{{- twitterauthor  -}}" />
     {% endif -%}
     <link rel="canonical" href="{{ canonical_url }}">
     <!-- CSS -->
