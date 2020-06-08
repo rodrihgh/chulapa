@@ -19,11 +19,24 @@ show_author : true
 
 # test2 
 
+
 {%- assign ogdesc = ogdesc | default: page.title -%}
 
 {{ ogdesc}}
 
-{{ page.author.links | where_exp:"item",
-"item.url contains twitter" }}
+# test3
 
+
+
+{%- assign links = page.author.links | default: site.author.links -%}
+{% for item in links %}
+  {% if item contains "twitter.com/" %}
+  
+  {% assign twitterauthor: item | split: "/" | last %}
+  {% break %}
+  {% endif %}
+
+{% endfor %}
+
+{{ twitterauthor }}
 
