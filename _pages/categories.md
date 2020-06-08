@@ -19,7 +19,7 @@ This is an example of how to create a category page
 	</div>
 </div>
 
-
+{% assign words_per_minute = site.words_per_minute | default: 200 %}
 {% for category in groupcategories %}
 <section id="{{- category.name -}}" class="pt-5">
 <div class="d-flex  align-items-center border-bottom border-chulapa mb-2">
@@ -27,12 +27,19 @@ This is an example of how to create a category page
   <div class="badge badge-pill badge-chulapa ml-2">{{category.size}}</div>
 </div>
   {% for document in alldocs %}
+  {% assign words = document.content | strip_html | number_of_words %}
+  {% assign readtime = "less than 1 minute" %}
+  {% if words > words_per_minute %}
+  {% assign readtime = words | divided_by:words_per_minute | append: "minute read" %}
+  {% endif %}
 	{% if document.categories contains category.name %}
   <article class="chulapa-links-hover-only mb-3">
   <a href="{{ document.url | absolute_url }}"><h5>{{ document.title }}</h5></a>
   {% if document.date %}
-  <time class="small font-italic" datetime="{{- document.date | date_to_xmlschema -}}">{{- document.date | date: "%B %d, %Y" -}}</time>
-  {% endif %} |   <a href="{{ document.url | absolute_url }}" class="text-primary"><i class="fas fa-external-link-alt mx-2"></i><span class="sr-only">Link</span></a>
+  <i class="far fa-calendar"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{{- document.date | date: "%B %d, %Y" -}}</time> | 
+  {% endif %}
+  <i class="far fa-clock"></i> {{ readtime }} | 
+  <a href="{{ document.url | absolute_url }}" class="text-primary"><i class="fas fa-external-link-alt mx-2"></i><span class="sr-only">Link</span></a>
   </article>
   {% endif %}
   {% endfor %}
