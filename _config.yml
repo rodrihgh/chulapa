@@ -1,47 +1,23 @@
-# A. Site Settings
-locale          :      # Fallback "en-US"
-title           :     Chulapa # Fallback "repository_name" REV
-title_separator :      # Fallback " | "
-subtitle        :     A Jekyll theme for Github Pages powered by Bootstrap 
-url             : 
-baseurl         : 
+# A. Site Settings /SEO options
+# Overall options for your site, would affect your site SEO
+# Default values are explained
+locale                  :     #default["en-US"]
+title                   :     Chulapa #default["repository_name"]
+title_separator         :     #default [" | "]
+subtitle                :     A Jekyll theme for Github Pages powered by Bootstrap #default [your-repository-tagline]  
+url                     :     #See baseurl - On Github Pages you may leave it blank
+baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
+words_per_minute        :     200 #default[200]
+og_image                :     "./assets/img/gallery/david-monje-YwrD58FfX9g-unsplash.jpg" #default[author.avatar (see below)] or [github-avatar]
+twitter_site            :     #[SEO] Avoid @
 
-words_per_minute         : 200
-
-# Search providers
-search:
-  provider: algolia
-  maxwords: 30
-  
-google_cse_id: "002514516175957445995:ep842kgah4q"
-
-
-algolia:                                                                
-  application_id: "KOIKA5PDQO"
-  index_name: "chulapa"
-  search_only_api_key: "7f1fe42bef3f03458cb3a911ebc7e0ac"
-  files_to_exclude:
-    - _layouts/*.html
-    - _includes/*.html
-  extensions_to_index:
-    - html
-    - md
-  searchableAttributes:                                                        
-    - title                                                                    
-    - headings                                                                 
-    - unordered(content)
-  customRanking:
-    - desc(include_on_search)
-    - desc(title)
-    - desc(content) 
-
-
-# Site Author
+# Site Author: about the creator of this site
+# Add social links using full urls and "icon" using Fontawesome 5 selectors (e.g. "fab fa-twitter")
 author:
-  name          : Name Surname
-  avatar        : https://github.com/dieghernan.png
-  location      : false
-  links:
+  name                  :      Name Surname Company
+  avatar                :      https://github.com/dieghernan.png #Info: Your github avatar on https://github.com/[USERNAME].png
+  location              :      false
+  links:                
     - url: aa
       icon: "fab fa-twitter"
     - url: bb
@@ -50,27 +26,57 @@ author:
       icon: "fab fa-github"
     - url: "srr"
       icon: "fab fa-instagram"
+# Web tracking - Google services https://analytics.google.com/analytics/web/
+# gtag_id is the preferred option, see https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=en
+# analytics provided for backwards compatibility
+gtag_id                 :    
+analytics_id            :  
 
+# Search providers
+# Available free search engines:
+# - lunr https://lunrjs.com/ 
+# - algolia v4 https://www.algolia.com/ - needs further configuration
+# - google custom search engine https://cse.google.es/ 
+search:
+  provider              : algolia #Select a provider for enable search
+  maxwords              : 30 #lunr only - May slow down your site build
 
-# Social Sharing
-twitter:
-  site               :   #Avoid the @
-og_image             : "./assets/img/gallery/david-monje-YwrD58FfX9g-unsplash.jpg"
-
-# Disqus ID
-
+google_cse_id: "002514516175957445995:ep842kgah4q" #Your cse id
+# This site uses jekyll-algolia plugin https://community.algolia.com/jekyll-algolia/
+# Recommended additional configuration provided, could be modified
+algolia:                                                                   
+  application_id        : "KOIKA5PDQO"
+  index_name            : "chulapa"
+  search_only_api_key   : "7f1fe42bef3f03458cb3a911ebc7e0ac"
+  files_to_exclude:         #Optional
+    - _layouts/*.html
+    - _includes/*.html
+  extensions_to_index:      #Optional
+    - html
+    - md
+  searchableAttributes:     #Optional                                                    
+    - title                                                                    
+    - headings                                                                 
+    - unordered(content)
+  customRanking:            #Optional
+    - desc(include_on_search)
+    - desc(title)
+    - desc(content) 
+#Enable comments via Disqus https://disqus.com/
 disqus_shortname: chulapa #Your site id : check your address https://{{ disqus.shortname }}.disqus.com/admin/
 
-# Web tracking using Google
-gtag_id:    # gtag.js configuration Google Tag ID 
-analytics_id:  # analytics.js id. Provided for backward compatibility, better use gtag_id
-# B. Navigations
 
+# B. Navigation
+# Configure your navbar and the footer of your site
+
+# Navbar: 
+#   "brand" options would be set on the left side of your navbar
+#   "nav" would be set on the right side. Two-level nav links available
 navbar:
   brand:
-    title: 
-    url: 
-    img: "./assets/img/site/brand_black.png"
+    title   : 
+    url     :   #default["url/baseurl"]
+    img     : "./assets/img/site/brand_black.png"
   nav:
   - title: Showcase
     url: /bootstrap
@@ -89,6 +95,7 @@ navbar:
   - title: Github
     url: https://github.com/dieghernan
 
+#Social links to be placed on your site footer
 footer:
   links:
     - label: "RSS"
@@ -107,30 +114,44 @@ footer:
   
 
 # C. Theme Settings
-# Code highlighter 
-highlight-skin  :      # Fallback "default" #See http://jwarby.github.io/jekyll-pygments-themes for options
 
-# Google Fonts https://fonts.google.com/, add as many as you want
+
+# Google Fonts https://fonts.google.com/, add as many as you need
 googlefonts:
-  - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+  - url : #example: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+#  - url : #example: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' 
 
-  
+
+# Chulapa is highly customisable - read the docs
+# Three ways:
+#   Use a predefined skin
+#   Use a base color and let chulapa do the rest (autothemer)
+#   Full customisation via Bootstrap https://getbootstrap.com/docs/4.5/getting-started/theming/#variable-defaults
+# 
+# Default skins can be also customized
+#
+#
+# Several options for code highlighting, see http://jwarby.github.io/jekyll-pygments-themes for previews
+
 
 # Theme and colors
 chulapa-skin: 
-  highlight   :  # Fallback "default" #See http://jwarby.github.io/jekyll-pygments-themes for options
+  highlight   :  #default["default"]
   theme       : graymor # Optional predefined skins
   autothemer  :   # Bool: Use autotheming
   vars        :    
-    chulapa-col:   # Fallback "crimson"
-    font-family-sans-serif: 
+    chulapa-col:   #default ["crimson"]
+    font-family-sans-serif:  #default ["bootstrap option"]
     hero-chulapa-bg-color: 
     
-#D. Defaults and collections
-
-collections_dir: collections
-
-# Defaults
+#D. Jekyll Defaults and collections: see https://jekyllrb.com/
+#Collections https://jekyllrb.com/docs/step-by-step/09-collections/
+collections:
+  demo:
+    output: true
+collections_dir     : collections
+permalink           : /:year:month:day_:title/
+# Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
   -
     scope:
@@ -138,47 +159,41 @@ defaults:
     values:
       layout: "default"
       header_type: "base"
-      include_on_search: false
+      include_on_search  : false
   -
     scope:
       path: ""
       type: "posts"
     values:
       layout: "cols2"
-      header_type: "post"
-      include_on_search: true
-      show_date: true
-      show_bottomnavs: true
-      show_sociallinks: true
-      show_comments: 
-      show_tags: true
-      show_categories: true
-      include_on_search: true
-      show_author: true
+      header_type       : "post"
+      include_on_search : true
+      show_date         : true
+      show_bottomnavs   : true
+      show_sociallinks  : true
+      show_comments     : false
+      show_tags         : true
+      show_categories   : true
+      show_author       : true
   -
     scope:
       path: ""
       type: "demo"
     values:
-      layout: "default"
-      header_type: "hero"
-      show_bottomnavs: true
-      show_sociallinks: true
-      show_comments:
-      include_on_search: true
+      layout            : "default"
+      header_type       : "hero"
+      show_bottomnavs   : true
+      show_sociallinks  : true
+      include_on_search : true
   -
     scope:
       path: "assets/img/gallery"
     values:
-      image_col: gallery
+      image_col         : gallery
 
-#For posts
-permalink: /:year:month:day_:title/
 
-#Collections
-collections:
-  demo:
-    output: true
+
+
 
 
 
