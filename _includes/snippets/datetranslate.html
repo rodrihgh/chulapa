@@ -1,0 +1,18 @@
+{%- assign dateloc = include.date -%}
+
+{%- assign en-days = 'Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday' | split:',' -%}
+{%- assign en-months = 'January,February,March,April,May,June,July,August,September,October,November,December' | split:',' -%}
+{%- assign days = 'lunes,martes,miércoles,jueves,viernes,sábado,domingo' | split:',' -%}
+{%- assign months = 'enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre' | split:',' -%}
+{%- for i in (0..11) -%}
+  {%- assign sm = en-months[i] | slice: 0,3 -%}
+	{%- assign sml = months[i] | slice: 0,3 -%}
+	{%- if i < 7 -%}
+  	{%- assign sd = en-days[i] | slice: 0,3 -%}
+  	{%- assign sdl = days[i] | slice: 0,3 -%}
+	{%- endif -%}
+	{%- assign dateloc =  dateloc | replace: en-days[i], days[i] | 
+	                      replace: en-months[i], months[i] | 
+	                      replace: sm, sml | replace: sd, sdl  -%}
+{%- endfor -%}
+{{- dateloc -}}
