@@ -10,7 +10,7 @@ show_author : true
 {%- assign newDate = 'now' | date:'%A %B %d, %Y' -%}
 This is the new date:
 
-{% newdate  %}
+{{ newDate  }}
 
 
 Now it should show a norwegian date:
