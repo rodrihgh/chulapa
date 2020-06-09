@@ -4,22 +4,22 @@
 {%- assign links = page.author.links | default: site.author.links -%}
 				<div class="row d-flex align-items-center">
 				  {%- if avatar -%}
-					<div class="border border-dark ml-3 mx-xl-auto chulapa-overlay-img chulapa-avatar-size" style="background-image: url({{ avatar | absolute_url  }});">
+					<div class="border border-dark ml-3 mx-md-auto chulapa-overlay-img chulapa-avatar-size" style="background-image: url({{ avatar | absolute_url  }});">
 					</div>
 					{%- endif -%}
-					<div class="col-9 col-xl-12 mt-xl-2 text-xl-center">
+					<div class="col-9 col-md-12 mt-md-2 text-md-center">
 						{{ name }}
 					</div>
 				</div>
 				<div class="row mt-2">
-					<div class="col text-xl-center">
+					<div class="col text-md-center">
 					  {%- if location -%}
-						<address class="d-inline d-xl-block my-1 small">
+						<address class="d-inline d-md-block my-1 small">
 							<i class="fas fa-map-marker-alt fa-lg mr-1"></i> {{ location }}
 						</address>
 						{%- endif -%}
 						{%- if links -%}
-						<div class="d-inline my-1 mx-2 mx-lg-0 chulapa-links-hover-only">
+						<div class="d-inline my-1 mx-2 mx-md-0 chulapa-links-hover-only">
 							{%- for item in links -%}
 							<a class="ml-1" href="{{ item.url }}"><i class="{{ item.icon }} fa-lg"></i></a>
 							{%- endfor -%}
