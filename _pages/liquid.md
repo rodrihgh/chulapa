@@ -15,7 +15,9 @@ This is the new date:
 
 Now it should show a norwegian date:
 
-{%- include snippets/datetranslate.html  date=newDate -%}
+
+{% include snippets/datetranslate.html  date=newDate %}
+
 
 End here
 
