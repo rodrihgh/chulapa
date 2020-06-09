@@ -1,6 +1,6 @@
 {%- assign dateloc = include.date -%}
 {%- assign langlocale = site.locale | downcase | default: "en" | split: "-" | first -%}
-{%- assign supported = "es" | split: "," -%}
+{%- assign supported = "es,fr,de" | split: "," -%}
 
 {% for lang in supported %}
   {% if lang == langlocale %}
@@ -21,6 +21,19 @@
                       | split:',' -%}
     {%- assign months = 'enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre' | split:',' -%}
   {%- endif -%}
+  {% if finallang == "fr" %}
+    {%- assign days = 'lundi,mardi,mercredi,jeudi,vendredi,samedi,dimanche' 
+                      | split:',' -%}
+    {%- assign months = 'janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre' 
+					  | split:',' -%}
+  {%- endif -%}
+  {% if finallang == "de" %}
+    {%- assign days = 'montag,dienstag,mittwoch,donnerstag,freitag,samstag,sonntag' 
+                      | split:',' -%}
+    {%- assign months = 'januar,februar,märz,april,mai,juni,juli,august,september,oktober,november,dezember' 
+					  | split:',' -%}
+  {%- endif -%}
+  
   {%- for i in (0..11) -%}
     {%- assign sm = en-months[i] | slice: 0,3 -%}
     {%- assign sml = months[i] | slice: 0,3 -%}

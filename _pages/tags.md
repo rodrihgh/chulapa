@@ -36,16 +36,16 @@ This is an example of how to create a tag cloud. This tag includes posts only
   <a href="{{ document.url | absolute_url }}"><h5>{{ document.title }}</h5></a>
   {% if document.date %}
   {% assign dateformat = document.date | date: "%B %d, %Y" %}
-  <i class="far fa-calendar"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time> | 
+  <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time> | 
   {% endif %}
-  <i class="far fa-clock"></i> {{ readtime }} | 
-  <a href="{{ document.url | absolute_url }}" class="text-primary"><i class="fas fa-external-link-alt mx-2"></i><span class="sr-only">Link</span></a>
+  <i class="far fa-clock" aria-hidden="true"></i> {{ readtime }} | 
+  <a href="{{ document.url | absolute_url }}" class="text-primary"><i class="fas fa-external-link-alt mx-2" aria-hidden="true"></i><span class="sr-only">Link</span></a>
   </article>
   {% endif %}
   {% endfor %}
   <div class="text-right">
       <button type="button" class="btn btn-outline-chulapa btn-sm">
-      <a href="#tags"><i class="fa fa-chevron-up"></i> Back to Top</a>
+      <a href="#tags"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i><span class="sr-only">Top</span></a>
       </button>
   </div>
 </section>
