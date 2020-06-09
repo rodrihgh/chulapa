@@ -1,7 +1,7 @@
       <div class="row pt-1 pt-md-2" id="chulapaDateSocial">
           <div class="col-xl-4 offset-xl-2 col font-italic font-weight-bold text-primary">
             {%- if page.date and page.show_date -%}
-            {%- assign dateformat = document.date | date_to_string -%}
+            {%- assign dateformat = page.date | date_to_string -%}
             <time datetime="{{ page.date | date_to_xmlschema }}">{% include_cached snippets/datetranslate.html  date=dateformat %}<time>
             {%- endif -%}
           </div>
