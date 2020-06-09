@@ -300,3 +300,17 @@
     height: 8vmax;
     @include border-radius(50%);
 }
+
+
+.chulapa-navigation{
+    .fa-stack {
+      color: transparent;
+        @include hover-focus() {
+            color: $link-hover-color;
+        }
+    }
+
+    .fa-inverse {
+        color: $link-color;
+    }
+}
