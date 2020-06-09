@@ -312,5 +312,8 @@
 
     .fa-inverse {
         color: $link-color;
+        @include hover-focus() {
+            color: $white;
+        }
     }
 }
