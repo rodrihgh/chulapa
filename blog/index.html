@@ -12,10 +12,10 @@ excerpt: This is my blog
    <h3>Paginators</h3>
 {% if paginator.total_pages > 1 %}
 	{% if paginator.previous_page %}
-		<p><a href="{{ paginator.previous_page_path | prepend: absolute_url }}">Newer Posts</a></p>
+		<p><a href="{{ paginator.previous_page_path | relative_url }}">Newer Posts</a></p>
 	{% endif %}
 	{% if paginator.next_page %}
-<p><a href="{{ paginator.next_page_path | prepend: absolute_url }}">Older Posts</a></p>
+<p><a href="{{ paginator.next_page_path | relative_url }}">Older Posts</a></p>
 	{% endif %}
 {% endif %}
 
