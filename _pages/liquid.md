@@ -15,7 +15,6 @@ This is the new date:
 
 Now it should show a norwegian date:
 
-{%- include snippets/datetranslate.liquid  dateString=newDate language='Norwegian' -%}
 
 End here
 
