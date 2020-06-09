@@ -1,7 +1,7 @@
 # A. Site Settings /SEO options
 # Overall options for your site, would affect your site SEO
 # Default values are explained
-locale                  :     #default["en-US"]
+locale                  :    es #default["en-US"] format language_TERRITORY , e.g fr, en-GB, es-MX, pt-BR
 title                   :     Chulapa #default["repository_name"]
 title_separator         :     #default [" | "]
 subtitle                :     A Jekyll theme for Github Pages powered by Bootstrap #default [your-repository-tagline]  
