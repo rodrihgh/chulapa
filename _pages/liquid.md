@@ -7,36 +7,15 @@ show_author : true
 ---
 
 
-{%- assign ogdesc = page.excerpt | default: page.content | 
-                markdownify |  newline_to_br | 
-                replace:"<br />", ",.," | 
-                replace:"{{", ",.," | 
-                replace:"{%", ",.," | 
-                split: ",.," | first | strip_html | 
-                escape_once -%}
-                
-{{ ogdesc }}
+{%- assign newDate = 'now' | date:'%A %B %d, %Y' -%}
+This is the new date:
 
-# test2 
+{% newdate  %}
 
 
-{%- assign ogdesc = ogdesc | default: page.title -%}
+Now it should show a norwegian date:
 
-{{ ogdesc}}
+{%- include snippets/datetranslate.liquid  dateString=newDate language='Norwegian' -%}
 
-# test3
-
-
-
-{%- assign links = page.author.links | default: site.author.links -%}
-{%- for item in links -%}
-  {%- if item.url contains "twitter.com/" -%}
-    {%- assign twitterauthor = item.url | split: "/" | last -%}
-    {%- break -%}
-  {%- endif -%}
-{%- endfor -%}
-
-Under this
-
-{{ twitterauthor }}
+End here
 
