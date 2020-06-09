@@ -7,7 +7,7 @@ show_author : true
 ---
 
 
-{%- assign newDate = 'now' | date_to_string -%}
+{%- assign newdate = 'now' | date_to_string -%}
 This is the new date:
 
 {{ newdate }}
@@ -16,8 +16,11 @@ This is the new date:
 Now it should show a norwegian date:
 
 
-{% include snippets/datetranslate.html  date=newDate %}
+{% include snippets/datetranslate.html  date=newdate %}
 
+
+
+{% include snippets/datetranslate.html  date="December Monday" %}
 
 End here
 
