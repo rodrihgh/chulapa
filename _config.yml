@@ -173,7 +173,6 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "cols2"
       header_type       : "post"
       include_on_search : true
       show_date         : true
@@ -188,7 +187,6 @@ defaults:
       path: ""
       type: "demo"
     values:
-      layout            : "default"
       header_type       : "hero"
       show_bottomnavs   : true
       show_sociallinks  : true
