@@ -30,7 +30,7 @@ End here
 - {{ item.title }} {{ item.date }}{{ item.collection }}
 
 ```
-{{ item }}
+{{ item.tags }}
 ```
 {% endfor %}
 {% endfor %}
