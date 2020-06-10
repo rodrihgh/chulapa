@@ -6,6 +6,9 @@ permalink: /liquid
 show_author : true
 ---
 
+{% assign alldocs = site.documents %}		
+{% assign grouptag =  alldocs | map: 'tags' | join: ','  | split: ','  %}
+{{ grouptag | inspect }}
 
 {%- assign newdate = 'now' | date_to_string -%}
 This is the new date:
