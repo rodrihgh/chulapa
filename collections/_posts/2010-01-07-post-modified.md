@@ -1,5 +1,4 @@
 ---
-layout: cols2
 title: "Plain post"
 subtitle: "Example"
 show_sociallinks: false
