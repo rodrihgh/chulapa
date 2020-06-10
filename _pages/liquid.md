@@ -24,3 +24,4 @@ Now it should show a norwegian date:
 
 End here
 
+{{ site.collections }}
