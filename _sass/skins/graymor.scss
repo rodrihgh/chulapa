@@ -17,7 +17,7 @@ $enable-rounded:false;
 
 
 // Add SASS theme customizations here..
-$link-color: darken($primary, 20%);
+$link-color: lighten($primary, 20%);
 //Custom hero
 $hero-chulapa-bg-color: $primary;
 $chulapa-col: $primary;
