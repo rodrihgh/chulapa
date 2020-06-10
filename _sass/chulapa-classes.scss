@@ -302,7 +302,7 @@
 }
 
 
-.chulapa-navigation{
+.chulapa-pagination{
     .fa-stack {
       color: transparent;
         @include hover-focus() {
@@ -316,4 +316,64 @@
             color: $white;
         }
     }
+    
+    .page-link {
+      position: relative;
+      display: block;
+      padding: $pagination-padding-y $pagination-padding-x;
+      line-height: $pagination-line-height;
+      color: $body-color;
+      text-decoration: if($link-decoration == none, null, none);
+
+      &:hover {
+        z-index: 2;
+        color: $white;
+        text-decoration: none;
+        background-color: $link-hover-color;
+        border-color: $link-color;
+      }
+      
+      &:focus {
+        z-index: 3;
+        outline: $pagination-focus-outline;
+        box-shadow: $pagination-focus-box-shadow;
+        }
+    }
+    
+    .page-item {
+      &:first-child {
+        .page-link {
+          margin-left: 0;
+          @include border-left-radius($border-radius);
+        }
+      }
+      &:last-child {
+        .page-link {
+          @include border-right-radius($border-radius);
+        }
+      }
+    
+      &.active .page-link {
+        z-index: 3;
+        color: $white;
+        background-color: $link-hover-color;
+        border-color: $link-color;
+      }
+    
+      &.disabled .page-link {
+        color: transparent;
+        pointer-events: none;
+        // Opinionated: remove the "hand" cursor set previously for .page-link
+        cursor: auto;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+    
+    .chulapa-pagination-numbers{
+      .page-item {
+        @include border-radius(50%);
+        }
+    }
+
 }
