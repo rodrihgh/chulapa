@@ -1,5 +1,4 @@
 ---
-layout: cols2
 title: Playground
 subtitle: Liquid 
 permalink: /liquid

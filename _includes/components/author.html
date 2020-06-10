@@ -14,8 +14,9 @@
 				<div class="row mt-2">
 					<div class="col text-md-center">
 					  {%- if location -%}
-						<address class="d-inline d-md-block my-1 small">
-							<i class="fas fa-map-marker-alt fa-lg mr-1"></i> {{ location }}
+						<address class="d-inline d-md-block my-1 small chulapa-links-hover-only">
+						  <a href="{{- location | replace: ' ', '+' | prepend: 'https://www.google.com/maps/search/?api=1&query=' | url_encode -}}">
+						    <i class="fas fa-map-marker-alt fa-lg mr-1" aria-hidden="true"></i>{{ location }}</a>
 						</address>
 						{%- endif -%}
 						{%- if links -%}
