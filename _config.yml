@@ -206,7 +206,7 @@ defaults:
 
 
 # XX. Other settings - no need to modify
-incremental  : true #Experimental, can cause problems. You may need to remove this line https://jekyllrb.com/docs/configuration/incremental-regeneration/
+#incremental  : true #Experimental, can cause problems. You may need to remove this line https://jekyllrb.com/docs/configuration/incremental-regeneration/
 plugins:
   - jekyll-github-metadata
   - jekyll-paginate
