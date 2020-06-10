@@ -34,3 +34,5 @@ End here
 ```
 {% endfor %}
 {% endfor %}
+
+{{ site.tags }}
