@@ -3,7 +3,7 @@
 {%- else -%}
   {%- assign brandurl = site.url | append: site.baseurl -%}
 {%- endif -%}
-{%- assign thispageurl = page.url | replace: ".html", ""  -%}
+{%- assign thispageurl = include.pageurl | replace: ".html", ""  -%}
  <nav class="navbar navbar-expand-md sticky-top navbar-chulapa">
 	<div class="container-fluid mx-md-2">
 		<a class="navbar-brand" href="{{ brandurl }}">
