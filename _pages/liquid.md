@@ -6,6 +6,11 @@ permalink: /liquid
 show_author : true
 ---
 
+{% for repository in site.github.public_repositories %}
+  * {{ repository.name }} ({{ repository.html_url }}) {{ repository.topics }}
+{% endfor %}
+
+
 {% assign alldocs = site.documents %}		
 {% assign grouptag =  alldocs | map: 'tags' | join: ','  | split: ','  %}
 {{ grouptag | group_by: key }}
