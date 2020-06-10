@@ -1,7 +1,65 @@
+{%- if site.chulapa-skin.theme == 'preptor' -%}
+	{%- assign name = 'Preptor' - %}
+	{%- assign author = 'Tophat' - %}
+	{%- assign url = 'https://themesguide.github.io/top-hat/dist/' - %}
+{%- elsif site.chulapa-skin.theme == 'lymcha' -%}
+	{%- assign name = 'Lymcha' - %}
+	{%- assign author = 'Tophat' - %}
+	{%- assign url = 'https://themesguide.github.io/top-hat/dist/' - %}
+{%- elsif site.chulapa-skin.theme == 'hootstrap' -%}
+	{%- assign name = 'Hootstrap' - %}
+	{%- assign author = 'Tophat' - %}
+	{%- assign url = 'https://themesguide.github.io/top-hat/dist/' - %}
+{%- elsif site.chulapa-skin.theme == 'deeply' -%}
+	{%- assign name = 'Deeply' - %}
+	{%- assign author = 'Tophat' - %}
+	{%- assign url = 'https://themesguide.github.io/top-hat/dist/' - %}
+{%- elsif site.chulapa-skin.theme == 'graymor' -%}
+	{%- assign name = 'Graymor' - %}
+	{%- assign author = 'Tophat' - %}
+	{%- assign url = 'https://themesguide.github.io/top-hat/dist/' - %}
+{%- elsif site.chulapa-skin.theme == 'wandoo' -%}
+	{%- assign name = 'Wandoo' - %}
+	{%- assign author = 'Tophat' - %}
+	{%- assign url = 'https://themesguide.github.io/top-hat/dist/' - %}
+{%- elsif site.chulapa-skin.theme == 'sketchy' -%}
+	{%- assign name = 'Sketchy' - %}
+	{%- assign author = 'Bootswatch' - %}
+	{%- assign url = 'https://bootswatch.com/' - %}
+{%- elsif site.chulapa-skin.theme == 'lux' -%}
+	{%- assign name = 'Lux' - %}
+	{%- assign author = 'Bootswatch' - %}
+	{%- assign url = 'https://bootswatch.com/' - %}
+{%- elsif site.chulapa-skin.theme == 'journal' -%}
+	{%- assign name = 'Journal' - %}
+	{%- assign author = 'Bootswatch' - %}
+	{%- assign url = 'https://bootswatch.com/' - %}
+{%- elsif site.chulapa-skin.theme == 'minty' -%}
+	{%- assign name = 'Minty' - %}
+	{%- assign author = 'Bootswatch' - %}
+	{%- assign url = 'https://bootswatch.com/' - %}
+{%- elsif site.chulapa-skin.theme == 'twitter' -%}
+	{%- assign name = 'Twitter' - %}
+	{%- assign author = 'dieghernan' - %}
+	{%- assign url = 'https://github.com/dieghernan' - %}
+{%- elsif site.chulapa-skin.theme == 'twitter-dim' -%}
+	{%- assign name = 'TwitterDim' - %}
+	{%- assign author = 'dieghernan' - %}
+	{%- assign url = 'https://github.com/dieghernan' - %}
+{%- elsif site.chulapa-skin.theme == 'twitter-lights-out' -%}
+	{%- assign name = 'TwitterLightsOut' - %}
+	{%- assign author = 'dieghernan' - %}
+	{%- assign url = 'https://github.com/dieghernan' - %}
+{%- elsif site.chulapa-skin.theme == 'chulapa' -%}
+	{%- assign name = 'Chulapa' - %}
+	{%- assign author = 'dieghernan' - %}
+	{%- assign url = 'https://github.com/dieghernan' - %}
+{%- else -%}
+{%- endif -%}
 <!-- Footer -->
  <footer class="footer-chulapa text-center mt-2 pt-3">
      <div class="container">
-         {% if page.show_comments -%}
+         {% if include.show_comments -%}
          {% include components/disqus.html %}
          {%- endif %}
          <div class="row">
@@ -23,8 +81,8 @@
                  {%- endif -%}
                     <p class="pb-3">&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.github.owner_name }}</p>
           					<!-- Do not remove this in order to give  attributions -->
-          					{%- if include.skinner -%}
-          					<p class="small"><b>{{- include.skinner.name -}}</b> skin by <a href="{{ include.skinner.url }}">{{ include.skinner.author }}</a></p>
+          					{%- if site.chulapa-skin.theme -%}
+          					<p class="small"><b>{{- name -}}</b> skin by <a href="{{ url }}">{{ author }}</a></p>
           					{%- endif -%}
           					<p class="small">Theme 
                         <a href="#" class="chulapa">Chulapa</a> 
