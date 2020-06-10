@@ -24,10 +24,13 @@ Now it should show a norwegian date:
 
 End here
 
-{% for item in site.collections %}
+{% for col in site.collections %}
+{% assign docs = col.docs %}
+{% for item in docs %}
 - {{ item.title }} {{ item.date }}{{ item.collection }}
 
 ```
 {{ item }}
 ```
+{% endfor %}
 {% endfor %}
