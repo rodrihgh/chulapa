@@ -302,11 +302,12 @@
 }
 
 
+
 .chulapa-pagination{
     .fa-stack {
       color: transparent;
         @include hover-focus() {
-            color: $link-hover-color;
+            color: $pagination-chulapa-bg-hover-color;
         }
     }
 
@@ -322,17 +323,17 @@
       display: block;
       padding: $pagination-padding-y $pagination-padding-x;
       line-height: $pagination-line-height;
-      color: $body-color;
+      color: $pagination-chulapa-text-color;
       text-decoration: if($link-decoration == none, null, none);
       border: 0;
       background-color: transparent;
 
       &:hover {
         z-index: 2;
-        color: $white;
+        color: $pagination-chulapa-text-hover-color;
         text-decoration: none;
-        background-color: $link-hover-color;
-        border-color: $link-color;
+        background-color: $pagination-chulapa-bg-hover-color;
+        border-color: $pagination-chulapa-bg-hover-color;
       }
       
       &:focus {
@@ -357,9 +358,9 @@
     
       &.active .page-link {
         z-index: 3;
-        color: $white;
-        background-color: $link-hover-color;
-        border-color: $link-color;
+        color: $pagination-chulapa-text-hover-color;
+        background-color: $pagination-chulapa-bg-hover-color;
+        border-color: $pagination-chulapa-bg-hover-color;
       }
     
       &.disabled .page-link {

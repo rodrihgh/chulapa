@@ -37,3 +37,11 @@ $pre-chulapa-bg-color: lighten($blockquote-chulapa-bg-color, 2%) !default;
 //Table
 $thead-chulapa-bg-color: $chulapa-col !default;
 $thead-chulapa-text-color: color-yiq($thead-chulapa-bg-color, $black, $white) !default;
+
+
+//Pagination
+$pagination-chulapa-text-color: $body-color !default;
+$pagination-chulapa-bg-hover-color: $chulapa-col !default;
+$pagination-chulapa-text-hover-color: color-yiq($pagination-chulapa-bg-hover-color, $black, $white) !default;
+
+

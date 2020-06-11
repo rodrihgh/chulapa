@@ -728,5 +728,13 @@ body p a {
   border-radius: 255px 25px 225px 25px/25px 225px 25px 255px !important;
 }
 
+.chulapa-avatar-size{
+    border-radius: $border-radius-sm-sketchy !important;
+}
+
+.chulapa-pagination .page-link{
+    border-radius: $border-radius-sm-sketchy  !important;
+}
+
 
 @import "bootstrap/variables";

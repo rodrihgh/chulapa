@@ -84,5 +84,8 @@ $navbar-chulapa-toggler-color: rgba(white, 0.4);
 $navbar-chulapa-toggler-border-color: rgba(white, 0.1);
 $navbar-chulapa-toggler-color-bg: transparent;
 
+$pagination-chulapa-text-color: $primary;
+$pagination-chulapa-bg-hover-color: $primary;
+
 @import "bootstrap/functions";
 @import "bootstrap/variables";
