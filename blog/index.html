@@ -24,22 +24,17 @@ excerpt: This is my blog
 <div class="text-warning">
 {% assign max_per_page = 3 %}
 {% assign lastpage = paginator.total_pages | minus: max_per_page %}
-{% for page in (1..paginator.total_pages) %}
-	{% if paginator.page <= max_per_page %}
-		{{ page }}
-	{% elsif paginator.page == paginator.total_pages  %}
-	{{ page }}__
-		{% for numitems in (1..max_per_page) reversed  %}
-			{{ paginator.page | minus: numitems | plus: 1 }}
-		{% endfor %}
-	{% else %}
-	{{ page }}__
-			{% for numitems in (1..max_per_page)   %}
-				{{ paginator.page | minus: max_per_page | plus: numitems | plus: 1 }}
-		{% endfor %}
-		.
-	{% endif %}
-{% endfor %}
+{% if paginator.page <= max_per_page %}
+1-{{ max_per_page }}
+{% elsif paginator.page => lastpage %}
+{{ lastpage }}-{{ paginator.total_pages }}
+{% else %}
+{{ paginator.page | minus: max_per_page | plus: 1}}-{{ paginator.page | plus: 1 }}
+
+{% endif %}
+
+
+
 </div>
    
    <h3>Paginators</h3>
