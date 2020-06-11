@@ -1,16 +1,16 @@
-{%- assign classitemnext = "disabled" -%}
+{%- assign classitemnext = "invisible" -%}
 {%- if page.next.url -%}
  {%- assign classitemnext = "" -%}
 {%- endif -%}
 {%- if page.url contains page.next.url -%}
- {%- assign classitemnext = "disabled" -%}
+ {%- assign classitemnext = "invisible" -%}
 {%- endif -%}
-{%- assign classitemprevious = "disabled" -%}
+{%- assign classitemprevious = "invisible" -%}
 {%- if page.previous.url -%}
  {%- assign classitemprevious = "" -%}
 {%- endif -%}
 {%- if page.url contains page.previous.url -%}
- {%- assign classitemprevious = "disabled" -%}
+ {%- assign classitemprevious = "invisible" -%}
 {%- endif -%}
 
 <nav aria-label="Navigation" class="container-lg chulapa-pagination  ">

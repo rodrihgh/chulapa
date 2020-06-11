@@ -21,6 +21,26 @@ excerpt: This is my blog
 <p>paginator.next_page {{ paginator.next_page }}</p>
 <p>paginator.next_page_path {{ paginator.next_page_path }}</p>
 
+<div class="text-warning">
+{% assign max_per_page = 3 %}
+{% assign lastpage = paginator.total_pages | minus: max_per_page %}
+{% for page in (1..paginator.total_pages) %}
+	{% if page <= max_per_page %}
+		{{ page }}
+	{% elsif page == paginator.total_pages  %}
+	{{ page }}__
+		{% for numitems in (1..max_per_page) reversed  %}
+			{{ page | minus: numitems | plus: 1 }}
+		{% endfor %}
+	{% else %}
+	{{ page }}__
+			{% for numitems in (1..max_per_page)   %}
+				{{ page | minus: max_per_page | plus: numitems | plus: 1 }}
+		{% endfor %}
+		.
+	{% endif %}
+{% endfor %}
+</div>
    
    <h3>Paginators</h3>
 {% if paginator.total_pages > 1 %}
