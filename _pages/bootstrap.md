@@ -26,12 +26,14 @@ author:
 ---
 
 
-This is a demo page showing the look-and-feel of your theme. 
+This is a demo page showing the different components of Bootstrap and how they look on your site.
+
+
 
 {%- include snippets/bootstrapdemo.html  -%}
 
 
-<nav aria-label="Page navigation example" class="chulapa-pagination">
+<nav aria-label="Page navigation example" class="mt-4 chulapa-pagination">
   <ul class="pagination justify-content-center ">
   <li class="page-item  text-left">
   <a class="page-link border-0" href="#" tabindex="-1">
