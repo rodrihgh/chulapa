@@ -347,12 +347,12 @@
       &:first-child {
         .page-link {
           margin-left: 0;
-          @include border-left-radius($border-radius);
+          @include border-radius($border-radius);
         }
       }
       &:last-child {
         .page-link {
-          @include border-right-radius($border-radius);
+          @include border-radius($border-radius);
         }
       }
     
@@ -364,7 +364,7 @@
       }
     
       &.disabled .page-link {
-        color: transparent;
+        color: change-color($pagination-chulapa-text-color,$alpha: 0.7);
         pointer-events: none;
         // Opinionated: remove the "hand" cursor set previously for .page-link
         cursor: auto;
