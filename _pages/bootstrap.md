@@ -31,7 +31,7 @@ This is a demo page showing the different components of Bootstrap and how they l
 
 
 
-{%- include snippets/bootstrapdemo.html  -%}
+{% include snippets/bootstrapdemo.html  %}
 
 
 <nav aria-label="Page navigation example" class="mt-4 chulapa-pagination">
