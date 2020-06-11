@@ -372,7 +372,7 @@
       }
     }
     
-    .chulapa-pagination-numbers {
+    .chulapa-pagination-round {
       .page-item {
         &.active .page-link {
         	@include border-radius(50%);
