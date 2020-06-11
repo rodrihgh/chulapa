@@ -25,17 +25,17 @@ excerpt: This is my blog
 {% assign max_per_page = 3 %}
 {% assign lastpage = paginator.total_pages | minus: max_per_page %}
 {% for page in (1..paginator.total_pages) %}
-	{% if page <= max_per_page %}
+	{% if paginator.page <= max_per_page %}
 		{{ page }}
-	{% elsif page == paginator.total_pages  %}
+	{% elsif paginator.page == paginator.total_pages  %}
 	{{ page }}__
 		{% for numitems in (1..max_per_page) reversed  %}
-			{{ page | minus: numitems | plus: 1 }}
+			{{ paginator.page | minus: numitems | plus: 1 }}
 		{% endfor %}
 	{% else %}
 	{{ page }}__
 			{% for numitems in (1..max_per_page)   %}
-				{{ page | minus: max_per_page | plus: numitems | plus: 1 }}
+				{{ paginator.page | minus: max_per_page | plus: numitems | plus: 1 }}
 		{% endfor %}
 		.
 	{% endif %}
