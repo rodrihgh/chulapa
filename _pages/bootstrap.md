@@ -9,7 +9,6 @@ header_img: "https://i.imgur.com/TveA612.jpg"
 date: 2015-07-28
 include_on_search : true
 show_date         : true
-show_bottomnavs   : true
 show_sociallinks  : true
 show_comments     : true
 show_tags         : true
@@ -27,5 +26,35 @@ author:
 ---
 
 
+This is a demo page showing the look-and-feel of your theme. 
+
 {%- include snippets/bootstrapdemo.html  -%}
 
+
+<nav aria-label="Page navigation example" class="chulapa-pagination">
+  <ul class="pagination justify-content-center ">
+  <li class="page-item  text-left">
+  <a class="page-link border-0" href="#" tabindex="-1">
+  <i class="fa fa-caret-left fa-lg" aria-hidden="true"></i><span class="sr-only">Previous</span>
+  </a>
+  </li>
+  <li class="page-item  mr-auto text-left">
+  <a class="page-link border-0" href="#" tabindex="-1">
+  <i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
+  </a>
+  </li>
+  <div class="d-flex chulapa-pagination-round">
+  <li class="page-item mx-3"><a class="page-link" href="#">1</a></li>
+  <li class="page-item mx-3 active"><a class="page-link" href="#">2</a></li>
+  <li class="page-item mx-3"><a class="page-link" href="#">3</a></li>
+  </div>
+  <li class="page-item ml-auto text-right disabled">
+  <a class="page-link border-0" href="#">
+  <i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
+  </li>
+  <li class="page-item text-right">
+  <a class="page-link border-0" href="#">
+  <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i><span class="sr-only">Next</span></a>
+  </li>
+  </ul>
+</nav>
