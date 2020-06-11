@@ -10,6 +10,8 @@ excerpt: This is my blog
    {% endfor %}
    
  
+{{ }} 
+ 
 <p>paginator.page {{ paginator.page }}</p>
 <p>paginator.per_page {{ paginator.per_page }}</p>
 <p>paginator.total_posts {{ paginator.total_posts }}</p>
@@ -40,6 +42,17 @@ excerpt: This is my blog
     {% endif %}
   {% endfor %}
   
+  <p>
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="lead">{{ page }}</span>
+    {% elsif page == 1 %}
+      {{ paginator.previous_page_path  }}
+    {% else %}
+      {{ site.paginate_path | replace: ':num', page }}
+    {% endif %}
+  {% endfor %}  
+  </p>
   
 <nav aria-label="Page navigation example" class="mt-4 chulapa-pagination">
   <ul class="pagination justify-content-center ">
