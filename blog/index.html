@@ -26,11 +26,6 @@ excerpt: This is my blog
 {% assign lastpage = paginator.total_pages | minus: max_per_page %}
 {% if paginator.page <= max_per_page %}
 1-{{ max_per_page }}
-{% elsif paginator.page => lastpage %}
-{{ lastpage }}-{{ paginator.total_pages }}
-{% else %}
-{{ paginator.page | minus: max_per_page | plus: 1}}-{{ paginator.page | plus: 1 }}
-
 {% endif %}
 
 
