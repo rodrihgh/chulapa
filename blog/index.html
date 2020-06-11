@@ -41,16 +41,21 @@ excerpt: This is my blog
       <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
   {% endfor %}
-  
-
+ 
+{%- if paginator.page == 1 -%}
+  {%- assign disfirst = "disabled" -%}
+{%- endif -%}
+{%- if paginator.page == paginator.total_pages  -%}
+  {%- assign dislast = "disabled" -%}
+{%- endif -%}
 <nav aria-label="Page navigation example" class="mt-4 chulapa-pagination">
   <ul class="pagination justify-content-center ">
-  <li class="page-item  text-left">
+  <li class="page-item text-left {{ disfirst }}">
   <a class="page-link border-0" href="{{ site.paginate_path | relative_url | replace: '/page:num/', '' }}" tabindex="-1">
   <i class="fa fa-caret-left fa-lg" aria-hidden="true"></i><span class="sr-only">First</span>
   </a>
   </li>
-  <li class="page-item  mr-auto text-left">
+  <li class="page-item  mr-auto text-left {{ disfirst }}">
   <a class="page-link border-0" href="#" tabindex="-1">
   <i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
   </a>
@@ -60,11 +65,11 @@ excerpt: This is my blog
   <li class="page-item mx-3 active"><a class="page-link" href="#">2</a></li>
   <li class="page-item mx-3"><a class="page-link" href="#">3</a></li>
   </div>
-  <li class="page-item ml-auto text-right disabled">
+  <li class="page-item ml-auto text-right {{ dislast }}">
   <a class="page-link border-0" href="#">
   <i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
   </li>
-  <li class="page-item text-right">
+  <li class="page-item text-right {{ dislast }}">
   <a class="page-link border-0" href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">
   <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i><span class="sr-only">Last</span></a>
   </li>
