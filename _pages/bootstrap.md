@@ -30,6 +30,7 @@ This is a demo page showing the different components of Bootstrap and how they l
 
 
 
+
 {%- include snippets/bootstrapdemo.html  -%}
 
 
