@@ -22,7 +22,7 @@ excerpt: This is my blog
 <p>paginator.next_page_path {{ paginator.next_page_path }}</p>
 
 <div class="text-warning">
-{% assign max_per_page = 4 | at_most : paginator.total_pages %}
+{% assign max_per_page = 12 | at_most : paginator.total_pages %}
 {% assign lastpaginator = paginator.total_pages | minus: max_per_page | plus: 1 %}
 {% if paginator.page < max_per_page %}
 1-{{ max_per_page }}
