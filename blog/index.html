@@ -23,9 +23,12 @@ excerpt: This is my blog
 
 <div class="text-warning">
 {% assign max_per_page = 3 %}
-{% assign lastpage = paginator.total_pages | minus: max_per_page %}
+{% assign lastpaginator = paginator.total_pages | minus: max_per_page %}
 {% if paginator.page <= max_per_page %}
 1-{{ max_per_page }}
+{% else %}
+{{ lastpaginator }}-{{ paginator.total_pages }}
+
 {% endif %}
 
 
@@ -64,7 +67,7 @@ excerpt: This is my blog
   <a class="page-link border-0" href="{{ site.paginate_path | relative_url | replace: '/page:num/', '' }}" tabindex="-1">
   <i class="fa fa-caret-left fa-lg" aria-hidden="true"></i><span class="sr-only">First</span>
   </a>
-  </li>
+  </li>hola 
   <li class="page-item  mr-auto text-left {{ disfirst }}">
   <a class="page-link border-0" href="{{ paginator.previous_page_path | relative_url }}" tabindex="-1">
   <i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
