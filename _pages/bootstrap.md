@@ -26,7 +26,7 @@ author:
 ---
 
 
-This is a demo page showing the different components of Bootstrap and how they look on your site.
+This is a demo page showing the different components of Bootstrap and how they look on your site. Check the [Chulapa Themer sandbox](https://www.codeply.com/p/qhEml875ge) for define your settings and don't forget to update your `_config.yml`.
 
 
 
