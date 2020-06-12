@@ -47,11 +47,17 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <!-- CSS -->
     {% for font in site.googlefonts -%}
+    {% if font.url -%}
     <link href="{{ font.url }}" rel="stylesheet">
+    {%- endif %}
     {%- endfor %}
     <!-- Fontawesome-->
     <!-- v5.13 -->
+    {% if site.fa5_kit_code -%}
+    <script src="https://kit.fontawesome.com/{{ site.fa5_kit_code }}.js" crossorigin="anonymous"></script>
+    {%- else -%}
     <link rel="stylesheet" href="{{- "assets/fontawesome/css/all.min.css " | relative_url -}}" />
+    {%- endif %}
     <!-- Theme css (Bootstrap included) -->
     <link rel="stylesheet" href="{{- "assets/css/main.css " | relative_url -}}" />
     <!-- Custom css -->

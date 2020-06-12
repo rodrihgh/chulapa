@@ -11,9 +11,9 @@ img {
 
 table {
     @extend .table;
-    @extend .table-sm;
-    @include fluid-type(font-size,breakpoint-min("sm"),  breakpoint-min("lg"), 0.75rem, 0.95rem);
     color: $body-color;
+    display: block;
+    overflow-x: auto;
     thead {
         th {
             color: $thead-chulapa-text-color;
