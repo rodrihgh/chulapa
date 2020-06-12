@@ -15,7 +15,7 @@ timezone                :     "Europe/Madrid" #See https://jekyllrb.com/docs/con
 # Add social links using full urls and "icon" using Fontawesome 5 selectors (e.g. "fab fa-twitter")
 author:
   name                  :      Name Surname Company
-  avatar                :      https://github.com/dieghernan.png #Info: Your github avatar on https://github.com/[USERNAME].png
+  avatar                :      ./assets/img/site/brand_black.png #Info: Your github avatar on https://github.com/[USERNAME].png
   location              :      false
   links:                
     - url: https://twitter.com/jack
