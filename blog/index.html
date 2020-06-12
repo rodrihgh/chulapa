@@ -9,86 +9,22 @@ excerpt: This is my blog
    <p>{{ post.title }} - <a href="{{ post.url | absolute_url }}">link</a></p>
    {% endfor %}
    
- 
-{{ site.paginate_path }} 
- 
-<p>paginator.page {{ paginator.page }}</p>
-<p>paginator.per_page {{ paginator.per_page }}</p>
-<p>paginator.total_posts {{ paginator.total_posts }}</p>
-<p>paginator.total_pages {{ paginator.total_pages }}</p>
-<p>paginator.previous_page {{ paginator.previous_page }}</p>
-<p>paginator.previous_page_path {{ paginator.previous_page_path }}</p>
-<p>paginator.next_page {{ paginator.next_page }}</p>
-<p>paginator.next_page_path {{ paginator.next_page_path }}</p>
-
-<div class="text-warning">
-{% assign max_per_page = 8 | at_most : paginator.total_pages %}
-{% assign lastpaginator = paginator.total_pages | minus: max_per_page | plus: 1 %}
-{% if paginator.page < max_per_page %}
-1-{{ max_per_page }}
-{% elsif paginator.page >= lastpaginator  %}
-{{ lastpaginator }}-{{ paginator.total_pages }}
-{% else %}
-
-{{ paginator.page | minus: max_per_page | plus: 2 }}-{{ paginator.page | plus: 1 }}
-
-{% endif %}
-
-
-
-</div>
    
-   <h3>Paginators</h3>
-{% if paginator.total_pages > 1 %}
-	{% if paginator.previous_page %}
-		<p><a href="{{ paginator.previous_page_path | relative_url }}">Newer Posts</a></p>
-	{% endif %}
-	{% if paginator.next_page %}
-<p><a href="{{ paginator.next_page_path | relative_url }}">Older Posts</a></p>
-	{% endif %}
+{% assign max_per_page = site.paginator_maxnum | 
+                         default: 3 | at_least: 2 | 
+                         at_most : paginator.total_pages %}
+{% assign lastpaginator = paginator.total_pages |
+                          minus: max_per_page | plus: 1 %}
+
+{% if paginator.page < max_per_page %}
+  {% assign init: 1 %}
+  {% assign end: max_per_page %}
+{% elsif paginator.page >= lastpaginator  %}
+  {% assign init: lastpaginator %}
+  {% assign end: paginator.total_pages %}
+{% else %}
+  {% assign init: paginator.page | minus: max_per_page | plus: 2 %}
+  {% assign end: paginator.page | plus: 1 %}
 {% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
- 
-{%- if paginator.page == 1 -%}
-  {%- assign disfirst = "disabled" -%}
-{%- endif -%}
-{%- if paginator.page == paginator.total_pages  -%}
-  {%- assign dislast = "disabled" -%}
-{%- endif -%}
-<nav aria-label="Page navigation example" class="mt-4 chulapa-pagination">
-  <ul class="pagination justify-content-center ">
-  <li class="page-item text-left {{ disfirst }}">
-  <a class="page-link border-0" href="{{ site.paginate_path | relative_url | replace: '/page:num/', '' }}" tabindex="-1">
-  <i class="fa fa-caret-left fa-lg" aria-hidden="true"></i><span class="sr-only">First</span>
-  </a>
-  </li>hola 
-  <li class="page-item  mr-auto text-left {{ disfirst }}">
-  <a class="page-link border-0" href="{{ paginator.previous_page_path | relative_url }}" tabindex="-1">
-  <i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
-  </a>
-  </li>
-  <div class="d-flex chulapa-pagination-round">
-  <li class="page-item mx-3"><a class="page-link" href="#">1</a></li>
-  <li class="page-item mx-3 active"><a class="page-link" href="#">2</a></li>
-  <li class="page-item mx-3"><a class="page-link" href="#">3</a></li>
-  </div>
-  <li class="page-item ml-auto text-right {{ dislast }}">
-  <a class="page-link border-0" href="{{ paginator.next_page_path | relative_url }}">
-  <i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
-  </li>
-  <li class="page-item text-right {{ dislast }}">
-  <a class="page-link border-0" href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">
-  <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i><span class="sr-only">Last</span></a>
-  </li>
-  </ul>
-</nav>
-
+{{ init }} to {{ end }}
