@@ -11,9 +11,9 @@ img {
 
 table {
     @extend .table;
+    @extend .table-sm;
+    @extend .table-responsive;
     color: $body-color;
-    display: block;
-    overflow-x: auto;
     thead {
         th {
             color: $thead-chulapa-text-color;
