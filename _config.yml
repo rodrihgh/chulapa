@@ -26,7 +26,7 @@ author:
       icon: "fab fa-github"
     - url: "srr"
       icon: "fab fa-instagram"
-fa5_kit_code: f9508d0713  # Your FontAwesome 5 kit code. If not provided a free hosted version (slower) will be loaded:  https://fontawesome.com/ 
+fa5_kit_code:  # Your FontAwesome 5 kit code. If not provided a free hosted version (slower) will be loaded:  https://fontawesome.com/ 
 # Web tracking - Google services https://analytics.google.com/analytics/web/
 # gtag_id is the preferred option, see https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=en
 # analytics provided for backwards compatibility
@@ -159,7 +159,7 @@ permalink           : /:year:month:day_:title/
 # Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
 paginate: 2
 paginate_path: "/blog/page:num/"
-paginator_maxnum:  #default[3] Custom: max of number to be displayed on the paginator
+paginator_maxnum: 5  #default[3] Custom: max of number to be displayed on the paginator
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
