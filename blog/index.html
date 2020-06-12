@@ -17,14 +17,14 @@ excerpt: This is my blog
                           minus: max_per_page | plus: 1 %}
 
 {% if paginator.page < max_per_page %}
-  {% assign init: 1 %}
-  {% assign end: max_per_page %}
+  {% assign init= 1 %}
+  {% assign end= max_per_page %}
 {% elsif paginator.page >= lastpaginator  %}
-  {% assign init: lastpaginator %}
-  {% assign end: paginator.total_pages %}
+  {% assign init= lastpaginator %}
+  {% assign end= paginator.total_pages %}
 {% else %}
-  {% assign init: paginator.page | minus: max_per_page | plus: 2 %}
-  {% assign end: paginator.page | plus: 1 %}
+  {% assign init= paginator.page | minus: max_per_page | plus: 2 %}
+  {% assign end= paginator.page | plus: 1 %}
 {% endif %}
 
 {{ init }} to {{ end }}
