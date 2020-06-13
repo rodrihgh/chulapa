@@ -80,6 +80,8 @@ navbar:
     url     :   #default["url/baseurl"]
     img     : "./assets/img/site/brand_black.png"
   nav:
+  - title: Blog
+    url: /blog
   - title: Showcase
     url: /bootstrap
   - title: Second Level
