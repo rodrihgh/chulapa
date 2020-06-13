@@ -269,6 +269,9 @@
     min-height: 10vh;
 }
 
+.chulapa-min-h-20{
+    min-height: 20vh;
+}
 
 
 .chulapa-size-base {
@@ -398,6 +401,6 @@
 }
 
 .chulapa-gradient {
-  background-image: linear-gradient(to bottom right, rgba($light,0.8) 0%, rgba($chulapa-col,0.8) 40%, rgba($dark,0.8) 100%);
+  background-image: linear-gradient(to bottom right, rgba($light,0.8) 0%, rgba($chulapa-col,0.8) 70%, rgba($dark,0.8) 100%);
   
 }
