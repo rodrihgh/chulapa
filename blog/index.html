@@ -6,11 +6,27 @@ excerpt: This is my blog
 ---
 <main class="container-lg pb-3 flex-fill">
   <div class="row pt-2">
-    <article class="col-md-8 offset-md-2">
+    <section class="col-md-8 offset-md-2">
     {% for post in paginator.posts %} 
-    <p>{{ post.title }} - <a href="{{ post.url | absolute_url }}">link</a></p>
+    	<article class="col-12 mb-4">
+		<div class="card mb-3 ">
+			<div class="row no-gutters">
+				<div class="col-md-2 chulapa-min-h-10 chulapa-gradient"
+				{%- if post.header_img %} style="background-image: url('{{ post.header-img | absolute_url }}')"{%-endif-%}>
+				</div>
+				<div class="col-md-10">
+					<div class="card-body">
+					<h5 class="card-title">{{ post.title }}</h5>
+					<h6 class="card-subtitle mb-2 text-muted">{{ post.subtitle }}</h6>
+					<p class="card-text">{{ post.content | markdownify | truncatewords: 20 }}</p>
+					<p class="card-text"><small class="text-muted"><a href="{{ post.url | absolute_url }}">link</a></small></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
     {% endfor %}
-    </article>
+    </section>
   </div>
 </main>
 {%- assign max_per_page = site.paginator_maxnum | 
