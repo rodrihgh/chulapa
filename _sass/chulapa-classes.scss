@@ -328,45 +328,24 @@
     }
     
     .page-link {
-      position: relative;
-      display: block;
-      padding: $pagination-padding-y $pagination-padding-x;
-      line-height: $pagination-line-height;
       color: $pagination-chulapa-text-color;
-      text-decoration: if($link-decoration == none, null, none);
-      border: 0;
       background-color: transparent;
 
       &:hover {
         z-index: 2;
         color: $pagination-chulapa-text-hover-color;
-        text-decoration: none;
         background-color: $pagination-chulapa-bg-hover-color;
         border-color: $pagination-chulapa-bg-hover-color;
       }
       
       &:focus {
-        z-index: 3;
         outline: $pagination-focus-outline;
         box-shadow: $pagination-focus-box-shadow;
         }
     }
     
     .page-item {
-      &:first-child {
-        .page-link {
-          margin-left: 0;
-          @include border-radius($border-radius);
-        }
-      }
-      &:last-child {
-        .page-link {
-          @include border-radius($border-radius);
-        }
-      }
-    
       &.active .page-link {
-        z-index: 3;
         color: $pagination-chulapa-text-hover-color;
         background-color: $pagination-chulapa-bg-hover-color;
         border-color: $pagination-chulapa-bg-hover-color;
@@ -379,23 +358,6 @@
         cursor: auto;
         background-color: transparent;
         border-color: transparent;
-      }
-    }
-    
-    .chulapa-pagination-round {
-      .page-item {
-        &.active .page-link {
-        	@include border-radius(50%);
-        	}
-        	
-        	.page-link {
-        	  @include border-radius(50%);
-        	  border:0;
-        	  
-        	  &:hover{
-        	    @include border-radius(50%);
-        	    }
-        	}
       }
     }
 }

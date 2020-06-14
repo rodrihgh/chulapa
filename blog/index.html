@@ -86,8 +86,7 @@ excerpt: This is my blog
                       {% for num in (init..end) -%}
                       
                         <li class="page-item {% if num== paginator.page %} active {%- endif -%}">
-                          <a class="page-link" href="
-                          {%- if num == 1 -%}{{- site.paginate_path | relative_url | replace: '/page:num/', '' -}}
+                          <a class="page-link border-0" href="{%- if num == 1 -%}{{- site.paginate_path | relative_url | replace: '/page:num/', '' -}}
                           {%- else  -%}{{- site.paginate_path | relative_url | replace: ':num', num -}}{%- endif -%}
                           ">{{- num -}}</a></li>
                       {%- endfor %}
