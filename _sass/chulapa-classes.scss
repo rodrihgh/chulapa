@@ -409,9 +409,8 @@
   @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
   .chulapa-card-img{
-    @include border-radius($card-inner-border-radius 0 $card-inner-border-radius 0);
-    
+    @include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
   }
 }
