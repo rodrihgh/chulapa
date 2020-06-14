@@ -404,3 +404,14 @@
   background-image: linear-gradient(to bottom right, rgba($light,0.8) 0%, rgba($chulapa-col,0.8) 70%, rgba($dark,0.8) 100%);
   
 }
+
+.chulapa-card-img{
+  @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+}
+
+@include media-breakpoint-up(md) {
+  .chulapa-card-img{
+    @include border-radius($card-inner-border-radius 0 $card-inner-border-radius 0);
+    
+  }
+}
