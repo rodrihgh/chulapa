@@ -326,7 +326,9 @@
             color: $white;
         }
     }
-    
+    .chulapa-pagination-inner .page-link { 
+	    border-radius: 0
+	}
     .page-link {
       color: $pagination-chulapa-text-color;
       background-color: transparent;
