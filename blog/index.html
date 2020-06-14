@@ -19,7 +19,9 @@ excerpt: This is my blog
 					<div class="card-body chulapa-links-hover-only">
 					<a href="{{- post.url | absolute_url -}}"><h5 class="card-title">{{- post.title -}}</h5></a>
 					<h6 class="card-subtitle mb-2 text-muted">{{- post.subtitle -}}</h6>
-					<div class="card-text">{{- post.content | truncatewords: 50 | markdownify -}}<a href="{{- post.url | absolute_url -}}" class="text-primary"><i class="fas fa-external-link-alt mx-2" aria-hidden="true"></i><span class="sr-only">Link</span></a></div>
+					<div class="card-text">{{- post.content | truncatewords: 50 | markdownify -}} 
+<p class="text-right"><a href="{{- post.url | absolute_url -}}" class="text-primary"><i class="fas fa-external-link-alt mx-2" aria-hidden="true"></i><span class="sr-only">Link</span></a></p>
+</div>
 					</div>
 					<div class="card-footer">
 					    <p class="small text-right font-italic"><time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: "%d/%m/%Y"  -}}</time></p>
