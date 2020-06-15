@@ -5,11 +5,13 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 	<channel>
-		<title>{{ site.title | xml_escape }}</title>
-		<link>{{ '' | absolute_url }}</link>
+		<title>{{ site.title | append: " " | append: site.subtitle | xml_escape }}</title>
+		<link>{{ absolute_url }}</link>
+		<link rel="self" type="application/atom+xml" href="{{ ./feed.xml | absolute_url }}"/>
+		<id>{{ absolute_url }}</id>
 		<description>{{ site.description | xml_escape }}</description>
-		<language>en</language>
-		<copyright>(c)  {{ site.time | date: '%Y' }}, {{ site.author.name }}</copyright>	
+		<language>{{- site.locale | default: 'en-US' -}}</language>
+		<copyright>(c)  {{ site.time | date: '%Y' }}, {{  site.author.name | default: site.github.owner_name }}</copyright>	
 		<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 		<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
 		<category>blog</category>
@@ -18,7 +20,7 @@ layout: null
 		<image>
 			<title>{{ site.title | xml_escape }}</title>
 			<url>{{- site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -}}</url>
-			<link>{{ '' | absolute_url -}}</link>
+			<link>{{ absolute_url -}}</link>
 			<description>{{ site.description | xml_escape }}</description>
 		</image>
 		{%- assign ogimage = page.header_img | default: site.og_image | 
@@ -30,11 +32,12 @@ layout: null
 		{%- assign words = document.content | strip_html | number_of_words -%}   		{%- assign minutes = words | divided_by: wpm | ceil | at_least: 1 -%}
 		<item>
 			<title>{{ document.title | xml_escape }}</title>
+			<id>{{ document.id  }}</id>
 			<description>
 				<![CDATA[	
  				{% if document.subtitle %}<p><b>{{ document.subtitle | xml_escape }}</b></p>{% endif %}
     				<p>{{ minutes }} min.</p>
-				<p>{{ document.content | markdownify | strip_html | xml_escape | truncatewords: 60 }}
+				<p>{{ document.content | markdownify | strip_html | xml_escape | truncatewords: 100 }}
 				<a href="{{ document.url | absolute_url }}">[Link]</a></p>
 				]]>
 			</description>

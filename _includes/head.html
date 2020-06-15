@@ -51,6 +51,7 @@
     <meta name="twitter:creator" content="@{{- twitterauthor  -}}" />
     {% endif -%}
     <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="alternate" type="application/atom+xml" title="RSS Feed for {{ site.title }}" href="{{ './feed.xml' | absolute_url }}" />
     <!-- CSS -->
     {% for font in site.googlefonts -%}
     {% if font.url -%}
