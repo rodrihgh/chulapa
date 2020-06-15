@@ -10,7 +10,7 @@ show_author : true
 
 {% if keyword %}
 - keyword= {{- keyword -}}
-{% %}
+{% endif %}
 
 
 {% for repository in site.github.public_repositories %}
