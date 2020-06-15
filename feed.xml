@@ -10,15 +10,15 @@ layout: null
 		<description>{{ site.description | xml_escape }}</description>
 		<language>en</language>
 		<copyright>(c)  {{ site.time | date: '%Y' }}, {{ site.author.name }}</copyright>	
-		<pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
-		<lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+		<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+		<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="{{ '/feed.xml' | absolute_url }}" rel="self" type="application/rss+xml" />
 		<image>
 			<title>{{ site.title | xml_escape }}</title>
 			<url>{{- site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -}}</url>
-			<link>{{ '' | absolute_url }}</link>
+			<link>{{- site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -}}</link>
 			<description>{{ site.description | xml_escape }}</description>
 		</image>
 		{%- assign ogimage = page.header_img | default: site.og_image | 
@@ -50,7 +50,7 @@ layout: null
       <media:content url="{{- ogimage -}}" medium="image" width="485" height="321"/>
       <media:thumbnail url="{{- ogimage -}}"  width="150" height="99"/>
       <guid isPermaLink="true">{{ document.url | absolute_url }}</guid>
-      <pubDate>{{ document.date | date_to_xmlschema }}</pubDate>
+      <pubDate>{{ document.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 		</item>
 		{%- endfor -%}
 	</channel>
