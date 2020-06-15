@@ -34,6 +34,11 @@ Example feed
 			<category>{{ tag }}</category>
 			{% endfor %}
 			{% endif %}
+  		<media:title type="html"><![CDATA[{{ document.title }} ]]></media:title>
+      <media:content url="{{- ogimage -}}" medium="image" width="485" height="321"/>
+      <media:thumbnail url="{{- ogimage -}}"  width="150" height="99"/>
+      <guid isPermaLink="true">{{ document.url | absolute_url }}</guid>
+      <pubDate>{{ document.date | date_to_xmlschema }}</pubDate>
 		</item>
 
 
