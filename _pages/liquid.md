@@ -9,7 +9,7 @@ show_author : true
 "item.name == site.github.repository_name " | map: "topics" %}
 
 {% if keyword %}
-- keyword= {{- keyword -}}
+- keyword= {{- keyword - | join: ','}}
 {% endif %}
 
 
