@@ -5,8 +5,13 @@ permalink: /liquid
 show_author : true
 ---
 
-{{ site.github.public_repositories | where_exp:"item",
-"item.name == site.github.repository_name " }}
+{% assign: keyword = site.github.public_repositories | where_exp:"item",
+"item.name == site.github.repository_name " | map: "topics" %}
+
+{% if keyword %}
+- keyword= {{- keyword -}}
+{% %}
+
 
 {% for repository in site.github.public_repositories %}
   * {{ repository.name }} ({{ repository.html_url }}) {{ repository.topics }}
