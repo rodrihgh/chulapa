@@ -1,0 +1,54 @@
+---
+layout: null
+---
+{%- assign ogimage = page.header_img | default: site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>{{ site.title | xml_escape }}</title>
+		<link>{{ site.url }}</link>
+		<description>{{ site.description | xml_escape }}</description>
+		<language>en</language>
+		<copyright>(c)  {{ site.time | date: '%Y' }}, {{ site.author.name }}</copyright>	
+		<pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+		<lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+		<category>blog</category>
+		<ttl>60</ttl>
+		<atom:link href="{{ '/feed.xml' | absolute_url }}" rel="self" type="application/rss+xml" />
+		<image>
+			<title>{{ site.title | xml_escape }}</title>
+			<url>{{- site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -}}</url>
+			<link>{{ '' | absolute_url }}</link>
+			<description>{{ site.description | xml_escape }}</description>
+		</image>
+		{% assign alldocs = site.posts | sort: 'date' | reverse | where_exp: "item", "item.includeonfeed == true" %}
+		{% for document in alldocs limit:15 %}
+		{%- assign words = document.content | strip_html | number_of_words -%}   
+		{%- assign minutes = words | divided_by: site.wordspermin | ceil -%}
+		<item>
+			<title>{{ document.title | xml_escape }}</title>
+			<description>
+				<![CDATA[	
+ 				{% if document.subtitle %}<p><b>{{ document.subtitle | xml_escape }}</b></p>{% endif %}
+    				<p><i>{{ minutes }} min.</i></p>
+				<p>{{ document.content | markdownify | strip_html | xml_escape | truncatewords: 60 }}
+				<a href="{{ document.url | absolute_url }}">[Link]</a></p>
+				]]>
+			</description>
+			<link>{{ document.url | absolute_url }}</link>
+			<category> {{ document.collection }} </category>
+			{% if document.tags.size > 0 %}
+			{% assign tagrss = document.tags | join: ','  | split: ',' | sort | where_exp: "tag","tag != document.layout " %}
+			{% for tag in tagrss  %}
+			<category>{{ tag }}</category>
+			{% endfor %}
+			{% endif %}
+			<media:title type="html"><![CDATA[{{ document.title }} ]]></media:title>
+			<media:content url="{{- ogimage -}}" medium="image" width="485" height="321"/>
+			<media:thumbnail url="{{- ogimage -}}"  width="150" height="99"/>
+			<guid isPermaLink="true">{{ document.url | absolute_url }}</guid>
+			<pubDate>{{ document.date | date_to_xmlschema }}</pubDate>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>
