@@ -5,7 +5,7 @@
     <div class="col-md-8 offset-md-2 col">
       <i class="far fa-folder-open fa-xs" aria-hidden="true"></i>
       {%- for category in page.categories %}
-      <a href="{{ site.baseurl }}/categories#{{- category -}}" class="badge badge-info">{{- category -}}</a>
+      <a href="{{ site.baseurl }}/categories#{{- category | replace: " ", "-" -}}" class="badge badge-info">{{- category -}}</a>
       {% endfor -%}
       </div>
     </div>
