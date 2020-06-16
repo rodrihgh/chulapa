@@ -33,7 +33,7 @@ function imgurl(p1) {
   if (p1 === undefined){
     return " "
   } else if (p1.indexOf("./") === 0) {
-    return p1.replace("./", "{{ site.baseurl }}/");
+    return p1.replace("./", "{{ '/' | absolute_url }}");
   } else {
     return p1
   }
@@ -50,7 +50,7 @@ const hitTemplate = function(hit) {
           <article class="my-2 text-left">
           <div class="row">
           <div class="col">
-          <h5 class="chulapa-links-hover-only"><a href="{{ site.baseurl }}${url}">${title}</a></h6>
+          <h5 class="chulapa-links-hover-only"><a href="{{ '' | absolute_url }}${url}">${title}</a></h6>
           </div>
           </div>
           <div class="row mt-2">
