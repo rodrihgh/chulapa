@@ -82,7 +82,7 @@ excerpt: This is my blog
                             <i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
                         </a>
                     </li>
-                    <div class="d-flex flex-grow-1 justify-content-center chulapa-pagination-inner">
+                    <span class="d-flex flex-grow-1 justify-content-center chulapa-pagination-inner">
                       {% for num in (init..end) -%}
                       
                         <li class="page-item {% if num== paginator.page %} active {%- endif -%}">
@@ -90,7 +90,7 @@ excerpt: This is my blog
                           {%- else  -%}{{- site.paginate_path | relative_url | replace: ':num', num -}}{%- endif -%}
                           ">{{- num -}}</a></li>
                       {%- endfor %}
-                    </div>
+                    </span>
                     <li class="page-item {{ nextclass }}">
                         <a class="page-link border-0 px-3 px-sm-4" href="{{- paginator.next_page_path | relative_url -}}">
                             <i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
