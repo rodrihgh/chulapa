@@ -2,7 +2,7 @@
           <div class="col-md-4 offset-md-2 col font-italic font-weight-bold text-primary">
             {%- if page.date and page.show_date -%}
             {%- assign dateformat = page.date | date_to_string -%}
-            <time datetime="{{ page.date | date_to_xmlschema }}">{% include_cached snippets/datetranslate.html  date=dateformat %}<time>
+            <time datetime="{{ page.date | date_to_xmlschema }}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time>
             {%- endif -%}
           </div>
           {%- if page.show_sociallinks -%}
