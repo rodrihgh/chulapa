@@ -9,6 +9,10 @@ show_author : true
 
 	{% for doc in allsite %}
 	
-	- {{ doc.url | absolute_url }} - category {{ doc.categories }}
+- {{ doc.url | absolute_url }} - category {{ doc.categories }} - {{ doc.date }}
+
+```
+{{ doc }}
+```
 	
 	{% endfor %}
