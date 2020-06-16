@@ -35,8 +35,7 @@ layout: null
 				<![CDATA[	
  				{% if document.subtitle %}<p><b>{{ document.subtitle | xml_escape }}</b></p>{% endif %}
     				<p>{{ minutes }} min.</p>
-				<p>{{ document.content | markdownify | xml_escape | truncatewords: 100 }}
-				<a href="{{ document.url | absolute_url }}">[Link]</a></p>
+				<div>{{ document.content | markdownify | truncatewords: 150 }}</div>
 				]]>
 			</description>
 			<link>{{ document.url | absolute_url }}</link>
