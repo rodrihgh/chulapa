@@ -14,7 +14,7 @@ layout: default
 {% endif %}
 {% assign alldocs = alldocs | sort: 'date' | reverse %}
 {% assign groupcategory =  alldocs | map: 'categories' | join: ','  | split: ','  | group_by: category | sort: 'size' | reverse %}
-<div class="row pt-5" id="categories">
+<div class="row no-gutters pt-5" id="categories">
 <div class="col">
 	{%- for category in groupcategory -%}
 	<a href="#{{- category.name -}}" class="btn btn-info m-1" role="button" style="font-size: calc(1rem + {{category.size}}px/3 - 1px);"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>{{- category.name -}}<span class="badge badge-pill badge-chulapa ml-2">{{category.size}}</span></a>
@@ -36,7 +36,7 @@ layout: default
   {% assign readtime = words | divided_by:words_per_minute | append: "’" %}
   {% endif %}
 	{% if document.categories contains category.name %}
-  <article class="chulapa-links-hover-only my-1 mb-4 row">
+  <article class="chulapa-links-hover-only my-1 mb-4 row no-gutters">
     <div class="col">
       <h5><a href="{{ document.url | absolute_url }}">{{ document.title }}</a></h5>
       <div>
