@@ -42,16 +42,15 @@ excerpt: This is my blog
 {%- assign max_per_page = site.paginator_maxnum | 
                          default: 3 | at_least: 2 | 
                          at_most : paginator.total_pages -%}
-{%- assign lastpaginator = paginator.total_pages |
-                          minus: max_per_page | plus: 1 -%}
-                          
+                         
 {%- assign prelast = paginator.total_pages | minus: 1 -%}
 
 {%- if paginator.page < max_per_page -%}
   {%- assign init= 1 -%}
   {%- assign end= max_per_page -%}
-{%- elsif paginator.page >= lastpaginator  -%}
-  {%- assign init= lastpaginator -%}
+{%- elsif paginator.page == paginator.total_pages  -%}
+  {%- assign init= paginator.total_pages |
+                          minus: max_per_page | plus: 1 -%}
   {%- assign end= paginator.total_pages -%}
 {%- else -%}
   {%- assign init= paginator.page | minus: max_per_page | plus: 2 -%}
