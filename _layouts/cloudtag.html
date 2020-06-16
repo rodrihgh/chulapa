@@ -31,7 +31,7 @@ layout: default
 </div>
   {% for document in alldocs %}
   {% assign words = document.content | strip_html | number_of_words %}
-  {% assign readtime = "< 1’ | escape_once " %}
+  {% assign readtime = "< 1’" | escape_once  %}
   {% if words > words_per_minute %}
   {% assign readtime = words | divided_by:words_per_minute | append: "’" %}
   {% endif %}
