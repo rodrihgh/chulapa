@@ -24,8 +24,8 @@ layout: default
 
 {% assign words_per_minute = site.words_per_minute | default: 200 %}
 {% for tag in grouptag %}
-<section id="{{- tag.name -}}" class="pt-5">
-<div class="d-flex  align-items-center border-bottom border-chulapa mb-2">
+<section id="{{- tag.name -}}" class="py-3">
+<div class="d-flex  align-items-center border-bottom border-chulapa mt-5">
   <h3 class="my-0"><i class="fa fa-tag mr-1" aria-hidden="true"></i>{{- tag.name -}} </h3>
   <div class="badge badge-pill badge-info ml-2">{{tag.size}}</div>
 </div>
