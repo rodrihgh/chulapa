@@ -30,19 +30,18 @@ layout: null
                 replace:"<br />", ",.," | 
                 replace:"{{", ",.," | 
                 replace:"{%", ",.," | 
-                split: ",.," | first |
-                xml_escape  -%}
+                split: ",.," | first  -%}
 	<entry>
-		<title type="html">{{ document.title | xml_escape }}</title>
-		<link href="{{ document.url | absolute_url }}" rel="alternate" type="text/html" title="{{ document.title | xml_escape }}"/>
+		<title type="html">{{ document.title }}</title>
+		<link href="{{ document.url | absolute_url }}" rel="alternate" type="text/html" title="{{ document.title  }}"/>
 		<published>{{ document.date | date_to_xmlschema }}</published>
 		<updated>{{ document.date | date_to_xmlschema }}</updated>
 		<id>{{ document.url | absolute_url }}</id>
-		<summary type="html">{{ summary }}</summary>
+		<summary type="html">{{ summary | strip_html }}</summary>
 		<content type="html" xml:base="{{ document.url | absolute_url }}">
-		  <img src="{{ ogimage }}">
+		  <img src="{{ ogimage }}"></img>
 		  <p>{{ minutes }} min.</p>
-		  {{ document.content | markdownify | xml_escape | truncatewords: 100 }}
+		  {{ document.content | markdownify | truncatewords: 100 }}
 		</content>
 		<author>
 			<name>{{ document.author.name | default: site.author.name | default: site.github.owner_name }}</name>
