@@ -9,7 +9,7 @@ show_author : true
 
 	{% for doc in allsite %}
 	
-- {{ doc.url | absolute_url }} - category {{ doc.categories }} - {{ doc.date }}
+- {{ doc.url | absolute_url }} - category {{ doc.categories }} - {{ doc.date | date: "%a, %b %d, %y" }}
 
 ```
 {{ doc.date }} {{ doc.url }} {{ doc.title }}
