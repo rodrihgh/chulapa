@@ -4,7 +4,10 @@ subtitle: "Anothe demo here"
 header_type: "base"
 show_sociallinks: true
 show_comments: true
+show_tags         : true
+show_categories   : true
 tags: [collection1]
+categories: [demo_collection]
 ---
 
 

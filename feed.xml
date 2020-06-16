@@ -34,7 +34,7 @@ layout: null
 			<description>
 				<![CDATA[	
  				{% if document.subtitle %}<h3>{{ document.subtitle | xml_escape }}</h3>{% endif %}
-    		<div>{{ minutes }} min.</div>
+    		<div>{{ minutes }}’</div>
 				<div>{{ document.content | markdownify | truncatewords: 150 }}</div>
 				]]>
 			</description>
