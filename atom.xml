@@ -1,0 +1,19 @@
+---
+layout: null
+---
+{%- assign ogimage = page.header_img | default: site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<author>
+		<name>{{  site.author.name | default: site.github.owner_name }}</name>	
+	</author>
+	<category term="blog"/>
+	<generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
+	<id>{{ '' | absolute_url }}</id>
+	<link href="{{ './atom.xml' | absolute_url }}" rel="self" type="application/atom+xml"/>
+	<link href="{{ '' | absolute_url }}" rel="alternate" type="text/html"/>
+	<rights>Copyright (c) {{ site.time | date: '%Y' }}, {{  site.author.name | default: site.github.owner_name }}</rights>
+	<subtitle type="text">{{ site.subtitle | default: site.github.project_tagline }}</subtitle>
+	<title type="text">{{ site.title | default: site.github.repository_name }}</title>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+</feed>
