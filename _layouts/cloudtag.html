@@ -36,18 +36,24 @@ layout: default
   {% assign readtime = words | divided_by:words_per_minute | append: "’" %}
   {% endif %}
 	{% if document.tags contains tag.name %}
-  <article class="chulapa-links-hover-only mb-3">
-  <h5><a href="{{ document.url | absolute_url }}">{{ document.title }}</a></h5>
-  <div>
-    {% if document.date %}
-    {% assign dateformat = document.date | date: "%B %d, %Y" %}
-    <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time> | 
+  <article class="chulapa-links-hover-only my-1 mb-2 row">
+    <div class="col">
+      <h5><a href="{{ document.url | absolute_url }}">{{ document.title }}</a></h5>
+      <div>
+        {% if document.date %}
+        {% assign dateformat = document.date | date: "%B %d, %Y" %}
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time> | 
+        {% endif %}
+        <i class="far fa-clock" aria-hidden="true"></i> {{ readtime }} 
+        {%- if page.cloud_collection == "all" -%}
+        <span class="ml-2 badge badge-light">{{ document.collection }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+    {% if document.header_img %}
+    <div class="col-2 btn chulapa-overlay-img" style="background-image: url('{{ document.header_img | absolute_url }}')">
+    </div>
     {% endif %}
-    <i class="far fa-clock" aria-hidden="true"></i> {{ readtime }} 
-    {%- if page.cloud_collection == "all" -%}
-    <span class="ml-2 badge badge-light">{{ document.collection }}</span>
-    {%- endif -%}
-  </div>
   </article>
   {% endif %}
   {% endfor %}
