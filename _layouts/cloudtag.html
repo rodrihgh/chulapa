@@ -17,7 +17,7 @@ layout: default
 <div class="row no-gutters pt-5" id="tags">
 <div class="col">
 	{%- for tag in grouptag -%}
-	<a href="#{{- tag.name | url_encode -}}" class="btn btn-chulapa m-1" role="button" style="font-size: calc(1rem + {{tag.size}}px/3 - 1px);"><i class="fa fa-tag mr-2" aria-hidden="true"></i>{{- tag.name -}}<span class="badge badge-pill badge-info ml-2">{{tag.size}}</span></a>
+	<a href="#{{- tag.name | uri_escape -}}" class="btn btn-chulapa m-1" role="button" style="font-size: calc(1rem + {{tag.size}}px/3 - 1px);"><i class="fa fa-tag mr-2" aria-hidden="true"></i>{{- tag.name -}}<span class="badge badge-pill badge-info ml-2">{{tag.size}}</span></a>
 	{%- endfor -%}
 	</div>
 </div>
