@@ -17,14 +17,14 @@ layout: default
 <div class="row no-gutters pt-5" id="tags">
 <div class="col">
 	{%- for tag in grouptag -%}
-	<a href="#{{- tag.name | uri_escape -}}" class="btn btn-chulapa m-1" role="button" style="font-size: calc(1rem + {{tag.size}}px/3 - 1px);"><i class="fa fa-tag mr-2" aria-hidden="true"></i>{{- tag.name -}}<span class="badge badge-pill badge-info ml-2">{{tag.size}}</span></a>
+	<a href="#{{- tag.name | replace: " ", "-" -}}" class="btn btn-chulapa m-1" role="button" style="font-size: calc(1rem + {{tag.size}}px/3 - 1px);"><i class="fa fa-tag mr-2" aria-hidden="true"></i>{{- tag.name -}}<span class="badge badge-pill badge-info ml-2">{{tag.size}}</span></a>
 	{%- endfor -%}
 	</div>
 </div>
 
 {% assign words_per_minute = site.words_per_minute | default: 200 %}
 {% for tag in grouptag %}
-<section id="{{- tag.name -}}" class="py-3">
+<section id="{{- tag.name | replace: " ", "-" -}}" class="py-3">
 <div class="d-flex  align-items-center border-bottom border-chulapa mt-5">
   <h3 class="my-0"><i class="fa fa-tag mr-1" aria-hidden="true"></i>{{- tag.name -}} </h3>
   <div class="badge badge-pill badge-info ml-2">{{tag.size}}</div>
