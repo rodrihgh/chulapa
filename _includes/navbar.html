@@ -23,7 +23,7 @@
 							{% endif %}
 						{%- endfor -%}
 						<a class="nav-link dropdown-toggle  {% if containteractive == true %} active {% endif %}" href="#" id="{{ item.title | strip | replace: " ", "-" }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }} </a>
-						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown{{ item.title }}">
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="{{ item.title | strip | replace: " ", "-" }}">
 						{%- for entry in item.child -%}
 							{%- if entry.url contains "http" -%}
 						<a class="dropdown-item" href="{{ entry.url }}">{{ entry.title }}</a>
