@@ -2,7 +2,7 @@
 layout: default
 title: Archive
 subtitle: Post by year 
-permalink: /archive/year
+permalink: /archive
 ---
 
 
