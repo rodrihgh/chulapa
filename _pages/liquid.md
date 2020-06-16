@@ -12,7 +12,7 @@ show_author : true
 - {{ doc.url | absolute_url }} - category {{ doc.categories }} - {{ doc.date }}
 
 ```
-{{ doc }}
+{{ doc.date }} {{ doc.url }} {{ doc.title }}
 ```
 	
 	{% endfor %}
