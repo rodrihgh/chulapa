@@ -5,7 +5,7 @@ subtitle: Super long description of this page to check it. Enough
 excerpt: A demo page showing how the theme looks
 permalink: /bootstrap
 header_type: hero
-header_img: "https://i.imgur.com/TveA612.jpg"
+header_img: "./assets/img/site/chulapa-madrd.jpg"
 date: 2015-07-28
 include_on_search : true
 show_date         : true
