@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: archive
 title: Tag cloud
 subtitle: All the tags of this site
 permalink: /tags
