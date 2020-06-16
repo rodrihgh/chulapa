@@ -50,7 +50,7 @@ const hitTemplate = function(hit) {
           <article class="my-2 text-left">
           <div class="row">
           <div class="col">
-          <h5 class="chulapa-links-hover-only"><a href="{{ '' | absolute_url }}${url}">${title}</a></h6>
+          <h5 class="chulapa-links-hover-only"><a href="{{ '' | absolute_url }}${url}">${title}</a></h5>
           </div>
           </div>
           <div class="row mt-2">
@@ -66,7 +66,7 @@ const hitTemplate = function(hit) {
     <article class="my-2 text-left">
     <div class="row">
     <div class="col">
-    <h5 class="chulapa-links-hover-only"><a href="{{ '' | absolute_url }}${url}">${title}</a></h6>
+    <h5 class="chulapa-links-hover-only"><a href="{{ '' | absolute_url }}${url}">${title}</a></h5>
     </div>
     <div class="col-4 col-md-3">
     <div class="rounded-lg chulapa-overlay-img chulapa-min-h-10" style="background-image: url('${imglink}')" ></div>
