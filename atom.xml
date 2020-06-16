@@ -1,7 +1,6 @@
 ---
 layout: null
 ---
-{%- assign ogimage = page.header_img | default: site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url -%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<author>
@@ -11,9 +10,27 @@ layout: null
 	<generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
 	<id>{{ '' | absolute_url }}</id>
 	<link href="{{ './atom.xml' | absolute_url }}" rel="self" type="application/atom+xml"/>
-	<link href="{{ '' | absolute_url }}" rel="alternate" type="text/html"/>
+	<link href="{{ '' | absolute_url }}" hreflang="{{- site.locale | default: 'en-US' -}}" rel="alternate" type="text/html"/>
 	<rights>Copyright (c) {{ site.time | date: '%Y' }}, {{  site.author.name | default: site.github.owner_name }}</rights>
 	<subtitle type="text">{{ site.subtitle | default: site.github.project_tagline }}</subtitle>
 	<title type="text">{{ site.title | default: site.github.repository_name }}</title>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	{%- assign ogimage = page.header_img | default: site.og_image | 
+						default: site.author.avatar | default: site.github.owner_gravatar_url | 
+						absolute_url -%}
+	{%- assign wpm = words_per_minute | default: 200 -%}
+	{%- assign alldocs = site.posts | sort: 'date' | reverse -%}
+	{%- for document in alldocs limit:15 -%}
+	{%- assign words = document.content | strip_html | number_of_words -%} 
+	<entry>
+		<title type="html">{{ document.title | xml_escape }}</title>
+		<link href="{{ document.url | absolute_url }}" rel="alternate" type="text/html" title="{{ document.title | xml_escape }}"/>
+		<published>{{ document.date | date_to_xmlschema }}</published>
+		<updated>{{ document.date | date_to_xmlschema }}</updated>
+		<id>{{ document.id }}</id>
+		<author>
+			<name>{{ document.author.name | default: site.author.name | default: site.github.owner_name }}</name>
+		</author>
+	</entry>
+	{%- endfor -%}
 </feed>
