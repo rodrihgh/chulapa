@@ -5,8 +5,10 @@ permalink: /liquid
 show_author : true
 ---
 
-	{% for doc in site.pages %}
+{% assign allsite = site.pages | where_exp: "item", "item.categories != nil" | concat: site.documents %}
+
+	{% for doc in allsite %}
 	
-	- {{ doc.url | absolute_url }}
+	- {{ doc.url | absolute_url }} - category {{ doc.categories }}
 	
 	{% endfor %}
