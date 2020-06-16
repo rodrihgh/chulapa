@@ -1,5 +1,5 @@
 ---
-layout: cloudtag
+layout: cloudcategory
 title: Categories
 subtitle: Posts by categories
 permalink: /categories

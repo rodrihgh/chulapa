@@ -5,6 +5,7 @@ header_type: "hero"
 show_sociallinks: false
 date: 2020-02-29
 show_date: true
+categories: [demo_collection]
 ---
 
 

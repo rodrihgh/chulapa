@@ -4,7 +4,8 @@ subtitle: Anothe demo here
 header_type: hero
 header_img: "https://i.imgur.com/TveA612.jpg"
 date: 2020-02-29
-show_date: 
+show_date: true
+categories: [demo_collection]
 ---
 
 

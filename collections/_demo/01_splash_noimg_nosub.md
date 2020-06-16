@@ -1,7 +1,7 @@
 ---
 title: "Splash no image no subtitle"
 header_type: splash
-show_sociallinks: 
+categories: [demo_collection]
 ---
 
 

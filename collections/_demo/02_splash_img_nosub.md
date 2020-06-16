@@ -3,6 +3,7 @@ title: "Splash image no subtitle"
 header_type: splash
 header_img: "https://i.imgur.com/TveA612.jpg"
 date: 2020-02-28
+categories: [demo_collection]
 ---
 
 This is the front matter
