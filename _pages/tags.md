@@ -2,7 +2,8 @@
 layout: cloudtag
 title: Tag cloud
 subtitle: All the tags
-permalink: all
+permalink: /tags
+cloud_collection: all
 ---
 
 This is an example of how to create a tag cloud. This tag includes all the collections.
