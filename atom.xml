@@ -20,17 +20,17 @@ layout: null
 						absolute_url -%}
 	{%- assign wpm = words_per_minute | default: 200 -%}
 	{%- assign alldocs = site.posts | sort: 'date' | reverse -%}
-	{%- for document in alldocs limit:15 -%}
+	{% for document in alldocs limit:15 %}
 	{%- assign words = document.content | strip_html | number_of_words -%} 
 	<entry>
 		<title type="html">{{ document.title | xml_escape }}</title>
 		<link href="{{ document.url | absolute_url }}" rel="alternate" type="text/html" title="{{ document.title | xml_escape }}"/>
 		<published>{{ document.date | date_to_xmlschema }}</published>
 		<updated>{{ document.date | date_to_xmlschema }}</updated>
-		<id>{{ document.id }}</id>
+		<id>{{ document.url | absolute_url }}</id>
 		<author>
 			<name>{{ document.author.name | default: site.author.name | default: site.github.owner_name }}</name>
 		</author>
 	</entry>
-	{%- endfor -%}
+	{% endfor %}
 </feed>
