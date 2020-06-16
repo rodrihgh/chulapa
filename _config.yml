@@ -41,7 +41,7 @@ analytics_id            :
 search:
   provider              : algolia #Select a provider for enable search
   maxwords              : 30 #lunr only - May slow down your site build
-  label                 : buscar #default ["Search"] Text on navbar when search is enabled 
+  label                 : #default ["Search"] Text on navbar when search is enabled 
 
 google_cse_id: "002514516175957445995:ep842kgah4q" #Your cse id
 # This site uses jekyll-algolia plugin https://community.algolia.com/jekyll-algolia/
