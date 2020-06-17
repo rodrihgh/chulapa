@@ -25,7 +25,10 @@ layout: null
 		default: site.author.avatar | default: site.github.owner_gravatar_url | 
 		absolute_url -%}
 		{%- assign wpm = words_per_minute | default: 200 -%}
-		{%- assign alldocs = site.posts | sort: 'date' | reverse -%}
+		{%- assign  alldocs = site.documents | 
+		            where_exp: "item", "item.include_on_feed == true" |
+		            where_exp: "item", "item.date != nil" | 
+		            sort: 'date' | reverse -%}
 		{%- for document in alldocs limit:15 -%}
 		{%- assign words = document.content | strip_html | number_of_words -%}   	
 		{%- assign minutes = words | divided_by: wpm | ceil | at_least: 1 -%}
