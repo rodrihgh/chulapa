@@ -34,30 +34,32 @@ This is a demo page showing the different components of Bootstrap and how they l
 {% include snippets/bootstrapdemo.html  %}
 
 
-<nav aria-label="Page navigation example" class="mt-4 chulapa-pagination">
-  <ul class="pagination justify-content-center ">
-  <li class="page-item  text-left">
-  <a class="page-link border-0" href="#" tabindex="-1">
-  <i class="fa fa-caret-left fa-lg" aria-hidden="true"></i><span class="sr-only">Previous</span>
-  </a>
-  </li>
-  <li class="page-item  mr-auto text-left">
-  <a class="page-link border-0" href="#" tabindex="-1">
-  <i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
-  </a>
-  </li>
-  <div class="d-flex chulapa-pagination-round">
-  <li class="page-item mx-3"><a class="page-link" href="#">1</a></li>
-  <li class="page-item mx-3 active"><a class="page-link" href="#">2</a></li>
-  <li class="page-item mx-3"><a class="page-link" href="#">3</a></li>
-  </div>
-  <li class="page-item ml-auto text-right disabled">
-  <a class="page-link border-0" href="#">
-  <i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
-  </li>
-  <li class="page-item text-right">
-  <a class="page-link border-0" href="#">
-  <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i><span class="sr-only">Next</span></a>
-  </li>
-  </ul>
-</nav>
+<nav aria-label="Page navigation example" class="mt-4 chulapa-pagination text-center">
+                <ul class="col-md-8 offset-md-2 pagination justify-content-around ">
+                    <li class="page-item invisible ">
+                        <a class="page-link border-0 px-3 px-sm-4" href="/jt/blog" tabindex="-1">
+                            <i class="fa fa-step-backward" aria-hidden="true"></i><span class="sr-only">First</span>
+                        </a>
+                    </li>
+                    <li class="page-item ">
+                        <a class="page-link border-0 px-3 px-sm-4" href="/jt/blog/">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <span class="d-flex flex-grow-1 justify-content-center chulapa-pagination-inner">
+                      <li class="page-item ">
+                          <a class="page-link border-0 rounded-0" href="/jt/blog">1</a></li><li class="page-item  active">
+                          <a class="page-link border-0 rounded-0" href="/jt/blog/page2/">2</a></li><li class="page-item ">
+                          <a class="page-link border-0 rounded-0" href="/jt/blog/page3/">3</a></li>
+                    </span>
+                    <li class="page-item ">
+                        <a class="page-link border-0 px-3 px-sm-4" href="/jt/blog/page3/">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
+                    </li>
+                    <li class="page-item ">
+                        <a class="page-link border-0 px-3 px-sm-4" href="/jt/blog/page5/">
+                            <i class="fa fa-step-forward" aria-hidden="true"></i><span class="sr-only">Last</span></a>
+                    </li>
+                </ul>
+            </nav>
+
