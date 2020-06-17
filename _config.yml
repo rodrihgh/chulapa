@@ -185,6 +185,7 @@ defaults:
     values:
       header_type       : "post"
       include_on_search : true
+      include_on_feed   : true
       show_date         : true
       show_bottomnavs   : true
       show_sociallinks  : true
@@ -201,11 +202,14 @@ defaults:
       show_bottomnavs   : true
       show_sociallinks  : true
       include_on_search : true
+      include_on_feed   : true
   -
     scope:
       path: ""
       type: "picsofmadrid"
     values:
+      include_on_search : true
+      include_on_feed   : true
       header_type       : "splash"
       show_bottomnavs   : true
       show_tags         : true
