@@ -17,21 +17,21 @@ layout: default
 <div class="row no-gutters pt-5" id="categories">
 <div class="col">
 	{%- for category in groupcategory -%}
-	<a href="#{{- category.name -}}" class="btn btn-info m-1" role="button" style="font-size: calc(1rem + {{category.size}}px/3 - 1px);"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>{{- category.name -}}<span class="badge badge-pill badge-chulapa ml-2">{{category.size}}</span></a>
+	<a href="#{{- category.name | replace: " ", "-" -}}" class="btn btn-info m-1" role="button" style="font-size: calc(1rem + {{category.size}}px/3 - 1px);"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>{{- category.name -}}<span class="badge badge-pill badge-chulapa ml-2">{{category.size}}</span></a>
 	{%- endfor -%}
 	</div>
 </div>
 
 {% assign words_per_minute = site.words_per_minute | default: 200 %}
 {% for category in groupcategory %}
-<section id="{{- category.name -}}" class="py-3">
+<section id="{{- category.name | replace: " ", "-" -}}" class="py-3">
 <div class="d-flex  align-items-center border-bottom border-chulapa mt-5">
   <h3 class="my-0"><i class="far fa-folder-open mr-1" aria-hidden="true"></i>{{- category.name -}} </h3>
   <div class="badge badge-pill badge-chulapa ml-2">{{category.size}}</div>
 </div>
   {% for document in alldocs %}
   {% assign words = document.content | strip_html | number_of_words %}
-  {% assign readtime = "< 1’" %}
+  {% assign readtime = "< 1’" | escape_once  %}
   {% if words > words_per_minute %}
   {% assign readtime = words | divided_by:words_per_minute | append: "’" %}
   {% endif %}
@@ -58,9 +58,7 @@ layout: default
   {% endif %}
   {% endfor %}
   <div class="text-right">
-      <button type="button" class="btn btn-outline-chulapa btn-lg border-0">
-      <a href="#categories"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i><span class="sr-only">Top</span></a>
-      </button>
+      <a href="#categories" class="btn btn-outline-chulapa btn-lg border-0"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i><span class="sr-only">Top</span></a>
   </div>
 </section>
 {% endfor %}

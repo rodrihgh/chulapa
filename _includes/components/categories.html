@@ -5,7 +5,9 @@
     <div class="col-md-8 offset-md-2 col">
       <i class="far fa-folder-open fa-xs" aria-hidden="true"></i>
       {%- for category in page.categories %}
-      <a href="{{ site.baseurl }}/categories#{{- category | replace: " ", "-" -}}" class="badge badge-info">{{- category -}}</a>
+      <a href="{{- category | replace: " ", "-" | prepend: "#" |
+                   prepend: page.cloudcategory_url |
+                   absolute_url | uri_escape -}}" class="badge badge-info">{{- category -}}</a>
       {% endfor -%}
       </div>
     </div>
