@@ -5,7 +5,9 @@
     <div class="col-md-8 offset-md-2 col">
       <i class="fas fa-tag mr-1 fa-xs" aria-hidden="true"></i>
       {%- for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tags#{{- tag | replace: " ", "-" -}}" class="badge badge-chulapa">{{- tag -}}</a>
+      <a href="{{- tag | replace: " ", "-" | prepend: "#" |
+                   prepend: page.cloudtag_url |
+                   absolue_url | uri_escape -}}" class="badge badge-chulapa">{{- tag -}}</a>
       {% endfor -%}
       </div>
     </div>
