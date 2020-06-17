@@ -105,7 +105,7 @@ footer:
   links:
     - label: "RSS"
       icon: "fa fa-rss"
-      url:  ./feed.xml
+      url:  ./rss.xml
     - label: "Twitter"
       icon: "fab fa-twitter"
       # url:

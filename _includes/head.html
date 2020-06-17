@@ -1,5 +1,5 @@
 {%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url | uri_escape -%}
-{%- assign metatitle1 = page.title | site.title | default: site.github.repository_name  -%}
+{%- assign metatitle1 = page.title | default: site.title | default: site.github.repository_name  -%}
 {%- assign metatitle2 = site.title | default: site.github.repository_name -%}
 {%- assign strippedurl = page.url | replace: "index.html", "" -%}
 {%- if strippedurl == "/" -%}
@@ -51,7 +51,7 @@
     <meta name="twitter:creator" content="@{{- twitterauthor  -}}" />
     {% endif -%}
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="alternate" type="application/atom+xml" title="RSS Feed for {{ site.title }}" href="{{ './feed.xml' | absolute_url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | append: " | " | append: site.subtitle |" href="{{ './rss.xml' | absolute_url }}" />
     <!-- CSS -->
     {% for font in site.googlefonts -%}
     {% if font.url -%}
