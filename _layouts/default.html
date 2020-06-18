@@ -16,7 +16,7 @@
 			</aside>
 			<article class="col-md-8">
 			 {% if page.show_toc %} 
-			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=6 skipNoIDs=true id="toc" %}
+			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=6 skipNoIDs=true id="toc" class="list-group" item_class="list-group-item.list-group-item-chulapa.py-1.small" %}
 			  {% endif %}
 			{{- content -}}
 			</article>
