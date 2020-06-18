@@ -381,9 +381,12 @@
 .chulapa-toc-reset {
    ul {
    padding-left: 0;
+   margin-left: 0;
    border: 0;
      li {
-         border: 0;
+         border-top: 0;
+         border-bottom: 0;
+         font-weight: normal;
      }
    }
 }
