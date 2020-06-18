@@ -109,7 +109,7 @@ $(document).ready(function() {
                     '<div class="row mt-2">' +
                     '<div class="col">' +
                     '<p>' + store[ref].excerpt.split(" ").splice(0, 10).join(" ") +
-								'<a href="' + store[ref].url + '"> [more]</a></p>' +
+								'<a href="' + store[ref].url + '"> [link]</a></p>' +
 					'</div>' +
 					'</div>' +
 					'<hr>' +
