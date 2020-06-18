@@ -84,11 +84,11 @@ const hitTemplate = function(hit) {
 }
 
 
-{% raw %}
+
 search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
-    placeholder: 'Search...',
+    placeholder: '{{ site.search.label | default: "Search" }}', {% raw %}
     showReset: false,
     showSubmit: false,
     showLoadingIndicator: false,
