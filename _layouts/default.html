@@ -16,7 +16,7 @@
 			</aside>
 			<article class="col-md-8">
 			 {% if page.show_toc %} 
-			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=6 skipNoIDs=true id="toc" class="list-group.lead.font-weight-bold" item_class="list-group-item.py-1.pr-0.mr-0.small.chulapa-toc-reset" %}
+			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=6 skipNoIDs=true id="toc" class="list-group.lead" item_class="list-group-item.font-weight-bold.py-1.pr-0.mr-0.small.chulapa-toc-reset" %}
 			  {% endif %}
 			{{- content -}}
 			</article>
