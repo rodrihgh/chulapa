@@ -39,7 +39,7 @@ analytics_id            :
 # - algolia v4 https://www.algolia.com/ - needs further configuration
 # - google custom search engine https://cse.google.es/ 
 search:
-  provider              : lunr #Select a provider for enable search: lunr, algolia, google
+  provider              : google #Select a provider for enable search: lunr, algolia, google
   maxwords              : 50 #lunr only - May slow down your site build
   label                 : Buscar #default ["Search"] Text on navbar when search is enabled 
 
