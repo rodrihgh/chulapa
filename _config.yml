@@ -40,7 +40,7 @@ analytics_id            :
 # - google custom search engine https://cse.google.es/ 
 search:
   provider              : lunr #Select a provider for enable search: lunr, algolia, google
-  maxwords              : 30 #lunr only - May slow down your site build
+  maxwords              : 50 #lunr only - May slow down your site build
   label                 : #default ["Search"] Text on navbar when search is enabled 
 
 google_cse_id: "002514516175957445995:ep842kgah4q" #Your cse id
