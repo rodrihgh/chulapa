@@ -378,3 +378,12 @@
     @include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
   }
 }
+.chulapa-toc-reset {
+   ul {
+   padding-left: 0;
+     li {
+         border: 0;
+     }
+   }
+}
+
