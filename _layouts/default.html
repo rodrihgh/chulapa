@@ -15,6 +15,9 @@
 			  {%- endif -%}
 			</aside>
 			<article class="col-md-8">
+			 {% if page.show_toc %} 
+			 {% include toc.html sanitize=true html=content h_min=2 h_max=6 skipNoIDs=true id="toc" %}
+			  {% endif %}
 			{{- content -}}
 			</article>
 		</div>

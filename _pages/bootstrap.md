@@ -14,6 +14,7 @@ show_comments     : true
 show_tags         : true
 show_categories   : true
 show_author       : true
+show_toc          : true
 tags: [demo, bootstrap, layout]
 categories: [demo]
 author:
