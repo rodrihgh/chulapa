@@ -39,10 +39,26 @@ function imgurl(p1) {
   }
 }
 
+function parsecontent(hit) {
+  if (hit.html === undefined){
+    return " "
+  } else {
+    return hit._highlightResult.html.value
+  }
+}
+function parsetitle(hit) {
+  if (hit.title === undefined){
+    return "---------"
+  } else {
+    return hit._highlightResult.title.value
+  }
+}
+
+
 const hitTemplate = function(hit) {
   const url = hit.url;
-  const title = hit._highlightResult.title.value;
-  const content = hit._highlightResult.html.value;
+  const title = parsetitle(hit);
+  const content = parsecontent(hit);
   const img = hit.header_img;
   const imglink = imgurl(img);
   if (img === undefined){
@@ -88,7 +104,7 @@ const hitTemplate = function(hit) {
 search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
-    placeholder: '{{ site.search.label | default: "Search" }}...', {% raw %}
+    placeholder: '{{ site.search.label | default: "Search" }}...', 
     showReset: false,
     showSubmit: false,
     showLoadingIndicator: false,
@@ -101,6 +117,7 @@ search.addWidgets([
   instantsearch.widgets.poweredBy({
     container: '#powered-by',
   }),
+  {% raw %}
   instantsearch.widgets.hits({
     container: '#hits',
     escapeHTML: false,
@@ -113,6 +130,6 @@ search.addWidgets([
       item: hitTemplate
     },
   }),
+  {% endraw %}
 ]);
-{% endraw %}
 search.start();
