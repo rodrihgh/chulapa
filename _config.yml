@@ -203,6 +203,7 @@ defaults:
       path: ""
       type: "demo"
     values:
+      layout: "splashpage"
       header_type       : "hero"
       show_bottomnavs   : true
       show_sociallinks  : true
