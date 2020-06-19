@@ -280,7 +280,8 @@
         }
     }
 
-    .fa-stack {
+    .fa-stack-2x {
+        color: $footer-chulapa-bg-color ;
         @include hover-focus() {
             color: $footer-chulapa-icon-hover-color;
         }
