@@ -293,7 +293,10 @@
     
     .chulapa-masonry-brick {
         @extend .card;
+        margin: 0;
+        padding: 0;
         margin-bottom: map-get($spacers, 1);
+        display: inline-block;
         
     }
 }
