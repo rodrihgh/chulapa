@@ -26,6 +26,37 @@
     <!-- Chulapa Jekyll Theme - unreleased -->
     <!--  MIT License-->
     <!-- dieghernan.github.io/jt -->
+    <!--Google markup-->
+    <script type="application/ld+json">
+        {
+      "@context": "https://schema.org",
+	  {% if page.collection == "posts" %}
+      "@type": "BlogPosting",
+	  {% else %}
+	  "@type": "Article",
+	  {% endif %}
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ canonical_url }}"
+      },
+      "headline": "{{ metatitle1 }}",
+      "image": "{{ ogimage }}",
+      "datePublished": "{{ page.date | default:  site.time | date_to_xmlschema }}",
+      "dateModified": "{{ page.date | default:  site.time | date_to_xmlschema }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ page.author.name | default: site.author.name | default: site.github.owner_name }}"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.author.name | default: site.github.owner_name }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.og_image | default: site.author.avatar | default: site.github.owner_gravatar_url | absolute_url }}"
+        }
+      }
+    }
+    </script>
     <title>{{ metatitle }}</title>
     <!-- Meta tags -->
     <meta charset="utf-8">
