@@ -243,54 +243,51 @@
 }
 
 
-// Footer
-@function chulapa-footertop($color1, $color2, $color3) {
-    @if $color1==$color2 {
-        @return 0.1rem solid $color3;
-    }
+ // Footer
+ @function chulapa-footertop($color1, $color2, $color3) {
+     @if $color1==$color2 {
+         @return 0.1rem solid $color3;
+     }
 
-    @else {
-        @return 0;
-    }
-}
+     @else {
+         @return 0;
+     }
+ }
 
-.footer-chulapa {
-    background-color: $footer-chulapa-bg-color;
-    * {
-      color: $footer-chulapa-text-color;
-    }
-    border-top: chulapa-footertop($footer-chulapa-bg-color, $body-bg, $footer-chulapa-text-color);
+ .footer-chulapa {
+     background-color: $footer-chulapa-bg-color;
+     color: $footer-chulapa-text-color;
+     border-top: chulapa-footertop($footer-chulapa-bg-color, $body-bg, $footer-chulapa-text-color);
 
-    a {
-        color: $footer-chulapa-text-color;
-        text-decoration: none;
-        font-weight: bold;
+     a {
+         color: $footer-chulapa-text-color;
+         text-decoration: none;
+         font-weight: bold;
 
-        @include hover-focus() {
-            color: $footer-chulapa-hover-color;
-        }
+         @include hover-focus() {
+             color: $footer-chulapa-hover-color;
+         }
 
-    }
+     }
 
-    .nav-link {
-        color: transparent;
+     .nav-link {
+         color: transparent;
 
-        @include hover-focus() {
-            color: $footer-chulapa-hover-color;
-        }
-    }
+         @include hover-focus() {
+             color: $footer-chulapa-hover-color;
+         }
+     }
 
-    .fa-stack-2x {
-        color: $footer-chulapa-bg-color ;
-        @include hover-focus() {
-            color: $footer-chulapa-icon-hover-color;
-        }
-    }
+     .fa-stack {
+         @include hover-focus() {
+             color: $footer-chulapa-icon-hover-color;
+         }
+     }
 
-    .fa-inverse {
-        color: $footer-chulapa-icon-color;
-    }
-}
+     .fa-inverse {
+         color: $footer-chulapa-icon-color;
+     }
+ }
 
 .chulapa-overlay-img {
     height: 100%;
