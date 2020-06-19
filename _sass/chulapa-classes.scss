@@ -339,8 +339,8 @@
 }
 
 .chulapa-gradient {
-    background-color: $chulapa-col;
-    background-image: linear-gradient(to bottom right, rgba($light, 1), rgba($chulapa-col, 1) 85%, rgba($dark, 1) 100%);
+    background-color: rgba($chulapa-col,0.3);
+    background-image: linear-gradient(to bottom right, rgba($light, 0.5), rgba($light, 0.7) 65%, rgba($chulapa-col, 0.7) 100%);
 
 }
 
