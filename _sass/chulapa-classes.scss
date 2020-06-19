@@ -434,7 +434,7 @@
       background-color: $white;
     }
   }
-    table, header, .chulapaDateSocial {
+    table, header, .header-chulapa, .chulapaDateSocial {
        color: $white;
        text-shadow: 0.1rem 0.1rem 0.2rem #000606;
    a{color: $white;
@@ -468,7 +468,7 @@
       background-color: $hero-chulapa-text-color;
     }
   }
-    table, header, .chulapaDateSocial {
+    table, header, .header-chulapa, .chulapaDateSocial {
        color: $hero-chulapa-text-color;
        a {color: $hero-chulapa-text-color;}
     }
