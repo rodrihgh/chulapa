@@ -3,6 +3,9 @@
  */
  .chulapaDateSocial{
    color: $primary;
+    a { 
+color: $primary;
+}
 
 }
 .chulapa-headingfont{
@@ -437,7 +440,9 @@
     table, header, .chulapaDateSocial {
        color: $white;
        text-shadow: 0.1rem 0.1rem 0.2rem #000606;
-    }
+   a{color: $white;
+       text-shadow: 0.1rem 0.1rem 0.2rem #000606;}
+ }
       a {
         color: darken($white,20%);
       }
@@ -468,6 +473,7 @@
   }
     table, header, .chulapaDateSocial {
        color: $hero-chulapa-text-color;
+       a {$hero-chulapa-text-color;}
     }
       a {
         color: color-yiq($hero-chulapa-bg-color, lighten($black,20%), darken($white, 20%));
