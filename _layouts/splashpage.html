@@ -7,8 +7,7 @@
 	<body class="d-flex flex-column chulapa-splashpage">
 	{% endif %}
 	{% include_cached navbar.html pageurl=page.url %}
-	{% assign headertype = "splash"%}
-	{%- include components/headers.html headertype= headertype -%}
+	{%- include components/headers.html headertype= page.header_type -%}
 	<main class="container-lg pb-3 flex-fill">
 		{%- if page.show_date or page.show_sociallinks -%}
 		  {%- include components/datesocial.html -%}
