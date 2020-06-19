@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="{{- site.locale | default: 'en-US' -}}">
+	{%- include head.html -%}
+	{% if page.header_img %}
+	<body class="d-flex flex-column chulapa-splashpage chulapa-overlay-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ page.header_img | absolute_url }}')">
+	{% else %}
+	<body class="d-flex flex-column chulapa-splashpage">
+	{% endif %}
+	{% include_cached navbar.html pageurl=page.url %}
+	{% assign headertype = "splash"%}
+	{%- include components/headers.html headertype= headertype -%}
+	<main class="container-lg pb-3 flex-fill">
+		{%- if page.show_date or page.show_sociallinks -%}
+		  {%- include components/datesocial.html -%}
+		{%- endif -%}
+		<div class="row pt-2">
+			<aside class="col-md-2 mb-3 small">
+			  {%- if page.show_author -%}
+			  {% include components/author.html %}
+			  {%- endif -%}
+			</aside>
+			<article class="col-md-8">
+			 {% if page.show_toc %} 
+                           {% assign maxlev = page.toc_maxlevel | default: 4 %}
+                         <p class="lead mb-2">{{ page.title }}</p>
+			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=maxlev skipNoIDs=true id="toc" class="list-group.mb-5.mx-3.mx-lg-5.px-lg-5" item_class="list-group-item.font-weight-bold.py-1.pr-0.mr-0.chulapa-toc-reset" %}
+			  {% endif %}
+			{{- content -}}
+			</article>
+		</div>
+	</main>
+	{%- if page.show_bottomnavs -%}
+	  {%- include components/navbeforeafter.html -%}
+	{%- endif -%}
+	{%- if page.show_categories -%}
+  	{%- include components/categories.html-%}
+	{%- endif -%}
+	{%- if page.show_tags -%}
+	  {%- include components/tags.html-%}
+	{%- endif -%}
+	{%- include_cached footer.html show_comments=page.show_comments -%}
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	{% include custom/custom_bottomscripts.html %}
+	</body>
+</html>

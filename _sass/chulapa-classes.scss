@@ -216,11 +216,21 @@
         font-size: $display4-size;
     }
 }
+
+
  // Footer
+ @function chulapa-footertop($color1, $color2, $color3) {
+  @if $color1 == $color2 {
+    @return 0.1rem solid $color3;
+  } @else {
+  @return 0;    
+  }
+}
+ 
 .footer-chulapa {
     background-color: $footer-chulapa-bg-color;
     color: $footer-chulapa-text-color;
-    border-top: 0.1rem solid rgba($footer-chulapa-text-color, 0.25);
+    border-top:chulapa-footertop($footer-chulapa-bg-color, $body-bg, $footer-chulapa-text-color);
     
     a {
         color: $footer-chulapa-text-color;
@@ -398,4 +408,39 @@
          margin-right: 0;
      }
    }
+}
+
+.chulapa-text-line-through{
+  text-decoration: line-through;
+}
+
+.chulapa-splashpage{
+  color: $white;
+  text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+  * {
+  text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+  }
+  header {
+    background-color: transparent;
+  }
+    table {
+       color: $white;
+       text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+    }
+      a {
+        color: darken($white,20%);
+      }
+           button, form, blockquote, pre, cite, input, footer,
+           select, .btn, .navbar, .list-group , .list-group-item,
+           .form-group,
+           .breadcrumb, .breadcrumb-item,
+           .pagination, .page-item, .alert, 
+           .jumbotron, .card, .toast, .nav, .badge
+           {
+             text-shadow: none;
+             * {
+               text-shadow: none;
+             }
+      }
+
 }

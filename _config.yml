@@ -213,6 +213,7 @@ defaults:
       path: ""
       type: "picsofmadrid"
     values:
+      layout: "splashpage"
       include_on_search : true
       include_on_feed   : true
       header_type       : "splash"

@@ -4,9 +4,10 @@
             {% if page.last_modified_at %}
             {%- assign dateformat1 = page.last_modified_at | date_to_string -%}
             {%- assign dateformat2 = page.date | date_to_string -%}
+            <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% include_cached snippets/datetranslate.html  date=dateformat1 %}</time> 
             <i class="fa fa-redo fa-xs" aria-hidden="true"></i>
-            <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% include_cached snippets/datetranslate.html  date=dateformat1 %}</time>
-            <span class="ml-1 text-light font-weight-light">{% include_cached snippets/datetranslate.html  date=dateformat2 %}</span>
+            <br>
+            <span class="font-weight-light chulapa-text-line-through">{% include_cached snippets/datetranslate.html  date=dateformat2 %}</span>
             {% else %}
             {%- assign dateformat = page.date | date_to_string -%}
             <time datetime="{{ page.date | date_to_xmlschema }}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time>
