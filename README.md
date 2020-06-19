@@ -5,8 +5,11 @@ Yet another Jekyll theme
 TODO
 
 - [ ] more locales on dates
-- [ ] feed
-- [ ] blog pagination
+- [ ] finish year archive
+- [ ] full implement of cards on summary
+- [ ] alternative navbar
+- [x] feed
+- [x] blog pagination
 - [x] Navbar fixed on top
 - [x] Responsive
 - [x] Syntax highlighting 
