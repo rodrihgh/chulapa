@@ -26,7 +26,7 @@
     <!-- Chulapa Jekyll Theme - unreleased -->
     <!--  MIT License-->
     <!-- dieghernan.github.io/jt -->
-    <!--Google markup-->
+    <!--Google Structured Data-->
     <script type="application/ld+json">
         {
       "@context": "https://schema.org",
@@ -42,7 +42,7 @@
       "headline": "{{ metatitle1 }}",
       "image": "{{ ogimage }}",
       "datePublished": "{{ page.date | default:  site.time | date_to_xmlschema }}",
-      "dateModified": "{{ page.date | default:  site.time | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | default:  site.time | date_to_xmlschema }}",
       "author": {
         "@type": "Person",
         "name": "{{ page.author.name | default: site.author.name | default: site.github.owner_name }}"

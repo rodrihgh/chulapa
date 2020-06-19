@@ -1,8 +1,16 @@
       <div class="row pt-1 pt-md-2" id="chulapaDateSocial">
           <div class="col-md-4 offset-md-2 col font-italic font-weight-bold text-primary">
             {%- if page.date and page.show_date -%}
+            {% if page.last_modified_at %}
+            {%- assign dateformat1 = page.last_modified_at | date_to_string -%}
+            {%- assign dateformat2 = page.date | date_to_string -%}
+            <i class="fa fa-redo fa-xs" aria-hidden="true"></i>
+            <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% include_cached snippets/datetranslate.html  date=dateformat1 %}</time>
+            <span class="ml-1 text-light font-weight-light">{% include_cached snippets/datetranslate.html  date=dateformat2 %}</span>
+            {% else %}
             {%- assign dateformat = page.date | date_to_string -%}
             <time datetime="{{ page.date | date_to_xmlschema }}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time>
+            {% endif %}
             {%- endif -%}
           </div>
           {%- if page.show_sociallinks -%}
