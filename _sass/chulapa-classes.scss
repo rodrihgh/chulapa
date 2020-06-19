@@ -470,7 +470,7 @@
   }
     table, header, .chulapaDateSocial {
        color: $hero-chulapa-text-color;
-       a {$hero-chulapa-text-color;}
+       a {color: $hero-chulapa-text-color;}
     }
       a {
         color: color-yiq($hero-chulapa-bg-color, lighten($black,20%), darken($white, 20%));
