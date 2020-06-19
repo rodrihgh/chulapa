@@ -470,8 +470,6 @@
     }
 
     table,
-    header,
-    .header-chulapa,
     .chulapaDateSocial {
         color: $white;
         text-shadow: 0.1rem 0.1rem 0.2rem #000606;
@@ -481,6 +479,22 @@
             text-shadow: 0.1rem 0.1rem 0.2rem #000606;
         }
     }
+    header {
+      color: $white;
+      text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+        * {
+          color: $white;
+          text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+          .header-chulapa, .hero-chulapa, .splash-chulapa {
+            color: $white;
+            text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+            * {
+              color: $white;
+              text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+              }
+            }
+          }
+        }
 
     a {
         color: darken($white, 20%);
