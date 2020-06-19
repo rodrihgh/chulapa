@@ -427,6 +427,7 @@
   .chulapa-pagination .page-link {
     color: $white;
     &:hover {
+      color: $hero-chulapa-bg-color;
       background-color: $white;
     }
   }
@@ -458,6 +459,7 @@
   .chulapa-pagination .page-link {
     color: $hero-chulapa-text-color;
     &:hover {
+      color: $hero-chulapa-bg-color;
       background-color: $hero-chulapa-text-color;
     }
   }
