@@ -1,7 +1,10 @@
 /*!
  * Specific classes and formats for chulapa
  */
- 
+ .chulapaDateSocial{
+   color: $primary(
+
+}
 .chulapa-headingfont{
     font-family: $headings-font-family;
 }
@@ -431,7 +434,7 @@
       background-color: $white;
     }
   }
-    table, header, .text-primary {
+    table, header, .chulapaDateSocial {
        color: $white;
        text-shadow: 0.1rem 0.1rem 0.2rem #000606;
     }
@@ -463,7 +466,7 @@
       background-color: $hero-chulapa-text-color;
     }
   }
-    table, header, .text-primary {
+    table, header, .chulapaDateSocial {
        color: $hero-chulapa-text-color;
     }
       a {
