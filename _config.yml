@@ -1,8 +1,3 @@
-compress_html:
-  clippings: all
-  blanklines: true
-  profile: true
-
 # A. Site Settings /SEO options
 # Overall options for your site, would affect your site SEO
 # Default values are explained
@@ -240,7 +235,12 @@ defaults:
 
 
 # XX. Other settings - no need to modify
-#incremental  : true #Experimental, can cause problems. You may need to remove this line https://jekyllrb.com/docs/configuration/incremental-regeneration/
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  blanklines: true
+
 plugins:
   - jekyll-github-metadata
   - jekyll-paginate
