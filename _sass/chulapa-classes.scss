@@ -414,14 +414,18 @@
   text-decoration: line-through;
 }
 
-.chulapa-splashpage{
+.chulapa-splashpage-img{
   color: $white;
   text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+  background-color: $hero-chulapa-bg-color ;
   * {
   text-shadow: 0.1rem 0.1rem 0.2rem #000606;
   }
   header {
     background-color: transparent;
+  }
+  .chulapa-pagination {
+    color: $white;
   }
     table {
        color: $white;
@@ -443,4 +447,18 @@
              }
       }
 
+}
+
+.chulapa-splashpage{
+  color: $white;
+  background-color: $hero-chulapa-bg-color ;
+  .chulapa-pagination {
+    color: $white;
+  }
+    table {
+       color: $white;
+    }
+      a {
+        color: darken($white,20%);
+      }
 }
