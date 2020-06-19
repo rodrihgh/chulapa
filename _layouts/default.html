@@ -16,8 +16,9 @@
 			</aside>
 			<article class="col-md-8">
 			 {% if page.show_toc %} 
+                           {% assign maxlev = page.toc_maxlevel | default: 4 %}
                          <p class="lead mb-2">{{ page.title }}</p>
-			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=6 skipNoIDs=true id="toc" class="list-group.lead.mb-3" item_class="list-group-item.font-weight-bold.py-1.pr-0.mr-0.small.chulapa-toc-reset" %}
+			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=maxlev skipNoIDs=true id="toc" class="list-group.mb-3" item_class="list-group-item.font-weight-bold.py-1.pr-0.mr-0.chulapa-toc-reset" %}
 			  {% endif %}
 			{{- content -}}
 			</article>
