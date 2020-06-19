@@ -1,43 +1,53 @@
 /*!
  * Specific classes and formats for chulapa
  */
- .chulapaDateSocial{
-   color: $primary;
-    a {color: $primary;}
+.chulapaDateSocial {
+    color: $primary;
+
+    a {
+        color: $primary;
+    }
 }
-.chulapa-headingfont{
+
+.chulapa-headingfont {
     font-family: $headings-font-family;
 }
 
-.chulapa-links-hover-only{
+.chulapa-links-hover-only {
     a {
         color: inherit;
+
         @include hover() {
             color: $link-hover-color;
             text-decoration: $link-hover-decoration;
-            }
         }
+    }
 }
- 
- // Navbar
+
+// Navbar
 .navbar-chulapa {
     background-color: $navbar-chulapa-bg-color;
     font-weight: bold;
+
     .navbar-brand {
         color: $navbar-chulapa-brand-color;
         font-weight: bold;
+
         @include hover-focus() {
             color: $navbar-chulapa-brand-hover-color;
         }
 
     }
-    .btn{
+
+    .btn {
         border-color: $navbar-chulapa-text-color;
         color: $navbar-chulapa-text-color;
+
         @include hover-focus() {
             color: $navbar-chulapa-hover-color;
-            }
+        }
     }
+
     .navbar-nav {
         .nav-link {
             color: $navbar-chulapa-text-color;
@@ -114,32 +124,39 @@
     background-color: $hero-chulapa-bg-color;
     text-align: center;
     height: 40vh;
+    * {  
+      color: $hero-chulapa-text-color;
+      }
+
     hr {
         background-color: $hero-chulapa-text-color;
         width: 15%;
     }
+
     h1,
     p {
-        color: $hero-chulapa-text-color;
         word-wrap: break-word;
         -ms-word-wrap: break-word;
     }
+
     p {
-        @include fluid-type(font-size,breakpoint-min("md"),  breakpoint-min("lg"), $font-size-base, $font-size-lg);
+        @include fluid-type(font-size, breakpoint-min("md"), breakpoint-min("lg"), $font-size-base, $font-size-lg);
     }
 }
 
 @include media-breakpoint-up(md) {
-    .hero-chulapa h1{
+    .hero-chulapa h1 {
         font-size: $display4-size;
         font-weight: $display4-weight;
     }
-    .hero-chulapa p{
+
+    .hero-chulapa p {
         font-weight: $display4-weight;
     }
 }
+
 @include media-breakpoint-up(lg) {
-    .hero-chulapa h1{
+    .hero-chulapa h1 {
         font-size: $display3-size;
     }
 }
@@ -150,42 +167,44 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    h1,
-    p {
-        color: $white;
-        text-shadow: 0.1rem 0.1rem 0.2rem $black;
+    * {
+      color: $white;
     }
+    text-shadow: 0.1rem 0.1rem 0.2rem $black;
 
     hr {
         background-color: $white;
         box-shadow: 0.1rem 0.1rem 0.2rem $black;
     }
 }
+
 .splash-chulapa {
     @extend .hero-chulapa;
     height: calc(100vh - 56px);
-    h1, p {
+
+    h1,
+    p {
         font-weight: $display1-weight;
     }
 
     h1 {
-        @include fluid-type(font-size,breakpoint-min("md"),  breakpoint-min("lg"), $font-size-base * 3, $display1-size);
+        @include fluid-type(font-size, breakpoint-min("md"), breakpoint-min("lg"), $font-size-base * 3, $display1-size);
     }
+
     p {
-        @include fluid-type(font-size,breakpoint-min("md"),  breakpoint-min("lg"), $font-size-base * 1.5, $h1-font-size);
+        @include fluid-type(font-size, breakpoint-min("md"), breakpoint-min("lg"), $font-size-base * 1.5, $h1-font-size);
     }
 }
+
 .splash-chulapa-image {
     @extend .splash-chulapa;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-
-    h1,
-    p {
-        color: $white;
-        text-shadow: 0.1rem 0.1rem 0.2rem $black;
+    * {
+      color: $white;
+      text-shadow: 0.1rem 0.1rem 0.2rem $black;
     }
 
     hr {
@@ -195,46 +214,53 @@
 }
 
 .header-chulapa {
-	background-color: transparent;
-	color: $body-color;
-	h1, p {
-        color: $body-color;
+    background-color: transparent;
+    color: $body-color;
+
+    h1,
+    p {
         word-wrap: break-word;
         -ms-word-wrap: break-word;
     }
+
     hr {
         background-color: color-yiq($body-bg, $hero-chulapa-bg-color, $body-color);
-        }
-    .header-chulapa-img{
+    }
+
+    .header-chulapa-img {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        @include fluid-type(height,breakpoint-min("sm"), breakpoint-min("lg"), 20vh, 30vh);
+        @include fluid-type(height, breakpoint-min("sm"), breakpoint-min("lg"), 20vh, 30vh);
     }
 }
 
 @include media-breakpoint-up(md) {
-    .header-chulapa h1{
+    .header-chulapa h1 {
         font-size: $display4-size;
     }
 }
 
 
- // Footer
- @function chulapa-footertop($color1, $color2, $color3) {
-  @if $color1 == $color2 {
-    @return 0.1rem solid $color3;
-  } @else {
-  @return 0;    
-  }
+// Footer
+@function chulapa-footertop($color1, $color2, $color3) {
+    @if $color1==$color2 {
+        @return 0.1rem solid $color3;
+    }
+
+    @else {
+        @return 0;
+    }
 }
- 
+
 .footer-chulapa {
     background-color: $footer-chulapa-bg-color;
-    color: $footer-chulapa-text-color;
-    border-top:chulapa-footertop($footer-chulapa-bg-color, $body-bg, $footer-chulapa-text-color);
-    
+    * {
+      color: $footer-chulapa-text-color;
+    }
+    border-top: chulapa-footertop($footer-chulapa-bg-color, $body-bg, $footer-chulapa-text-color);
+
     a {
         color: $footer-chulapa-text-color;
         text-decoration: none;
@@ -278,11 +304,11 @@
     background-size: cover;
 }
 
-.chulapa-min-h-10{
+.chulapa-min-h-10 {
     min-height: 10vh;
 }
 
-.chulapa-min-h-20{
+.chulapa-min-h-20 {
     min-height: 20vh;
 }
 
@@ -295,32 +321,32 @@
     @extend .card-columns;
     column-count: 2;
     column-gap: map-get($spacers, 1);
-    
+
     @include media-breakpoint-up(md) {
-    column-count: 3;
+        column-count: 3;
     }
-    
+
     @include media-breakpoint-up(lg) {
-    column-count: 4;
+        column-count: 4;
     }
-    
+
     .chulapa-masonry-brick {
         @extend .card;
         margin: 0;
         padding: 0;
         margin-bottom: map-get($spacers, 1);
         display: inline-block;
-        
+
     }
 }
 
-.chulapa-gradiente-fallback{
+.chulapa-gradiente-fallback {
     background-color: $chulapa-col;
-    background-image: linear-gradient(to bottom right, rgba($light,1) , rgba($chulapa-col,1) 80%, rgba($dark,1) 100%);
+    background-image: linear-gradient(to bottom right, rgba($light, 1), rgba($chulapa-col, 1) 80%, rgba($dark, 1) 100%);
 
 }
 
-.chulapa-avatar-size{
+.chulapa-avatar-size {
     width: 8vmax;
     height: 8vmax;
     @include border-radius(50%);
@@ -328,9 +354,10 @@
 
 
 
-.chulapa-pagination{
+.chulapa-pagination {
     .fa-stack {
-      color: transparent;
+        color: transparent;
+
         @include hover-focus() {
             color: $pagination-chulapa-bg-hover-color;
         }
@@ -338,141 +365,186 @@
 
     .fa-inverse {
         color: $body-color;
+
         @include hover-focus() {
             color: $white;
         }
     }
-    .chulapa-pagination-inner .page-item { 
-	    border-radius: 0
-	}
-    .page-link {
-      color: $pagination-chulapa-text-color;
-      background-color: transparent;
 
-      &:hover {
-        z-index: 2;
-        color: $pagination-chulapa-text-hover-color;
-        background-color: $pagination-chulapa-bg-hover-color;
-        border-color: $pagination-chulapa-bg-hover-color;
-      }
-      
-      &:focus {
-        outline: $pagination-focus-outline;
-        box-shadow: $pagination-focus-box-shadow;
+    .chulapa-pagination-inner .page-item {
+        border-radius: 0
+    }
+
+    .page-link {
+        color: $pagination-chulapa-text-color;
+        background-color: transparent;
+
+        &:hover {
+            z-index: 2;
+            color: $pagination-chulapa-text-hover-color;
+            background-color: $pagination-chulapa-bg-hover-color;
+            border-color: $pagination-chulapa-bg-hover-color;
+        }
+
+        &:focus {
+            outline: $pagination-focus-outline;
+            box-shadow: $pagination-focus-box-shadow;
         }
     }
-    
+
     .page-item {
-      &.active .page-link {
-        color: $pagination-chulapa-text-hover-color;
-        background-color: $pagination-chulapa-bg-hover-color;
-        border-color: $pagination-chulapa-bg-hover-color;
-      }
-    
-      &.disabled .page-link {
-        color: change-color($pagination-chulapa-text-color,$alpha: 0.7);
-        pointer-events: none;
-        // Opinionated: remove the "hand" cursor set previously for .page-link
-        cursor: auto;
-        background-color: transparent;
-        border-color: transparent;
-      }
+        &.active .page-link {
+            color: $pagination-chulapa-text-hover-color;
+            background-color: $pagination-chulapa-bg-hover-color;
+            border-color: $pagination-chulapa-bg-hover-color;
+        }
+
+        &.disabled .page-link {
+            color: change-color($pagination-chulapa-text-color, $alpha: 0.7);
+            pointer-events: none;
+            // Opinionated: remove the "hand" cursor set previously for .page-link
+            cursor: auto;
+            background-color: transparent;
+            border-color: transparent;
+        }
     }
 }
 
 .chulapa-gradient {
-  background-image: linear-gradient(to bottom right, rgba($light,0.8) 0%, rgba($chulapa-col,0.8) 70%, rgba($dark,0.8) 100%);
-  
+    background-image: linear-gradient(to bottom right, rgba($light, 0.8) 0%, rgba($chulapa-col, 0.8) 70%, rgba($dark, 0.8) 100%);
+
 }
 
-.chulapa-card-img{
-  @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+.chulapa-card-img {
+    @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
 }
 
 @include media-breakpoint-up(sm) {
-  .chulapa-card-img{
-    @include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
-  }
+    .chulapa-card-img {
+        @include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
+    }
 }
+
 .chulapa-toc-reset {
-   ul {
-   padding-left: 0;
-   margin-left: 0;
-   padding-right: 0;
-   margin-right: 0;
-   border: 0;
-     li {
-         border-left: 0;
-         border-right: 0;
-         border-bottom: 0;
-         font-size: 0.9 * $font-size-base;
-         font-weight: $font-weight-normal !important;
-         padding-right: 0;
-         margin-right: 0;
-     }
-   }
+    ul {
+        padding-left: 0;
+        margin-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        border: 0;
+
+        li {
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0;
+            font-size: 0.9 * $font-size-base;
+            font-weight: $font-weight-normal !important;
+            padding-right: 0;
+            margin-right: 0;
+        }
+    }
 }
 
-.chulapa-text-line-through{
-  text-decoration: line-through;
+.chulapa-text-line-through {
+    text-decoration: line-through;
 }
 
-.chulapa-splashpage-img{
-  color: $white;
-  text-shadow: 0.1rem 0.1rem 0.2rem #000606;
-  background-color: $hero-chulapa-bg-color ;
-  * {
-  text-shadow: 0.1rem 0.1rem 0.2rem #000606;
-  }
-  header {
-    background-color: transparent;
-  }
-  .chulapa-pagination .page-link {
+.chulapa-splashpage-img {
     color: $white;
-    &:hover {
-      color: $hero-chulapa-bg-color;
-      background-color: $white;
+    text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+    background-color: $hero-chulapa-bg-color;
+
+    * {
+        text-shadow: 0.1rem 0.1rem 0.2rem #000606;
     }
-  }
-    table, header, .header-chulapa, .chulapaDateSocial {
-       color: $white;
-       text-shadow: 0.1rem 0.1rem 0.2rem #000606;
-   a{color: $white;
-       text-shadow: 0.1rem 0.1rem 0.2rem #000606;}
- }
-      a {
-        color: darken($white,20%);
-      }
-           button, form, blockquote, pre, cite, input, footer,
-           select, .btn, .navbar, .list-group , .list-group-item,
-           .form-group,
-           .breadcrumb, .breadcrumb-item,
-           .pagination, .page-item, .alert, 
-           .jumbotron, .card, .toast, .nav, .badge
-           {
-             text-shadow: none;
-             * {
-               text-shadow: none;
-             }
-      }
+
+    header {
+        background-color: transparent;
+    }
+
+    .chulapa-pagination .page-link {
+        color: $white;
+
+        &:hover {
+            color: $hero-chulapa-bg-color;
+            background-color: $white;
+        }
+    }
+
+    table,
+    header,
+    .header-chulapa,
+    .chulapaDateSocial {
+        color: $white;
+        text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+
+        a {
+            color: $white;
+            text-shadow: 0.1rem 0.1rem 0.2rem #000606;
+        }
+    }
+
+    a {
+        color: darken($white, 20%);
+    }
+
+    button,
+    form,
+    blockquote,
+    pre,
+    cite,
+    input,
+    footer,
+    select,
+    .btn,
+    .navbar,
+    .list-group,
+    .list-group-item,
+    .form-group,
+    .breadcrumb,
+    .breadcrumb-item,
+    .pagination,
+    .page-item,
+    .alert,
+    .jumbotron,
+    .card,
+    .toast,
+    .nav,
+    .badge {
+        text-shadow: none;
+
+        * {
+            text-shadow: none;
+        }
+    }
 
 }
 
-.chulapa-splashpage{
-  color: $hero-chulapa-text-color;
-  background-color: $hero-chulapa-bg-color ;
-  .chulapa-pagination .page-link {
+.chulapa-splashpage {
     color: $hero-chulapa-text-color;
-    &:hover {
-      color: $hero-chulapa-bg-color;
-      background-color: $hero-chulapa-text-color;
+    background-color: $hero-chulapa-bg-color;
+
+    .chulapa-pagination .page-link {
+        color: $hero-chulapa-text-color;
+
+        &:hover {
+            color: $hero-chulapa-bg-color;
+            background-color: $hero-chulapa-text-color;
+        }
     }
-  }
-    table, header, .header-chulapa, .chulapaDateSocial {
-       color: $hero-chulapa-text-color;
-       a {color: $hero-chulapa-text-color;}
+
+    table,
+    header,
+    .header-chulapa,
+    .chulapaDateSocial {
+        color: $hero-chulapa-text-color;
+
+        a {
+            color: $hero-chulapa-text-color;
+        }
     }
-      a {
-        color: color-yiq($hero-chulapa-bg-color, lighten($black,20%), darken($white, 20%));
-      }
+
+    a {
+        color: color-yiq($hero-chulapa-bg-color, lighten($black, 20%), darken($white, 20%));
+    }
 }
