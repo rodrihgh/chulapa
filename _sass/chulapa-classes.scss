@@ -347,6 +347,7 @@
 .chulapa-avatar-size {
     width: 8vmax;
     height: 8vmax;
+    border-color: $body-color;
     @include border-radius(50%);
 }
 
