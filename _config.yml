@@ -60,10 +60,13 @@ algolia:
     - html
     - md
   searchableAttributes:     #Optional                                                    
-    - title                                                                    
-    - headings                                                                 
-    - unordered(content)
-    - unordered(subtitle)
+      - title                                                                    
+      - headings                                                                 
+      - unordered(content)                                                       
+      - unordered(subtitle)                                                      
+      - unordered(categories)                                                    
+      - unordered(collection)                                                    
+      - unordered(tags) 
   customRanking:            #Optional
     - desc(include_on_search)
     - desc(title)
