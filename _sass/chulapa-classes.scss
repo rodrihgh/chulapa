@@ -454,7 +454,9 @@
     header {
         background-color: transparent;
     }
-
+    a {
+        color: darken($white, 20%);
+    }
     .chulapa-pagination .page-link {
         color: $white;
 
@@ -473,10 +475,6 @@
             color: $white;
             text-shadow: 0.1rem 0.1rem 0.2rem $black;
         }
-    }
-
-    a {
-        color: darken($white, 20%);
     }
 
     button,
@@ -521,6 +519,9 @@
 .chulapa-splashpage {
     color: $hero-chulapa-text-color;
     background-color: $hero-chulapa-bg-color;
+    a {
+        color: color-yiq($hero-chulapa-bg-color, lighten($black, 20%), darken($white, 20%));
+    }
 
     .chulapa-pagination .page-link {
         color: $hero-chulapa-text-color;
@@ -542,7 +543,4 @@
         }
     }
 
-    a {
-        color: color-yiq($hero-chulapa-bg-color, lighten($black, 20%), darken($white, 20%));
-    }
 }
