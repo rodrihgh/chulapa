@@ -152,7 +152,7 @@ chulapa-skin:
   theme       :  # Optional predefined skins
   autothemer  :  true # Bool: Use autotheming
   vars        :    
-    chulapa-col: teal  #default ["crimson"]
+    chulapa-col:  #default ["black"]
     font-family-sans-serif:  #default ["bootstrap option"]
     hero-chulapa-bg-color: 
     
