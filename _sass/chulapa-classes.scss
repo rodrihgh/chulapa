@@ -347,8 +347,8 @@
 .chulapa-avatar-size {
     width: 8vmax;
     height: 8vmax;
-    border-color: $body-color !important;
     @include border-radius(50%);
+    border-color: $body-color;
 }
 
 
@@ -516,7 +516,7 @@
       }
     }
    .chulapa-avatar-size {
-     border-color: $white !important;
+     border-color: $white;
    }
 }
 
@@ -546,5 +546,7 @@
             color: $hero-chulapa-text-color;
         }
     }
-
+  .chulapa-avatar-size {
+     border-color: $white;
+   }
 }
