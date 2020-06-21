@@ -130,7 +130,7 @@ footer:
 
 # Google Fonts https://fonts.google.com/, add as many as you need
 googlefonts:
-  - url : 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+  - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
 #  - url : #example: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' 
 
 
@@ -153,7 +153,7 @@ chulapa-skin:
   autothemer  :  true # Bool: Use autotheming
   vars        :    
     chulapa-col: teal  #default ["crimson"]
-    font-family-sans-serif: Roboto, sans-serif  #default ["bootstrap option"]
+    font-family-sans-serif:  #default ["bootstrap option"]
     hero-chulapa-bg-color: 
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
