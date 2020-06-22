@@ -604,6 +604,10 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
 // Navbar modern
 
 .navbar-chulapa-modern {
+   label {
+      line-height: unset;
+      margin: 0;
+   }
 
     .navbar-toggler {
         background-color: $navbar-chulapa-bg-color;
@@ -750,9 +754,6 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     }
 
     .navbar-toggler-icon {
-        position: relative;
-        margin-top: 0.75*$spacer;
-
         &,
         &::before,
         &::after {
