@@ -641,7 +641,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
         height: 100vh;
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100vw;
         z-index: 1500;
         opacity: 0;
         width: 0;
