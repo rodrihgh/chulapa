@@ -1,29 +1,29 @@
 {%- assign thispageurl = include.pageurl | replace: ".html", ""  -%}
- <nav class="navbar navbar-expand-md sticky-top navbar-chulapa">
-	<div class="container-fluid mx-md-2">
-		<a class="navbar-brand" href="{{ site.navbar.brand.url | default: "/" | absolute_url }}">
-			{%- if site.navbar.brand.img -%}
-			<img src="{{ site.navbar.brand.img | absolute_url }}" width="30" class="d-inline-block align-top rounded-lg mr-1" alt="NavbarLogo">
-			{%- endif -%}
-			{{- site.navbar.brand.title -}}
-		</a>
-	{%- if site.navbar.nav -%}
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarToggler">
-			<ul class="navbar-nav ml-auto">
-				{%- for item in site.navbar.nav -%}
-					{%- if item.child[0] -%}
-					<li class="nav-item dropdown">
-					{%- assign containteractive  =  false -%}  
-						{%- for all in item.child -%}
-							{%- if thispageurl == all.url -%}
-							{%- assign containteractive  =  true -%}
-							{% endif %}
-						{%- endfor -%}
-						<a class="nav-link dropdown-toggle  {% if containteractive == true %} active {% endif %}" href="#" id="{{ item.title | strip | replace: " ", "-" }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }} </a>
-						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="{{ item.title | strip | replace: " ", "-" }}">
+<div class="navbar-chulapa-modern">
+    <input type="checkbox" class="navbar-chulapa-modern-button d-none" id="navi-toggle">
+    <label for="navi-toggle" class="navbar-toggler p-1">
+        <span class="navbar-toggler-icon">&nbsp;</span>
+    </label>
+    <div class="navbar-chulapa-modern-background">&nbsp;</div>
+    <nav class="navbar-chulapa-modern-nav">
+        <a class="navbar-brand " href="{{ site.navbar.brand.url | default: "/" | absolute_url }}">
+          	{%- if site.navbar.brand.img -%}
+          	<img src="{{ site.navbar.brand.img | absolute_url }}" width="30" class="d-inline-block align-top rounded-lg mr-1" alt="NavbarLogo">
+          	{%- endif -%}
+          	{{- site.navbar.brand.title -}}
+      	</a>
+        <ul class="navbar-nav d-flex flex-column align-items-center text-uppercase font-weight-light">
+          {%- for item in site.navbar.nav -%}
+            {%- if item.child[0] -%}
+            <li class="nav-item dropdown">
+              {%- assign containteractive  =  false -%}
+                {%- for all in item.child -%}
+                  {%- if thispageurl == all.url -%}
+                    {%- assign containteractive  =  true -%}
+                  {% endif %}
+                {%- endfor -%}
+                <a class="nav-link dropdown-toggle  {% if containteractive == true %} active {% endif %}" href="#" id="{{ item.title | strip | replace: " ", "-" }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }} </a>
+						<div class="dropdown-menu dropdown-menu-right text-center pr-4" aria-labelledby="{{ item.title | strip | replace: " ", "-" }}">
 						{%- for entry in item.child -%}
 							{%- if entry.url contains "http" -%}
 						<a class="dropdown-item" href="{{ entry.url }}">{{ entry.title }}</a>
@@ -51,8 +51,6 @@
 						</a>
 					</li>
 				{%- endif -%}
-			</ul>
-		</div>
-	{%- endif -%}
-	</div>
- </nav>
+        </ul>
+    </nav>
+</div>
