@@ -641,7 +641,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
         height: 100vh;
         position: fixed;
         top: 0;
-        left: 0;
+        left: -25vw;
         z-index: 1500;
         opacity: 0;
         width: 0;
@@ -651,8 +651,8 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     .navbar-nav {
         position: absolute;
         top: 50%;
-        left: -25vw;
-        transform: translate(75vw, -50%);
+        left: 25vw;
+        transform: translate(50vw, -50%);
         text-align: center;
         width: 100%;
     }
