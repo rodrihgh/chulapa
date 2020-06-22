@@ -686,7 +686,6 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
         &:link,
         &:visited {
             display: inline-block;
-            font-weight: 300;
             min-width: 50vw;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $navbar-chulapa-hover-color 50%);
             background-size: 220%;
@@ -706,6 +705,10 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
             }
         &.active {
             color: $navbar-chulapa-active-color;
+            
+            @include hover-focus() {
+                color: $navbar-chulapa-text-color;
+                }
         }
     }
 
