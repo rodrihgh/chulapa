@@ -754,6 +754,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     }
 
     .navbar-toggler-icon {
+        position: relative;
         &,
         &::before,
         &::after {
