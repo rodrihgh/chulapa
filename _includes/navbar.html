@@ -25,21 +25,17 @@
                 <a class="nav-link dropdown-toggle  {% if containteractive == true %} active {% endif %}" href="#" id="{{ item.title | strip | replace: " ", "-" }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }} </a>
 						<div class="dropdown-menu dropdown-menu-right text-center pr-4" aria-labelledby="{{ item.title | strip | replace: " ", "-" }}">
 						{%- for entry in item.child -%}
-							{%- if entry.url contains "http" -%}
-						<a class="dropdown-item nav-link" href="{{ entry.url }}">{{ entry.title }}</a>
-							{%- else -%}
-						<a class="dropdown-item nav-link {% if entry.url == thispageurl %} active {% endif %}" href="{{ entry.url | relative_url }}">{{ entry.title }} {% if entry.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
-							{%- endif -%}
+							
+						<a class="dropdown-item nav-link {% if entry.url == thispageurl %} active {% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.title }} {% if entry.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
+							
 						{%- endfor -%}
 						</div>
 					</li>
 					{%- else -%}
 					<li class="nav-item">
-						{%- if item.url contains "http" -%}
-						<a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
-						{%- else -%}
-						<a class="nav-link {% if item.url == thispageurl %} active {% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}  {% if item.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
-						{%- endif -%}
+				
+						<a class="nav-link {% if item.url == thispageurl %} active {% endif %}" href="{{ item.url | absolute_url }}">{{ item.title }}  {% if item.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
+						
 					</li>
 					{%- endif -%}
 				{%- endfor -%}
