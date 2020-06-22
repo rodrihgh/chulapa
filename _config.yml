@@ -149,7 +149,7 @@ googlefonts:
 # Theme and colors
 chulapa-skin: 
   highlight   :  #default["default"]
-  theme       :  # Optional predefined skins
+  theme       :  chulapa # Optional predefined skins
   autothemer  :  true # Bool: Use autotheming
   vars        :    
     chulapa-col:  #default ["black"]
