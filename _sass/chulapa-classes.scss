@@ -656,14 +656,18 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     .dropdown-menu {
         background-color: $navbar-chulapa-bg-color;
         border-color: $navbar-chulapa-text-color;
-        min-width: 60vw;
+
         .dropdown-item {
             color: $navbar-chulapa-text-color;
-            &.disabled {
-                color: $navbar-chulapa-disabled-color;
-            }
-            &.active {
-                color: $navbar-chulapa-active-color;
+
+            .nav-link {
+                &.disabled {
+                    color: $navbar-chulapa-disabled-color;
+                }
+
+                &.active {
+                    color: $navbar-chulapa-active-color;
+                }
             }
         }
     }
@@ -682,7 +686,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
 
     .nav-link {
         color: $navbar-chulapa-text-color;
-        
+
         &:link,
         &:visited {
             display: inline-block;
@@ -699,16 +703,17 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
             color: $navbar-chulapa-bg-color;
             transform: translateX(map-get($spacers, 2));
         }
-        
+
         &.disabled {
             color: $navbar-chulapa-disabled-color;
-            }
+        }
+
         &.active {
             color: $navbar-chulapa-active-color;
-            
+
             @include hover-focus() {
                 color: $navbar-chulapa-text-color;
-                }
+            }
         }
     }
 
@@ -724,10 +729,6 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
 
         .navbar-chulapa-modern-background {
             right: 2*map-get($spacers, 5);
-        }
-
-        .dropdown-menu {
-            min-width: 45vw;
         }
 
         .nav-link {
