@@ -124,9 +124,10 @@
     background-color: $hero-chulapa-bg-color;
     text-align: center;
     height: 40vh;
-    * {  
-      color: $hero-chulapa-text-color;
-      }
+
+    * {
+        color: $hero-chulapa-text-color;
+    }
 
     hr {
         background-color: $hero-chulapa-text-color;
@@ -167,9 +168,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
     * {
-      color: $white;
+        color: $white;
     }
+
     text-shadow: 0.1rem 0.1rem 0.2rem $black;
 
     hr {
@@ -202,9 +205,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
     * {
-      color: $white;
-      text-shadow: 0.1rem 0.1rem 0.2rem $black;
+        color: $white;
+        text-shadow: 0.1rem 0.1rem 0.2rem $black;
     }
 
     hr {
@@ -243,51 +247,51 @@
 }
 
 
- // Footer
- @function chulapa-footertop($color1, $color2, $color3) {
-     @if $color1==$color2 {
-         @return 0.1rem solid $color3;
-     }
+// Footer
+@function chulapa-footertop($color1, $color2, $color3) {
+    @if $color1==$color2 {
+        @return 0.1rem solid $color3;
+    }
 
-     @else {
-         @return 0;
-     }
- }
+    @else {
+        @return 0;
+    }
+}
 
- .footer-chulapa {
-     background-color: $footer-chulapa-bg-color;
-     color: $footer-chulapa-text-color;
-     border-top: chulapa-footertop($footer-chulapa-bg-color, $body-bg, $footer-chulapa-text-color);
+.footer-chulapa {
+    background-color: $footer-chulapa-bg-color;
+    color: $footer-chulapa-text-color;
+    border-top: chulapa-footertop($footer-chulapa-bg-color, $body-bg, $footer-chulapa-text-color);
 
-     a {
-         color: $footer-chulapa-text-color;
-         text-decoration: none;
-         font-weight: bold;
+    a {
+        color: $footer-chulapa-text-color;
+        text-decoration: none;
+        font-weight: bold;
 
-         @include hover-focus() {
-             color: $footer-chulapa-hover-color;
-         }
+        @include hover-focus() {
+            color: $footer-chulapa-hover-color;
+        }
 
-     }
+    }
 
-     .nav-link {
-         color: transparent;
+    .nav-link {
+        color: transparent;
 
-         @include hover-focus() {
-             color: $footer-chulapa-hover-color;
-         }
-     }
+        @include hover-focus() {
+            color: $footer-chulapa-hover-color;
+        }
+    }
 
-     .fa-stack {
-         @include hover-focus() {
-             color: $footer-chulapa-icon-hover-color;
-         }
-     }
+    .fa-stack {
+        @include hover-focus() {
+            color: $footer-chulapa-icon-hover-color;
+        }
+    }
 
-     .fa-inverse {
-         color: $footer-chulapa-icon-color;
-     }
- }
+    .fa-inverse {
+        color: $footer-chulapa-icon-color;
+    }
+}
 
 .chulapa-overlay-img {
     height: 100%;
@@ -339,7 +343,7 @@
 }
 
 .chulapa-gradient {
-    background-color: rgba($chulapa-col,0.3);
+    background-color: rgba($chulapa-col, 0.3);
     background-image: linear-gradient(to bottom right, rgba($light, 0.5), rgba($light, 0.65) 65%, rgba($light, 0.8) 100%);
 
 }
@@ -447,7 +451,7 @@
     color: $white;
     text-shadow: 0.1rem 0.1rem 0.2rem $black;
     background-color: $hero-chulapa-bg-color;
-    
+
     * {
         text-shadow: 0.1rem 0.1rem 0.2rem $black;
     }
@@ -455,9 +459,11 @@
     header {
         background-color: transparent;
     }
+
     a {
         color: darken($white, 20%);
     }
+
     .chulapa-pagination .page-link {
         color: $white;
 
@@ -507,21 +513,27 @@
             text-shadow: none;
         }
     }
-    .header-chulapa, .hero-chulapa, .splash-chulapa {
-      color: $white;
-      text-shadow: 0.1rem 0.1rem 0.2rem $black;
-      * {
+
+    .header-chulapa,
+    .hero-chulapa,
+    .splash-chulapa {
         color: $white;
         text-shadow: 0.1rem 0.1rem 0.2rem $black;
-      }
+
+        * {
+            color: $white;
+            text-shadow: 0.1rem 0.1rem 0.2rem $black;
+        }
     }
 }
 
 $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
+
 .chulapa-splashpage {
     color: $hero-chulapa-text-color;
     background-color: $hero-chulapa-bg-color;
     text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+
     a {
         color: color-yiq($hero-chulapa-bg-color, lighten($black, 20%), darken($white, 20%));
     }
@@ -575,12 +587,197 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
             text-shadow: none;
         }
     }
-    .header-chulapa, .hero-chulapa, .splash-chulapa {
-      color: $hero-chulapa-text-color;
-      text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
-      * {
+
+    .header-chulapa,
+    .hero-chulapa,
+    .splash-chulapa {
         color: $hero-chulapa-text-color;
         text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
-      }
+
+        * {
+            color: $hero-chulapa-text-color;
+            text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+        }
+    }
+}
+
+// Navbar modern
+
+.navbar-chulapa-modern {
+
+    .navbar-toggler {
+        background-color: $navbar-chulapa-bg-color;
+        border-color: $navbar-chulapa-toggler-border-color;
+        height: map-get($spacers, 5);
+        width: map-get($spacers, 5);
+        position: fixed;
+        top: map-get($spacers, 4);
+        right: map-get($spacers, 4);
+        border-radius: 50%;
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    &-background {
+        height: map-get($spacers, 5);
+        width: map-get($spacers, 5);
+        border-radius: 50%;
+        position: fixed;
+        top: map-get($spacers, 4);
+        right: map-get($spacers, 4);
+        background-image: radial-gradient($navbar-chulapa-bg-color, $navbar-chulapa-bg-color);
+        z-index: 1000;
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    }
+
+    &-nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+        opacity: 0;
+        width: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .navbar-nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        background-color: $navbar-chulapa-bg-color;
+        border-color: $navbar-chulapa-text-color;
+        min-width: 60vw;
+    }
+
+    .navbar-brand {
+        color: $navbar-chulapa-brand-color;
+        margin-top: map-get($spacers, 4);
+        margin-left: map-get($spacers, 4);
+
+        @include hover-focus() {
+            color: $navbar-chulapa-brand-hover-color;
+        }
+
+
+    }
+
+    .nav-link {
+        color: $navbar-chulapa-text-color;
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-weight: 300;
+            min-width: 50vw;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $navbar-chulapa-hover-color 50%);
+            background-size: 220%;
+            transition: all .4s;
+
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $navbar-chulapa-bg-color;
+            transform: translateX(map-get($spacers, 2));
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+
+        .navbar-brand {
+            margin-left: 2*map-get($spacers, 5);
+        }
+
+        .navbar-toggler {
+            right: 2*map-get($spacers, 5);
+        }
+
+        .navbar-chulapa-modern-background {
+            right: 2*map-get($spacers, 5);
+        }
+
+        .dropdown-menu {
+            min-width: 45vw;
+        }
+
+        .nav-link {
+
+            &:link,
+            &:visited {
+                min-width: 40vw;
+            }
+        }
+    }
+
+    &-button:checked~&-background {
+        transform: scale(80);
+    }
+
+    &-button:checked~&-nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    .navbar-toggler-icon {
+        position: relative;
+        margin-top: 0.7*$spacer;
+
+        &,
+        &::before,
+        &::after {
+            width: map-get($spacers, 4);
+            height: 2px;
+            background-color: $navbar-chulapa-toggler-color;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -1*map-get($spacers, 2);
+        }
+
+        &::after {
+            top: map-get($spacers, 2);
+        }
+    }
+
+    .navbar-toggler:hover .navbar-toggler-icon::before {
+        top: -$spacer;
+    }
+
+    .navbar-toggler:hover .navbar-toggler-icon::after {
+        top: $spacer;
+    }
+
+    &-button:checked+.navbar-toggler .navbar-toggler-icon {
+        background-color: transparent;
+    }
+
+    &-button:checked+.navbar-toggler .navbar-toggler-icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &-button:checked+.navbar-toggler .navbar-toggler-icon::after {
+        top: 0;
+        transform: rotate(-135deg);
     }
 }
