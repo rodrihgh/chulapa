@@ -10,6 +10,7 @@ excerpt: This is my blog
     <section class="col-md-8 offset-md-2">
     {% include_cached components/indexcards.html cacheddocs=paginator.posts  cachedlimit=site.paginate %}
     </section>
+<h1>{{paginator.previous_page_path}}
   </div>
 </main>
 {%- assign max_per_page = site.paginator_maxnum | 
