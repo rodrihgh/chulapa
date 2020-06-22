@@ -662,6 +662,9 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
             &.disabled {
                 color: $navbar-chulapa-disabled-color;
             }
+            &.active {
+                color: $navbar-chulapa-active-color;
+            }
         }
     }
 
@@ -680,10 +683,6 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     .nav-link {
         color: $navbar-chulapa-text-color;
         
-        .active {
-            color: $navbar-chulapa-active-color;
-            }
-            
         &:link,
         &:visited {
             display: inline-block;
@@ -700,6 +699,13 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
             background-position: 100%;
             color: $navbar-chulapa-bg-color;
             transform: translateX(map-get($spacers, 2));
+        }
+        
+        &.disabled {
+            color: $navbar-chulapa-disabled-color;
+            }
+        &.active {
+            color: $navbar-chulapa-active-color;
         }
     }
 
