@@ -657,6 +657,12 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
         background-color: $navbar-chulapa-bg-color;
         border-color: $navbar-chulapa-text-color;
         min-width: 60vw;
+        .dropdown-item {
+            color: $navbar-chulapa-text-color;
+            &.disabled {
+                color: $navbar-chulapa-disabled-color;
+            }
+        }
     }
 
     .navbar-brand {
@@ -673,7 +679,11 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
 
     .nav-link {
         color: $navbar-chulapa-text-color;
-
+        
+        .active {
+            color: $navbar-chulapa-active-color;
+            }
+            
         &:link,
         &:visited {
             display: inline-block;
@@ -757,14 +767,6 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
         &::after {
             top: map-get($spacers, 2);
         }
-    }
-
-    .navbar-toggler:hover .navbar-toggler-icon::before {
-        top: -$spacer;
-    }
-
-    .navbar-toggler:hover .navbar-toggler-icon::after {
-        top: $spacer;
     }
 
     &-button:checked+.navbar-toggler .navbar-toggler-icon {
