@@ -650,9 +650,9 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
 
     .navbar-nav {
         position: absolute;
-        top: 100%;
-        left: 100%;
-        transform: translate(-100%, -100%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
         width: 100%;
     }
@@ -694,7 +694,6 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
         &:link,
         &:visited {
             display: inline-block;
-            min-width: 50vw;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $navbar-chulapa-hover-color 50%);
             background-size: 220%;
             transition: all .4s;
@@ -735,13 +734,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
             right: 2*map-get($spacers, 5);
         }
 
-        .nav-link {
-
-            &:link,
-            &:visited {
-                min-width: 40vw;
-            }
-        }
+        
     }
 
     &-button:checked~&-background {
