@@ -149,10 +149,10 @@ googlefonts:
 # Theme and colors
 chulapa-skin: 
   highlight   :  #default["default"]
-  theme       :  graymor # Optional predefined skins
+  theme       :  # Optional predefined skins
   autothemer  :  true # Bool: Use autotheming
   vars        :    
-    chulapa-col:  teal #default ["black"]
+    chulapa-col:  bisque #default ["black"]
     font-family-sans-serif:  #default ["bootstrap option"]
     hero-chulapa-bg-color: 
     
