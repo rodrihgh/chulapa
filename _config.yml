@@ -93,6 +93,8 @@ navbar:
     url: /blog
   - title: Showcase
     url: /bootstrap
+  - title: Pictures of Madrid
+    url: /picsofmadrid
   - title: Second Level
     child:
     - title: Liquid examples
