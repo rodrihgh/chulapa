@@ -14,7 +14,7 @@ layout: default
 {% endif %}
 {% assign alldocs = alldocs | sort: 'date' | reverse %}
 {% assign grouptag =  alldocs | map: 'tags' | join: ','  | split: ','  | group_by: tag | sort: 'size' | reverse %}
-<div class="row no-gutters pt-5" id="tags">
+<div class="row g-0 pt-5" id="tags">
 <div class="col">
 	{%- for tag in grouptag -%}
 	<a href="#{{- tag.name | replace: " ", "-" -}}" class="btn btn-chulapa m-1" role="button" style="font-size: calc(1rem + {{tag.size}}px/3 - 1px);"><i class="fa fa-tag mr-2" aria-hidden="true"></i>{{- tag.name -}}<span class="badge badge-pill badge-info ml-2">{{tag.size}}</span></a>
@@ -36,7 +36,7 @@ layout: default
   {% assign readtime = words | divided_by:words_per_minute | append: "’" %}
   {% endif %}
 	{% if document.tags contains tag.name %}
-  <article class="chulapa-links-hover-only my-1 mb-4 row no-gutters">
+  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
     <div class="col">
       <h5><a href="{{ document.url | absolute_url }}">{{ document.title }}</a></h5>
       <div>
@@ -58,7 +58,7 @@ layout: default
   {% endif %}
   {% endfor %}
   <div class="text-right">
-      <a href="#tags" class="btn btn-outline-chulapa btn-lg border-0"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i><span class="sr-only">Top</span></a>
+      <a href="#tags" class="btn btn-outline-chulapa btn-lg border-0 chulapa-text-body-color"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i><span class="sr-only">Top</span></a>
   </div>
 </section>
 {% endfor %}

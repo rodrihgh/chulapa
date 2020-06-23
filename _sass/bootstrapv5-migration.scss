@@ -1,0 +1,12 @@
+/***Bootstrap v5 migration ****/
+
+.g-0{
+      @extend .no-gutters;
+}
+
+@mixin hover-focus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
