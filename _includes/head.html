@@ -100,9 +100,9 @@
     <link rel="stylesheet" href="{{- "assets/fontawesome/css/all.min.css " | relative_url -}}" />
     {%- endif %}
     <!-- Theme css (Bootstrap included) -->
-    <link rel="stylesheet" href="{{- "assets/css/main.css " | relative_url -}}" />
+    <link rel="stylesheet" href="{{- "assets/css/main.css " | absolute_url -}}" />
     <!-- Custom css -->
-    <link rel="stylesheet" href="{{- "assets/css/custom.css " | relative_url -}}" />
+    <link rel="stylesheet" href="{{- "assets/css/custom.css " | absolute_url -}}" />
     {%- include components/webtracking.html -%}
     {%- include custom/custom_head.html -%}
 </head>
