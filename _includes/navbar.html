@@ -7,7 +7,7 @@
     </label>
     <div class="navbar-chulapa-modern-background">&nbsp;</div>
     <nav class="navbar-chulapa-modern-nav">
-        <ul class="navbar-nav text-center text-uppercase font-weight-light">
+        <ul class="navbar-nav text-center text-uppercase font-weight-light mt-0 mb-1 py-1">
 <li class="nav-item">
         <a class="nav-link px-3 navbar-brand " href="{{ site.navbar.brand.url | default: "" | absolute_url }}">
           	{%- if site.navbar.brand.img -%}
@@ -18,7 +18,7 @@
 </li>
           {%- for item in site.navbar.nav -%}
             {%- if item.child[0] -%}
-            <li class="nav-item dropright">
+            <li class="nav-item dropright my-0 py-1">
               {%- assign containteractive  =  false -%}
                 {%- for all in item.child -%}
                   {%- if thispageurl == all.url -%}
@@ -35,7 +35,7 @@
 						</div>
 					</li>
 					{%- else -%}
-					<li class="nav-item">
+					<li class="nav-item my-0 py-1">
 				
 						<a class="nav-link px-3 {% if item.url == thispageurl %} active font-weight-bold {% endif %}" href="{{ item.url | absolute_url }}">{{ item.title }}  {% if item.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
 						
@@ -44,7 +44,7 @@
 				{%- endfor -%}
 				{%- if site.search.provider -%}
 					<li class="nav-item">
-						<a class="nav-link" href="{{ site.search.landing_page | default: '/search' | absolute_url }}">
+						<a class="nav-link  {% if thispageurl == site.search.landing_page | default: '/search' %}active font-weight-bold {% endif %}" href="{{ site.search.landing_page | default: '/search' | absolute_url }}">
 							{{ site.search.label | default: 'Search' }}
 						</a>
 					</li>
