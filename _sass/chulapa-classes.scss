@@ -451,6 +451,10 @@
     color: $white;
     text-shadow: 0.1rem 0.1rem 0.2rem $black;
     background-color: $hero-chulapa-bg-color;
+    
+    hr {
+        background-color: $white;
+    }
 
     * {
         text-shadow: 0.1rem 0.1rem 0.2rem $black;
@@ -520,6 +524,9 @@
     .splash-chulapa {
         color: $white;
         text-shadow: 0.1rem 0.1rem 0.2rem $black;
+        hr {
+            background-color: $white;
+            }
 
         * {
             color: $white;
@@ -534,6 +541,10 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     color: $hero-chulapa-text-color;
     background-color: $hero-chulapa-bg-color;
     text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+    
+    hr {
+        background-color: $hero-chulapa-text-color;
+    }
 
     a {
         text-shadow: 0.1rem 0.1rem 0.2rem color-yiq($hero-chulapa-bg-color, lighten($black, 20%), darken($white, 20%));
@@ -595,6 +606,9 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     .splash-chulapa {
         color: $hero-chulapa-text-color;
         text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+        hr {
+            background-color: $hero-chulapa-text-color;
+            }
 
         * {
             color: $hero-chulapa-text-color;
