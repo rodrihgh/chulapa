@@ -17,9 +17,8 @@
 				</div>
 				<div class="card-footer">
 					{% if post.date -%}<p class="small text-right font-italic">
-{% if page.last_modified_at %}
-<i class="fa fa-redo fa-xs" aria-hidden="true"></i> 
-{% endif %}
+{% if post.last_modified_at %}
+<i class="fa fa-redo fa-xs" aria-hidden="true"></i> {% endif %}
 <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: "%d/%m/%Y"  -}}</time></p>{%- endif %}
 					{%- for category in post.categories -%}
 					<a href="{{- category | replace: " ", "-" | prepend: "#" |
