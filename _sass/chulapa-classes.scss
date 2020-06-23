@@ -535,7 +535,7 @@
     }
 }
 
-$shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
+$shadow-hero: mix($hero-chulapa-bg-color, $hero-chulapa-text-color, 60%);
 
 .chulapa-landingpage {
     color: $hero-chulapa-text-color;
@@ -547,7 +547,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     }
 
     a {
-        text-shadow: 0.1rem 0.1rem 0.2rem color-yiq($hero-chulapa-bg-color, lighten($black, 20%), darken($white, 20%));
+        text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
     }
 
     .chulapa-pagination .page-link {
