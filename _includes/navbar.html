@@ -30,7 +30,7 @@
 						<div class="dropdown-menu dropdown-menu-right text-center pr-4" aria-labelledby="{{ item.title | strip | replace: " ", "-" }}">
 						{%- for entry in item.child -%}
 							
-						<a class="dropdown-item nav-link {% if entry.url == thispageurl %} active font-weight-bold {% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.title }} {% if entry.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
+						<a class="dropdown-item nav-link d-block {% if entry.url == thispageurl %} active font-weight-bold {% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.title }} {% if entry.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
 							
 						{%- endfor -%}
 						</div>
