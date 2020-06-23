@@ -2,9 +2,9 @@
 <html lang="{{- site.locale | default: 'en-US' -}}">
 	{%- include head.html -%}
 	{% if page.header_img %}
-	<body class="d-flex flex-column chulapa-splashpage-img chulapa-overlay-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ page.header_img | absolute_url }}')">
+	<body class="d-flex flex-column chulapa-landingpage-img chulapa-overlay-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ page.header_img | absolute_url }}')">
 	{% else %}
-	<body class="d-flex flex-column chulapa-splashpage">
+	<body class="d-flex flex-column chulapa-landingpage">
 	{% endif %}
 	{% include_cached navbar.html pageurl=page.url %}
 	{%- include components/headers.html headertype= page.header_type -%}

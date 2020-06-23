@@ -206,7 +206,7 @@ defaults:
       path: ""
       type: "demo"
     values:
-      layout: "splashpage"
+      layout: "landingpage"
       header_type       : "hero"
       show_bottomnavs   : true
       show_sociallinks  : true
@@ -217,7 +217,7 @@ defaults:
       path: ""
       type: "picsofmadrid"
     values:
-      layout: "splashpage"
+      layout: "landingpage"
       include_on_search : true
       include_on_feed   : true
       header_type       : "splash"

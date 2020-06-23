@@ -447,7 +447,7 @@
     text-decoration: line-through;
 }
 
-.chulapa-splashpage-img {
+.chulapa-landingpage-img {
     color: $white;
     text-shadow: 0.1rem 0.1rem 0.2rem $black;
     background-color: $hero-chulapa-bg-color;
@@ -537,7 +537,7 @@
 
 $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
 
-.chulapa-splashpage {
+.chulapa-landingpage {
     color: $hero-chulapa-text-color;
     background-color: $hero-chulapa-bg-color;
     text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
