@@ -6,13 +6,13 @@
     </label>
     <div class="navbar-chulapa-modern-background">&nbsp;</div>
     <nav class="navbar-chulapa-modern-nav">
-        <a class="navbar-brand " href="{{ site.navbar.brand.url | default: "/" | absolute_url }}">
+        <a class="navbar-brand " href="{{ site.navbar.brand.url | default: "" | absolute_url }}">
           	{%- if site.navbar.brand.img -%}
           	<img src="{{ site.navbar.brand.img | absolute_url }}" width="30" class="d-inline-block align-top rounded-lg mr-1" alt="NavbarLogo">
           	{%- endif -%}
           	{{- site.navbar.brand.title -}}
       	</a>
-        <ul class="navbar-nav text-uppercase font-weight-light d-flex flex-column align-items-center">
+        <ul class="navbar-nav text-uppercase font-weight-light">
           {%- for item in site.navbar.nav -%}
             {%- if item.child[0] -%}
             <li class="nav-item dropdown">
