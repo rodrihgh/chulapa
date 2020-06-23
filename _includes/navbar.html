@@ -7,11 +7,11 @@
     </label>
     <div class="navbar-chulapa-modern-background">&nbsp;</div>
     <nav class="navbar-chulapa-modern-nav">
-        <ul class="navbar-nav text-uppercase font-weight-light">
+        <ul class="navbar-nav text-center text-uppercase font-weight-light">
 <li class="nav-item">
-        <a class="nav-link navbar-brand " href="{{ site.navbar.brand.url | default: "" | absolute_url }}">
+        <a class="nav-link px-3 navbar-brand " href="{{ site.navbar.brand.url | default: "" | absolute_url }}">
           	{%- if site.navbar.brand.img -%}
-          	<img src="{{ site.navbar.brand.img | absolute_url }}" width="30" class="d-inline-block align-top rounded-lg text-center" alt="NavbarLogo">
+          	<img src="{{ site.navbar.brand.img | absolute_url }}" width="30" class="d-inline-block align-top rounded-lg text-center mr-1" alt="NavbarLogo">
           	{%- endif -%}
           	{{- site.navbar.brand.title -}}
       	</a>
@@ -25,11 +25,11 @@
                     {%- assign containteractive  =  true -%}
                   {% endif %}
                 {%- endfor -%}
-                <a class="nav-link dropdown-toggle  {% if containteractive == true %} active font-weight-bold {% endif %}" href="#" id="{{ item.title | strip | replace: " ", "-" }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }} </a>
+                <a class="nav-link dropdown-toggle px-3 {% if containteractive == true %} active font-weight-bold {% endif %}" href="#" id="{{ item.title | strip | replace: " ", "-" }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }} </a>
 						<div class="dropdown-menu dropdown-menu-right text-center pr-4" aria-labelledby="{{ item.title | strip | replace: " ", "-" }}">
 						{%- for entry in item.child -%}
 							
-						<a class="dropdown-item nav-link d-block {% if entry.url == thispageurl %} active font-weight-bold {% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.title }} {% if entry.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
+						<a class="dropdown-item nav-link d-block px-3 {% if entry.url == thispageurl %} active font-weight-bold {% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.title }} {% if entry.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
 							
 						{%- endfor -%}
 						</div>
@@ -37,7 +37,7 @@
 					{%- else -%}
 					<li class="nav-item">
 				
-						<a class="nav-link {% if item.url == thispageurl %} active font-weight-bold {% endif %}" href="{{ item.url | absolute_url }}">{{ item.title }}  {% if item.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
+						<a class="nav-link px-3 {% if item.url == thispageurl %} active font-weight-bold {% endif %}" href="{{ item.url | absolute_url }}">{{ item.title }}  {% if item.url == thispageurl %}<span class="sr-only">(current)</span>{% endif %}</a>
 						
 					</li>
 					{%- endif -%}
