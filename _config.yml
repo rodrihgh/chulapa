@@ -83,6 +83,7 @@ disqus_shortname: chulapa #Your site id : check your address https://{{ disqus.s
 #   "brand" options would be set on the left side of your navbar
 #   "nav" would be set on the right side. Two-level nav links available
 navbar:
+  style     : 
   brand:
     title   : 
     url     :   #default["url/baseurl"]
