@@ -601,13 +601,13 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     }
 }
 
-// Navbar modern
-
+//Navbar modern
 .navbar-chulapa-modern {
-   label {
-      line-height: unset;
-      margin: 0;
-   }
+    label {
+        line-height: unset;
+        margin: 0;
+    }
+
 
     .navbar-toggler {
         background-color: $navbar-chulapa-bg-color;
@@ -646,6 +646,11 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
         opacity: 0;
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        a {
+            width: 0;
+        }
+
     }
 
     .navbar-nav {
@@ -690,12 +695,14 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
 
     .nav-link {
         color: $navbar-chulapa-text-color;
+        padding-left: map-get($spacers, 3);
+        padding-right: map-get($spacers, 3);
 
         &:link,
         &:visited {
             display: inline-block;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $navbar-chulapa-hover-color 50%);
-            background-size: 220%;
+            background-size: 280%;
             transition: all .4s;
 
         }
@@ -734,7 +741,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
             right: 2*map-get($spacers, 5);
         }
 
-        
+
     }
 
     &-button:checked~&-background {
@@ -744,11 +751,18 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     &-button:checked~&-nav {
         opacity: 1;
         width: 100%;
+
+        a {
+            width: auto;
+        }
     }
+
+
 
     .navbar-toggler-icon {
         position: relative;
         margin-top: .25rem;
+
         &,
         &::before,
         &::after {
