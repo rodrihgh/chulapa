@@ -1,6 +1,10 @@
  /*!
  * Specific classes and formats for chulapa
  */
+
+.chulapa-text-body-color{
+  color: $body-color !important;
+}
 .chulapaDateSocial {
     color: $body-color;
 
