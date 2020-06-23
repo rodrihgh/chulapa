@@ -678,7 +678,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-align: center;
         width: 100%;
     }
 
@@ -712,9 +711,6 @@
 
     .nav-link {
         color: $navbar-chulapa-text-color;
-        padding-left: map-get($spacers, 3);
-        padding-right: map-get($spacers, 3);
-
         &:link,
         &:visited {
             display: inline-block;
