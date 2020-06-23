@@ -535,19 +535,17 @@
     }
 }
 
-$shadow-hero: mix($hero-chulapa-bg-color, $hero-chulapa-text-color, 60%);
-
 .chulapa-landingpage {
     color: $hero-chulapa-text-color;
     background-color: $hero-chulapa-bg-color;
-    text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+    text-shadow: 1px 1px 1px $hero-chulapa-text-color;
     
     hr {
         background-color: $hero-chulapa-text-color;
     }
 
     a {
-        text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+        text-shadow: 1px 1px 3px $info;
     }
 
     .chulapa-pagination .page-link {
@@ -562,11 +560,11 @@ $shadow-hero: mix($hero-chulapa-bg-color, $hero-chulapa-text-color, 60%);
     table,
     .chulapaDateSocial {
         color: $hero-chulapa-text-color;
-        text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+        text-shadow: 1px 1px 1px $hero-chulapa-text-color;
 
         a {
             color: $hero-chulapa-text-color;
-            text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+            text-shadow: 1px 1px 1px $hero-chulapa-text-color;
         }
     }
 
@@ -605,14 +603,14 @@ $shadow-hero: mix($hero-chulapa-bg-color, $hero-chulapa-text-color, 60%);
     .hero-chulapa,
     .splash-chulapa {
         color: $hero-chulapa-text-color;
-        text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+        text-shadow: 1px 1px 1px $hero-chulapa-text-color;
         hr {
             background-color: $hero-chulapa-text-color;
             }
 
         * {
             color: $hero-chulapa-text-color;
-            text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
+            text-shadow: 1px 1px 1px $hero-chulapa-text-color;
         }
     }
 }
