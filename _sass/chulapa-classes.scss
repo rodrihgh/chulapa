@@ -636,8 +636,8 @@
     .navbar-toggler {
         background-color: $navbar-chulapa-bg-color;
         border-color: $navbar-chulapa-toggler-border-color;
-        height: map-get($spacers, 5);
-        width: map-get($spacers, 5);
+        height: 4*$spacer;
+        width: 4*$spacer;
         position: fixed;
         border-radius: 50%;
         z-index: 2000;
@@ -647,8 +647,8 @@
     }
 
     &-background {
-        height: map-get($spacers, 5);
-        width: map-get($spacers, 5);
+        height: 4*$spacer;
+        width: 4*$spacer;
         border-radius: 50%;
         position: fixed;
         background-image: radial-gradient($navbar-chulapa-bg-color, $navbar-chulapa-bg-color);
@@ -798,12 +798,12 @@
 
     .navbar-toggler-icon {
         position: relative;
-        margin-top: .25rem;
+        margin-top: 1rem;
 
         &,
         &::before,
         &::after {
-            width: map-get($spacers, 4);
+            width: 2rem;
             height: 2px;
             background-color: $navbar-chulapa-toggler-color;
             display: inline-block;
@@ -818,11 +818,11 @@
         }
 
         &::before {
-            top: -1*map-get($spacers, 2);
+            top: -.6rem;
         }
 
         &::after {
-            top: map-get($spacers, 2);
+            top: .6rem;
         }
     }
 
