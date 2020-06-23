@@ -746,12 +746,12 @@
         @include media-breakpoint-down(lg) {
 
         .navbar-toggler {
-            bottom: map-get($spacers, 4);
+            bottom: map-get($spacers, 5);
             right: map-get($spacers, 4);
         }
 
         .navbar-chulapa-modern-background {
-            bottom: map-get($spacers, 4);
+            bottom: map-get($spacers, 5);
             right: map-get($spacers, 4);
         }
 
