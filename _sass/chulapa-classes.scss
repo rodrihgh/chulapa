@@ -232,7 +232,7 @@
     }
 
     hr {
-        background-color: color-yiq($body-bg, $hero-chulapa-bg-color, $body-color);
+        background-color: color-contrast($body-bg, $hero-chulapa-bg-color, $body-color);
     }
 
     .header-chulapa-img {

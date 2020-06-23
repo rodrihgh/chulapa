@@ -4,7 +4,7 @@
 $chulapa-col: black !default;
 //Navbar
 $navbar-chulapa-bg-color: $chulapa-col !default;
-$navbar-chulapa-text-contrast: color-yiq($navbar-chulapa-bg-color, $black, $white);
+$navbar-chulapa-text-contrast: color-contrast($navbar-chulapa-bg-color, $black, $white);
 $navbar-chulapa-text-color: mix($navbar-chulapa-text-contrast, $navbar-chulapa-bg-color, 60%) !default;
 $navbar-chulapa-hover-color: mix($navbar-chulapa-text-contrast, $navbar-chulapa-bg-color, 75%) !default;
 $navbar-chulapa-active-color: mix($navbar-chulapa-text-contrast, $navbar-chulapa-bg-color, 75%) !default;
@@ -26,7 +26,7 @@ $footer-chulapa-icon-hover-color: $footer-chulapa-hover-color !default;
 
 //Hero
 $hero-chulapa-bg-color: $navbar-chulapa-bg-color !default;
-$hero-chulapa-text-color: color-yiq($hero-chulapa-bg-color, $black, $white) !default;
+$hero-chulapa-text-color: color-contrast($hero-chulapa-bg-color, $black, $white) !default;
 
 //Misc
 //Blockquote
@@ -38,12 +38,12 @@ $pre-chulapa-bg-color: lighten($blockquote-chulapa-bg-color, 2%) !default;
 
 //Table
 $thead-chulapa-bg-color: $chulapa-col !default;
-$thead-chulapa-text-color: color-yiq($thead-chulapa-bg-color, $black, $white) !default;
+$thead-chulapa-text-color: color-contrast($thead-chulapa-bg-color, $black, $white) !default;
 
 
 //Pagination
 $pagination-chulapa-text-color: $body-color !default;
 $pagination-chulapa-bg-hover-color: $chulapa-col !default;
-$pagination-chulapa-text-hover-color: color-yiq($pagination-chulapa-bg-hover-color, $black, $white) !default;
+$pagination-chulapa-text-hover-color: color-contrast($pagination-chulapa-bg-hover-color, $black, $white) !default;
 
 
