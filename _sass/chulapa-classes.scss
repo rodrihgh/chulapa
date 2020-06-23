@@ -461,7 +461,7 @@
     }
 
     a {
-        color: darken($white, 20%);
+        text-shadow: 0.1rem 0.1rem 0.1rem white;
     }
 
     .chulapa-pagination .page-link {
@@ -494,6 +494,7 @@
     select,
     .btn,
     .navbar,
+    .navbar-chulapa-modern,
     .list-group,
     .list-group-item,
     .form-group,
@@ -535,7 +536,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     text-shadow: 0.1rem 0.1rem 0.2rem $shadow-hero;
 
     a {
-        color: color-yiq($hero-chulapa-bg-color, lighten($black, 20%), darken($white, 20%));
+        text-shadow: 0.1rem 0.1rem 0.2rem color-yiq($hero-chulapa-bg-color, lighten($black, 20%), darken($white, 20%));
     }
 
     .chulapa-pagination .page-link {
@@ -568,6 +569,7 @@ $shadow-hero: color-yiq($hero-chulapa-bg-color, $white, $black);
     select,
     .btn,
     .navbar,
+    .navbar-chulapa-modern,
     .list-group,
     .list-group-item,
     .form-group,
