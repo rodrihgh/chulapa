@@ -76,7 +76,14 @@
               color: $navbar-chulapa-bg-color;
             }
         }
-    }
+        
+        .nav-link {
+          .active {
+            background-color: $navbar-chulapa-hover-color;
+            color: $navbar-chulapa-bg-color;
+            }
+          }
+        }
 
     .navbar-toggler {
         color: $navbar-chulapa-text-color;

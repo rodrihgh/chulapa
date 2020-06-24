@@ -86,7 +86,7 @@
 			{%- if site.search.provider -%}
 				{%- assign urlsearch = site.search.landing_page | default: '/search' -%}
 					<li class="nav-item">
-						<a class="nav-link {% if urlsearch == thispageurl %} active font-weight-bold {%- endif -%}" href="{{- urlsearch | absolute_url -}}">
+						<a class="nav-link px-2 {% if urlsearch == thispageurl %} active font-weight-bold {%- endif -%}" href="{{- urlsearch | absolute_url -}}">
 							<span class="d-md-none p-0 pr-1">{{- site.search.label | default: 'Search' -}}</span><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">{{- site.search.label | default: 'Search' -}}</span>
 						</a>
 					</li>
