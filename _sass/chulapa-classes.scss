@@ -667,9 +667,6 @@
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-        a {
-            width: 0;
-        }
 
     }
 
@@ -679,6 +676,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
+        display: none;
     }
 
     .dropdown-menu {
@@ -778,10 +776,11 @@
     &-button:checked~&-nav {
         opacity: 1;
         width: 100%;
+        
+        .navbar-nav{
+                display: flex;
+                }
 
-        a {
-            width: unset;
-        }
     }
 
 
