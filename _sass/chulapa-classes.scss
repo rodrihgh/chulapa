@@ -671,10 +671,10 @@
 
     .navbar-nav {
         position: absolute;
-        top: 25%;
+        top: 50%;
         left: -100vw;
         width: 100%;
-        transform: translateX(100%);
+        transform: translate(100%,-50%);
         
     }
 
