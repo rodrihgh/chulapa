@@ -673,7 +673,6 @@
         position: absolute;
         top: 50%;
         left: -50vw;
-        transform: translate(50vw, -50%);
         width: 100%;
         
     }
@@ -776,7 +775,7 @@
         width: 100%;
         
         .navbar-nav{
-                display: flex;
+                transform: translate(50vw, -50%);
                 }
 
     }
