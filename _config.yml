@@ -92,21 +92,21 @@ navbar:
   - title: Blog
     url: /blog
   - title: Boostrap		
-      url: /bootstrap		
-   - title: Collections		
-     child:		
+    url: /bootstrap		
+  - title: Collections		
+    child:		
      - title: Demos		
        url: /demo		
      - title : Pics of Madrid		
        url: /picsofmadrid		
-   - title: Others		
-     child:		
+  - title: Others		
+    child:		
      - title: Liquid		
        url: /liquid		
      - title: Tags		
        url: /tags 		
-   - title: Github		
-     url: https://github.com/dieghernan
+  - title: Github		
+    url: https://github.com/dieghernan
 
 #Social links to be placed on your site footer
 footer:
