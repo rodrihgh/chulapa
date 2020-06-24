@@ -74,9 +74,10 @@
         .nav-link.show,
         .nav-link.active {
             color: $navbar-chulapa-active-color;
-            border:$border-width solid $navbar-chulapa-active-color;
-            @include border-radius($btn-border-radius);
+            @include hover-focus() {
+                color: $navbar-chulapa-bg-color;
             }
+
         }
 
     .navbar-toggler {
