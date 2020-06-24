@@ -43,8 +43,7 @@ layout: default
         {% if document.date %}
         {% assign dateformat = document.date | date: "%B %d, %Y" %}
         <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time>
-{%- if document.last_modified_at -%}
-<i class="fa fa-redo fa-xs" aria-hidden="true"></i> {%- endif %} | 
+{% if document.last_modified_at %} <i class="fa fa-redo" aria-hidden="true"></i>{% endif %} | 
         {% endif %}
         <i class="far fa-clock" aria-hidden="true"></i> {{ readtime }} 
         {%- if page.cloud_collection == "all" -%}
