@@ -66,7 +66,10 @@
             }
         }
 
-        .show>.nav-link,
+        .show>.nav-link {
+          color: $navbar-chulapa-bg-color;
+        }
+        
         .active>.nav-link,
         .nav-link.show,
         .nav-link.active {
