@@ -57,7 +57,8 @@
             color: $navbar-chulapa-text-color;
 
             @include hover-focus() {
-                color: $navbar-chulapa-hover-color;
+                background-color: $navbar-chulapa-hover-color;
+                color: $navbar-chulapa-bg-color;
             }
 
             &.disabled {
