@@ -12,7 +12,13 @@
 				<div class="card-body chulapa-links-hover-only">
 					<a href="{{- post.url | absolute_url -}}"><h5 class="card-title">{{- post.title  | default: "—- —-" -}}</h5></a>
 					{% if post.subtitle -%}<h6 class="card-subtitle mb-2 text-muted">{{- post.subtitle -}}</h6>{%- endif %}
-					<div class="card-text">{{- post.content | truncatewords: 50 | markdownify -}}
+					<div class="card-text">{{- post.excerpt | default: post.content | 
+                markdownify |  newline_to_br | 
+                replace:"<br />", ",.," | 
+                replace:"{{", ",.," | 
+                replace:"{%", ",.," | 
+                split: ",.," | first | strip_html | 
+                escape_once -}}
 					</div>
 				</div>
 				<div class="card-footer">
