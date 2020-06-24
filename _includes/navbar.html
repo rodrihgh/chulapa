@@ -70,16 +70,16 @@
 							{%- assign containteractive  =  true -%}
 						{% endif %}
 					{%- endfor -%}
-						<a class="nav-link dropdown-toggle  {% if containteractive == true %} active {%- endif -%}" href="#" id="{{- item.title | strip | replace: ' ', '-' -}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{- item.title -}} </a>
+						<a class="nav-link dropdown-toggle px-1  {% if containteractive == true %} active {%- endif -%}" href="#" id="{{- item.title | strip | replace: ' ', '-' -}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{- item.title -}} </a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="{{- item.title | strip | replace: ' ', '-' -}}">
 						{%- for entry in item.child -%}
-							<a class="dropdown-item {% if entry.url == thispageurl %} active {%- endif -%}" href="{{- entry.url | absolute_url -}}">{{- entry.title -}} {%- if entry.url == thispageurl -%}<span class="sr-only">(current)</span>{%- endif -%}</a>
+							<a class="dropdown-item px-1 {% if entry.url == thispageurl %} active {%- endif -%}" href="{{- entry.url | absolute_url -}}">{{- entry.title -}} {%- if entry.url == thispageurl -%}<span class="sr-only">(current)</span>{%- endif -%}</a>
 						{%- endfor -%}
 						</div>
 					</li>
 					{%- else -%}
 					<li class="nav-item">
-						<a class="nav-link {% if item.url == thispageurl %} active {%- endif -%}" href="{{- item.url | absolute_url -}}">{{- item.title -}}{%- if item.url == thispageurl -%}<span class="sr-only">(current)</span>{%- endif -%}</a>
+						<a class="nav-link px-1 {% if item.url == thispageurl %} active {%- endif -%}" href="{{- item.url | absolute_url -}}">{{- item.title -}}{%- if item.url == thispageurl -%}<span class="sr-only">(current)</span>{%- endif -%}</a>
 					</li>
 					{%- endif -%}
 			{%- endfor -%}
