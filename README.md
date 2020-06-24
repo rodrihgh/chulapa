@@ -4,10 +4,13 @@ Yet another Jekyll theme
 
 TODO
 
-- [ ] more locales on dates
+- [ ] more locales on dates (help wanted)
+- [ ] move to final location 
+- [ ] create remote example
+- [ ] create docs
 - [ ] finish year archive
-- [ ] full implement of cards on summary
-- [ ] alternative navbar
+- [x] full implement of cards on summary
+- [x] alternative navbar
 - [x] feed
 - [x] blog pagination
 - [x] Navbar fixed on top
