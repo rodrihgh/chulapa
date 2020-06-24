@@ -1,4 +1,5 @@
 {%- assign thispageurl = include.pageurl | replace: ".html", ""  -%}
+{%— assign searchurl = site.search.landing_page | default: '/search' | absolute_url -%}
 {% if site.navbar.style == "modern" %}
 <div class="navbar-chulapa-modern">
     <input type="checkbox" class="navbar-chulapa-modern-button d-none" id="navi-toggle">
@@ -44,7 +45,7 @@
 				{%- endfor -%}
 				{%- if site.search.provider -%}
 					<li class="nav-item">
-						<a class="nav-link  {% if thispageurl == site.search.landing_page | default: '/search' %}active font-weight-bold {% endif %}" href="{{ site.search.landing_page | default: '/search' | absolute_url }}">
+						<a class="nav-link  {% if thispageurl == searchurl %} active font-weight-bold {% endif %}" href="{{ searchurl }}">
 							{{ site.search.label | default: 'Search' }}
 						</a>
 					</li>
