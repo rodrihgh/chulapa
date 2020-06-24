@@ -776,7 +776,7 @@
         width: 100%;
         
         .navbar-nav{
-                transform: translateX(100vw);
+                transform: translate(100vw,-50%);
 transition: all .4s cubic-bezier(0, 0, 1, 1);
                 }
 
