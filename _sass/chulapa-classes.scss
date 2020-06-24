@@ -57,8 +57,8 @@
             color: $navbar-chulapa-text-color;
 
             @include hover-focus() {
-                background-color: $navbar-chulapa-hover-color;
-                color: $navbar-chulapa-bg-color;
+                color: $navbar-chulapa-hover-color;
+                
             }
 
             &.disabled {
@@ -66,18 +66,11 @@
             }
         }
 
-        .show>.nav-link {
-          color: $navbar-chulapa-bg-color;
-        }
-        
+        .show>.nav-link,
         .active>.nav-link,
         .nav-link.show,
         .nav-link.active {
             color: $navbar-chulapa-active-color;
-            @include hover-focus() {
-              color: $navbar-chulapa-bg-color;
-            }
-
             }
 
         }
@@ -112,8 +105,7 @@
             color: $navbar-chulapa-text-color;
 
             @include hover-focus() {
-                background-color: $navbar-chulapa-hover-color;
-                color: $navbar-chulapa-bg-color;
+                color: $navbar-chulapa-hover-color;
             }
 
             &.disabled {
@@ -125,8 +117,7 @@
         .active>.dropdown-item,
         .dropdown-item.show,
         .dropdown-item.active {
-            background-color: $navbar-chulapa-hover-color;
-            color: $navbar-chulapa-bg-color;
+            color: $navbar-chulapa-active-color;
         }
     }
 }
