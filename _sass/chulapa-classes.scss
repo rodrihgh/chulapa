@@ -72,8 +72,10 @@
         .nav-link.active {
             color: $navbar-chulapa-active-color;
             @include hover-focus() {
+              background-color: $navbar-chulapa-hover-color;
               color: $navbar-chulapa-bg-color;
             }
+        }
     }
 
     .navbar-toggler {
