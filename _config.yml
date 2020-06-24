@@ -91,22 +91,20 @@ navbar:
   nav:
   - title: Blog
     url: /blog
-  - title: Showcase
+  - title: Boostrap
     url: /bootstrap
-  - title: Pictures of Madrid
-    url: /picsofmadrid
-  - title: Second Level
+  - title: Collections
     child:
-    - title: Liquid examples
-      url:  /liquid
     - title: Demos
       url: /demo
-  - title: Another
+    - title : Pics of Madrid
+      url: /picsofmadrid
+  - title: Others
     child:
-    - title: New
-      url: /new
-    - title: External url
-      url: https://www.google.com/
+    - title: Liquid
+      url: /liquid
+    - title: Tags
+      url: /tags 
   - title: Github
     url: https://github.com/dieghernan
 
