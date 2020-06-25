@@ -30,7 +30,7 @@ fa5_kit_code:  # Your FontAwesome 5 kit code. If not provided a free hosted vers
 # Web tracking - Google services https://analytics.google.com/analytics/web/
 # gtag_id is the preferred option, see https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=en
 # analytics provided for backwards compatibility
-gtag_id                 :    
+gtag_id                 :  UA-139034853-2  
 analytics_id            :  
 
 # Search providers
