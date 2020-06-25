@@ -4,6 +4,19 @@
       @extend .no-gutters;
 }
 
+.badge {
+  .rounded-pill {
+    @extend .badge-pill;
+  }
+  
+  .bg-info  {
+    @extend .badge-info;
+  }
+  .bg-chulapa  {
+    @extend .badge-chulapa;
+  }
+}
+
 @mixin hover-focus() {
   &:hover,
   &:focus {
