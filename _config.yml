@@ -131,7 +131,7 @@ footer:
 
 # Google Fonts https://fonts.google.com/, add as many as you need
 googlefonts:
-  - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+ # - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
 #  - url : #example: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' 
 
 
@@ -150,7 +150,7 @@ googlefonts:
 # Theme and colors
 chulapa-skin: 
   highlight   :  #default["default"]
-  theme       : deeply # Optional predefined skins
+  theme       : twitter-dim # Optional predefined skins
   autothemer  :  true # Bool: Use autotheming
   vars        :    
     primary:   #default ["#007bff] - Bootstrap blue
