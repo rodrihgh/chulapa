@@ -17,7 +17,7 @@ layout: default
 <div class="row g-0 pt-5" id="tags">
 <div class="col">
 	{%- for tag in grouptag -%}
-	<a href="#{{- tag.name | replace: " ", "-" -}}" class="btn btn-chulapa m-1" role="button" style="font-size: calc(1rem + {{tag.size}}px/3 - 1px);"><i class="fa fa-tag mr-2" aria-hidden="true"></i>{{- tag.name -}}<span class="badge rounded-pill bg-chulapa ml-2">{{tag.size}}</span></a>
+	<a href="#{{- tag.name | replace: " ", "-" -}}" class="btn btn-chulapa m-1" role="button" style="font-size: calc(1rem + {{tag.size}}px/3 - 1px);"><i class="fa fa-tag mr-2" aria-hidden="true"></i>{{- tag.name -}}<span class="badge rounded-pill chulapa-pill-bg-chulapa ml-2">{{tag.size}}</span></a>
 	{%- endfor -%}
 	</div>
 </div>
@@ -27,7 +27,7 @@ layout: default
 <section id="{{- tag.name | replace: " ", "-" -}}" class="py-3">
 <div class="d-flex  align-items-center border-bottom border-chulapa mt-5">
   <h3 class="my-0"><i class="fa fa-tag mr-1" aria-hidden="true"></i>{{- tag.name -}} </h3>
-  <div class="badge rounded-pill bg-chulapa ml-2">{{tag.size}}</div>
+  <div class="badge rounded-pill chulapa-pill-bg-chulapa ml-2">{{tag.size}}</div>
 </div>
   {% for document in alldocs %}
   {% assign words = document.content | strip_html | number_of_words %}

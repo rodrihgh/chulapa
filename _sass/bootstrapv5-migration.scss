@@ -12,13 +12,7 @@
   @include border-radius($badge-pill-border-radius);
 }
 
-.badge {
-  @each $color, $value in $theme-colors {
-    .bg-#{$color} {
-      @include badge-variant($value);
-      }
-  }
-}
+
 
 @mixin hover-focus() {
   &:hover,

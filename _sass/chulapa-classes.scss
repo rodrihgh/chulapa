@@ -2,6 +2,14 @@
  * Specific classes and formats for chulapa
  */
 
+
+
+  @each $color, $value in $theme-colors {
+    .chulapa-pill-bg-#{$color} {
+      @include badge-variant($value);
+      }
+  }
+
 .chulapa-text-body-color{
   color: $body-color !important;
 }
