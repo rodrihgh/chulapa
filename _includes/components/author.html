@@ -4,8 +4,7 @@
 {%- assign links = page.author.links | default: site.author.links -%}
 				<div class="row d-flex align-items-center">
 				  {%- if avatar -%}
-					<div class="ml-3 mx-md-auto chulapa-overlay-img chulapa-avatar-size" style="background-image: url({{ avatar | absolute_url  }});">
-					</div>
+				  <img src="{{ avatar | absolute_url  }}" alt="{{ name }}" class="mx-3 mx-md-auto chulapa-avatar-size">
 					{%- endif -%}
 					<div class="col-9 col-md-12 mt-md-2 text-md-center">
 						{{ name }}

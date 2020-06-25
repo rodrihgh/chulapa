@@ -49,3 +49,10 @@
 
   @return $number;
 }
+
+@mixin hover-focus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
