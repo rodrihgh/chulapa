@@ -1,9 +1,5 @@
-@import "bootstrap/functions";
-@import "bootstrap/mixins";
-
-$chulapa-col: black !default;
 //Navbar
-$navbar-chulapa-bg-color: $chulapa-col !default;
+$navbar-chulapa-bg-color: $primary !default;
 $navbar-chulapa-text-contrast: color-contrast($navbar-chulapa-bg-color, $black, $white);
 $navbar-chulapa-text-color: mix($navbar-chulapa-text-contrast, $navbar-chulapa-bg-color, 50%) !default;
 $navbar-chulapa-hover-color: mix($navbar-chulapa-text-contrast, $navbar-chulapa-bg-color, 75%) !default;
@@ -32,18 +28,16 @@ $hero-chulapa-text-color: color-contrast($hero-chulapa-bg-color, $black, $white)
 //Blockquote
 $blockquote-chulapa-bg-color: darken($body-bg, 5%) !default;
 $blockquote-chulapa-border-color: darken($blockquote-chulapa-bg-color, 30%) !default;
-$blockquote-chulapa-text-color: mix($blockquote-chulapa-bg-color,$body-color, 20%) !default;
+$blockquote-chulapa-text-color: mix($blockquote-chulapa-bg-color, $body-color, 20%) !default;
 
 $pre-chulapa-bg-color: lighten($blockquote-chulapa-bg-color, 2%) !default;
 
 //Table
-$thead-chulapa-bg-color: $chulapa-col !default;
+$thead-chulapa-bg-color: $primary !default;
 $thead-chulapa-text-color: color-contrast($thead-chulapa-bg-color, $black, $white) !default;
 
 
 //Pagination
 $pagination-chulapa-text-color: $body-color !default;
-$pagination-chulapa-bg-hover-color: $chulapa-col !default;
+$pagination-chulapa-bg-hover-color: $primary !default;
 $pagination-chulapa-text-hover-color: color-contrast($pagination-chulapa-bg-hover-color, $black, $white) !default;
-
-

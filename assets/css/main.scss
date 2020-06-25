@@ -26,13 +26,6 @@
   @import "skins/auto";
 {% endif %}
 
-//Create chulapa theme
-// Key theme var
-$chulapa-col: black !default;
-$theme-colors:(
-  chulapa: $chulapa-col,
-);
-
 // Import bootstrap
 @import "bootstrap/bootstrap";
 //B. Chulapa specifics

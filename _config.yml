@@ -153,7 +153,7 @@ chulapa-skin:
   theme       :  # Optional predefined skins
   autothemer  :  true # Bool: Use autotheming
   vars        :    
-    chulapa-col:  bisque #default ["black"]
+    primary:  bisque #default ["#007bff] - Bootstrap blue
     font-family-sans-serif:  #default ["bootstrap option"]
     hero-chulapa-bg-color: 
     

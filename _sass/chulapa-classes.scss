@@ -1,18 +1,31 @@
- /*!
+/*!
  * Specific classes and formats for chulapa
  */
-
-
-
-  @each $color, $value in $theme-colors {
-    .chulapa-pill-bg-#{$color} {
-      @include badge-variant($value);
-      }
-  }
-
-.chulapa-text-body-color{
-  color: $body-color !important;
+.chulapa {
+    font-family: chulapa, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    // Enable Ligatures
+    -webkit-font-feature-settings: "liga", "dlig";
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -moz-font-feature-settings: "liga", "dlig";
+    -ms-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+    text-rendering: optimizeLegibility;
 }
+
+
+
+@each $color,
+$value in $theme-colors {
+    .chulapa-pill-bg-#{$color} {
+        @include badge-variant($value);
+    }
+}
+
+.chulapa-text-body-color {
+    color: $body-color !important;
+}
+
 .chulapaDateSocial {
     color: $body-color;
 
@@ -39,7 +52,7 @@
 // Navbar
 .navbar-chulapa {
     background-color: $navbar-chulapa-bg-color;
-   
+
     .navbar-brand {
         color: $navbar-chulapa-brand-color;
         font-weight: bold;
@@ -65,7 +78,7 @@
 
             @include hover-focus() {
                 color: $navbar-chulapa-hover-color;
-                
+
             }
 
             &.disabled {
@@ -78,9 +91,9 @@
         .nav-link.show,
         .nav-link.active {
             color: $navbar-chulapa-active-color;
-            }
-
         }
+
+    }
 
     .navbar-toggler {
         color: $navbar-chulapa-text-color;
@@ -354,7 +367,7 @@
 }
 
 .chulapa-gradient {
-    background-color: rgba($chulapa-col, 0.3);
+    background-color: rgba($primary, 0.3);
     background-image: linear-gradient(to bottom right, rgba($light, 0.5), rgba($light, 0.65) 65%, rgba($light, 0.8) 100%);
 
 }
@@ -435,10 +448,11 @@
 }
 
 #toc {
-   a {
-   color: $body-color;
+    a {
+        color: $body-color;
+    }
 }
-}
+
 .chulapa-toc-reset {
     ul {
         padding-left: 0;
@@ -467,7 +481,7 @@
     color: $white;
     text-shadow: 0.1rem 0.1rem 0.2rem $black;
     background-color: $hero-chulapa-bg-color;
-    
+
     hr {
         background-color: $white;
     }
@@ -540,9 +554,10 @@
     .splash-chulapa {
         color: $white;
         text-shadow: 0.1rem 0.1rem 0.2rem $black;
+
         hr {
             background-color: $white;
-            }
+        }
 
         * {
             color: $white;
@@ -555,7 +570,7 @@
     color: $hero-chulapa-text-color;
     background-color: $hero-chulapa-bg-color;
     text-shadow: 0.5 0.5 0.5 $hero-chulapa-text-color;
-    
+
     hr {
         background-color: $hero-chulapa-text-color;
     }
@@ -621,9 +636,10 @@
     .splash-chulapa {
         color: $hero-chulapa-text-color;
         text-shadow: 1px 1px 1px $hero-chulapa-text-color;
+
         hr {
             background-color: $hero-chulapa-text-color;
-            }
+        }
 
         * {
             color: $hero-chulapa-text-color;
@@ -682,13 +698,14 @@
         top: 50%;
         left: -100vw;
         width: 100%;
-        transform: translate(100%,-50%);
-        
+        transform: translate(100%, -50%);
+
     }
 
     .dropdown-menu {
         background-color: $navbar-chulapa-bg-color;
         border-color: $navbar-chulapa-text-color;
+
         .dropdown-item {
             color: $navbar-chulapa-text-color;
 
@@ -706,6 +723,7 @@
 
     .navbar-brand {
         color: $navbar-chulapa-brand-color;
+
         @include hover-focus() {
             color: $navbar-chulapa-brand-hover-color;
         }
@@ -715,6 +733,7 @@
 
     .nav-link {
         color: $navbar-chulapa-text-color;
+
         &:link,
         &:visited {
             display: inline-block;
@@ -743,8 +762,8 @@
             }
         }
     }
-    
-        @include media-breakpoint-down(lg) {
+
+    @include media-breakpoint-down(lg) {
 
         .navbar-toggler {
             bottom: map-get($spacers, 5);
@@ -762,7 +781,7 @@
     @include media-breakpoint-up(lg) {
 
 
-     .navbar-toggler {
+        .navbar-toggler {
             top: map-get($spacers, 4);
             right: 2*map-get($spacers, 5);
         }
@@ -782,10 +801,10 @@
     &-button:checked~&-nav {
         opacity: 1;
         width: 100%;
-        
-        .navbar-nav{
-                transform: translate(100vw,-50%);
-                }
+
+        .navbar-nav {
+            transform: translate(100vw, -50%);
+        }
 
     }
 
