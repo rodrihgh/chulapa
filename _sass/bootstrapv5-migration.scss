@@ -1,19 +1,22 @@
-/***Bootstrap v5 migration ****/
+ /*!
+ * Bootstrap v5 migration
+ */
 
 .g-0{
       @extend .no-gutters;
 }
 
+.rounded-pill {
+  padding-right: $badge-pill-padding-x;
+  padding-left: $badge-pill-padding-x;
+  @include border-radius($badge-pill-border-radius);
+}
+
 .badge {
-  .rounded-pill {
-    @extend .badge-pill;
-  }
-  
-  .bg-info  {
-    @extend .badge-info;
-  }
-  .bg-chulapa  {
-    @extend .badge-chulapa;
+  @each $color, $value in $theme-colors {
+    .bg-#{$color} {
+      @include badge-variant($value);
+      }
   }
 }
 
