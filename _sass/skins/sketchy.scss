@@ -696,8 +696,6 @@ pre {
 }
 
 //CUSTOM SASS CHULAPA
-
-$chulapa-col: $gray-200;
 $navbar-chulapa-bg-color: $white;
 
 .navbar-chulapa .dropdown-menu{
@@ -735,6 +733,3 @@ body p a {
 .chulapa-pagination .page-link{
     border-radius: $border-radius-sm-sketchy  !important;
 }
-
-
-@import "bootstrap/variables";

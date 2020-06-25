@@ -5,9 +5,11 @@
     src: url(../fonts/Ferpal/Ferpal-Regular.otf);
 }
 
-$headings-font-family: chulapa,sans-serif;
-$font-family-sans-serif: ferpal, sans-serif;
-$enable-rounded:              false !default;
+$headings-font-family: chulapa,
+sans-serif;
+$font-family-sans-serif: ferpal,
+sans-serif;
+$enable-rounded: false !default;
 $btn-font-family: $headings-font-family;
 
 h1,
@@ -17,7 +19,7 @@ h4,
 footer,
 blockquote,
 button,
-legend,		
+legend,
 label,
 .alert-heading,
 .btn,
@@ -49,11 +51,6 @@ $success: #88bdbc;
 $info: #31708e;
 $warning: #fffe7a;
 $danger: #f13c20;
-$dark: darken($secondary,10%);
-
-$chulapa-col: blanchedalmond;
-
+$dark: darken($secondary, 10%);
 $navbar-chulapa-toggler-border-color: transparent;
-$yiq-contrasted-threshold:  180 ;
-
 @import "skins/auto";

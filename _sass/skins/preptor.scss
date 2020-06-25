@@ -14,9 +14,6 @@ $light:#eeeeee;
 $dark:#353535;
 
 // Add SASS theme customizations here..
-$chulapa-col: $primary;
-$hero-chulapa-bg-color:$chulapa-col;
-$blockquote-chulapa-bg-color: mix(white,$chulapa-col,80%);
+$hero-chulapa-bg-color:$primary;
+$blockquote-chulapa-bg-color: mix(white,$primary,80%);
 
-@import "bootstrap/functions";
-@import "bootstrap/variables";

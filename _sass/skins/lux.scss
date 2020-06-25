@@ -51,9 +51,9 @@ $body-color: $gray-700 !default;
 
 // Components
 
-$border-radius:               0 !default;
-$border-radius-lg:            0 !default;
-$border-radius-sm:            0 !default;
+$border-radius: 0 !default;
+$border-radius-lg: 0 !default;
+$border-radius-sm: 0 !default;
 
 // Fonts
 
@@ -137,9 +137,9 @@ $breadcrumb-bg: transparent !default;
 
 // Lux 4.5.0
 // Bootswatch
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-base * 1.25 !default;
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
 
 // Variables ===================================================================
 
@@ -149,119 +149,130 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600&dis
 // Navbar ======================================================================
 
 .navbar {
-  font-size: $font-size-sm;
-  text-transform: uppercase;
-  font-weight: 600;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    font-weight: 600;
 
-  &-nav {
-    .nav-link {
-      padding-top: .715rem;
-      padding-bottom: .715rem;
+    &-nav {
+        .nav-link {
+            padding-top: .715rem;
+            padding-bottom: .715rem;
+        }
     }
-  }
 
-  &-brand {
-    margin-right: 2rem;
-  }
+    &-brand {
+        margin-right: 2rem;
+    }
 }
 
 .bg-primary {
-  background-color: $primary !important;
+    background-color: $primary !important;
 }
 
 .bg-light {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 
-  &.navbar-fixed-top {
-    border-width: 0 0 1px 0;
-  }
+    &.navbar-fixed-top {
+        border-width: 0 0 1px 0;
+    }
 
-  &.navbar-bottom-top {
-    border-width: 1px 0 0 0;
-  }
+    &.navbar-bottom-top {
+        border-width: 1px 0 0 0;
+    }
 }
 
 .nav-item {
-  margin-right: 2rem;
+    margin-right: 2rem;
 }
+
 // Buttons =====================================================================
 
 .btn {
-  font-size: $font-size-sm;
-  text-transform: uppercase;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
 
-  &-sm {
-    font-size: 10px;
-  }
-
-  &-warning {
-    &,
-    &:hover,
-    &:not([disabled]):not(.disabled):active,
-    &:focus {
-      color: $white;
+    &-sm {
+        font-size: 10px;
     }
-  }
+
+    &-warning {
+
+        &,
+        &:hover,
+        &:not([disabled]):not(.disabled):active,
+        &:focus {
+            color: $white;
+        }
+    }
 }
 
 .btn-outline-secondary {
-  border-color: $gray-600;
-  color: $gray-600;
+    border-color: $gray-600;
+    color: $gray-600;
 
-  &:not([disabled]):not(.disabled):hover,
-  &:not([disabled]):not(.disabled):focus,
-  &:not([disabled]):not(.disabled):active {
-    background-color: $gray-400;
-    border-color: $gray-400;
-    color: $white;
-  }
+    &:not([disabled]):not(.disabled):hover,
+    &:not([disabled]):not(.disabled):focus,
+    &:not([disabled]):not(.disabled):active {
+        background-color: $gray-400;
+        border-color: $gray-400;
+        color: $white;
+    }
 
-  &:not([disabled]):not(.disabled):focus {
-    box-shadow: 0 0 0 0.2rem rgba($gray-400, 0.5);
-  }
+    &:not([disabled]):not(.disabled):focus {
+        box-shadow: 0 0 0 0.2rem rgba($gray-400, 0.5);
+    }
 }
 
 [class*="btn-outline-"] {
-  border-width: 2px;
+    border-width: 2px;
 }
 
 .border-secondary {
-  border: 1px solid $gray-400 !important;
+    border: 1px solid $gray-400 !important;
 }
 
 // Typography ==================================================================
 
 body {
-  font-weight: 200;
-  letter-spacing: 1px;
+    font-weight: 200;
+    letter-spacing: 1px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-  letter-spacing: 3px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .text-secondary {
-  color: $body-color !important;
+    color: $body-color !important;
 }
 
 // Tables ======================================================================
 
 th {
-  font-size: $font-size-sm;
-  text-transform: uppercase;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
 }
 
 .table {
-  th, td {
-    padding: 1.5rem;
-  }
 
-  &-sm {
-    th, td {
-      padding: 0.75rem;
+    th,
+    td {
+        padding: 1.5rem;
     }
-  }
+
+    &-sm {
+
+        th,
+        td {
+            padding: 0.75rem;
+        }
+    }
 }
 
 // Forms =======================================================================
@@ -269,31 +280,31 @@ th {
 
 .custom-switch {
 
-  .custom-control-label {
-    &::after {
-      top: calc(0.15625rem + 2px);
-      left: calc(-2.25rem + 2px);
-      width: calc(1rem - 4px);
-      height: calc(1rem - 4px);
+    .custom-control-label {
+        &::after {
+            top: calc(0.15625rem + 2px);
+            left: calc(-2.25rem + 2px);
+            width: calc(1rem - 4px);
+            height: calc(1rem - 4px);
+        }
     }
-  }
 }
 
 // Navs ========================================================================
 
 .dropdown-menu {
-  font-size: $font-size-sm;
-  text-transform: none;
+    font-size: $font-size-sm;
+    text-transform: none;
 }
 
 // Indicators ==================================================================
 
 .badge {
-  padding-top: 0.28rem;
+    padding-top: 0.28rem;
 
-  &-pill {
-    border-radius: 10rem;
-  }
+    &-pill {
+        border-radius: 10rem;
+    }
 }
 
 // Progress bars ===============================================================
@@ -301,23 +312,33 @@ th {
 // Containers ==================================================================
 
 .list-group-item {
-  h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: inherit;
-  }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        color: inherit;
+    }
 }
 
 .card {
 
-  &-title,
-  &-header {
-    color: inherit;
-  }
+    &-title,
+    &-header {
+        color: inherit;
+    }
 }
 
 //CUSTOM SASS
 $enable-rounded: false;
-$chulapa-col: black;
 $white: white;
 
 .navbar-chulapa {
@@ -341,5 +362,3 @@ $white: white;
         color: white !important;
     }
 }
-
-$hero-chulapa-bg-color: $chulapa-col;

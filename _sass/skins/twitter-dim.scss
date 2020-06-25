@@ -1,5 +1,4 @@
 //Twitter dim
-$chulapa-col: #15202b;
 // Some bootstrap variables
 $primary: #1da1f2;
 $secondary:#788995;
@@ -8,13 +7,14 @@ $warning: #ffad1f;
 $danger: #e0245e;
 $info: #794bc4;
 $dark: #192734;
-$body-bg:$chulapa-col;
+$body-bg:#15202b;
 $body-color: #fff;
-$hero-chulapa-bg-color:$chulapa-col;
+$hero-chulapa-bg-color:#15202b;
 $thead-chulapa-bg-color: $primary;
 $blockquote-chulapa-bg-color: mix(white, $primary, 80%);
 $blockquote-chulapa-text-color: mix(black, $primary, 80%);
 
+$navbar-chulapa-bg-color: #15202b;
 $navbar-chulapa-text-color: white;
 $navbar-chulapa-brand-color: white;
 $navbar-chulapa-hover-color: $primary;
@@ -24,6 +24,3 @@ $footer-chulapa-text-color: white;
 $footer-chulapa-hover-color: $primary;
 
 $pagination-chulapa-bg-hover-color: $primary;
-
-@import "bootstrap/functions";
-@import "bootstrap/variables";
