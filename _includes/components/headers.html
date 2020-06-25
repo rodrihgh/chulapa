@@ -7,9 +7,9 @@
 {%- endif -%}
 {%- if include.headertype =="splash" -%}
   {%- if imghero -%}
-<header class="jumbotron jumbotron-fluid mb-0 py-0 d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ imghero }}')">
+<header class="d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ imghero }}')">
   {%- else -%}
-<header class="jumbotron jumbotron-fluid mb-0 py-0 d-flex align-items-center splash-chulapa">
+<header class="d-flex align-items-center splash-chulapa">
   {%- endif -%}
   <div class="container-lg">
     <h1>{{- page.title | default: "Where's your title?" -}}</h1>
@@ -21,9 +21,9 @@
 </header>
 {%- elsif include.headertype == "hero" -%}
   {%- if imghero -%}
-<header class="jumbotron jumbotron-fluid mb-0 py-0 d-flex align-items-center hero-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ imghero }}')">
+<header class="d-flex align-items-center hero-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ imghero }}')">
   {%- else -%}
-<header class="jumbotron jumbotron-fluid mb-0 py-0 d-flex align-items-center hero-chulapa">
+<header class="d-flex align-items-center hero-chulapa">
   {%- endif -%}
   <div class="container-lg">
     <h1>{{- page.title | default: "Where's your title?" -}}</h1>
@@ -34,7 +34,7 @@
   </div>
 </header>
 {%- elsif include.headertype == "base" -%}
-<header class="jumbotron jumbotron-fluid mb-0 py-0 text-sm-center header-chulapa">
+<header class="text-sm-center header-chulapa">
       {%- if imghero -%}
       <div class="container-fluid header-chulapa-img" style="background-image: url('{{ imghero }}')">
       </div>
@@ -52,7 +52,7 @@
 	</div>
 </header>
 {%- elsif include.headertype == "post" -%}
-<header class="jumbotron jumbotron-fluid mb-0 py-0 header-chulapa">
+<header class="header-chulapa">
       {%- if imghero -%}
       <div class="container-fluid header-chulapa-img" style="background-image: url('{{ imghero }}')">
       </div>
