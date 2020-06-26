@@ -1,3 +1,11 @@
+{%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url | uri_escape -%}
+{%- assign basetitle = page.title | default: site.title | default: site.github.repository_name  -%}
+{%- assign prependtitle = site.title | default: site.github.repository_name -%}
+{%- if basetitle == prependtitle %}
+{%- capture sharetitle -%}{{ basetitle}} {{ site.title_separator | default: "|" }} {{ canonical_url }}{%- endcapture -%}
+{%- else -%}
+{%- capture sharetitle -%}{{ basetitle }} {{ site.title_separator | default: "|" }} {{ prependtitle }}{%- endcapture -%}
+{%- endif -%}
  <div class="row pt-1 pt-md-2 chulapaDateSocial">
            <div class="col-md-4 offset-md-2 col small">
             {%- if page.date and page.show_date -%}
@@ -16,10 +24,10 @@
           </div>
           {%- if page.show_sociallinks -%}
           <div class="col-md-4 col text-right lead">
-            <a  href="https://twitter.com/intent/tweet?url={{ canonical_url }}&text={{ metatitle | url_encode }}{%- if site.twitter.site -%}&via={{- site.twitter.site -}} {%- endif -%}" title="Share on Twitter"><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+            <a  href="https://twitter.com/intent/tweet?url={{ canonical_url }}&text={{ sharetitle | url_encode }}{%- if site.twitter.site -%}&via={{- site.twitter.site -}} {%- endif -%}" title="Share on Twitter"><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></a>
              <a  href="https://www.facebook.com/sharer.php?u={{ canonical_url }}" title="Share on Facebook"><i class="fab fa-facebook-square fa-lg" aria-hidden="true"></i></a>
-             <a  href="https://api.whatsapp.com/send?&text={{ metatitle | url_encode }}%20{{ canonical_url }}" title="Share on Whatsapp"><i class="fab fa-whatsapp-square fa-lg" aria-hidden="true"></i></a>
-            <a  href="https://www.linkedin.com/shareArticle?url={{ canonical_url }}&title={{ metatitle | url_encode }}" title="Share on LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+             <a  href="https://api.whatsapp.com/send?&text={{ sharetitle | url_encode }}%20{{ canonical_url }}" title="Share on Whatsapp"><i class="fab fa-whatsapp-square fa-lg" aria-hidden="true"></i></a>
+            <a  href="https://www.linkedin.com/shareArticle?url={{ canonical_url }}&title={{ sharetitle | url_encode }}" title="Share on LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
           </div>
           {%- endif -%}
       </div>
