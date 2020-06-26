@@ -1,5 +1,4 @@
-
-      - name: Check HTML
-        uses: chabad360/htmlproofer@master
-        with:
-          directory: "./public"
+name: Check Html
+uses: chabad360/htmlproofer@master
+with:
+  directory: "./"
