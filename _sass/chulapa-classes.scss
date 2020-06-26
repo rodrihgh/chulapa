@@ -549,6 +549,14 @@ $value in $theme-colors {
         }
     }
 
+@each $color,
+$value in $theme-colors {
+    .chulapa-pill-bg-#{$color} {
+        @include badge-variant($value);
+    }
+}
+
+
     .header-chulapa,
     .hero-chulapa,
     .splash-chulapa {
@@ -630,6 +638,14 @@ $value in $theme-colors {
             text-shadow: none;
         }
     }
+
+@each $color,
+$value in $theme-colors {
+    .chulapa-pill-bg-#{$color} {
+        @include badge-variant($value);
+    }
+}
+
 
     .header-chulapa,
     .hero-chulapa,
