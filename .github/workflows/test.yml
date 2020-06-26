@@ -11,4 +11,4 @@ jobs:
     steps:
     - uses: chabad360/htmlproofer@master
       with:
-        directory: "./"
+        directory: "./blog"
