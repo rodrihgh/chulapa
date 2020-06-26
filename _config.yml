@@ -209,7 +209,6 @@ defaults:
       path: ""
       type: "demo"
     values:
-      layout: "landingpage"
       header_type       : "hero"
       show_bottomnavs   : true
       show_sociallinks  : true
