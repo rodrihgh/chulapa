@@ -1,4 +1,14 @@
 name: Check Html
-uses: chabad360/htmlproofer@master
-with:
-  directory: "./"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-16.04
+    steps:
+    - uses: chabad360/htmlproofer@master
+      with:
+        directory: "./"
