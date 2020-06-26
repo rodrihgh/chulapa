@@ -5,14 +5,9 @@ permalink: /liquid
 show_author : true
 ---
 
-  {% assign alldocs = site.documents | where_exp: "item", "item.include_on_feed == true" | sort: 'date' | reverse %}
+{% capture my_variable %}
+ - url: a
+ - url: b
+{% endcapture %}
 
-	{% for doc in alldocs %}
-	
-- {{ doc.url | absolute_url }} - category {{ doc.categories }} - {{ doc.date | date: "%a, %b %d, %y" }}
-
-```
-{{ doc.date }} {{ doc.url }} {{ doc.title }}
-```
-	
-	{% endfor %}
+{{ my_variable }}
