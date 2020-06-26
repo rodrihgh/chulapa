@@ -652,7 +652,6 @@ $value in $theme-colors {
 .navbar-chulapa-modern {
     label {
         line-height: unset;
-        margin: 0;
     }
 
 
@@ -662,18 +661,16 @@ $value in $theme-colors {
         height: 4*$spacer;
         width: 4*$spacer;
         position: fixed;
-        border-radius: 50%;
+        @include border-radius(50%);
         font-size:1.25rem;
         z-index: 2000;
-        text-align: center;
         cursor: pointer;
-
     }
 
     &-background {
         height: 4*$spacer;
         width: 4*$spacer;
-        border-radius: 50%;
+        @include border-radius(50%);
         position: fixed;
         background-image: radial-gradient($navbar-chulapa-bg-color, $navbar-chulapa-bg-color);
         z-index: 1000;
@@ -813,7 +810,6 @@ $value in $theme-colors {
 
     .navbar-toggler-icon {
         position: relative;
-        margin-top: 1rem;
 
         &,
         &::before,
