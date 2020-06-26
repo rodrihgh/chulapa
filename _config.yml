@@ -131,6 +131,7 @@ footer:
 
 # Google Fonts https://fonts.google.com/, add as many as you need
 googlefonts:
+  - url: https://fonts.googleapis.com/css2?family=Raleway&family=Rubik&display=swap
  # - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
 #  - url : #example: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' 
 
@@ -150,11 +151,12 @@ googlefonts:
 # Theme and colors
 chulapa-skin: 
   highlight   :  #default["default"]
-  theme       : lux # Optional predefined skins
+  theme       : # Optional predefined skins
   autothemer  :  true # Bool: Use autotheming
   vars        :    
-    primary:   #default ["#007bff] - Bootstrap blue
-    font-family-sans-serif:  #default ["bootstrap option"]
+    primary:   cadetblue #default ["#007bff] - Bootstrap blue
+    font-family-sans-serif:  Rubik, sans-serif #default ["bootstrap option"]
+    headings-font-family: Raleway, sans-serif
     hero-chulapa-bg-color: 
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
