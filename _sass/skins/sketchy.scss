@@ -702,6 +702,12 @@ $navbar-chulapa-bg-color: $white;
     border-style: solid !important;
 }
 
+.navbar-chulapa-modern {
+   .dropdown-menu{
+border-radius: 15px 5px 5px 25px/5px 25px 25px 5px !important;
+}
+}
+
 body p img,
 .hero-chulapa,
 .hero-chulapa-image {
@@ -721,7 +727,7 @@ pre {
 body p a {
     text-decoration: underline !important;
 }
-.
+
 .navbar-toggler, .navbar-chulapa-modern-background {
   border-radius: 255px 25px 225px 25px/25px 225px 25px 255px !important;
 }
