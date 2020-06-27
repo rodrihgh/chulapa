@@ -1,11 +1,11 @@
-  {% assign alldocs = include.cacheddocs -%}
+{-% assign alldocs = include.cacheddocs -%}
   
    {% for post in alldocs limit: include.cachedlimit %} 
 
 	<article class="col-12 mb-4">
 	<div class="card mb-3 ">
 		<div class="row g-0">
-			<a href="{{- post.url | absolute_url -}}" class="col-sm-1 chulapa-min-h-10 chulapa-card-img chulapa-overlay-img-noheight chulapa-gradient"
+			<a href="{{- post.url | absolute_url -}}" class="col-sm-1 chulapa-min-h-10 chulapa-card-img chulapa-overlay-img-noheight chulapa-gradient {% if post.header_img == nil -%} d-none d-sm-flex {% endif %} "
 	{% if post.header_img -%} style="background-image: url('{{- post.header_img | absolute_url -}}')"{%-endif-%}>
 			</a>
 			<div class="col-sm">
@@ -22,7 +22,7 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					{% if post.date -%}<p class="small text-right font-italic">
+					{% if post.date -%}<p class="small text-right font-italic mb-0">
 {% if post.last_modified_at %}
 <i class="fa fa-redo fa-xs" aria-hidden="true"></i> {% endif %}
 <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: "%d/%m/%Y"  -}}</time></p>{%- endif %}
