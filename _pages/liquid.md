@@ -5,9 +5,9 @@ permalink: /liquid
 show_author : true
 ---
 
-{% capture my_variable %}
- - url: a
- - url: b
-{% endcapture %}
+{% assign internal_gallery = site.static_files | where: "image_col", "gallery" %}
 
-{{ my_variable }}
+{% for item in internal_gallery %}
+ - {{ item }}
+{% endfor %}
+
