@@ -22,4 +22,3 @@ Now try with external on YAML header:
                                  https://picsum.photos/450/380?image=500,
                                  https://picsum.photos/450/300?image=600" %}
 
-{% include_cached components/masonry.html external=externalgallery %}
