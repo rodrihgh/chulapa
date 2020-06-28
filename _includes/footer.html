@@ -65,7 +65,7 @@
          <div class="row">
              <div class="col-xl-10 offset-xl-1">
                  {%- if site.footer.links -%}
-                 <div role="navigation" class="d-flex flex-wrap justify-content-between">
+                 <div role="navigation" class="d-flex flex-wrap justify-content-around">
                          {%- for social in site.footer.links  -%}
                          <div>
                              <a href="{{ social.url | absolute_url }}" title="footer{{ social.label }}" class="chulapa-footer-sociallink lead">
