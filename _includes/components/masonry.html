@@ -6,8 +6,8 @@ where: "image_col", include.internal | map: "path"  -%}
 {%- endif -%}
 {%- if bricks -%}
 <div class="chulapa-masonry">
-  {%- for brickurl in bricks -%}
-  <img class="chulapa-masonry-brick" src="{{- brickurl | absolute_url -}}">
+  {%- for brick in bricks -%}
+  <img class="chulapa-masonry-brick" src="{{- brick | absolute_url -}}">
   {%- endfor -%}
 </div>
 {%- endif -%}
