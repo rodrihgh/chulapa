@@ -14,5 +14,10 @@ show_author : true
                                  
 {% assign bricks = externalgallery | split: ", " %}
 
-{{ brick }}
+{{ bricks }}
+
+{% for item in bricks %}
+- {{ item }}
+
+{% endfor %}
 
