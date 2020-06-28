@@ -124,7 +124,16 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-instagram"
-  
+    - label: "Twitter"
+      icon: "fab fa-twitter"
+      # url:
+    - label: "Twitter"
+      icon: "fab fa-twitter"
+      # url:
+    - label: "Twitter"
+      icon: "fab fa-twitter"
+      # url:
+
 
 # C. Theme Settings
 
