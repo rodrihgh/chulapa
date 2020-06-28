@@ -12,7 +12,7 @@ show_author : true
                                  https://picsum.photos/450/380?image=500,
                                  https://picsum.photos/450/300?image=600" %}
                                  
-{% assign bricks = externalgallery | split: ", " %}
+{% assign bricks = externalgallery | split: "," %}
 
 {{ bricks }}
 
