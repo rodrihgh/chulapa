@@ -90,7 +90,7 @@ navbar:
     img     : "./assets/img/site/brand_black.png"
   nav:
   - title: Blog
-    url: /blog
+    url: /blog/
   - title: Boostrap		
     url: /bootstrap		
   - title: Collections		
