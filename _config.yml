@@ -20,11 +20,11 @@ author:
   links:                
     - url: https://twitter.com/jack
       icon: "fab fa-twitter"
-    - url: bb
+    - url: https://www.facebook.com
       icon: "fab fa-facebook"
-    - url: cc
+    - url: https://www.github.com
       icon: "fab fa-github"
-    - url: "srr"
+    - url: https://www.instagram.com
       icon: "fab fa-instagram"
 fa5_kit_code:  # Your FontAwesome 5 kit code. If not provided a free hosted version (slower) will be loaded:  https://fontawesome.com/ 
 # Web tracking - Google services https://analytics.google.com/analytics/web/
@@ -116,28 +116,18 @@ footer:
       url:  "./rss.xml"
     - label: "Twitter"
       icon: "fab fa-twitter"
-      # url:
+      url: https://twitter.com/
     - label: "Facebook"
       icon: "fab fa-facebook"
+      url: https://www.facebook.com
     - label: "GitHub"
       icon: "fab fa-github"
-      # url:
+      url: https://www.github.com
     - label: "Instagram"
       icon: "fab fa-instagram"
-    - label: "Twitter"
-      icon: "fab fa-twitter"
-      # url:
-    - label: "Twitter"
-      icon: "fab fa-twitter"
-      # url:
-    - label: "Twitter"
-      icon: "fab fa-twitter"
-      # url:
-
+      url: https://www.instagram.com
 
 # C. Theme Settings
-
-
 # Google Fonts https://fonts.google.com/, add as many as you need
 googlefonts:
  - url: https://fonts.googleapis.com/css2?family=Raleway&family=Rubik&display=swap
