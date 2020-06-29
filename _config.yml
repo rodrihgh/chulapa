@@ -225,7 +225,6 @@ defaults:
       show_bottomnavs   : true
       show_tags         : true
       cloudtag_url        : "/tags_collection"       #This is where the link on tags would redirect
-
   -
     scope:
       path: "assets/img/gallery"

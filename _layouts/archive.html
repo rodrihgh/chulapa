@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{{- content -}}
+
+
+{% if page.archive_collection == "all" %}
+  {% assign alldocs = site.documents %}
+{% elsif page.archive_collection %}
+  {% assign alldocs = site.documents | where_exp: "item", "item.collection == page.archive_collection" %}
+{% else%}
+  {% assign alldocs = site.posts %}
+{% endif %}
+
+{% assign alldocs = alldocs | sort: 'date' | reverse %}
+
+{% for document in alldocs %}
+
+- {{ document.title }} - {{ document.date | date_to_string }}
+
+{% endfor %}
+
+
+
