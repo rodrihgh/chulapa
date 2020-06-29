@@ -3,5 +3,5 @@ layout: archive
 title: Archive
 subtitle: Post by year 
 permalink: /archivenew
-archive_collection: "all"
+archive_collection: "picsofmadrid"
 ---
