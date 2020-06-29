@@ -49,44 +49,42 @@
 {%- elsif site.chulapa-skin.theme == 'twitter-lights-out' -%}
 	{%- assign name = 'TwitterLightsOut' - %}
 	{%- assign author = 'dieghernan' - %}
-	{%- assign url = 'https://github.com/dieghernan' - %}
-{%- elsif site.chulapa-skin.theme == 'chulapa' -%}
-	{%- assign name = 'Chulapa' - %}
-	{%- assign author = 'dieghernan' - %}
-	{%- assign url = 'https://github.com/dieghernan' - %}
-{%- else -%}
-{%- endif -%}
-<!-- Footer -->
- <footer class="footer-chulapa text-center mt-0 pt-3">
-     <div class="container">
-         {% if include.show_comments -%}
-         {% include components/disqus.html %}
-         {%- endif %}
-         <div class="row">
-             <div class="col-xl-10 offset-xl-1">
-                 {%- if site.footer.links -%}
-                 <div role="navigation" class="d-flex flex-wrap justify-content-center">
-                         {%- for social in site.footer.links  -%}
-                         <div>
-                             <a href="{{ social.url | absolute_url }}" title="footer{{ social.label }}" class="chulapa-footer-sociallink">
-                                 <span class="fa-stack fa-2x" aria-hidden="true">
-                                     <i class="fa fa-circle fa-stack-2x"></i><i class="{{ social.icon }} fa-stack-1x fa-inverse"></i>
-                                 </span><span class="sr-only">{{ social.label }}</span>
-                             </a>
-                         </div>
-                         {%- endfor -%}
-                 </div>
-                 {%- endif -%}
-                    <p class="pb-3">&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.github.owner_name }}</p>
-          					<!-- Do not remove this in order to give  attributions -->
-          					{%- if site.chulapa-skin.theme -%}
-          					<p class="small"><b>{{- name -}}</b> skin by <a href="{{ url }}">{{ author }}</a></p>
-          					{%- endif -%}
-          					<p class="small">Theme by
-                        <a href="https://dieghernan.github.io/chulapa" class="chulapa">Chulapa</a></p>
-                     <!-- End  attributions -->
-                </div>
-            </div>
+  	{%- assign url = 'https://github.com/dieghernan' - %}
+  {%- elsif site.chulapa-skin.theme == 'chulapa' -%}
+  	{%- assign name = 'Chulapa' - %}
+  	{%- assign author = 'dieghernan' - %}
+  	{%- assign url = 'https://github.com/dieghernan' - %}
+  {%- else -%}
+  {%- endif -%}
+  <!-- Footer -->
+  <footer class="footer-chulapa text-center mt-0 pt-3">
+    <div class="container">
+      {% if include.show_comments -%}
+      {% include components/disqus.html %}
+      {%- endif %}
+      <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+          {%- if site.footer.links -%}
+          <div role="navigation" class="d-flex flex-wrap justify-content-center">
+            {%- for social in site.footer.links  -%}
+            <a href="{{ social.url | absolute_url }}" title="footer{{ social.label }}" class="chulapa-footer-sociallink">
+              <span class="fa-stack fa-2x" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="{{ social.icon }} fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">{{ social.label }}</span>
+            </a>
+            {%- endfor -%}
+          </div>
+          {%- endif -%}
+          <p class="pb-3">&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.github.owner_name }}</p>
+          <!-- Do not remove this in order to give  attributions -->
+          {%- if site.chulapa-skin.theme -%}
+          <p class="small"><b>{{- name -}}</b> skin by <a href="{{ url }}">{{ author }}</a></p>
+          {%- endif -%}
+          <p class="small">Theme by <a href="https://dieghernan.github.io/chulapa" class="chulapa">Chulapa</a></p>
+          <!-- End  attributions -->
         </div>
-    </footer>
-    <!-- Footer -->
+      </div>
+  </div>
+</footer>
+<!-- Footer -->
