@@ -38,7 +38,7 @@ layout: default
 									replace:"{%", ",.," | 
 									split: ",.," | first | strip_html -%}
 	<article class="mb-3">
-		<div class="row">
+		<div class="row g-0">
 			<div class="col">
 				<h4><a href="{{- document.url | absolute_url -}}" class="chulapa-text-body-color">{{ document.title }}</a></h4>
 				{%- if document.subtitle -%}<h5>{{- document.subtitle -}}</h5> {%- endif -%}
