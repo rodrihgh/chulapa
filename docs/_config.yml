@@ -17,7 +17,8 @@ fa5_kit_code.           : afe0d1dec9
 gtag_id                 :  UA-139034853-2  
 
 search:
-  provider              : algolia 
+  provider              : lunr
+  algolia_logo          : true 
 
 algolia:                                                                   
   application_id        : "KOIKA5PDQO"
