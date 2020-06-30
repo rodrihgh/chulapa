@@ -101,8 +101,8 @@ footer:
 chulapa-skin: 
   autothemer  :  true 
   vars        :    
-    primary:   '#88bdbc'
-    secondary: '#67abaa'
+    primary:   '#f7f5ee'
+    secondary: '#e7e1cb'
 
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
