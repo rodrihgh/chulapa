@@ -43,7 +43,7 @@ layout: default
 									split: ",.," | first | strip_html -%}
 	<article class="ml-2 my-4">
 	  			  {% if document.date %}
-			  {% assign dateformat = document.date | date: "%A, %e" %}
+			  {% assign dateformat = document.date | date: "%d, %A" %}
 			  <p class="small mb-1"> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time>
 {% if document.last_modified_at %} <i class="fa fa-redo fa-sm" aria-hidden="true"></i>{% endif %}</p>
 			  {% endif %}
