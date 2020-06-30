@@ -8,6 +8,6 @@ script:
   - bundle exec jekyll algolia
 branches:
   only:
-    - gh-pages
+    - master
 rvm:
  - 2.4
