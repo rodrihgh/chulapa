@@ -1,0 +1,229 @@
+title                   :     Chulapa
+subtitle                :     A full flexible Jekyll theme  
+og_image                :     "./assets/img/site/chulapa-madrid.jpg" #default[author.avatar (see below)] or [github-avatar]
+timezone                :     "Europe/Madrid" #See https://jekyllrb.com/docs/configuration/options/
+author:
+  name                  :      dieghernan
+  avatar                :      https://github.com/dieghernan.png
+  location              :      Madrid, Spain
+  links:                
+    - url: https://github.com/dieghernan/
+      icon: "fab fa-github"
+
+fa5_kit_code: 
+
+gtag_id                 :  UA-139034853-2  
+
+search:
+  provider              : algolia 
+
+algolia:                                                                   
+  application_id        : "KOIKA5PDQO"
+  index_name            : "chulapa"
+  search_only_api_key   : "7f1fe42bef3f03458cb3a911ebc7e0ac"
+  files_to_exclude:         #Optional
+    - _layouts/*.html
+    - _includes/*.html
+    - _pages/liquid*
+  extensions_to_index:      #Optional
+    - html
+    - md
+  searchableAttributes:     #Optional                                                    
+      - title                                                                    
+      - headings                                                                 
+      - unordered(content)                                                       
+      - unordered(subtitle)                                                      
+      - unordered(categories)                                                    
+      - unordered(collection)                                                    
+      - unordered(tags) 
+  customRanking:            #Optional
+    - desc(include_on_search)
+    - desc(title)
+    - desc(content) 
+    - desc(subtitle)
+
+disqus_shortname: chulapa
+
+
+# B. Navigation
+
+navbar:
+  style     :  modern #default is the classical top navbar, set "modern" for a fixed button navbar
+  brand:
+    title   :  Home
+    url     :   #default["url/baseurl"]
+    img     : "./assets/img/site/brand_black.png"
+  nav:
+  - title: Blog
+    url: /blog/
+  - title: Boostrap		
+    url: /bootstrap		
+  - title: Collections		
+    child:		
+     - title: Demos		
+       url: /demo		
+     - title : Pics of Madrid		
+       url: /picsofmadrid		
+  - title: Others		
+    child:		
+     - title: Liquid		
+       url: /liquid		
+     - title: Tags		
+       url: /tags 		
+  - title: Github		
+    url: https://github.com/dieghernan
+
+#Social links to be placed on your site footer
+footer:
+  links:
+    - label: "RSS"
+      icon: "fa fa-rss"
+      url:  "./rss.xml"
+    - label: "Twitter"
+      icon: "fab fa-twitter"
+      url: https://twitter.com/
+    - label: "Facebook"
+      icon: "fab fa-facebook"
+      url: https://www.facebook.com
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: https://www.github.com
+    - label: "Instagram"
+      icon: "fab fa-instagram"
+      url: https://www.instagram.com
+
+# C. Theme Settings
+
+
+# Theme and colors
+chulapa-skin: 
+  autothemer  :  true 
+  vars        :    
+    primary:   black
+
+    
+# D. Jekyll Defaults and collections: see https://jekyllrb.com/
+
+# Collections https://jekyllrb.com/docs/step-by-step/09-collections/
+collections:
+  demo:
+    output: true
+  picsofmadrid:
+    output: true
+collections_dir     : collections
+permalink           : /:year:month:day_:title/
+
+
+# Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
+paginate: 4
+paginate_path: "/blog/page:num/"
+paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
+
+# Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      header_type: "base"
+      include_on_search   : false
+      cloudtag_url        : "/tags"       #This is where the link on tags would redirect
+      cloudcategory_url   : "/categories" #This is where the link on categories would redirect
+
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      header_type       : "post"
+      include_on_search : true
+      include_on_feed   : true
+      show_date         : true
+      show_bottomnavs   : true
+      show_sociallinks  : true
+      show_comments     : false
+      show_tags         : true
+      show_categories   : true
+      show_author       : true
+      show_toc          : false
+  -
+    scope:
+      path: ""
+      type: "demo"
+    values:
+      header_type       : "hero"
+      show_bottomnavs   : true
+      show_sociallinks  : true
+      include_on_search : true
+      include_on_feed   : true
+  -
+    scope:
+      path: ""
+      type: "picsofmadrid"
+    values:
+      layout: "landingpage"
+      include_on_search : true
+      include_on_feed   : true
+      header_type       : "splash"
+      show_bottomnavs   : true
+      show_tags         : true
+      cloudtag_url        : "/tags_collection"       #This is where the link on tags would redirect
+  -
+    scope:
+      path: "assets/img/gallery"
+    values:
+      image_col         : gallery
+
+
+
+
+
+
+
+# XX. Other settings - no need to modify
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  blanklines: true
+
+plugins:
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-include-cache
+  - jekyll-sitemap
+
+# Exclude these files from production site
+exclude:
+  - LICENSE
+  - README.md
+  - Gemfile
+  - vendor
+
+include:
+ - _pages
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  header_offset: 1
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
