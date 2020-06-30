@@ -28,7 +28,7 @@ layout: default
 
 {%- for year in postsInYear -%}
 <section id="{{ year.name | default: "NA" }}" class="pt-5">
-	<h2 class=" border-bottom border-chulapa">{{ year.name | default: "NA" }}</h2>
+	<h2 class="display-4 border-bottom border-chulapa">{{ year.name | default: "NA" }}</h2>
 	{%- assign postsInMonth = year.items | group_by_exp: 'post', 'post.date | date: "%B"' -%}
 	{%- for month in postsInMonth  -%}
 	  <h3>{{ month.name }}</h3>
@@ -40,7 +40,7 @@ layout: default
 									replace:"{{", ",.," | 
 									replace:"{%", ",.," | 
 									split: ",.," | first | strip_html -%}
-	<article class="mb-3">
+	<article class="ml-2 mb-3">
 		<div class="row g-0">
 			<div class="col">
 				<h4><a href="{{- document.url | absolute_url -}}" class="chulapa-text-body-color">{{ document.title }}</a></h4>
