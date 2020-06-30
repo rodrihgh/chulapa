@@ -17,7 +17,7 @@ fa5_kit_code.           : afe0d1dec9
 gtag_id                 :  UA-139034853-2  
 
 search:
-  provider              : lunr
+  provider              : algolia
   algolia_logo          : true 
 
 algolia:                                                                   
