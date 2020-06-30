@@ -8,8 +8,8 @@ TODO
 - [ ] move to final location 
 - [ ] create remote example
 - [ ] create docs
-- [ ] finish year archive
-- [ ] redesign of gallery liquid code
+- [x] finish year archive
+- [x] redesign of gallery liquid code
 - [x] full implement of cards on summary
 - [x] alternative navbar
 - [x] feed

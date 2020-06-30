@@ -32,7 +32,9 @@ layout: default
 	{%- assign postsInMonth = year.items | group_by_exp: 'post', 'post.date | date: "%B"' -%}
 	{%- for month in postsInMonth  -%}
 	{%- assign dateformat = month.name -%}
+	{% if dateformat %}
 	  <h3>{% include_cached snippets/datetranslate.html  date=dateformat %}</h3>
+	{% endif %}
   	{%- for document in month.items -%}
   	{%- assign excerpt = document.excerpt | markdownify | strip_html -%}
   	{%- assign excerptfallback = document.content |
