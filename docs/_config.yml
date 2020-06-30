@@ -1,3 +1,5 @@
+remote_theme: dieghernan/chulapa
+
 title                   :     Chulapa
 subtitle                :     A full flexible Jekyll theme  
 og_image                :     "./assets/img/site/chulapa-madrid.jpg" #default[author.avatar (see below)] or [github-avatar]
