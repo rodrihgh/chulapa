@@ -104,6 +104,7 @@ chulapa-skin:
   vars        :    
     primary:   '#efebdd'
     secondary: '#e7e1cb'
+    link-color: '#e7e1cb'
 
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
