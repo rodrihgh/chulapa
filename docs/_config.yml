@@ -101,7 +101,7 @@ footer:
 chulapa-skin: 
   autothemer  :  true 
   vars        :    
-    primary:   '#f7f5ee'
+    primary:   '#efebdd'
     secondary: '#e7e1cb'
 
     
