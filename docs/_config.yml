@@ -116,6 +116,9 @@ collections:
     output: true
   skins:
     output: true
+    permalink: /skins/:name
+    order:
+    - current.md
 collections_dir     : collections
 permalink           : /:year:month:day_:title/
 

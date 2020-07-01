@@ -3,7 +3,6 @@ layout: default
 title: LUX
 subtitle: A touch of class
 excerpt: Lux, a touch of class developed by Bootswatch.
-permalink: skins/lux
 date: 2015-03-05
 last_modified_at: 2018-02-09
 tags: [demo, bootstrap, bootswatch, splash]

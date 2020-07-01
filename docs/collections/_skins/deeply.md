@@ -3,7 +3,6 @@ layout: default
 title: Deeply
 subtitle: A dark background theme with bold contrasting colors
 excerpt: Deeply, a dark background theme with bold contrasting colors developed by Tophat Themes.
-permalink: skins/deeply
 date: 2015-03-04
 last_modified_at: 2018-02-08
 tags: [demo, bootstrap, tophat, splash]
