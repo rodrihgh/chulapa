@@ -455,7 +455,7 @@ $value in $theme-colors {
 
 .chulapa-toc-wrapper{
     @include border-radius($border-radius-lg);
-    border-color:$light !important;
+    border-color: $secondary !important;
 }
 
 .chulapa-toc-reset {
