@@ -58,8 +58,8 @@ navbar:
   nav:
   - title: Blog
     url: /blog/
-  - title: Boostrap		
-    url: /bootstrap		
+  - title: Skins		
+    url: /skins/current		
   - title: Collections		
     child:		
      - title: Demos		
@@ -114,6 +114,8 @@ collections:
     output: true
   picsofmadrid:
     output: true
+  skins:
+    output: true
 collections_dir     : collections
 permalink           : /:year:month:day_:title/
 
@@ -134,7 +136,6 @@ defaults:
       include_on_search   : false
       cloudtag_url        : "/tags"       #This is where the link on tags would redirect
       cloudcategory_url   : "/categories" #This is where the link on categories would redirect
-
   -
     scope:
       path: ""
@@ -151,6 +152,24 @@ defaults:
       show_categories   : true
       show_author       : true
       show_toc          : false
+   -
+    scope:
+      path: ""
+      type: "skins"
+    values:
+      header_type       : "hero"
+      include_on_search : false
+      include_on_feed   : false
+      header_type: hero
+      header_img: "./assets/img/site/chulapa-madrid.jpg"
+      show_date         : true
+      show_sociallinks  : true
+      show_comments     : true
+      show_tags         : true
+      show_categories   : true
+      show_bottomnavs   : true
+      show_author       : true
+      show_toc          : true
   -
     scope:
       path: ""
