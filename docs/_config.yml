@@ -17,8 +17,7 @@ fa5_kit_code            : afe0d1dec9
 gtag_id                 :  UA-139034853-2  
 
 search:
-  provider              : lunr
-  lunr_maxwords         : 50
+  provider              : algolia
 
 disqus_shortname: chulapa
 
@@ -90,7 +89,7 @@ collections:
     output: true
   picsofmadrid:
     output: true
-collections_dir     : docs/collections
+collections_dir     : collections
 permalink           : /:year:month:day_:title/
 
 

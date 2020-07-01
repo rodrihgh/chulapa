@@ -166,7 +166,7 @@ collections:
     output: true
   picsofmadrid:
     output: true
-collections_dir     : collections
+collections_dir     : docs/collections
 permalink           : /:year:month:day_:title/
 
 
