@@ -26,4 +26,8 @@ chulapa-skin:
 While `autothemer` does not override the skin, it may not be fully functional. You can modify the theme defaults via `vars`.
 
 
+
+{%- include components/navbeforeafter.html -%}
+
+
 {% include snippets/bootstrapdemo.html  %}
