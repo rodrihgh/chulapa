@@ -167,6 +167,11 @@ collections:
     output: true
   picsofmadrid:
     output: true
+  skins:
+    output: true
+    permalink: /skins/:name
+    order:
+    - current.md
 collections_dir     : docs/collections
 permalink           : /:year:month:day_:title/
 
@@ -231,9 +236,22 @@ defaults:
       path: "assets/img/gallery"
     values:
       image_col         : gallery
-
-
-
+  -
+    scope:
+      path: ""
+      type: "skins"
+    values:
+      header_type       : "splash"
+      include_on_search : false
+      include_on_feed   : false
+      show_date         : true
+      show_sociallinks  : true
+      show_comments     : true
+      show_tags         : true
+      show_categories   : true
+      show_bottomnavs   : true
+      show_author       : true
+      show_toc          : true
 
 
 
