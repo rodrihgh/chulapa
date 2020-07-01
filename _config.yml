@@ -6,7 +6,7 @@ title                   :     Chulapa #default["repository_name"]
 title_separator         :     #default [" | "]
 subtitle                :     A Jekyll theme for Github Pages powered by Bootstrap #default [your-repository-tagline]  
 url                     :     #See baseurl - On Github Pages you may leave it blank
-baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
+baseurl                 :  chulapa   #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
 words_per_minute        :     #default[200]
 og_image                :     "./assets/img/site/chulapa-madrid.jpg" #default[author.avatar (see below)] or [github-avatar]
 twitter_site            :     #Avoid @
