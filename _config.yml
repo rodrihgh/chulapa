@@ -57,7 +57,6 @@ algolia:
     - _includes/*.html
     - _pages/liquid*
     - docs/blog/index.html
-
   extensions_to_index:      #Optional
     - html
     - md
