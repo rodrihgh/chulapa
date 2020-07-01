@@ -448,11 +448,21 @@ $value in $theme-colors {
 }
 
 .chulapa-toc-wrapper{
-    @include border-radius($border-radius-lg);
-    border-color: $secondary !important;
-    background-color: $secondary !important;
-    a {
+
+    .list-group-item {
+      background-color: $secondary;
+      a {
         color: color-contrast($secondary);
+        }
+      &:first-child {
+        @include border-top-radius($border-radius-lg);
+        padding-top: map-get($spacers, 2) !important;
+        }
+        
+      &:last-child {
+        @include border-bottom-radius($border-radius-lg);
+        padding-bottom: map-get($spacers, 2) !important;
+        }
     }
 }
 
