@@ -2,6 +2,6 @@
 layout: archive
 title: Archive
 subtitle: Post by year 
-permalink: /archivenew
+permalink: /archive
 archive_collection: "all"
 ---
