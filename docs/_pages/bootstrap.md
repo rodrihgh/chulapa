@@ -1,5 +1,5 @@
 ---
-layout: landingpage
+layout: default
 title: Bootstrap showcase
 subtitle: Super long description of this page to check it. Enough
 excerpt: A demo page showing how the theme looks
