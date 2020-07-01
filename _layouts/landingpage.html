@@ -1,9 +1,8 @@
-<!doctype html>
-<html lang="{{- site.locale | default: 'en-US' -}}">
-	{%- include head.html -%}
-	<body class="d-flex flex-column bg-primary">
-	{% include_cached navbar.html pageurl=page.url %}
-	{%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
+---
+layout: minimal
+---
+<div class="chulapa-bg-hero">
+{%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
 	<main class="container-lg pb-3 flex-fill">
 		{%- if page.show_date or page.show_sociallinks -%}
 		  {%- include components/datesocial.html -%}
@@ -14,7 +13,7 @@
 			  {% include components/author.html %}
 			  {%- endif -%}
 			</aside>
-			<article class="col-md-8 chulapa-text-hero-color">
+			<article class="col-md-8">
 			 {% if page.show_toc %} 
                            {% assign maxlev = page.toc_maxlevel | default: 4 %}
                          <p class="lead mb-2">{{ page.title }}</p>
@@ -33,11 +32,4 @@
 	{%- if page.show_tags -%}
 	  {%- include components/tags.html-%}
 	{%- endif -%}
-	{%- include_cached footer.html show_comments=page.show_comments -%}
-	<!-- JS, Popper.js, and jQuery -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-	{% include custom/custom_bottomscripts.html %}
-	</body>
-</html>
+	</div>

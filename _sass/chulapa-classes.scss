@@ -477,6 +477,10 @@ $value in $theme-colors {
     text-decoration: line-through;
 }
 
+.chulapa-bg-hero {
+  background-color: $hero-chulapa-bg-color;
+}
+
 .chulapa-text-hero-color {
   color: $hero-chulapa-text-color;
 }

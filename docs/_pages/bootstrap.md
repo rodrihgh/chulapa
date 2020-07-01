@@ -1,18 +1,20 @@
 ---
-layout: default
+layout: landingpage
 title: Bootstrap showcase
 subtitle: Super long description of this page to check it. Enough
 excerpt: A demo page showing how the theme looks
 permalink: /bootstrap
 header_type: hero
 header_img: "./assets/img/site/chulapa-madrid.jpg"
-date: 2015-07-28
+date: 2015-03-03
+last_modified_at: 2018-02-07
 include_on_search : true
 show_date         : true
 show_sociallinks  : true
 show_comments     : true
 show_tags         : true
 show_categories   : true
+show_bottomnavs   : true
 show_author       : true
 show_toc          : true
 tags: [demo, bootstrap, layout]
@@ -24,6 +26,8 @@ author:
   links:
     - url: https://twitter.com/jack2
       icon: "fab fa-twitter"
+    - url: https://github.com
+      icon: "fab fa-github"
 ---
 
 
