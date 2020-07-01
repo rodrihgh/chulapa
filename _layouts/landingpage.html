@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{- site.locale | default: 'en-US' -}}">
 	{%- include head.html -%}
-	<body class="d-flex flex-column bg-primary chulapa-landingpage">
+	<body class="d-flex flex-column bg-primary">
 	{% include_cached navbar.html pageurl=page.url %}
 	{%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
 	<main class="container-lg pb-3 flex-fill">
@@ -14,7 +14,7 @@
 			  {% include components/author.html %}
 			  {%- endif -%}
 			</aside>
-			<article class="col-md-8">
+			<article class="col-md-8 chulapa-text-hero-color">
 			 {% if page.show_toc %} 
                            {% assign maxlev = page.toc_maxlevel | default: 4 %}
                          <p class="lead mb-2">{{ page.title }}</p>

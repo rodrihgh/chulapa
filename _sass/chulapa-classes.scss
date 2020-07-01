@@ -477,104 +477,11 @@ $value in $theme-colors {
     text-decoration: line-through;
 }
 
-.chulapa-landingpage-img {
-    color: $white;
-    text-shadow: 0.1rem 0.1rem 0.2rem $black;
-    background-color: $hero-chulapa-bg-color;
-
-    hr {
-        background-color: $white;
-    }
-
-    * {
-        text-shadow: 0.1rem 0.1rem 0.2rem $black;
-    }
-
-    header {
-        background-color: transparent;
-    }
-
-    a {
-        text-shadow: 0.1rem 0.1rem 0.1rem white;
-    }
-
-    .chulapa-pagination .page-link {
-        color: $white;
-
-        &:hover {
-            color: $hero-chulapa-bg-color;
-            background-color: $white;
-        }
-    }
-
-    table,
-    .chulapaDateSocial {
-        color: $white;
-        text-shadow: 0.1rem 0.1rem 0.2rem $black;
-
-        a {
-            color: $white;
-            text-shadow: 0.1rem 0.1rem 0.2rem $black;
-        }
-    }
-
-    button,
-    form,
-    blockquote,
-    pre,
-    cite,
-    input,
-    footer,
-    select,
-    .btn,
-    .navbar,
-    .navbar-chulapa-modern,
-    .list-group,
-    .list-group-item,
-    .form-group,
-    .breadcrumb,
-    .breadcrumb-item,
-    .pagination,
-    .page-item,
-    .alert,
-    .jumbotron,
-    .card,
-    .toast,
-    .nav,
-    .badge {
-        text-shadow: none;
-
-        * {
-            text-shadow: none;
-        }
-    }
-
-@each $color,
-$value in $theme-colors {
-    .chulapa-pill-bg-#{$color} {
-        @include badge-variant($value);
-    }
+.chulapa-text-hero-color {
+  color: $hero-chulapa-text-color;
 }
 
-
-    .header-chulapa,
-    .hero-chulapa,
-    .splash-chulapa {
-        color: $white;
-        text-shadow: 0.1rem 0.1rem 0.2rem $black;
-
-        hr {
-            background-color: $white;
-        }
-
-        * {
-            color: $white;
-            text-shadow: 0.1rem 0.1rem 0.2rem $black;
-        }
-    }
-}
-
-.chulapa-landingpage {
+.xxchulapa-landingpage {
     color: $hero-chulapa-text-color;
     background-color: $hero-chulapa-bg-color;
 
