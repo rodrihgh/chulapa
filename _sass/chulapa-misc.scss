@@ -41,6 +41,10 @@ blockquote {
     color: $blockquote-chulapa-text-color;
 }
 
+.footnotes {
+  font-size:$font-size-sm;
+}
+
 .highlight {
     @extend .p-2;
 }
