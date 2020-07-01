@@ -481,30 +481,11 @@ $value in $theme-colors {
   background-color: $hero-chulapa-bg-color;
 }
 
-.chulapa-text-hero-color {
-  color: $hero-chulapa-text-color;
-}
-
-.xulapa-landingpage {
+.chulapa-landingpage-color {
     color: $hero-chulapa-text-color;
-    background-color: $hero-chulapa-bg-color;
-
-    hr {
-        background-color: $hero-chulapa-text-color;
-    }
 
     a {
-        color: $hero-chulapa-text-color;
-        text-shadow: 1px 1px 3px $info;
-    }
-
-    .chulapa-pagination .page-link {
-        color: $hero-chulapa-text-color;
-
-        &:hover {
-            color: $hero-chulapa-bg-color;
-            background-color: $hero-chulapa-text-color;
-        }
+        color: mix($info, $hero-chulapa-text-color, 50%);
     }
 
     table,
@@ -516,57 +497,26 @@ $value in $theme-colors {
         }
     }
 
-    button,
-    form,
-    blockquote,
-    pre,
-    cite,
-    input,
-    footer,
-    select,
-    .btn,
-    .navbar,
-    .navbar-chulapa-modern,
-    .list-group,
-    .list-group-item,
-    .form-group,
-    .breadcrumb,
-    .breadcrumb-item,
-    .pagination,
-    .page-item,
-    .alert,
-    .jumbotron,
-    .card,
-    .toast,
-    .nav,
-    .badge {
-        text-shadow: none;
-
-        * {
-            text-shadow: none;
-        }
+    hr {
+        background-color: $hero-chulapa-text-color;
     }
 
-@each $color,
-$value in $theme-colors {
-    .chulapa-pill-bg-#{$color} {
-        @include badge-variant($value);
+    .chulapa-pagination {
+        .page-link {
+
+            color: $hero-chulapa-text-color;
+
+            &:hover {
+                color: $hero-chulapa-bg-color;
+                background-color: $hero-chulapa-text-color;
+            }
+        }
     }
 }
 
-
-    .header-chulapa,
-    .hero-chulapa,
-    .splash-chulapa {
+.chulapa-landingpage-icons {
+    i {
         color: $hero-chulapa-text-color;
-
-        hr {
-            background-color: $hero-chulapa-text-color;
-        }
-
-        * {
-            color: $hero-chulapa-text-color;
-        }
     }
 }
 
