@@ -54,7 +54,7 @@ navbar:
   brand:
     title   :  Home
     url     :   #default["url/baseurl"]
-    img     : "./assets/img/site/brand-clear-small.png"
+    img     : "./assets/img/site/brand-clear.png"
   nav:
   - title: Blog
     url: /blog/
