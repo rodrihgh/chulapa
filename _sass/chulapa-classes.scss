@@ -526,8 +526,10 @@ $value in $theme-colors {
     i {
         color: $hero-chulapa-text-color;
     }
-    
-    a {
+}
+
+.chulapa-landingpage-tag {
+      a {
       border: $border-width solid $hero-chulapa-text-color;
     }
 }
