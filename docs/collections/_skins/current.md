@@ -1,7 +1,7 @@
 ---
 layout: default
 header_type       : "hero"
-header_img : "./assets/img/gallery/david-monje-YwrD58FfX9g-unsplash.jpg"
+header_img : "./assets/img/site/chulapa-madrid.jpg"
 title: Current skin
 subtitle: Showing al the different Bootstrap components available
 date: 2015-03-03
