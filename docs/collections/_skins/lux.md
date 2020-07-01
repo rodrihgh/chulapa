@@ -15,7 +15,7 @@ Developed by [Bootswatch](https://bootswatch.com/), you can use it on your site.
 
 ```yaml
 chulapa-skin: 
-  theme       :  lux
+  theme       :  {{ page.skin }}
   autothemer  :  # Autotheming may not have any effect
   vars        :    
     ...
@@ -25,7 +25,17 @@ chulapa-skin:
 While `autothemer` does not override the skin, it may not be fully functional. You can modify the theme defaults via `vars`.
 
 
-{% include components/navbeforeafter.html %}
+
+
+{% if page.show_bottomnavs -%}
+{% include components/navbeforeafter.html -%}
+{% endif -%}
+{% if page.show_categories -%}
+{% include components/categories.html-%}
+{% endif -%}
+{% if page.show_tags -%}
+{% include components/tags.html-%}
+{% endif -%}
 
 
 {% include snippets/bootstrapdemo.html  %}
