@@ -16,7 +16,7 @@ layout: minimal
 			 {% if page.show_toc %} 
                            {% assign maxlev = page.toc_maxlevel | default: 4 %}
                          <p class="lead mb-2">{{ page.title }}</p>
-			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=maxlev skipNoIDs=true id="toc" class="list-group.mb-5.mx-3.mx-lg-5.px-lg-5" item_class="list-group-item.font-weight-bold.py-1.pr-0.mr-0.chulapa-toc-reset" %}
+			 {% include components/toc.html sanitize=true html=content h_min=2 h_max=maxlev skipNoIDs=true id="toc" class="list-group.mb-5.mx-3.mx-lg-5.px-lg-5.chulapa-toc-wrapper.border" item_class="list-group-item.font-weight-bold.py-1.pr-0.mr-0.chulapa-toc-reset" %}
 			  {% endif %}
 			{{- content -}}
 			</article>

@@ -447,13 +447,19 @@ $value in $theme-colors {
     }
 }
 
-#toc {
+#toc{
     a {
         color: $body-color;
     }
 }
 
+.chulapa-toc-wrapper{
+    @include border-radius($border-radius-lg);
+    border-color:$light !important;
+}
+
 .chulapa-toc-reset {
+    border:0;
     ul {
         padding-left: 0;
         margin-left: 0;
