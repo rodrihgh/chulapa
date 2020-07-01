@@ -522,9 +522,13 @@ $value in $theme-colors {
     }
 }
 
-.chulapa-landingpage-icons {
+.chulapa-landingpage-badges {
     i {
         color: $hero-chulapa-text-color;
+    }
+    
+    a {
+      border: $border-width solid $hero-chulapa-text-color;
     }
 }
 
