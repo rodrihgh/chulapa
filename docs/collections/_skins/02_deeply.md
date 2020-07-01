@@ -1,18 +1,18 @@
 ---
 layout: default
 title: Deeply
-subtitle: A dark background theme with bold contrasting colors.
-excerpt: Deeply ,a dark background theme with bold contrasting colors developed by Tophat Themes.
+subtitle: A dark background theme with bold contrasting colors
+excerpt: Deeply, a dark background theme with bold contrasting colors developed by Tophat Themes.
 permalink: skins/deeply
-date: 2015-03-03
-last_modified_at: 2018-02-07
-tags: [demo, bootstrap, current-theme]
+date: 2015-03-04
+last_modified_at: 2018-02-08
+tags: [demo, bootstrap, tophat, splash]
 categories: [skins]
 skin: deeply
 ---
 
 
-Developed by [Tophat Themes](https://themesguide.github.io/top-hat/dist/deeply/), you can use it on your site. Just go to your `_config.yml` file and modify this lines
+Developed by [Tophat Themes](https://themesguide.github.io/top-hat/dist/), you can use it on your site. Just go to your `_config.yml` file and modify this lines
 
 ```yaml
 chulapa-skin: 

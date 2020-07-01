@@ -157,7 +157,7 @@ defaults:
       path: ""
       type: "skins"
     values:
-      header_type       : "hero"
+      header_type       : "splash"
       include_on_search : false
       include_on_feed   : false
       header_type: hero
