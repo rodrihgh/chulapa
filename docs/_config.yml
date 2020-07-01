@@ -160,8 +160,6 @@ defaults:
       header_type       : "splash"
       include_on_search : false
       include_on_feed   : false
-      header_type: hero
-      header_img: "./assets/img/site/chulapa-madrid.jpg"
       show_date         : true
       show_sociallinks  : true
       show_comments     : true
