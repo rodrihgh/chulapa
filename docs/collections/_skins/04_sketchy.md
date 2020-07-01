@@ -27,7 +27,7 @@ While `autothemer` does not override the skin, it may not be fully functional. Y
 
 
 
-{%- include components/navbeforeafter.html -%}
+{% include components/navbeforeafter.html %}
 
 
 {% include snippets/bootstrapdemo.html  %}

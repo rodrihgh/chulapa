@@ -15,7 +15,7 @@ categories: [skins]
 This is a demo page showing the different components of Bootstrap and how they look on this site under the current configuration.
 
 
-{%- include components/navbeforeafter.html -%}
+{% include components/navbeforeafter.html %}
 
 
 {% include snippets/bootstrapdemo.html  %}
