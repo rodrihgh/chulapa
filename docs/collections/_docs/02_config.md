@@ -9,8 +9,7 @@ h_max: 6
 
 Learn how to modify your `_config.yml` file. If you are using the remote method and you didn't fork the chulapa-remote-PENDING repo, you can use [this file](https://github.com/dieghernan/chulapa/blob/master/_config.yml) as a starting point. Don't forget to add also `remote_theme: dieghernan/chulapa@[version]` to your file.
 
-All these options are accesible across anywhere of your site using {% 
-- raw -%}`{{ site.VARIABLE }}`{% endraw %}.
+All these options are accesible across anywhere of your site using {% raw -%}`{{ site.VARIABLE }}`{%- endraw -%}.
 
 ### A. Site settings/SEO
 
