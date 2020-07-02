@@ -114,6 +114,9 @@ collections:
     output: true
   picsofmadrid:
     output: true
+  docs:
+    output: true
+    permalink: /docs/:name
   skins:
     output: true
     permalink: /skins/:name
@@ -139,6 +142,13 @@ defaults:
       include_on_search   : false
       cloudtag_url        : "/tags"       #This is where the link on tags would redirect
       cloudcategory_url   : "/categories" #This is where the link on categories would redirect
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      header_type       : "hero"
+      include_on_search : true
   -
     scope:
       path: ""
