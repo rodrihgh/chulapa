@@ -25,7 +25,7 @@ remote_theme: dieghernan/chulapa@[version]
 
 ```
     
-Be sure that you replace `@[version]` with the desired version, or remove it completely if you want to use the `master` branch version of the theme (development version).
+Be sure that you replace `@[version]` with the desired version, or remove it completely if you want to use the `master` branch version of the theme (development version). Latest version os `dieghernan/chulapa@{{- site.github.releases | map: "tag_name" | first }}`
 
 Don't forget to deploy your site:
 
