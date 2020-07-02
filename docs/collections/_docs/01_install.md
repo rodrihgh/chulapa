@@ -18,7 +18,11 @@ If you prefer not to fork the example repo, follow these steps:
   - Add  this line to your `_config.yml` and make sure to remove any previous theme or remote theme parameter:
   
 ```yaml
+
 remote_theme: dieghernan/chulapa@[version]
+
+... more config options
+
 ```
     
 Be sure that you replace `@[version]` with the desired version, or remove it completely if you want to use the `master` branch version (development).
