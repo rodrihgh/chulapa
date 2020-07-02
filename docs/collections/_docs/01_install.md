@@ -8,7 +8,7 @@ excerpt: Install Chulapa on your Github repo
 
 
 
-## 1. Remote theme method (Recommended)
+### 1. Remote theme method (Recommended)
 
 You can use the `jekyll-remote-theme` method with this theme. A dedicated [repo - pending]() has been creating, just fork it and quickstart your site!
 
@@ -36,7 +36,7 @@ Please read the rest of the docs for further adjustments.
 
 
 
-## 2. Fork this repository
+### 2. Fork this repository
 
 You can fork [the current repo](https://github.com/dieghernan/chulapa/) and modify it. 
 
@@ -45,7 +45,7 @@ You can fork [the current repo](https://github.com/dieghernan/chulapa/) and modi
 </div>
 
 
-## Gem-based
+####  Gem-based method
 
 This theme has not been developed as a gem-based theme, so this option has been not explored.
 
