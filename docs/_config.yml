@@ -58,6 +58,10 @@ navbar:
   nav:
   - title: Blog
     url: /blog/
+  - title: Quick-Start Guide
+    child:
+     - title: Installation
+       url: /docs/01-install
   - title: Skins		
     url: /skins/current		
   - title: Collections		
