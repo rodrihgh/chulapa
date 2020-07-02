@@ -153,6 +153,7 @@ defaults:
     values:
       header_type       : "hero"
       include_on_search : true
+      show_bottomnavs   : true
   -
     scope:
       path: ""
