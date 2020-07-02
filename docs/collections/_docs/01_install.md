@@ -9,7 +9,7 @@ excerpt: Install Chulapa on your Github repo
 ## Remote theme method (Recommended)
 
 ### Fork it
-You can use the `jekyll-remote-theme` method with this theme. Fork (this repo - pending)[] and read the docs.
+You can use the `jekyll-remote-theme` method with this theme. Fork [this repo - pending]() and read the docs.
 
 ### From scratch / migrating an existing repo
 If you prefer not to fork the example repo, follow these steps:
@@ -28,10 +28,10 @@ Be sure that you replace `@[version]` with the desired version, or remove it com
   
 ## Fork this repository
 
-You can fork (the current repo)[https://github.com/dieghernan/chulapa/] and modify it. 
+You can fork [the current repo](https://github.com/dieghernan/chulapa/) and modify it. 
 
 <div class="bg-warning p-3 rounded">
-<i class="fas fa-exclamation-triangle"></i> The main repo is published under the `docs` folder, please be aware of that when setting your `_config.yml`.
+<i class="fas fa-exclamation-triangle"></i> The main repo is published under the <code>docs</code> folder, please be aware of that when setting your <code>_config.yml</code>.
 </div>
 
 
