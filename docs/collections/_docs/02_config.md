@@ -20,13 +20,13 @@ All these options are accesible across anywhere of your site using `{{ site.VARI
 - `title`, `title_separator` and `subtitle`: Set several `<meta>` tags and defines the text to be displayed on top of the browsers. **Default: repository_name \| project_tagline**.
 - `url` and `baseurl`: If you are deploying on Github just ignored these pesky two. You may (or may not) want to read [Clearing Up Confusion Around baseurl -- Again](https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/) by Parker Moore (Jekyll).
 - `words_per_minute`: Used for computing the reading time of the page. **200**.
-- `timezone`: Used for setting the timezone of your dates and hours. See [https://jekyllrb.com/docs/configuration/options](https://jekyllrb.com/docs/configuration/options).
+- `timezone`: Used for setting the timezone of your dates and hours. See [Jekyll Docs](https://jekyllrb.com/docs/configuration/options).
 
 #### SEO
 
-**Search Engine Optimization** is important (obviously) for any site. Some of the previous options would affect as well, however <span class="chulapa">Chulapa</span> has a great focus on that:
+**Search Engine Optimization** is important (obviously) for any site. Some of the previous options would affect to SEO, however <span class="chulapa">Chulapa</span> has a specific focus on that:
 
-- `og_image`: The default image to be displayed  when a page of your site is shares on any of the major social networks (Facebook, Twitter, etc.). ** Author avatar (if set, see below) or your Github avatar.**
-- `twitter_site`: The twitter username **withou @!** of the owner of the site. Useful when sharing on Twitter.
+- `og_image`: The default image to be displayed  when a page of your site is shared on any of the major social networks (Facebook, Twitter, etc.). ** Author avatar (if set, see below) or your Github avatar.**
+- `twitter_site`: The twitter username **without @!** of the owner of the site. Useful when sharing on Twitter.
 - `author` of the site:
   - `name` of the author, it will be injected on several parts of your site, as the footer or different `<meta>` tags.
