@@ -26,7 +26,7 @@ All these options are accesible across anywhere of your site using `{{ site.VARI
 
 **Search Engine Optimization** is important (obviously) for any site. Some of the previous options would affect to SEO, however <span class="chulapa">Chulapa</span> has a specific focus on that:
 
-- `og_image`: The default image to be displayed  when a page of your site is shared on any of the major social networks (Facebook, Twitter, etc.). ** Author avatar (if set, see below) or your Github avatar.**
+- `og_image`: The default image to be displayed  when a page of your site is shared on any of the major social networks (Facebook, Twitter, etc.). **Author avatar (if set, see below) or your Github avatar**.
 - `twitter_site`: The twitter username **without @!** of the owner of the site. Useful when sharing on Twitter.
 - `author` of the site:
   - `name` of the author, it will be injected on several parts of your site, as the footer or different `<meta>` tags.
