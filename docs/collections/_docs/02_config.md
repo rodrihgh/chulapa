@@ -84,22 +84,22 @@ Algolia has a [specific configuration syntax](https://community.algolia.com/jeky
 Recommended additional options are:
 
 ```yaml
-algolia:                                                                   
-  application_id        : your id
-  index_name            : your name
-  search_only_api_key   : your apikey
-  extensions_to_index:      #Optional
+algolia:                                                                
+  application_id: your id
+  index_name: your name
+  search_only_api_key: your apikey
+  extensions_to_index:
     - html
     - md
-  searchableAttributes:     #Optional                                                    
-      - title                                                                    
-      - headings                                                                 
-      - unordered(content)                                                       
-      - unordered(subtitle)                                                      
-      - unordered(categories)                                                    
-      - unordered(collection)                                                    
-      - unordered(tags) 
-  customRanking:            #Optional
+  searchableAttributes:                                                 
+    - title                                           
+    - headings                                                                 
+    - unordered(content)                                                       
+    - unordered(subtitle)                                                      
+    - unordered(categories)                                                    
+    - unordered(collection)                                                    
+    - unordered(tags) 
+  customRanking:
     - desc(include_on_search)
     - desc(title)
     - desc(content) 
