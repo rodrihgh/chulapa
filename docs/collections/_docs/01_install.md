@@ -40,7 +40,7 @@ Please read the rest of the docs for further adjustments.
 
 You can fork [the current repo](https://github.com/dieghernan/chulapa/) and modify it. 
 
-<div class="bg-warning p-3 rounded mx-3 mb-3">
+<div class="alert alert-warning p-3 rounded mx-3 mb-3">
 <i class="fas fa-exclamation-triangle"></i> The main repo is published under the <code>docs</code> folder, please be aware of that when setting your <code>_config.yml</code>.
 </div>
 
@@ -49,6 +49,6 @@ You can fork [the current repo](https://github.com/dieghernan/chulapa/) and modi
 
 This theme has not been developed as a gem-based theme, so this option has been not explored.
 
-<div class="bg-info p-3 mx-3 rounded">
+<div class="alert alert-info p-3 mx-3 rounded">
 <span class="font-weight-bold">Help wanted:</span> You can contribute to this theme on this topic.
 </div>
