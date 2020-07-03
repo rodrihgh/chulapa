@@ -63,8 +63,6 @@ You don't have to set anything, the theme already shipped this for you. Structur
 
 When enabled, this theme would install an internal search capability of your site. There are three free engines available, [Lunr.js](https://lunrjs.com/), [Algolia](https://www.algolia.com/) and [Google Custom Search](https://developers.google.com/custom-search).
 
-Algolia is implemented via the `jekyll-algolia` plugin [(docs)](https://community.algolia.com/jekyll-algolia/getting-started.html), and needs further instructions, so a dedicated explanation can be found PENDING.
-
 - `search`:
   - `provider`: Select a provider for enable search: `lunr`, `algolia` or `google`.
   - `label`: Text to be displayed on the navbar when enabled. Useful for localization (i.e. you can set it as Búsqueda or Ricerca). **Search**.
@@ -74,7 +72,7 @@ Algolia is implemented via the `jekyll-algolia` plugin [(docs)](https://communit
 
 - `google_cse_id`: Your Google Custom Search id, available on *cse.google.com > Your search engine > Settings*.
 
-Algolia has a [specific configuration syntax](https://community.algolia.com/jekyll-algolia/getting-started.html), the minimal requirement are:
+Algolia is implemented via the `jekyll-algolia` plugin [(docs)](https://community.algolia.com/jekyll-algolia/getting-started.html), and needs a [specific configuration syntax](https://community.algolia.com/jekyll-algolia/options.html), the minimal requirement are:
 
 - `algolia`:                                                                   
   - `application_id`: App id on Algolia.
@@ -105,3 +103,4 @@ algolia:
     - desc(content) 
     - desc(subtitle)
 ```
+If you are deploying your site with Github Pages, you need to create and update your Algolia index via [Travis CI](https://travis-ci.com/). Follow [this guide](https://community.algolia.com/jekyll-algolia/github-pages.html) and add a `.travis.yml` to your site, as [this one](https://github.com/dieghernan/chulapa/blob/master/.travis.yml).
