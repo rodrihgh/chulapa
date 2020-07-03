@@ -53,7 +53,7 @@ You don't have to set anything, the theme already shipped this for you. Structur
 
 #### Fontawesome
 
-<span class="chulapa">Chulapa</span> has its own installation of Fontawesome 5, so you don't need to set anything. However, if you want to use your own kit, jump to your Fontawesome account and grab the kitcode. This would speed up the loading time of the site. Implement this kitcode after `fa5_kit_code:`.
+<span class="chulapa">Chulapa</span> has its own installation of Fontawesome 5, so you don't need to set anything. However, if you want to use your own kit, jump to your Fontawesome account and grab the kitcode. Implement this kitcode after `fa5_kit_code:`.
 
 #### Google Analytics
 
