@@ -20,3 +20,20 @@ chulapa-skin:
   vars        :    
     ...
 ```
+
+
+
+{% if page.show_bottomnavs -%}
+{% include components/navbeforeafter.html -%}
+{% endif -%}
+{% if page.show_categories -%}
+{% include components/categories.html-%}
+{% endif -%}
+{% if page.show_tags -%}
+{% include components/tags.html-%}
+{% endif -%}
+
+
+{% include snippets/bootstrapdemo.html  %}
+
+
