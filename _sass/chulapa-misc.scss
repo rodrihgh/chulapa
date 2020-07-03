@@ -35,9 +35,7 @@ blockquote {
     @extend .pl-2;
     @extend .pr-1;
     @extend .py-1;
-    font-style: italic;
     background-color: $blockquote-chulapa-bg-color;
-    border-left: 0.3rem solid $blockquote-chulapa-border-color;
     color: $blockquote-chulapa-text-color;
 }
 
