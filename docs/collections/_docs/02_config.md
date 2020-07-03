@@ -91,7 +91,7 @@ algolia:
   extensions_to_index:
     - html
     - md
-  searchableAttributes:                                                 
+  searchableAttributes:
     - title
     - headings
     - unordered(content)
