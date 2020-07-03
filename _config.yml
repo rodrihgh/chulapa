@@ -8,9 +8,9 @@ subtitle                :     A Jekyll theme for Github Pages powered by Bootstr
 url                     :     #See baseurl - On Github Pages you may leave it blank
 baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
 words_per_minute        :     #default[200]
+timezone                :     "Europe/Madrid" #See https://jekyllrb.com/docs/configuration/options/
 og_image                :     "./assets/img/site/chulapa-madrid.jpg" #default[author.avatar (see below)] or [github-avatar]
 twitter_site            :     #Avoid @
-timezone                :     "Europe/Madrid" #See https://jekyllrb.com/docs/configuration/options/
 # Site Author: about the creator of this site
 # Add social links using full urls and "icon" using Fontawesome 5 selectors (e.g. "fab fa-twitter")
 author:
@@ -167,6 +167,9 @@ collections:
     output: true
   picsofmadrid:
     output: true
+  docs:
+    output: true
+    permalink: /docs/:name
   skins:
     output: true
     permalink: /skins/:name
