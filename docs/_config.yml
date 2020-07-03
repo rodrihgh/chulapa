@@ -6,7 +6,7 @@ og_image: "./assets/img/site/chulapa-madrid.jpg"
 timezone: "Europe/Madrid"
 author:
   name: dieghernan
-  avatar: https://github.com/dieghernan.png
+  avatar: ./assets/img/site/dieghernan-avatar.png
   location: Madrid, Spain
   links:                
     - url: https://github.com/dieghernan/
