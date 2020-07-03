@@ -1,24 +1,23 @@
 remote_theme: dieghernan/chulapa
 
-title                   :     Chulapa
-subtitle                :     A full flexible Jekyll theme  
-og_image                :     "./assets/img/site/chulapa-madrid.jpg" #default[author.avatar (see below)] or [github-avatar]
-timezone                :     "Europe/Madrid" #See https://jekyllrb.com/docs/configuration/options/
+title: Chulapa
+subtitle: A full flexible Jekyll theme  
+og_image: "./assets/img/site/chulapa-madrid.jpg" 
+timezone: "Europe/Madrid"
 author:
-  name                  :      dieghernan
-  avatar                :      https://github.com/dieghernan.png
-  location              :      Madrid, Spain
+  name: dieghernan
+  avatar: https://github.com/dieghernan.png
+  location: Madrid, Spain
   links:                
     - url: https://github.com/dieghernan/
       icon: "fab fa-github"
 
-fa5_kit_code            : afe0d1dec9
-
-gtag_id                 :  UA-139034853-2  
+fa5_kit_code: afe0d1dec9
+gtag_id:  UA-139034853-2  
 
 search:
-  provider              : algolia
-  algolia_logo : true
+  provider: algolia
+  algolia_logo: true
   
 algolia:                                                                   
   application_id        : "KOIKA5PDQO"
@@ -48,13 +47,11 @@ disqus_shortname: chulapa
 
 
 # B. Navigation
-
 navbar:
-  style     :  modern #default is the classical top navbar, set "modern" for a fixed button navbar
+  style :  modern 
   brand:
-    title   :  Home
-    url     :   #default["url/baseurl"]
-    img     : "./assets/img/site/brand-clear.png"
+    title :  Home
+    img: "./assets/img/site/brand-clear.png"
   nav:
   - title: Blog
     url: /blog/
@@ -62,24 +59,11 @@ navbar:
     child:
      - title: Installation
        url: /docs/01-install
+     - title: Global Settings
+       url: /docs/02-config
   - title: Skins		
     url: /skins/current		
-  - title: Collections		
-    child:		
-     - title: Demos		
-       url: /demo		
-     - title : Pics of Madrid		
-       url: /picsofmadrid		
-  - title: Others		
-    child:		
-     - title: Liquid		
-       url: /liquid		
-     - title: Tags		
-       url: /tags 		
-  - title: Github		
-    url: https://github.com/dieghernan
 
-#Social links to be placed on your site footer
 footer:
   links:
     - label: "RSS"
@@ -100,14 +84,14 @@ footer:
 
 # C. Theme Settings
 
-
-# Theme and colors
 chulapa-skin: 
+  highlight   : "BW"
   autothemer  :  true 
   vars        :    
     primary:   '#efebdd'
     secondary: "#dfd7ba"
     link-color: '#a19d8e'
+    pre-chulapa-bg-color: "white"
 
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
