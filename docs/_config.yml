@@ -106,7 +106,7 @@ chulapa-skin:
   autothemer  :  true 
   vars        :    
     primary:   '#efebdd'
-    secondary: "#e7e1cb"
+    secondary: "#b09d58"
     link-color: '#a19d8e'
 
     
