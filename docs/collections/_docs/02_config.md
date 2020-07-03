@@ -66,9 +66,42 @@ When enabled, this theme would install an internal search capability of your sit
 Algolia is implemented via the `jekyll-algolia` plugin [(docs)](https://community.algolia.com/jekyll-algolia/getting-started.html), and needs further instructions, so a dedicated explanation can be found PENDING.
 
 - `search`:
-  - `provider`: Select a provider for enable search: `lunr`, `algolia` or `google`
+  - `provider`: Select a provider for enable search: `lunr`, `algolia` or `google`.
   - `label`: Text to be displayed on the navbar when enabled. Useful for localization (i.e. you can set it as Búsqueda or Ricerca). **Search**.
-  - `landing_page`:  url of your search page, useful for localization. **"/search"**
+  - `landing_page`:  url of your search page, useful for localization. **"/search"**.
   - `lunr_maxwords`: `lunr` only, number of word to be included in the index. **30**.
   - `algolia_logo`: Your must set it as `true` if your are on a Community (Free) Algolia plan.  
 
+- `google_cse_id`: Your Google Custom Search id, available on *cse.google.com > Your search engine > Settings*.
+
+Algolia has a [specific configuration syntax](https://community.algolia.com/jekyll-algolia/getting-started.html), the minimal requirement are:
+
+- `algolia`:                                                                   
+  - `application_id`: App id on Algolia.
+  - `index_name`: Name of the index to search.
+  - `search_only_api_key` : Your **public** key.
+
+Recommended additional options are:
+
+```yaml
+algolia:                                                                   
+  application_id        : your id
+  index_name            : your name
+  search_only_api_key   : your apikey
+  extensions_to_index:      #Optional
+    - html
+    - md
+  searchableAttributes:     #Optional                                                    
+      - title                                                                    
+      - headings                                                                 
+      - unordered(content)                                                       
+      - unordered(subtitle)                                                      
+      - unordered(categories)                                                    
+      - unordered(collection)                                                    
+      - unordered(tags) 
+  customRanking:            #Optional
+    - desc(include_on_search)
+    - desc(title)
+    - desc(content) 
+    - desc(subtitle)
+```
