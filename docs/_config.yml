@@ -109,6 +109,7 @@ collections:
     permalink: /skins/:name
     order:
     - current.md
+    - twitter-dim.md
 collections_dir     : collections
 permalink           : /:year:month:day_:title/
 
