@@ -85,13 +85,12 @@ footer:
 # C. Theme Settings
 
 chulapa-skin: 
-  highlight   : "BW"
+  highlight   : "ZENBURN"
   autothemer  :  true 
   vars        :    
     primary:   '#efebdd'
     secondary: "#dfd7ba"
     link-color: '#a19d8e'
-    pre-chulapa-bg-color: "white"
 
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
