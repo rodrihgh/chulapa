@@ -2,7 +2,7 @@ remote_theme: dieghernan/chulapa
 
 title: Chulapa
 subtitle: A full flexible Jekyll theme  
-og_image: "./assets/img/site/chulapa-madrid.jpg" 
+og_image: "./assets/img/site/chulapa-home.png" 
 timezone: "Europe/Madrid"
 author:
   name: dieghernan
