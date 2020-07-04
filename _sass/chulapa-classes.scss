@@ -370,7 +370,7 @@ $value in $theme-colors {
     border: 1px solid;
     width: 8vmax;
     height: 8vmax;
-    @include border-radius(50%,0);
+    @include border-radius(50%);
 }
 
 
@@ -449,12 +449,12 @@ $value in $theme-colors {
         color: color-contrast($secondary);
         }
       &:first-child {
-        @include border-top-radius($border-radius-lg, 0);
+        @include border-top-radius($border-radius-lg);
         padding-top: map-get($spacers, 2) !important;
         }
         
       &:last-child {
-        @include border-bottom-radius($border-radius-lg, 0);
+        @include border-bottom-radius($border-radius-lg);
         padding-bottom: map-get($spacers, 2) !important;
         }
     }
@@ -547,7 +547,7 @@ $value in $theme-colors {
         height: 4*$spacer;
         width: 4*$spacer;
         position: fixed;
-        @include border-radius(50%, 0);
+        @include border-radius(50%);
         font-size:1.25rem;
         z-index: 2000;
         cursor: pointer;
@@ -556,7 +556,7 @@ $value in $theme-colors {
     &-background {
         height: 4*$spacer;
         width: 4*$spacer;
-        @include border-radius(50%, 0);
+        @include border-radius(50%);
         position: fixed;
         background-image: radial-gradient($navbar-chulapa-bg-color, $navbar-chulapa-bg-color);
         z-index: 1000;
