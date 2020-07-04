@@ -32,11 +32,11 @@ hr {
 }
 
 blockquote {
-    @extend .pl-2;
-    @extend .pr-1;
+    @extend .px-2;
     @extend .py-1;
     background-color: $blockquote-chulapa-bg-color;
     color: $blockquote-chulapa-text-color;
+    @include border-radius($border-radius-lg);
 }
 
 .footnotes {
