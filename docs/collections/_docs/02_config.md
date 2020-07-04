@@ -26,7 +26,7 @@ For some variables, a default value is provided. This value is shown at the end 
 
 **Search Engine Optimization** is important (obviously) for any site. Some of the previous options would affect to SEO, however <span class="chulapa">Chulapa</span> has a specific focus on that:
 
-- `og_image`: The default image to be displayed  when a page of your site is shared on any of the major social networks (Facebook, Twitter, etc.). **Author avatar (if set, see below) or your Github avatar**.
+- `og_image`: The default image to be displayed  when a page of your site is shared on any of the major social networks (Facebook, Twitter, etc.). If `header_img` or `og_image` are set on  the front matter of a page those images would be used instead. **Author avatar (if set, see below) or your Github avatar**.
 - `twitter_site`: The twitter username **without @!** of the owner of the site. Useful when sharing on Twitter.
 - `author` of the site:
   - `name` of the author, it will be injected on several parts of your site, as the footer or different `<meta>` tags.
@@ -47,7 +47,7 @@ author:
       icon: "fab fa-facebook"
       ...
 ```
-#### Google Structured-data
+#### Google Structured Data
 
 You don't have to set anything, the theme already shipped this for you. Structured data can help Google to display results on nicer ways! Learn more [here](https://developers.google.com/search/docs/guides/intro-structured-data?hl=en). You can check any page on [this testing tool](https://search.google.com/structured-data/testing-tool/u/0/).
 
