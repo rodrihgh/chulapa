@@ -15,7 +15,7 @@
 
 //Theming Bootstrap from config // overrides 
 {% for var in site.chulapa-skin.vars %}
-  {% if var[1] %}
+  {% if var[1] != nil %}
    ${{ var[0] }}: {{ var[1] }};
   {% endif %}
 {% endfor%}
