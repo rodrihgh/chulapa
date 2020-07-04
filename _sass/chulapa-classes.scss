@@ -370,7 +370,7 @@ $value in $theme-colors {
     border: 1px solid;
     width: 8vmax;
     height: 8vmax;
-    @include border-radius(50%);
+    @include border-radius(50%,0);
 }
 
 
