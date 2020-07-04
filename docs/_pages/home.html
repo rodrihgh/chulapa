@@ -7,9 +7,9 @@ header_img: "./assets/img/gallery/david-monje-YwrD58FfX9g-unsplash.jpg"
 permalink: "/"
 include_on_search: true
 ---
-<header class="d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ header_img | absolute_url }}')">
+<header class="d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ page.header_img | absolute_url }}')">
   <div class="container-lg">
-    <h1 class="chulapa">{{- page.title | default: "Where's your title?" -}}</h1>
+    <h1 class="chulapa">{{- page.title -}}</h1>
     {%- if page.subtitle -%}
     <hr class="my-3">
     <p>{{- page.subtitle -}}</p>
