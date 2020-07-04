@@ -63,6 +63,8 @@ You don't have to set anything, the theme already shipped this for you. Structur
 
 When enabled, this theme would install an internal search capability of your site. There are three free engines available, [Lunr.js](https://lunrjs.com/), [Algolia](https://www.algolia.com/) and [Google Custom Search](https://developers.google.com/custom-search).
 
+While Lunr is fully integrated on the theme, for Algolia and Google CSE you may need to create an account and perform some additional steps.
+
 - `search`:
   - `provider`: Select a provider for enable search: `lunr`, `algolia` or `google`.
   - `label`: Text to be displayed on the navbar when enabled. Useful for localization (i.e. you can set it as Búsqueda or Ricerca). **Search**.
