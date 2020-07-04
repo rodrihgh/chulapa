@@ -78,6 +78,8 @@
     <meta property="og:description" content="{{ ogdesc | truncatewords: 20 }}" />
     <meta property="og:locale" content="{{- site.locale | default: 'en-US' -}}" />
     <meta property="og:image" content="{{- ogimage -}}" />
+    <meta name="author" content="{{ page.author.name | default: site.author.name | default: site.github.owner_name }}" />
+<meta name="copyright" content="{{ site.author.name | default: site.github.owner_name }}" />
     <meta name="twitter:card" content="summary_large_image">
     {%- if site.twitter_site %}
     <meta name="twitter:site" content="@{{- site.twitter_site  -}}" />
