@@ -300,7 +300,7 @@ $value in $theme-colors {
     }
 
     .chulapa-footer-sociallink {
-        @include fluid-type(font-size, breakpoint-min("sm"), breakpoint-min("md"), $font-size-sm, $font-size-base);
+        @include fluid-type(font-size, breakpoint-min("sm"), breakpoint-min("lg"), $font-size-sm, $font-size-base);
         
         color: transparent;
 
