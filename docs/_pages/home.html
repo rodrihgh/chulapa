@@ -8,6 +8,7 @@ header_img: "./assets/img/gallery/david-monje-YwrD58FfX9g-unsplash.jpg"
 og_image: "./assets/img/site/chulapa-home.png"
 permalink: "/"
 include_on_search: true
+show_sociallinks: true
 ---
 <header class="d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ page.header_img | absolute_url }}')">
   <div class="container-lg">
@@ -19,6 +20,7 @@ include_on_search: true
   </div>
 </header>
 <main class="container-lg pb-3 flex-fill">
+{%- include components/datesocial.html -%}
 		<div class="row pt-2">
 			<article class="col-md-8 mt-3">
 
