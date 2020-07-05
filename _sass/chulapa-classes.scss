@@ -650,7 +650,7 @@ $value in $theme-colors {
     @include media-breakpoint-down(lg) {
 
         .navbar-toggler {
-            bottom: map-get($spacers, 5);
+            bottom: 10vh;
             right: map-get($spacers, 4);
         }
 
