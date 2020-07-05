@@ -2,6 +2,7 @@ remote_theme: dieghernan/chulapa
 
 title: Chulapa
 subtitle: A full flexible Jekyll theme  
+description: Template for creating free sites on Github Pages
 og_image: "./assets/img/site/chulapa-home.png" 
 timezone: "Europe/Madrid"
 author:
