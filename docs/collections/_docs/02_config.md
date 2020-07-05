@@ -107,4 +107,15 @@ algolia:
     - desc(content) 
     - desc(subtitle)
 ```
+
 If you are deploying your site with Github Pages, you need to create and update your Algolia index via [Travis CI](https://travis-ci.com/). Follow [this guide](https://community.algolia.com/jekyll-algolia/github-pages.html) and add a `.travis.yml` to your site, as [this one](https://github.com/dieghernan/chulapa/blob/master/.travis.yml).
+
+#### Comments
+
+You can add a comment feature via [Disqus](https://disqus.com/):
+- `disqus_shortname`: Add your site id, on `https://DISQUS_SHORTNAME.disqus.com/admin/`.
+
+
+### B. Navigation
+
+Configure the navbar and footer of your site. This theme supports a two-level navigation structure, and features two different navbar styles: `modern`, as a floating button with animation or a **classic sticky-top navbar**. Check this [live demo]({{ "/classic-navbar" | absolute_url }}) of the classic navbar style.
