@@ -67,7 +67,7 @@
           {%- if site.footer.links -%}
           <div role="navigation" class="d-flex flex-wrap justify-content-center">
             {%- for social in site.footer.links  -%}
-            <a href="{{ social.url | absolute_url }}" title="footer{{ social.label }}" class="chulapa-footer-sociallink">
+            <a href="{{ social.url | absolute_url }}" title="footer{{ social.label }}" class="chulapa-footer-sociallink lead">
               <span class="fa-stack fa-lg" aria-hidden="true">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="{{ social.icon }} fa-stack-1x fa-inverse"></i>
