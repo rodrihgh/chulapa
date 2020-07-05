@@ -5,16 +5,23 @@ subtitle: Check how the classic navbar would look like
 excerpt: Check how the classic navbar would looks like
 permalink: "/classic-navbar"
 include_on_search: true
+header_type: "base"
 ---
 <!doctype html>
 <html lang="{{- site.locale | default: 'en-US' -}}">
 	{%- include head.html -%}
 	<body class="d-flex flex-column">
 	{% include_cached navbarclassic.html pageurl=page.url %}
-	
-	
+	{%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
+	<main class="container-lg pb-3 flex-fill">
+	<div class="row pt-2">
+	  <article class="col-md-8 mt-3">
 	
 		<p>This is an example that shows how the classic navbar would look on this theme.</p>
+		
+		</article>
+		</div>
+	</main>
 			
 			
 			
