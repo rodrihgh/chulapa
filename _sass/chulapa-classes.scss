@@ -650,12 +650,12 @@ $value in $theme-colors {
     @include media-breakpoint-down(lg) {
 
         .navbar-toggler {
-            bottom: 10vh;
+            bottom: 1.5*map-get($spacers, 5);
             right: map-get($spacers, 4);
         }
 
         .navbar-chulapa-modern-background {
-            bottom: map-get($spacers, 5);
+            bottom: 1.5*map-get($spacers, 5);
             right: map-get($spacers, 4);
         }
 
