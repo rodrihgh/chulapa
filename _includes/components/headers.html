@@ -1,9 +1,7 @@
 {%- if include.imghero -%}
-  {%- if include.imghero contains "http" -%}
-  {%- capture imghero -%}{{ include.imghero  }}{%- endcapture -%}
-  {%- else -%}
-  {%- capture imghero -%}{{ include.imghero | absolute_url  }}{%- endcapture -%}
-  {%- endif -%}
+  {%- capture imghero -%}
+  {{ include.imghero | absolute_url  }}
+  {%- endcapture -%}
 {%- endif -%}
 {%- if include.headertype =="splash" -%}
   {%- if imghero -%}

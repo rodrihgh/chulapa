@@ -2,7 +2,7 @@
 {%- assign basetitle = page.title | default: site.title | default: site.github.repository_name  -%}
 {%- assign prependtitle = site.title | default: site.github.repository_name -%}
 {%- if basetitle == prependtitle %}
-{%- capture sharetitle -%}{{ basetitle}} {{ site.title_separator | default: "|" }} {{ canonical_url }}{%- endcapture -%}
+{%- capture sharetitle -%}{{ basetitle}} {{ site.title_separator | default: "|" }} {{ page.subtitle | default: site.subtitle | default: site.github.project_tagline }}{%- endcapture -%}
 {%- else -%}
 {%- capture sharetitle -%}{{ basetitle }} {{ site.title_separator | default: "|" }} {{ prependtitle }}{%- endcapture -%}
 {%- endif -%}
