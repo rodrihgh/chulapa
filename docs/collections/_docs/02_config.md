@@ -47,9 +47,11 @@ author:
       icon: "fab fa-facebook"
       ...
 ```
-#### Google Structured Data
+#### Sharing your content nicely
 
-You don't have to set anything, the theme already shipped this for you. Structured data can help Google to display results on nicer ways! Learn more [here](https://developers.google.com/search/docs/guides/intro-structured-data?hl=en). You can check any page on [this testing tool](https://search.google.com/structured-data/testing-tool/u/0/).
+You don't have to set anything, the theme already shipped this for you. Twitter Cards, LinkedIn Post Inspector, Facebook Validator, WhatsApp... even Google Structured Data! Every page shared would look awesome.
+
+Learn more about Google Structured Data [here](https://developers.google.com/search/docs/guides/intro-structured-data?hl=en). You can check any page on [this testing tool](https://search.google.com/structured-data/testing-tool/u/0/).
 
 #### Fontawesome
 
