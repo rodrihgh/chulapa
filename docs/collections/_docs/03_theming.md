@@ -1,5 +1,5 @@
 ---
-title: Theming Chulapa
+title: Theming <span class="chulapa">Chulapa</span>
 subtitle: A powerful interface to pimp your site
 show_toc: true
 h_min: 4
