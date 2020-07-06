@@ -14,7 +14,10 @@ coded a tool to actually listen to it.
 ## <i class="fas fa-palette"></i> Music theory goes interactive
 
 
+
 {% include components/video id="P7iC-fbdKmQ" provider="youtube" %}
+
+
 
 The widget can take up to one minute to load, so in the meantime
 let me explain what you can do with it.
