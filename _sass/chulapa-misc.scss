@@ -41,6 +41,7 @@ blockquote {
 
 .footnotes {
   font-size:$font-size-sm;
+  color: color-contrast($body-bg, lighten($body-color, 15%), darken($body-color,15%));
 }
 
 .highlight {
