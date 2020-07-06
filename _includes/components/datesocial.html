@@ -1,7 +1,8 @@
 {%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url | uri_escape -%}
-{%- assign basetitle = page.title | default: site.title | default: site.github.repository_name  -%}
+{%- assign rooturl = "/" | absolute_url %}
+{%- assign basetitle = page.title | default: site.title | default: site.github.repository_name | strip_html  -%}
 {%- assign prependtitle = site.title | default: site.github.repository_name -%}
-{%- if basetitle == prependtitle %}
+{%- if canonical_url == rooturl %}
 {%- capture sharetitle -%}{{ basetitle}} {{ site.title_separator | default: "|" }} {{ page.subtitle | default: site.subtitle | default: site.github.project_tagline }}{%- endcapture -%}
 {%- else -%}
 {%- capture sharetitle -%}{{ basetitle }} {{ site.title_separator | default: "|" }} {{ prependtitle }}{%- endcapture -%}
