@@ -102,8 +102,6 @@ whenever the string vibrates, and
 the underlying fundamental frequency is what we perceive
 as the note's pitch.
 
-{% include figure image_path="assets/images/partials.svg" alt="String partials" caption="Partials of a string tuned to $$C3=132\textrm{ Hz}$$. You may note that it actually forms a C major chord. Adapted from Wikipedia" %}
-
 The simpler the relation between two notes is
 (as in the table above),
 the more partials both notes
@@ -342,8 +340,6 @@ if you understand Spanish, as it covers the basics for overtones and intervals
 any good reference for the said theory in English, but _Minute Physics_
 video does a superb job summarizing everything else in less than 5 minutes.
 {: .notice--success}
-
-{% include components/video id="P7iC-fbdKmQ" provider="youtube" %}
 
 ### Papers
 
