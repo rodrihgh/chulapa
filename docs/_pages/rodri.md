@@ -339,7 +339,7 @@ if you understand Spanish, as it covers the basics for overtones and intervals
 **plus** the theory of well-formed scales. Unfortunately I have not found
 any good reference for the said theory in English, but _Minute Physics_
 video does a superb job summarizing everything else in less than 5 minutes.
-{: .notice--success}
+{: .alert .alert-info .p-3 .mx-2}
 
 ### Papers
 
