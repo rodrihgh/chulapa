@@ -177,5 +177,5 @@ footer:
 
 ### C. Theming Chulapa
 
-This is the core feature of <span class="chulapa">Chulapa</span>, please find the full reference [here](./03-theming)
+This is the core feature of <span class="chulapa">Chulapa</span>, please find the full reference [here](./03-theming), or just navigate to the next page.
 
