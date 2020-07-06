@@ -1,16 +1,29 @@
 ---
-layout: landingpage
-title: "<span class="chulapa">Chulapa"</span>"
+layout: minimal
+title: Chulapa
 subtitle: A full flexible Jekyll theme for Github Pages
 excerpt: Jekyll template for fast creation of free site on Github Pages. Based on Bootstrap and shipped with lots of features
 header_type: splash
 header_img: "./assets/img/gallery/david-monje-YwrD58FfX9g-unsplash.jpg"
 og_image: "./assets/img/site/chulapa-home.png"
-permalink: "/"
+permalink: "/bk"
 include_on_search: true
 show_sociallinks: true
 ---
-
+<header class="d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ page.header_img | absolute_url }}')">
+  <div class="container-lg">
+    <h1 class="chulapa">{{- page.title -}}</h1>
+    {%- if page.subtitle -%}
+    <hr class="my-3">
+    <p>{{- page.subtitle -}}</p>
+    {%- endif -%}
+  </div>
+</header>
+<div class="bg-primary">
+  <main class="container-lg pb-3 flex-fill">
+    {%- include components/datesocial.html -%}
+		<div class="row pt-2">
+		  <article class="col-md-8 offset-md-2 mt-3 text-center">
 		    <a class="btn btn-dark mx-1 text-primary" href="https://github.com/dieghernan/chulapa" role="button"><i class="fab fa-github fa-lg"></i> Follow</a>
 		    <a class="btn btn-dark mx-1 text-primary" href="https://github.com/dieghernan/chulapa" role="button"><i class="far fa-star fa-lg"></i> Star</a>
 		    <div class="text-center my-4 py-5 px-3 bg-secondary rounded-lg chulapa-overlay-img"  style="
@@ -38,4 +51,7 @@ show_sociallinks: true
           <h5 class="font-weight-light py-2">Blogs, portfolios, projects, archives, image galleries... Use our collection of built-in layouts with lots of additional components</h5>
         </div>
         <a class="btn btn-dark btn-lg my-3 text-primary" href="./docs/01-install" role="button">Read the docs</a>
-
+      </article>
+    </div>
+  </main>
+</div>

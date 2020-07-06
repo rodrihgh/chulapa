@@ -175,7 +175,7 @@ footer:
       url: https://www.facebook.com
 ```
 
-<h4 id="theming"> C. Theming <span class="chulapa">Chulapa</span></4>
+<h4 id="theming"> C. Theming <span class="chulapa">Chulapa</span></h4>
 
 This is the core feature of <span class="chulapa">Chulapa</span>, please find the full reference [here](./03-theming), or just navigate to the next page.
 
