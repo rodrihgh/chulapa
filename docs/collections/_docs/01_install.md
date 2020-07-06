@@ -40,16 +40,15 @@ Please read the rest of the docs for further adjustments.
 
 You can fork [the current repo](https://github.com/dieghernan/chulapa/) and modify it. 
 
-<div class="alert alert-warning p-3 mx-2 mb-3">
-<i class="fas fa-exclamation-triangle"></i> The main repo is published under the <code>docs</code> folder, please be aware of that when setting your <code>_config.yml</code>.
-</div>
+
+<i class="fas fa-exclamation-triangle"></i> The main repo is published under the `docs` folder, please be aware of that when setting your `_config.yml`.
+{: .alert .alert-warning .p-3 .mx-2 mb-3}
 
 
 ####  Gem-based method
 
 This theme has not been developed as a gem-based theme, so this option has been not explored yet.
 
-<div class="alert alert-info p-3 mx-2">
-<span class="font-weight-bold">TODO:</span> 
-After the first stable release.
-</div>
+
+**Potentially:** After the first stable release.
+{: .alert .alert-info .p-3 .mx-2}
