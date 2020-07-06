@@ -1,7 +1,6 @@
 ---
 title: Theming Chulapa
 subtitle: A powerful interface to pimp your site
-excerpt: Setting up your new site
 ---
 
 <span class="chulapa">Chulapa</span> has a powerful theming interface, meaning that you could use this template for several sites and the look-and-feel of each one could be completely different. We have already introduced the dual navbar system, but you can customize colors and fonts, and even more characteristics as spacing, border, buttons.
