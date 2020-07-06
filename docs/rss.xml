@@ -33,7 +33,7 @@ layout: null
 		{%- assign words = document.content | strip_html | number_of_words -%}   	
 		{%- assign minutes = words | divided_by: wpm | ceil | at_least: 1 -%}
 		<item>
-			<title>{{ document.title | xml_escape }}</title>
+			<title>{{ document.title | strip_html | xml_escape }}</title>
 			<description>
 				<![CDATA[	
  				{% if document.subtitle %}<h3>{{ document.subtitle | xml_escape }}</h3>{% endif %}
