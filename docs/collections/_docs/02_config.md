@@ -16,7 +16,7 @@ For some variables, a default value is provided. This value is shown at the end 
 
 ### A. Site settings/SEO
 
-- `locale`: Set the `lang` on the `<head>` of your site. Use the format `language_TERRITORY` , e.g fr, en-GB, es-MX, pt-BR. **Default value: es_US**.
+- `locale`: Set the `lang` on the `<head>` of your site. Use the format `language_TERRITORY` , e.g fr, en-GB, es-MX, pt-BR. **Default value: es-US**.
 - `title`, `title_separator` and `subtitle`: Set several `<meta>` tags and defines the text to be displayed on top of the browsers. **repository_name \| project_tagline**.
 - `url` and `baseurl`: If you are deploying on Github just ignored these pesky two. You may (or may not) want to read [Clearing Up Confusion Around baseurl -- Again](https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/) by Parker Moore (Jekyll).
 - `words_per_minute`: Used for computing the reading time of the page. **200**.
