@@ -1,6 +1,6 @@
 ---
 title: Installation
-subtitle: How to use Chulapa
+subtitle: How to use <span class="chulapa">Chulapa</span>
 excerpt: Install Chulapa on your Github repo
 ---
 
