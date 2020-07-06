@@ -344,9 +344,6 @@ video does a superb job summarizing everything else in less than 5 minutes.
 {: .notice--success}
 
 {% include components/video id="P7iC-fbdKmQ" provider="youtube" %}
-{% include components/video id="1Hqm0dYKUx4" provider="youtube" %}
-{% include components/video id="Wx_kugSemfY" provider="youtube" %}
-{% include components/video id="cyW5z-M2yzw" provider="youtube" %}
 
 ### Papers
 
