@@ -1,9 +1,6 @@
 <!— From Mmistakes—>
-
-
 {% capture video_id %}{{ include.id }}{% endcapture %}
 {% capture video_provider %}{{ include.provider }}{% endcapture %}
-
 <!— Courtesy of embedresponsively.com //—>
 <div class=“responsive-video-container”>
 {% if video_provider == “vimeo” %}
