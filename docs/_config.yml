@@ -61,6 +61,8 @@ navbar:
        url: /docs/01-install
      - title: Global Settings
        url: /docs/02-config
+     - title: Theming your site
+       url: /docs/03-theming
   - title: Skins		
     url: /skins/current		
 
@@ -69,18 +71,12 @@ footer:
     - label: "RSS"
       icon: "fa fa-rss"
       url:  "./rss.xml"
-    - label: "Twitter"
-      icon: "fab fa-twitter"
-      url: https://twitter.com/
-    - label: "Facebook"
-      icon: "fab fa-facebook"
-      url: https://www.facebook.com
     - label: "GitHub"
       icon: "fab fa-github"
-      url: https://www.github.com
-    - label: "Instagram"
-      icon: "fab fa-instagram"
-      url: https://www.instagram.com
+      url: https://github.com/dieghernan/
+    - label: "My blog"
+      icon: "fas fa-blog"
+      url: "https://dieghernan.github.io/"
 
 # C. Theme Settings
 

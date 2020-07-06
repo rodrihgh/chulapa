@@ -118,4 +118,64 @@ You can add a comment feature via [Disqus](https://disqus.com/):
 
 ### B. Navigation
 
+#### Navbar
 Configure the navbar and footer of your site. This theme supports a two-level navigation structure, and features two different navbar styles: `modern`, as a floating button with animation or a **classic sticky-top navbar**. Check this [live demo]({{ "/classic-navbar" | absolute_url }}) of the classic navbar style.
+
+- `navbar`:
+  - `style`:  `modern` value would display your navbar as a floating animated button.  **classic**.
+  - `brand`:
+     - `title` :  Text to be displayed as the title of your navbar.
+     - `img`: An icon (ideally 30px x 30 px) displayed together with the `title`.
+     - `url`: The brand would link to this value. **your root url**.
+  - `nav`: Links on your navbar. See the example to learn how to set one-level and two-level links:
+  
+```yaml
+navbar:
+  style :  modern 
+  brand:
+    title :  Home
+    img: "./assets/img/site/brand-clear.png"
+    url: /someurl
+  nav:
+  - title: One-level link #Label
+    url: /url1/  #url
+  - title: Two-level link #Label
+    child:
+    - title: Second level first item
+      url: /url2-1
+    - title: Second level second item
+      url: /url2-2
+  - title: One-level link #Label
+    url: /url1/  #url
+     ... more levels
+```
+
+#### Footer
+
+To set social links to be displayed on your footer, configure this section:
+
+- `footer`:
+  - `links`:
+    - `label`: Label of your link.
+    - `icon`: Fontawesome icon code.
+    - `url`: url of the link
+  - ...
+    
+```yaml
+footer:
+  links:
+    - label: "RSS"
+      icon: "fa fa-rss"
+      url:  "./rss.xml"
+    - label: "Twitter"
+      icon: "fab fa-twitter"
+      url: https://twitter.com/
+    - label: "Facebook"
+      icon: "fab fa-facebook"
+      url: https://www.facebook.com
+```
+
+### C. Theming Chulapa
+
+This is the core feature of <span class="chulapa">Chulapa</span>, please find the full reference [here](./03-theming)
+
