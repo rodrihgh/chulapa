@@ -45,5 +45,8 @@ chulapa-skin:
 
 #### Skins
 
-This theme includes 14 skins from [Tophat Themes](https://themesguide.github.io/top-hat/dist/), [Bootswatch](https://bootswatch.com/) and others. You can have a look on {{'./skins' | absolute_url }}.
+This theme includes 14 skins from [Tophat Themes](https://themesguide.github.io/top-hat/dist/), [Bootswatch](https://bootswatch.com/) and others. You can have a look [on this page]({{'./skins' | absolute_url }}).
+
+
+
 ...
