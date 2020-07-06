@@ -29,6 +29,8 @@ $hero-chulapa-text-color: color-contrast($hero-chulapa-bg-color, $black, $white)
 $blockquote-chulapa-bg-color: darken($body-bg, 5%) !default;
 $blockquote-chulapa-text-color: mix($blockquote-chulapa-bg-color, $body-color, 20%) !default;
 
+$footnote-chulapa-text-color: $gray-500 !default ;
+
 $pre-chulapa-bg-color: lighten($blockquote-chulapa-bg-color, 2%) !default;
 
 //Table
