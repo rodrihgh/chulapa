@@ -61,6 +61,7 @@ a.reversefootnote {
 
 figcaption {
   @extend .footnotes;
+  border-top: 0;
 }
 
 .figcaption{
