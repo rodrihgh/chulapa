@@ -77,18 +77,6 @@ figcaption {
     @extend .p-2;
 }
 
-audio,
-canvas,
-progress,
-video {
-  float: right;
-  margin-right: 0;
-  width: 100%;
-  min-width: 65px;
-  max-width: 300px;
-  display: inline-block;
-  vertical-align: baseline;
-}
 
 // Could be overriden by highlight css
 .highlight pre {

@@ -6,6 +6,29 @@ subtitle: An experiment
 <!doctype html>
 <html lang="{{- site.locale | default: 'en-US' -}}">
 	{%- include head.html -%}
+
+<style>
+audio,
+canvas,
+progress,
+video {
+  float: right;
+  margin-right: 0;
+  width: 100%;
+  min-width: 65px;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+</style>
 <body style="background-color: transparent">
   <div class="
       cell border-box-sizing code_cell rendered" style="display: none">
