@@ -18,6 +18,8 @@ author:
       icon: "fab fa-instagram"
 mathjax: true
 show_toc: true
+show_sociallinks  : true
+show_author  : true
 ---
 
 Music is ruled by mathematical laws.
