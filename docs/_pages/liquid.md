@@ -4,31 +4,16 @@ subtitle: Liquid
 permalink: /liquid
 show_author : true
 project_link:
-  links:                
-    - url: https://twitter.com/jack
-      icon: "fab fa-twitter"
-      label: label1
+    - url: https://github.com/rodrihgh/music-scales-playground
+      icon: "fab fa-github"
+      label: View on Github
+    - url: https://colab.research.google.com/github/rodrihgh/music-scales-playground/blob/master/music-scales.ipynb
+      icon: "fas fa-code"
+      label: Open in Colab
 ---
-
-## PP{{ page.project_link.links.size }}
-
-{% if page.project_link.links.size > 1 %}
-
-{{ page.project_link.label | default: "Source code"  }}
-
-{% for project in page.project_link.links  %}
-
+{% if page.project_link %}
+  {% for project in page.project_link  %}
 - {{ project.icon }} {{ project.url }}  {{ project.icon }}
-
-{% endfor %}
-
-{% else %}
-
-{% for project in page.project_link.links  %}
-
-Btn {{ project.icon }} {{ project.url }}  {{ project.icon }}
-
-{% endfor %}
-
+  {% endfor %}
 {% endif %}
 

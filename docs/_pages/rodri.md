@@ -20,6 +20,13 @@ mathjax: true
 show_toc: true
 show_sociallinks  : true
 show_author  : true
+project_link:
+    - url: https://github.com/rodrihgh/music-scales-playground
+      icon: "fab fa-github"
+      label: View on Github
+    - url: https://colab.research.google.com/github/rodrihgh/music-scales-playground/blob/master/music-scales.ipynb
+      icon: "fas fa-code"
+      label: Open in Colab
 ---
 
 Music is ruled by mathematical laws. Staring at the numbers was not enough for me though, so I have coded a tool to actually listen to it.
