@@ -48,6 +48,15 @@ blockquote {
   color: $footnote-chulapa-text-color;
 }
 
+a.reversefootnote {
+  color: $footnote-chulapa-text-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 figcaption {
   @extend .footnotes;
 }
