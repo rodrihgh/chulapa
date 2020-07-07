@@ -1,7 +1,21 @@
 ---
 title: "Playing with the maths of music"
 permalink: /rodri
-header_type: hero
+header_type: splash
+header_img: https://uselessness.science/assets/images/music-math.png
+author:
+  name: Rodrigo Hernangómez
+  avatar:  https://uselessness.science//assets/images/bio-photo.jpg
+  location: Berlin, Germany
+  links:   
+    - url: fab fa-linkedin-in
+      icon: https://www.linkedin.com/in/rodrigohgh/
+    - url: https://twitter.com/rodrihgh
+      icon: "fab fa-twitter"
+    - url: https://github.com/rodrihgh
+      icon: "fab fa-github"
+    - url: https://instagram.com/rodrihgh
+      icon: "fab fa-instagram"
 mathjax: true
 show_toc: true
 ---
@@ -16,11 +30,8 @@ coded a tool to actually listen to it.
 
 
 
-{% include components/video.html id="P7iC-fbdKmQ" provider="youtube" %}
 
 
-
-<div class='embed-container'><iframe src='https://www.youtube.com/embed/QILiHiTD3uc' frameborder='0' allowfullscreen></iframe></div>
 
 
 The widget can take up to one minute to load, so in the meantime
@@ -110,6 +121,12 @@ whenever the string vibrates, and
 the underlying fundamental frequency is what we perceive
 as the note's pitch.
 
+![String partials](https://uselessness.science/assets/images/partials.svg)
+
+Partials of a string tuned to $$C3=132\textrm{ Hz}$$. You may note that it actually forms a C major chord. Adapted from Wikipedia
+{: .figcaption}
+
+
 The simpler the relation between two notes is
 (as in the table above),
 the more partials both notes
@@ -159,6 +176,12 @@ a lower octave as 112.5 Hz. If we keep multiplying by
 $$\frac{3}{2}$$ and fitting to the octave
 we will always encounter a new note.
 That is how many scales in the [widget] are generated[^2].
+
+![Fifth relations for the chromatic scale](https://uselessness.science/assets/images/fifth_generation.gif)
+
+Construction of the chromatic scale from fifth intervals.
+{: .figcaption}
+
 
 The purple connecting lines in the [widget graph][widget]
 above represent the fifth
@@ -348,6 +371,11 @@ if you understand Spanish, as it covers the basics for overtones and intervals
 any good reference for the said theory in English, but _Minute Physics_
 video does a superb job summarizing everything else in less than 5 minutes.
 {: .alert .alert-info .p-3 .mx-2}
+
+{% include components/video.html id="P7iC-fbdKmQ" provider="youtube" %}
+{% include components/video.html id="1Hqm0dYKUx4" provider="youtube" %}
+{% include components/video.html id="Wx_kugSemfY" provider="youtube" %}
+{% include components/video.html id="cyW5z-M2yzw" provider="youtube" %}
 
 ### Papers
 
