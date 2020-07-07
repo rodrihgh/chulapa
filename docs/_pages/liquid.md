@@ -8,9 +8,6 @@ project_link:
     - url: https://twitter.com/jack
       icon: "fab fa-twitter"
       label: label1
-    - url: https://twitter.com/jack
-      icon: "fab fa-twitter"
-      label: AA
 ---
 
 ## PP{{ page.project_link.links.size }}
@@ -27,7 +24,7 @@ project_link:
 
 {% else %}
 
-{{ page.project_link.links.url }}
+### {{ page.project_link.links.url }}
 
 {% endif %}
 
