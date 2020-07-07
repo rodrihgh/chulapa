@@ -20,16 +20,9 @@ mathjax: true
 show_toc: true
 show_sociallinks  : true
 show_author  : true
-excerpt_separator: "<!--more-->"
 ---
 
-Music is ruled by mathematical laws.
-Staring at the numbers was not enough for me though, so I have
-coded a tool to actually listen to it.
-
-
-<!--more-->
-
+Music is ruled by mathematical laws. Staring at the numbers was not enough for me though, so I have coded a tool to actually listen to it.
 
 ## <i class="fas fa-palette"></i> Music theory goes interactive
 
