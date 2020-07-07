@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Chulapa
+title: ‘<span class=“chulapa”>Chulapa</span> <small class=“text-muted”>skin</small>'
 subtitle: Get lost in Madrid
 excerpt: Chulapa, get lost in Madrid developed by dieghernan.
 date: 2019-05-15
