@@ -26,9 +26,9 @@ If you use another provider, or you prefer another method, there are two feature
   1. Create a blank file on your repo (or modify) under this path: `_includes/custom/custom_head.html`. The content of this file is injected on the `<head>` of your site. Note that you can include other pieces of code, as favicons or files loaded via cdn.
   2. Create a blank file on your repo (or modify) under this path: `assets/css/custom.css` (or `custom.scss`). You can import your fonts via css there. Note that you can include new css styles or override existing ones there.
 
-<div class="alert alert-warning p-3 mx-2 mb-3">
-While this option would make available the font, you still need to tell the theme to use it via `vars`, please read the next sections of this page.
-</div>
+
+**Note that** ehile this option would load the fonts, you still need to tell the theme to use them via `vars`, please read the next sections of this page.
+{: .alert .alert-warning .p-3 .mx-2 mb-3}
 
 ### B. Theming 
 
