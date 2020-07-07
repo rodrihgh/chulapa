@@ -3,16 +3,26 @@ title: Playground
 subtitle: Liquid 
 permalink: /liquid
 show_author : true
+project_link:
+  label: Label
+  links:                
+    - url: https://twitter.com/jack
+      icon: "fab fa-twitter"
+      label: label1
+    - url: https://twitter.com/jack
+      icon: "fab fa-twitter"
+      label: AA
 ---
 
-{% for cont in site.github.contributors %}
+{% if page.project_link.links %}
 
-- {{ cont.login }} {{cont.avatar_url}} {{ cont.html_url }}
+{{ page.project_link.label | default: "Source code"  }}
+
+{% for project in page.project_link.links  %}
+
+- {{ project.icon }} {{ project.url }}  {{ project.icon }}
 
 {% endfor %}
 
-{% for var in site.chulapa-skin.vars %}
-  {% if var[1] %}
-   ${{ var[0] }}: {{ var[1] }};
-  {% endif %}
-{% endfor%}
+{% endif %}
+
