@@ -8,8 +8,8 @@ author:
   avatar:  https://uselessness.science//assets/images/bio-photo.jpg
   location: Berlin, Germany
   links:   
-    - url: fab fa-linkedin-in
-      icon: https://www.linkedin.com/in/rodrigohgh/
+    - url: https://www.linkedin.com/in/rodrigohgh/
+      icon: fab fa-linkedin-in
     - url: https://twitter.com/rodrihgh
       icon: "fab fa-twitter"
     - url: https://github.com/rodrihgh
