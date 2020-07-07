@@ -23,7 +23,7 @@ googlefonts:
 ```
 
 If you use another provider, or you prefer another method, there are two features you may want to explore:
-  1. Create a blank file on your repo (or modify) under this path: `_includes/custom/custom_head.html`. The content of this file is injected on the `<head>` of your site. Note that you can include other pieces of code, as favicons or `.js` like [MathJax](https://www.mathjax.org/).
+  1. Create a blank file on your repo (or modify) under this path: `_includes/custom/custom_head.html`. The content of this file is injected on the `<head>` of your site. Note that you can include other pieces of code, as favicons or files loaded via cdn.
   2. Create a blank file on your repo (or modify) under this path: `assets/css/custom.css` (or `custom.scss`). You can import your fonts via css there. Note that you can include new css styles or override existing ones there.
 
 <div class="alert alert-warning p-3 mx-2 mb-3">
