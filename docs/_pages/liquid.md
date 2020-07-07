@@ -24,7 +24,11 @@ project_link:
 
 {% else %}
 
-### {{ page.project_link.links.url }}
+{% for project in page.project_link.links  %}
+
+Btn {{ project.icon }} {{ project.url }}  {{ project.icon }}
+
+{% endfor %}
 
 {% endif %}
 
