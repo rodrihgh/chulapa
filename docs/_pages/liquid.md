@@ -4,7 +4,6 @@ subtitle: Liquid
 permalink: /liquid
 show_author : true
 project_link:
-  label: Label
   links:                
     - url: https://twitter.com/jack
       icon: "fab fa-twitter"
