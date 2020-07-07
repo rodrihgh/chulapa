@@ -27,10 +27,8 @@ Music is ruled by mathematical laws. Staring at the numbers was not enough for m
 ## <i class="fas fa-palette"></i> Music theory goes interactive
 
 
-
-
-
-
+<iframe src="/assets/widgets/music-scales" scrolling="no" width="100%" height="700" frameborder="0" allowtransparency="true">
+</iframe>
 
 
 The widget can take up to one minute to load, so in the meantime

@@ -82,11 +82,12 @@ footer:
 
 chulapa-skin: 
   highlight   : "ZENBURN"
+  theme       :  preptor
   autothemer  :  true 
   vars        :    
-    primary:   '#efebdd'
-    secondary: "#dfd7ba"
-    link-color: '#a19d8e'
+    #primary:   '#efebdd'
+    #secondary: "#dfd7ba"
+    #link-color: '#a19d8e'
 
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
