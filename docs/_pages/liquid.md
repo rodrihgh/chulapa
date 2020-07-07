@@ -13,7 +13,9 @@ project_link:
       label: AA
 ---
 
-{% if page.project_link.links %}
+## PP{{ page.project_link.links.size }}
+
+{% if page.project_link.links.size > 1 %}
 
 {{ page.project_link.label | default: "Source code"  }}
 
@@ -22,6 +24,10 @@ project_link:
 - {{ project.icon }} {{ project.url }}  {{ project.icon }}
 
 {% endfor %}
+
+{% else %}
+
+{{ page.project_link.links.url }}
 
 {% endif %}
 
