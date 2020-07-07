@@ -48,6 +48,10 @@ blockquote {
   color: $footnote-chulapa-text-color;
   margin-left: $spacer;
   border-top: $border-width solid $secondary;
+  
+  ol {
+    margin-top: $spacer;
+  }
 }
 
 a.reversefootnote {
