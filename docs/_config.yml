@@ -85,7 +85,7 @@ chulapa-skin:
   theme       :  chulapa
   autothemer  :  true 
   vars        :    
-    body-color: navajowhite
+    body-bg: navajowhite
     #primary:   '#efebdd'
     #secondary: "#dfd7ba"
     #link-color: '#a19d8e'
