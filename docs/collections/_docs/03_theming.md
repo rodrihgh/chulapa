@@ -47,6 +47,24 @@ chulapa-skin:
 
 This theme includes 14 skins from [Tophat Themes](https://themesguide.github.io/top-hat/dist/), [Bootswatch](https://bootswatch.com/) and others. You can have a look [on this page]({{'./skins' | absolute_url }}).
 
+```yaml
+chulapa-skin: 
+  theme   : #name of the skin
+```
+
+###### Autothemer
+
+This is a cool feature to create a full theme based on a single color. Basically it propagates your `primary` color value to all the rest of colores used on your theme. This would produce that the full palette used for warnings, errors, etc. would be based on your theme primary color.
+
+Note that autothemer can be combined also with the skin option, however the approach is non-destructive, meaning that if any specific color (as `warning`) is already specified on the skin or via `vars` it won’t be overridden (variable with `!default`, if you are familiar with SASS/SCSS).
+
+To enable autothemer: 
+
+```yaml
+chulapa-skin: 
+  autothemer  :  true #omit to disable this option
+
+```
 
 
 ...
