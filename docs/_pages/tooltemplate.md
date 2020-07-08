@@ -20,7 +20,7 @@ show_toc          : true
 permalink: ./tooltemplate
 ---
 
-# Step by step
+## Step by step
 See [Graymor](https://github.com/dieghernan/chulapa/blob/master/_sass/skins/graymor.scss) source code on SCSS:
 
 ```scss
@@ -53,19 +53,19 @@ $navbar-chulapa-toggler-color-bg: transparent;
 ```
 
 
-## Step 1: On Codeply
+### Step 1: On Codeply
 
 On the tool, you can play with the variables as described in PENDING. As an example, paste the code above.
 
-## Step 2: Save and run the Codeply
+### Step 2: Save and run the Codeply
 
 Use the buttons on Codeply. You will have a live preview of the theme
 
-### (Optional) Enable Autotheme.
+#### (Optional) Enable Autotheme.
 
 If you want to try the Autothemer, please uncomment the lines between `/* Start autothemer */` and `/* End autothemer */`.
 
-## Step 3: Move to your `_config.yml`
+### Step 3: Move to your `_config.yml`
 
 The final code can be translated to your `_config` file as:
 
