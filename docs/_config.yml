@@ -55,7 +55,7 @@ navbar:
   nav:
   - title: Blog
     url: /blog/
-  - title: Documentation
+  - title: Docs
     child:
      - title: Installation
        url: /docs/01-install
