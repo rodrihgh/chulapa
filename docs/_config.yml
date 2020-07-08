@@ -55,7 +55,7 @@ navbar:
   nav:
   - title: Blog
     url: /blog/
-  - title: Quick-Start Guide
+  - title: Documentation
     child:
      - title: Installation
        url: /docs/01-install
