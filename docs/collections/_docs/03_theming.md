@@ -2,7 +2,7 @@
 title: Theming <span class="chulapa">Chulapa</span>
 subtitle: A powerful interface to pimp your site
 show_toc: true
-h_min: 4
+h_min: 5
 h_max: 6
 ---
 
@@ -12,7 +12,7 @@ This is not new, the advantage is that you don't need to know how to code, all y
 
 Learn how to do it!
 
-### A. Load Google Fonts
+##### A. Load Google Fonts
 
 You can easily load new fonts via [Google Fonts](https://fonts.google.com/) like this:
 
@@ -30,11 +30,11 @@ If you use another provider, or you prefer another method, there are two feature
 **Note that** ehile this option would load the fonts, you still need to tell the theme to use them via `vars`, please read the next sections of this page.
 {: .alert .alert-warning .p-3 .mx-2 mb-3}
 
-### B. Theming 
+##### B. Theming 
 
 This is the true hearth of the theme. You have full access to several formatting options under `chulapa-skin`:
 
-#### Code highlighting
+###### Code highlighting
 
 Several highlighting styles available thanks to [@jwarby](http://jwarby.github.io/jekyll-pygments-themes). Just follow the link and choose the one you want. **default**
 
@@ -43,7 +43,7 @@ chulapa-skin:
   highlight   : "ZENBURN" #or any other name, default is 'DEFAULT' style
 ```
 
-#### Skins
+###### Skins
 
 This theme includes 14 skins from [Tophat Themes](https://themesguide.github.io/top-hat/dist/), [Bootswatch](https://bootswatch.com/) and others. You can have a look [on this page]({{'./skins' | absolute_url }}).
 
