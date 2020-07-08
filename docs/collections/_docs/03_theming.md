@@ -34,7 +34,7 @@ If you use another provider, or you prefer another method, there are two feature
 
 This is the true hearth of the theme. You have full access to several formatting options under `chulapa-skin`:
 
-#### Code highlighting
+###### Code highlighting
 
 Several highlighting styles available thanks to [@jwarby](http://jwarby.github.io/jekyll-pygments-themes). Just follow the link and choose the one you want. **default**
 
@@ -43,7 +43,7 @@ chulapa-skin:
   highlight   : "ZENBURN" #or any other name, default is 'DEFAULT' style
 ```
 
-#### Skins
+###### Skins
 
 This theme includes 14 skins from [Tophat Themes](https://themesguide.github.io/top-hat/dist/), [Bootswatch](https://bootswatch.com/) and others. You can have a look [on this page]({{'./skins' | absolute_url }}).
 
