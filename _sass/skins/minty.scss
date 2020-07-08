@@ -153,19 +153,5 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Montserrat&display=swap
 
 //SASS CUSTOM
 $navbar-chulapa-bg-color: $primary;
-
-.hero-chulapa {
-    
-    h1 {
-    color: $white;
-      
-    }
-}
-
-.hero-chulapa-image {
-    
-    h1 {
-    color: $white;
-      
-    }
-}
+$navbar-chulapa-text-contrast: $white;
+$hero-chulapa-text-color: $white;
