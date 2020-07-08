@@ -46,7 +46,8 @@ blockquote {
 .footnotes {
   font-size:$font-size-sm;
   color: $footnote-chulapa-text-color;
-  margin-left: $spacer;
+  margin-left: 3*$spacer;
+  margin-right: 3*$spacer;
   border-top: $border-width solid $secondary;
   
   ol {
@@ -64,8 +65,10 @@ a.reversefootnote {
 }
 
 figcaption {
-  @extend .footnotes;
-  border-top: 0;
+   font-size:$font-size-sm;
+  color: $footnote-chulapa-text-color;
+  margin-left: $spacer;
+  margin-right: $spacer;
 }
 
 .figcaption{
