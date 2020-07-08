@@ -77,20 +77,20 @@ googlefonts:
 chulapa-skin: 
   autothemer  :  false # Assuming you don't use it
   vars        :
-    font-family-base:Muli
-    headings-font-family:Oswald
-    primary:#2f3c48
-    secondary:#6f7f8c
-    success:#3e4d59
-    danger:#cc330d
-    info:#5c8f94
-    warning:#6e9fa5
-    light:#eceeec
-    dark:#1e2b37
-    enable-rounded:false
+    font-family-base: Muli
+    headings-font-family: Oswald
+    primary: #2f3c48
+    secondary: #6f7f8c
+    success: #3e4d59
+    danger: #cc330d
+    info: #5c8f94
+    warning: #6e9fa5
+    light: #eceeec
+    dark: #1e2b37
+    enable-rounded: false
 ```
 
-As easy as place your variables under `vars` and removes the $ and the ;.
+As easy as place your variables under `vars` and removes `$` and `;` (mind the space after `:`).
 
 **Alternatively**, you can create your own skin and install it under `_sass/skins/THEMENAME.scss`. Then just call `THEMENAME` as skin on your `_config`. If you want to make your awesome skin available on <span class="chulapa">Chulapa</span> just PR!
 {: .alert .alert-info .p-3 .mx-2}
