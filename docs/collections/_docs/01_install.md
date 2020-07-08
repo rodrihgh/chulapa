@@ -27,13 +27,11 @@ remote_theme: dieghernan/chulapa@[version]
     
 Be sure that you replace `@[version]` with the desired version, or remove it completely if you want to use the `master` branch version of the theme (development version). Latest version is `dieghernan/chulapa@PENDING`.
 
-{::options parse_block_html=“true” /}
-
-<div class="alert alert-warning p-3 mx-2">
+<div markdown="1" class="alert alert-warning p-3 mx-2">
 **Don't forget to deploy your site:**
 
   - On your Github repo, go to *Setting > Github Pages* and publish your site.
-  - Starting creating your site.
+  - Add your content.
 </div>
 
 Please read the rest of the docs for further adjustments.
