@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Deeply
-subtitle: A dark background theme with bold contrasting colors
-excerpt: Deeply, a dark background theme with bold contrasting colors developed by Tophat Themes.
-date: 2015-03-04
-last_modified_at: 2018-02-08
-header_img: https://images.unsplash.com/photo-1489846986031-7cea03ab8fd0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a6c62b8e2662924c44c4725b8286ed60&auto=format&w=900&q=80
-tags: [demo, bootstrap, tophat, splash, img]
+title: Sunset
+subtitle: Hungover on the beach at sunrise
+excerpt: Sunset, hungover on the beach at sunrise developed by Tophat Themes.
+header_img: https://images.unsplash.com/photo-1503756043224-101dab0dcb30?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4bd62d181f78bd2f85ab23a677acd6f4&auto=format&w=900&q=80
+date: 2019-03-07
+last_modified_at: 2020-06-08
+tags: [demo, bootstrap, tophat, splash,img]
 categories: [skins]
-skin: deeply
+skin: sunset
 ---
 
 
@@ -16,7 +16,7 @@ Developed by [Tophat Themes](https://themesguide.github.io/top-hat/dist/), you c
 
 ```yaml
 chulapa-skin: 
-  theme       :  deeply
+  theme       :  {{ page.skin }}
   autothemer  :  # Autotheming may not have any effect
   vars        :    
     ...

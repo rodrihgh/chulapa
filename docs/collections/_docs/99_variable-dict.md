@@ -34,7 +34,7 @@ This page shows all the <span class="chulapa">Chulapa</span> variables that you 
 | `blockquote-chulapa-bg-color` | Blockquote background color |
 | `blockquote-chulapa-text-color` | Blockquote text color |
 | `footnote-chulapa-text-color` | Footnote/captions text color |
-| `pre-chulapa-bg-color` | Code block background color (depends also of your `highlight`  option) |
+| `pre-chulapa-bg-color` | Code block background color (may be overriden depending on your `highlight`  option) |
 | `thead-chulapa-bg-color` | Table head background color |
 | `thead-chulapa-text-color` | Table head text color |
 | `pagination-chulapa-text-color` | Pagination text color |
@@ -42,5 +42,58 @@ This page shows all the <span class="chulapa">Chulapa</span> variables that you 
 | `pagination-chulapa-bg-hover-color` | Pagination background color on hover |
 
 ##### Selected Bootstrap variables
+
+See full set of variables [here](https://raw.githubusercontent.com/dieghernan/chulapa/master/_sass/bootstrap/_variables.scss).
+
+| `vars` | Description |
+|:---|:---|
+| `primary` | Primary color |
+| `secondary` | Secondary color |
+| `success` | Success color |
+| `info` | Info color |
+| `warning` | Warning color |
+| `danger` | Danger color |
+| `light` | Light color |
+| `dark` | Dark color |
+| `enable-rounded` | Set to `false` to have square buttons |
+| `enable-responsive-font-sizes` | Font sizes are reponsive when set to `true` |
+| `body-bg` | Body background color |
+| `body-color` | Body text color |
+| `link-color` | Link text color |
+| `font-family-base` | Main font family |
+| `headings-font-family` | Headings font family |
+| `font-size-base` | Base font size |
+| `headings-color` | Headings text color |
+
+
+###### Color map
+
+The full [Bootstrap color map](https://getbootstrap.com/docs/4.5/getting-started/theming/#color) could be modified by using these variables:
+
+| `vars` |
+|:---|
+| `white` | 
+| `gray-100` | 
+| `gray-200` | 
+| `gray-300` | 
+| `gray-400` | 
+| `gray-500` | 
+| `gray-600` | 
+| `gray-700` | 
+| `gray-800` | 
+| `gray-900` | 
+| `black` | 
+| `blue` | 
+| `indigo` | 
+| `purple` | 
+| `pink` | 
+| `red` | 
+| `orange` | 
+| `yellow` | 
+| `green` | 
+| `teal` | 
+| `cyan` | 
+
+
 
 ...

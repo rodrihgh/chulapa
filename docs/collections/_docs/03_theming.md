@@ -42,7 +42,7 @@ chulapa-skin:
 
 ##### Skins
 
-This theme includes 14 skins from [Tophat Themes](https://themesguide.github.io/top-hat/dist/), [Bootswatch](https://bootswatch.com/) and others. You can have a look [on this page]({{'./skins' | absolute_url }}). If you want to use in your site:
+This theme includes 14+ skins from [Tophat Themes](https://themesguide.github.io/top-hat/dist/), [Bootswatch](https://bootswatch.com/) and others. You can have a look [on this page]({{'./skins' | absolute_url }}). If you want to use in your site:
 
 ```yaml
 chulapa-skin: 
@@ -53,7 +53,7 @@ You can use `vars` to override some parts of the theme.
 
 ##### Autothemer
 
-This is a cool feature to create a full theme based on a single color. Basically it propagates your `primary` color value to all the rest of colores used on your theme. This would produce that the full palette used for warnings, errors, etc. would be based on your theme primary color.
+This is a cool feature to create a full theme based on a single color. Basically it propagates your `primary` color value to all the rest of colors used on your theme. This would produce that the full palette used for warnings, errors, etc. would be based on your theme primary color.
 
 Note that autothemer can be combined also with the skin option, however the approach is non-destructive, meaning that if any specific color (as `warning`) is already specified on the skin or via `vars` it won’t be overridden (variable with `!default`, if you are familiar with SASS/SCSS).
 
@@ -98,7 +98,81 @@ chulapa-skin:
 `chulapa-skin vars` usually overrides any other value provided by `autothemer` of `theme`, meaning that you can modify any parameter of a skin via this method, i.e, changing the default font or primary color of a specific skin.
 
 
-On top of the default [Bootstrap variables](https://github.com/dieghernan/chulapa/blob/master/_sass/bootstrap/_variables.scss) (500+!) this theme has specific variables that makes the customisation of specific components easier.
+On top of the default [Bootstrap variables](https://github.com/dieghernan/chulapa/blob/master/_sass/bootstrap/_variables.scss) (500+!) this theme has specific variables that makes the customization of specific components easier. See the `vars` dictionary [here]({{ "./docs/variable-dictionary" | absolute_url }}).
 
 The critical variable for `autothemer` is `primary`, so you can create a full theme just playing with those two options. By default, `primary` is set to Bootstrap default primary color (<span style="color:#007bff;">#007bff</span> in v4.x).
 {: .alert .alert-info .p-3 .mx-2 mb-3}
+
+
+<h5 id="tool"><span class="chulapa">Chulapa</span> theming tool</h5>
+
+It is available an online tool for fast-theming your site. The drawback is that you have to work with SASS/SCSS and translate it to your `_config.yml`, but as explained before, the conversion is not complicated. 
+
+<div class="text-center">
+  <a class="btn btn-dark mx-1 text-primary" href="https://www.codeply.com/p/qhEml875ge" role="button">Go to the Codeply sandbox</a>
+</div>
+
+There are two pages on that **ply**, one name **INDEX** and the **CLASSICNAVBARDEMO**, so both navbars styles can be previewed.
+
+###### Step-by-step example
+
+Let's say we want to implement the [Sunset theme](https://themesguide.github.io/top-hat/dist/sunset/) by TopHat on our site. Having a look to the `theme.scss`:
+
+```scss
+/*! Tophat `Sunset` Bootstrap 4.3.1 theme */
+@import url(https://fonts.googleapis.com/css?family=Voltaire:200,300,400,700);
+$headings-font-family:Voltaire;
+
+# $enable-grid-classes:false; THIS SHOULD BE OMMITED
+$primary:#2F414A;
+$secondary:#F47B53;
+$success:#420084;
+$danger:#f2460d;
+$info:#7ebcfa;
+$warning:#ff9933;
+$light:#eef0f2;
+$dark:#000633;
+# @import "bootstrap"; THIS SHOULD BE OMMITED
+
+// Add SASS theme customizations here..
+
+```
+
+**1. On the tool**
+
+1. Open the **ply** and copy that code on tp of the **CSS** window.
+2. Save the changes and run the **ply**. You would have a preview of the most relevant Markdown and Bootstrap components.
+3. Modify until you are happy with your configuration.
+
+<p><strong>2. On your</strong> <code> _config.yml</code>
+
+Translate that code as :
+
+```yaml
+googlefonts: 
+ - url: "https://fonts.googleapis.com/css?family=Voltaire:200,300,400,700"
+
+chulapa-skin: 
+  vars  :
+    primary: "#2F414A"
+    secondary: "#F47B53"
+    success: "#420084"
+    danger: "#f2460d"
+    info: "#7ebcfa"
+    warning: "#ff9933"
+    light: "#eef0f2""
+    dark: "#000633""
+```
+
+The skin is already implemented on your theme. Please remember to remove `$` and `;`, enclose hex colors in `" "` and leave a blank space after `:`.
+
+**Alternatively**, you can save the SCSS code on `_sass/skins/THEMENAME.scss` to create it as a `theme`. Then just call `theme: THEMENAME` on your `_config.yml`. If you have an awesome skin and you want to include it on <span class="chulapa">Chulapa</span> just PR!
+{: .alert .alert-info .p-3 .mx-2}
+
+
+###### Using Autothemer on Codeply
+
+The Autothemer is already installed in the **ply**, but you must activate it to use it. Just uncomment the lines between `/* Start autothemer */` and `/* End autothemer */`.
+
+
+
