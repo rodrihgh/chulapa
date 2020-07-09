@@ -108,7 +108,7 @@ The critical variable for `autothemer` is `primary`, so you can create a full th
 
 It is available an online tool for fast-theming your site. The drawback is that you have to work with SASS/SCSS and translate it to your `_config.yml`, but as explained before, the conversion is not complicated. 
 
-<div class="text-center">
+<div class="text-center mt-3 mb-5">
   <a class="btn btn-dark mx-1 text-primary" href="https://www.codeply.com/p/qhEml875ge" role="button">Go to the Codeply sandbox</a>
 </div>
 
@@ -144,7 +144,7 @@ $dark:#000633;
 2. Save the changes and run the **ply**. You would have a preview of the most relevant Markdown and Bootstrap components.
 3. Modify until you are happy with your configuration.
 
-<p><strong>2. On your</strong> <code> _config.yml</code>
+<p><strong>2. On your</strong> <code> _config.yml</code></p>
 
 Translate that code as :
 
@@ -160,14 +160,16 @@ chulapa-skin:
     danger: "#f2460d"
     info: "#7ebcfa"
     warning: "#ff9933"
-    light: "#eef0f2""
-    dark: "#000633""
+    light: "#eef0f2"
+    dark: "#000633"
 ```
 
 The skin is already implemented on your theme. Please remember to remove `$` and `;`, enclose hex colors in `" "` and leave a blank space after `:`.
 
+
+
 **Alternatively**, you can save the SCSS code on `_sass/skins/THEMENAME.scss` to create it as a `theme`. Then just call `theme: THEMENAME` on your `_config.yml`. If you have an awesome skin and you want to include it on <span class="chulapa">Chulapa</span> just PR! See [here the code](https://github.com/dieghernan/chulapa/blob/master/_sass/skins/sunset.scss) for Sunset implemented as skin.
-{: .alert .alert-info .p-3 .mx-2}
+{: .alert .alert-info .p-3 .mx-2 mb-2}
 
 
 ###### Using Autothemer on Codeply
