@@ -8,7 +8,7 @@ excerpt: Install Chulapa on your Github repo
 
 
 
-#### 1. Remote theme method <i class="fas fa-thumbs-up fa-sm"></i>
+#### 1. Remote theme method <i class="fas fa-thumbs-up fa-xs"></i>
 
 This is the **recommended option**. You can use the `jekyll-remote-theme` method with this theme. A dedicated [repo - pending]() has been creating, just fork it and quickstart your site!
 
