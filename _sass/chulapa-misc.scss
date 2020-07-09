@@ -64,17 +64,12 @@ a.reversefootnote {
   }
 }
 
-figcaption {
+figcaption, caption, .figcaption, .caption {
    font-size:$font-size-sm;
   color: $footnote-chulapa-text-color;
   margin-left: $spacer;
   margin-right: $spacer;
 }
-
-.figcaption{
-  @extend figcaption;
-}
-
 
 .highlight {
     @extend .p-2;
