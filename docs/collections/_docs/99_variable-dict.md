@@ -94,6 +94,3 @@ The full [Bootstrap color map](https://getbootstrap.com/docs/4.5/getting-started
 | `teal` | 
 | `cyan` | 
 
-
-
-...
