@@ -17,4 +17,4 @@ project_link:
   {% endfor %}
 {% endif %}
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeEb_9jdWpNaY7t3rt7HjJx8buyzgjtC4olWEKU5vvFIH_Ww/viewform?embedded=true" width="500" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeEb_9jdWpNaY7t3rt7HjJx8buyzgjtC4olWEKU5vvFIH_Ww/viewform?embedded=true" width="100%" height="20vh" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
