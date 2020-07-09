@@ -77,22 +77,3 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
 @function opaque($background, $foreground) {
     @return mix(rgba($foreground, 1), $background, opacity($foreground) * 100);
 }
-
-
-@mixin badge-variant($bg) {
-    color: color-contrast($bg);
-    background-color: $bg;
-
-    @at-root a#{&} {
-        @include hover-focus() {
-            color: color-contrast($bg);
-            background-color: darken($bg, 10%);
-        }
-
-        &:focus,
-        &.focus {
-            outline: 0;
-            box-shadow: 0 0 0 $badge-focus-width rgba($bg, .5);
-        }
-    }
-}
