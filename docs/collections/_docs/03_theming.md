@@ -112,11 +112,11 @@ It is available an online tool for fast-theming your site. The drawback is that 
   <a class="btn btn-lg btn-dark mx-1 text-primary" href="https://www.codeply.com/p/qhEml875ge" role="button">Go to the Codeply sandbox</a>
 </div>
 
-There are two pages on that **ply**, one name **INDEX** and the **CLASSICNAVBARDEMO**, so both navbars styles can be previewed.
+There are two pages on that **ply** (**HTML** window), one named **INDEX** and the **CLASSICNAVBARDEMO**, so both navbars styles can be previewed.
 
 ### Step-by-step example
 
-Let's say we want to implement the [Sunset theme](https://themesguide.github.io/top-hat/dist/sunset/) by TopHat on our site. Having a look to the `theme.scss`:
+Let's say we want to implement the [Sunset theme](https://themesguide.github.io/top-hat/dist/sunset/) by TopHat on our site. Having a look to the `theme.scss`, it looks like this:
 
 ```scss
 /*! Tophat `Sunset` Bootstrap 4.3.1 theme */
@@ -140,7 +140,7 @@ $dark:#000633;
 
 #### 1. On the tool
 
-1. Open the **ply** and copy that code on tp of the **CSS** window.
+1. Open the **ply** and copy that code on top of the **CSS** window.
 2. Save the changes and run the **ply**. You would have a preview of the most relevant Markdown and Bootstrap components.
 3. Modify until you are happy with your configuration.
 
