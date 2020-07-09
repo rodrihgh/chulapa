@@ -88,6 +88,10 @@
     {% if keyword -%}
     <meta name="keywords" content="{{- keyword - | join: ','}}"/>
     {%- endif %}
+    {% if site.chulapa-skin.vars.primary -%}
+    <!-- Chrome, Firefox OS and Opera -->
+   <meta name="theme-color" content="{{ site.chulapa-skin.vars.primary }}">
+   {%- endif %}
     <!-- OpenGraph -->
     <meta property="og:title" content="{{ metatitle | strip_html }}" />
     <meta property="og:url" content="{{ canonical_url }}" />
