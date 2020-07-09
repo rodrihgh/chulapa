@@ -10,8 +10,10 @@ h_max: 6
 This page shows all the <span class="chulapa">Chulapa</span> variables that you can use for theming your site. Additionally, some useful variables from Bootstrap are already listed.
 
 <h5 id="theming"><span class="chulapa">Chulapa</span>-specific variables</h5>
+
+
 | `vars` | Description |
-|---|---|
+|:---|:---|
 | `navbar-chulapa-bg-color` | Navbar background color |
 | `navbar-chulapa-text-color` | Navbar text color |
 | `navbar-chulapa-hover-color` | Navbar text color on hover |
