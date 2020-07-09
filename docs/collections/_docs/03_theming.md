@@ -178,10 +178,10 @@ The Autothemer is already installed in the **ply**, but you must activate it to 
 
 ## Themestr.app
 
-[**Theme**str.app](https://themestr.app/) is a fantastic site that allows you to quickly create a Bootstrap theme with a nice and friendly UI. You can create a theme there and pick up the generated  SCSS code. A good practice is to test it before implementing on the <a href=“https://www.codeply.com/p/qhEml875ge”><span class=“chulapa”>Chulapa</span> theming tool</a>.
+[**Theme**str.app](https://themestr.app/) is a fantastic site that allows you to quickly create a Bootstrap theme with a nice and friendly UI. You can create a theme there and pick up the generated  SCSS code. A good practice is to test it before implementing on the <a href="https://www.codeply.com/p/qhEml875ge"><span class=“chulapa”>Chulapa</span> theming tool</a>.
 
 
-**Ignore the **`@import "bootstrap";`** and **`$enable-grid-classes:false;`** lines!** Those lines cause an error when deploying this theme.
+**Ignore the** `@import "bootstrap";` **and** `$enable-grid-classes:false;` **lines!** Those lines cause an error when deploying this theme.
 {: .alert .alert-warning .p-3 .mx-2 mb-3}
 
 
