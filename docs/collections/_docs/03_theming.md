@@ -67,7 +67,7 @@ chulapa-skin:
 
 ##### Variables
 
-<span class="chulapa">Chulapa</span> allows you to adjust any visual feature of your `main.css` via the `_config.yml` file. Given that <span class="chulapa">Chulapa</span> has been developed as a implementation of Bootstrap, it is **strongly recommended** to have a look to its theming documentation.
+<span class="chulapa">Chulapa</span> allows you to adjust any visual feature of your `main.css` via the `_config.yml` file. Given that <span class="chulapa">Chulapa</span> has been developed as a implementation of Bootstrap, it is **strongly recommended** to have a look to its [theming documentation](https://getbootstrap.com/docs/4.5/getting-started/theming/#variable-defaults).
 
 In short, you can override Bootstrap variables via `_config`. Here's an example on how to translate SASS/SCSS theming to your site. On this example the body background, color and the font are modified:
 
@@ -87,7 +87,6 @@ On your `_config.yml` use this:
 ```yaml
 googlefonts: 
  - url: "https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-
 
 chulapa-skin: 
   vars        :
