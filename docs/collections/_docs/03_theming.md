@@ -27,7 +27,7 @@ If you use another provider, or you prefer another method, there are two feature
   2. Create a blank file on your repo (or modify) under this path: `assets/css/custom.css` (or `custom.scss`). You can import your fonts via css there. Note that you can include new css styles or override existing ones there.
 
 
-**Note that** ehile this option would load the fonts, you still need to tell the theme to use them via `vars`, please read the next sections of this page.
+**Note that** while this option would load the fonts, you still need to tell the theme to use them via `vars`, please read [this section](#variable) to know how.
 {: .alert .alert-warning .p-3 .mx-2 mb-3}
 
 
@@ -101,3 +101,5 @@ chulapa-skin:
 
 On top of the default [Bootstrap variables](https://github.com/dieghernan/chulapa/blob/master/_sass/bootstrap/_variables.scss) (500+!) this theme has specific variables that makes the customisation of specific components easier.
 
+The critical variable for `autothemer` is `primary`, so you can create a full theme just playing with those two options. By default, `primary` has the Bootstrap primary color (<span style="color:#007bff;">#007bff</span> in v4.x).
+{: .alert .alert-info .p-3 .mx-2 mb-3}

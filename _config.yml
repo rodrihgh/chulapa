@@ -154,7 +154,7 @@ chulapa-skin:
   theme       :  # Optional predefined skins
   autothemer  :  true # Bool: Use autotheming
   vars        :    
-    primary:   teal #default ["#007bff] - Bootstrap blue
+    primary:   teal #default ["#007bff"] - Bootstrap blue
     font-family-sans-serif: Rubik, sans-serif  #default ["bootstrap option"]
     headings-font-family: Raleway, sans-serif
     hero-chulapa-bg-color: 
