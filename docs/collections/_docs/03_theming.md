@@ -95,7 +95,7 @@ chulapa-skin:
     font-family-base: "Montserrat"
 ```
 
-`chulapa-skin vars` usually overrides any other value provided by `autothemer` of `theme`, meaning that you can modify any parameter of a skin via this method, i.e, changing the default font or primary color of a specific skin.
+`chulapa-skin vars` usually overrides any other value provided by `autothemer` or `theme`, meaning that you can modify any parameter of a skin via this method, i.e, changing the default font or primary color of a specific skin.
 
 
 On top of the default [Bootstrap variables](https://github.com/dieghernan/chulapa/blob/master/_sass/bootstrap/_variables.scss) (500+!) this theme has specific variables that makes the customization of specific components easier. See the `vars` dictionary [here]({{ "./docs/variable-dictionary" | absolute_url }}).
