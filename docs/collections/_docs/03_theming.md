@@ -67,4 +67,37 @@ chulapa-skin:
 
 ##### Variables
 
-...
+<span class="chulapa">Chulapa</span> allows you to adjust any visual feature of your `main.css` via the `_config.yml` file. Given that <span class="chulapa">Chulapa</span> has been developed as a implementation of Bootstrap, it is **strongly recommended** to have a look to its theming documentation.
+
+In short, you can override Bootstrap variables via `_config`. Here's an example on how to translate SASS/SCSS theming to your site. On this example the body background, color and the font are modified:
+
+On SASS/SCSS:
+
+```scss
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+$body-bg: #000;
+$body-color: #111;
+$font-family-base: Montserrat;
+
+```
+
+On your `_config.yml` use this:
+
+```yaml
+googlefonts: 
+ - url: "https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+
+
+chulapa-skin: 
+  vars        :
+    body-bg: "#000"
+    body-color: "#111"
+    font-family-base: "Montserrat"
+```
+
+`chulapa-skin vars` usually overrides any other value provided by `autothemer` of `theme`, meaning that you can modify any parameter of a skin via this method, i.e, changing the default font or primary color of a specific skin.
+
+
+On top of the default [Bootstrap variables](https://github.com/dieghernan/chulapa/blob/master/_sass/bootstrap/_variables.scss) (500+!) this theme has specific variables that makes the customisation of specific components easier.
+
