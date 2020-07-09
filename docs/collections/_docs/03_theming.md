@@ -166,7 +166,7 @@ chulapa-skin:
 
 The skin is already implemented on your theme. Please remember to remove `$` and `;`, enclose hex colors in `" "` and leave a blank space after `:`.
 
-**Alternatively**, you can save the SCSS code on `_sass/skins/THEMENAME.scss` to create it as a `theme`. Then just call `theme: THEMENAME` on your `_config.yml`. If you have an awesome skin and you want to include it on <span class="chulapa">Chulapa</span> just PR!
+**Alternatively**, you can save the SCSS code on `_sass/skins/THEMENAME.scss` to create it as a `theme`. Then just call `theme: THEMENAME` on your `_config.yml`. If you have an awesome skin and you want to include it on <span class="chulapa">Chulapa</span> just PR! See [here the code](https://github.com/dieghernan/chulapa/blob/master/_sass/skins/sunset.scss) for Sunset implemented as skin.
 {: .alert .alert-info .p-3 .mx-2}
 
 
