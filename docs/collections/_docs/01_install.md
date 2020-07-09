@@ -8,7 +8,7 @@ excerpt: Install Chulapa on your Github repo
 
 
 
-#### 1. Remote theme method <i class="fas fa-thumbs-up fa-xs"></i>
+## 1. Remote theme method <i class="fas fa-thumbs-up fa-xs"></i>
 
 This is the **recommended option**. You can use the `jekyll-remote-theme` method with this theme. A dedicated [repo - pending]() has been creating, just fork it and quickstart your site!
 
@@ -38,7 +38,7 @@ Please read the rest of the docs for further adjustments.
 
 
 
-#### 2. Fork this repository
+## 2. Fork this repository
 
 You can fork [the current repo](https://github.com/dieghernan/chulapa/) and modify it. However, the site would be frozen at the moment of forking and it would make harder for you to get potential new features and upgrades.
 
@@ -47,7 +47,7 @@ You can fork [the current repo](https://github.com/dieghernan/chulapa/) and modi
 {: .alert .alert-warning .p-3 .mx-2 mb-3}
 
 
-<h4 class="text-muted" id="gem-based">Gem-based method</h4>
+<h2 class="text-muted" id="gem-based">Gem-based method</h2>
 
 This theme has not been developed as a gem-based theme, so this option has been not explored yet.
 

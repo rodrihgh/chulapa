@@ -3,13 +3,13 @@ title: Variables dictionary
 subtitle: An example 
 permalink: /docs/variable-dictionary
 show_toc: true
-h_min: 5
-h_max: 6
+h_min: 2
+h_max: 3
 ---
 
 This page shows all the <span class="chulapa">Chulapa</span> variables that you can use for theming your site. Additionally, some useful variables from Bootstrap are already listed.
 
-<h5 id="theming"><span class="chulapa">Chulapa</span>-specific variables</h5>
+<h2 id="theming"><span class="chulapa">Chulapa</span>-specific variables</h2>
 
 
 | `vars` | Description |
@@ -34,14 +34,14 @@ This page shows all the <span class="chulapa">Chulapa</span> variables that you 
 | `blockquote-chulapa-bg-color` | Blockquote background color |
 | `blockquote-chulapa-text-color` | Blockquote text color |
 | `footnote-chulapa-text-color` | Footnote/captions text color |
-| `pre-chulapa-bg-color` | Code block background color (may be overriden depending on your `highlight`  option) |
+| `pre-chulapa-bg-color` | Code block background color (may be overridden depending on your `highlight`  option) |
 | `thead-chulapa-bg-color` | Table head background color |
 | `thead-chulapa-text-color` | Table head text color |
 | `pagination-chulapa-text-color` | Pagination text color |
 | `pagination-chulapa-text-hover-color` | Pagination text color on hover |
 | `pagination-chulapa-bg-hover-color` | Pagination background color on hover |
 
-##### Selected Bootstrap variables
+## Selected Bootstrap variables
 
 See full set of variables [here](https://raw.githubusercontent.com/dieghernan/chulapa/master/_sass/bootstrap/_variables.scss).
 
@@ -56,7 +56,7 @@ See full set of variables [here](https://raw.githubusercontent.com/dieghernan/ch
 | `light` | Light color |
 | `dark` | Dark color |
 | `enable-rounded` | Set to `false` to have square buttons |
-| `enable-responsive-font-sizes` | Font sizes are reponsive when set to `true` |
+| `enable-responsive-font-sizes` | Font sizes are responsive. **I recommend to set this value to** `true`  |
 | `body-bg` | Body background color |
 | `body-color` | Body text color |
 | `link-color` | Link text color |
@@ -66,7 +66,7 @@ See full set of variables [here](https://raw.githubusercontent.com/dieghernan/ch
 | `headings-color` | Headings text color |
 
 
-###### Color map
+### Color map
 
 The full [Bootstrap color map](https://getbootstrap.com/docs/4.5/getting-started/theming/#color) could be modified by using these variables:
 

@@ -3,8 +3,8 @@ title: Global settings
 subtitle: Learn how to set up your new site
 excerpt: Setting up your new site
 show_toc: true
-h_min: 5
-h_max: 6
+h_min: 2
+h_max: 5
 ---
 
 <p class="font-weight-light font-italic lead">TL;DR</p>
@@ -14,7 +14,7 @@ Learn how to modify your `_config.yml` file. If you are using the remote method 
 For some variables, a default value is provided. This value is shown at the end of the explanation **on bold**.
 
 
-##### A. Site settings/SEO
+## A. Site settings/SEO
 
 - `locale`: Set the `lang` on the `<head>` of your site. Use the format `language_TERRITORY` , e.g fr, en-GB, es-MX, pt-BR. **Default value: es-US**.
 - `title`, `title_separator` and `subtitle`: Set several `<meta>` tags and defines the text to be displayed on top of the browsers. **repository_name \| project_tagline**.
@@ -22,7 +22,7 @@ For some variables, a default value is provided. This value is shown at the end 
 - `words_per_minute`: Used for computing the reading time of the page. **200**.
 - `timezone`: Used for setting the timezone of your dates and hours. See [Jekyll Docs](https://jekyllrb.com/docs/configuration/options).
 
-###### SEO
+### SEO
 
 **Search Engine Optimization** is important (obviously) for any site. Some of the previous options would affect to SEO, however <span class="chulapa">Chulapa</span> has a specific focus on that:
 
@@ -47,21 +47,21 @@ author:
       icon: "fab fa-facebook"
       ...
 ```
-###### Sharing your content nicely
+### Sharing your content nicely
 
 You don't have to set anything, the theme already shipped this for you. Twitter Cards, LinkedIn Post Inspector, Facebook Validator, WhatsApp... even Google Structured Data! Every page shared would look awesome.
 
 Learn more about Google Structured Data [here](https://developers.google.com/search/docs/guides/intro-structured-data?hl=en). You can check any page on [this testing tool](https://search.google.com/structured-data/testing-tool/u/0/).
 
-###### Fontawesome
+### Fontawesome
 
 <span class="chulapa">Chulapa</span> has its own installation of Fontawesome 5, so you don't need to set anything. However, if you want to use your own kit, jump to your Fontawesome account and grab the kitcode. Implement this kitcode after `fa5_kit_code:`.
 
-###### Google Analytics
+### Google Analytics
 
 - `gtag_id` and `analytics_id`: Use either your gtag (recommended) or your Google Analytics tracking code. [Learn more](https://developers.google.com/analytics/devguides/collection/gtagjs).
 
-###### Search engines
+### Search engines
 
 When enabled, this theme would install an internal search capability of your site. There are three free engines available, [Lunr.js](https://lunrjs.com/), [Algolia](https://www.algolia.com/) and [Google Custom Search](https://developers.google.com/custom-search).
 
@@ -110,15 +110,15 @@ algolia:
 
 If you are deploying your site with Github Pages, you need to create and update your Algolia index via [Travis CI](https://travis-ci.com/). Follow [this guide](https://community.algolia.com/jekyll-algolia/github-pages.html) and add a `.travis.yml` to your site, as [this one](https://github.com/dieghernan/chulapa/blob/master/.travis.yml).
 
-###### Comments
+### Comments
 
 You can add a comment feature via [Disqus](https://disqus.com/):
 - `disqus_shortname`: Add your site id, on `https://DISQUS_SHORTNAME.disqus.com/admin/`.
 
 
-##### B. Navigation
+## B. Navigation
 
-###### Navbar
+### Navbar
 Configure the navbar and footer of your site. This theme supports a two-level navigation structure, and features two different navbar styles: `modern`, as a floating button with animation or a **classic sticky-top navbar**. Check this [live demo]({{ "/classic-navbar" | absolute_url }}) of the classic navbar style.
 
 - `navbar`:
@@ -150,7 +150,7 @@ navbar:
      ... more levels
 ```
 
-###### Footer
+### Footer
 
 To set social links to be displayed on your footer, configure this section:
 
@@ -175,7 +175,7 @@ footer:
       url: https://www.facebook.com
 ```
 
-<h5 id="theming"> C. Theming <span class="chulapa">Chulapa</span></h5>
+<h2 id="theming"> C. Theming <span class="chulapa">Chulapa</span></h2>
 
 This is the core feature of <span class="chulapa">Chulapa</span>, please find the full reference [here](./03-theming), or just navigate to the next page.
 
