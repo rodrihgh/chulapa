@@ -154,7 +154,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Montserrat&display=swap
 
 //SASS CUSTOM
 
-$hero-chulapa-text-color: $white;
+$min-contrast-ratio: 2;
 $navbar-chulapa-bg-color: $primary;
 $navbar-chulapa-text-contrast: $white;
 $navbar-chulapa-text-color: mix($navbar-chulapa-text-contrast, $navbar-chulapa-bg-color, 80%);
