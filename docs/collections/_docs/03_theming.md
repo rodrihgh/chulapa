@@ -108,8 +108,8 @@ The critical variable for `autothemer` is `primary`, so you can create a full th
 
 It is available an online tool for fast-theming your site. The drawback is that you have to work with SASS/SCSS and translate it to your `_config.yml`, but as explained before, the conversion is not complicated. 
 
-<div class="text-center mt-3 mb-5">
-  <a class="btn btn-dark mx-1 text-primary" href="https://www.codeply.com/p/qhEml875ge" role="button">Go to the Codeply sandbox</a>
+<div class="text-center my-4">
+  <a class="btn btn-lg btn-dark mx-1 text-primary" href="https://www.codeply.com/p/qhEml875ge" role="button">Go to the Codeply sandbox</a>
 </div>
 
 There are two pages on that **ply**, one name **INDEX** and the **CLASSICNAVBARDEMO**, so both navbars styles can be previewed.
