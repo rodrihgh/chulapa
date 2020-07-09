@@ -5,6 +5,7 @@ subtitle: A dark background theme with bold contrasting colors
 excerpt: Deeply, a dark background theme with bold contrasting colors developed by Tophat Themes.
 date: 2015-03-04
 last_modified_at: 2018-02-08
+header_img: https://images.unsplash.com/photo-1489846986031-7cea03ab8fd0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a6c62b8e2662924c44c4725b8286ed60&auto=format&w=900&q=80
 tags: [demo, bootstrap, tophat, splash]
 categories: [skins]
 skin: deeply
