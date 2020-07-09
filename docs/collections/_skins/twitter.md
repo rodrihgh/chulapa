@@ -3,8 +3,8 @@ layout: default
 title: Twitter
 subtitle: Fly high with a light skin
 excerpt: Twitter, fly high with a light skin developed by dieghernan.
-date: 2020-03-27
-last_modified_at: 2020-07-04
+date: 2020-02-14
+last_modified_at: 2020-06-03
 tags: [demo, bootstrap, dieghernan, splash]
 categories: [skins]
 skin: twitter
