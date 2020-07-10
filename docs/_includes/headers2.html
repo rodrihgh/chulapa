@@ -25,7 +25,7 @@
   {%- else -%}
 <header class="d-flex align-items-center hero-chulapa">
   {%- endif -%}
-  <div class="container-lg">
+  <div class="container-lg py-4">
     <h1>{{- page.title | default: "Where's your title?" -}}</h1>
     {%- if page.subtitle -%}
     <hr class="my-3">
@@ -35,7 +35,7 @@
 </header>
 {%- elsif include.headertype == "base" -%}
 <header class="text-sm-center header-chulapa">
-      {%- if nclude.imghero -%}
+      {%- if include.imghero -%}
       <div class="container-fluid header-chulapa-img" style="background-image: url('{{ include.imghero | absolute_url }}')">
       </div>
       {%- endif -%}

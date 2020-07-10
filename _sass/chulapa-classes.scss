@@ -170,7 +170,8 @@ $value in $theme-colors {
     }
     
     .chulapa-btn-project{
-      border-color:$hero-chulapa-text-color;
+      @include button-variant($hero-chulapa-bg-color, $hero-chulapa-text-color);
+      color: $hero-chulapa-text-color;
       @include fluid-type(font-size, breakpoint-min("md"), breakpoint-min("lg"), $font-size-sm, $font-size-base);
     }
 }
@@ -211,7 +212,7 @@ $value in $theme-colors {
     }
     
     .chulapa-btn-project{
-      border-color:$white;
+      @include button-outline-variant($hero-chulapa-text-color);
       }
 }
 
@@ -251,7 +252,7 @@ $value in $theme-colors {
     }
     
     .chulapa-btn-project{
-      border-color:$white;
+      @include button-outline-variant($hero-chulapa-text-color);
       }
 }
 

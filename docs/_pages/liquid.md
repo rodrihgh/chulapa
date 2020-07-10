@@ -20,6 +20,10 @@ project_links:
 {%- include headers2.html headertype="splash" projects=page.project_links imghero=img -%}
 {%- include headers2.html headertype="hero"   projects=page.project_links -%}
 {%- include headers2.html headertype="hero"   projects=page.project_links imghero=img -%}
+{%- include headers2.html headertype="base"   projects=page.project_links -%}
+{%- include headers2.html headertype="base"   projects=page.project_links imghero=img -%}
+{%- include headers2.html headertype="post"   projects=page.project_links -%}
+{%- include headers2.html headertype="post"   projects=page.project_links imghero=img -%}
 
 {% if page.project_links %}
   {% for project in page.project_links  %}
