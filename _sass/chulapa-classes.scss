@@ -168,6 +168,10 @@ $value in $theme-colors {
     p {
         @include fluid-type(font-size, breakpoint-min("md"), breakpoint-min("lg"), $font-size-base, $font-size-lg);
     }
+    
+    .chulapa-btn-project{
+      border-color:$hero-chulapa-text-color;
+    }
 }
 
 @include media-breakpoint-up(md) {
@@ -204,6 +208,10 @@ $value in $theme-colors {
         background-color: $white;
         box-shadow: 0.1rem 0.1rem 0.2rem $black;
     }
+    
+    .chulapa-btn-project{
+      border-color:$white;
+      }
 }
 
 .splash-chulapa {
