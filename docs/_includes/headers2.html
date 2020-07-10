@@ -22,8 +22,13 @@
     <a href="{{ project.url | absolute_url }}" class="btn chulapa-btn-project" role="button" aria-disabled="true"><i class="{{ project.icon }}"></i> {{ project.label }}</a>
     {% endfor %}
   </div>
-  
   {% endif %}
+  
+  {% if page.project_links %}
+  {% for project in page.project_link  %}
+- {{ project.label }} {{ project.url }}  {{ project.icon }}
+  {% endfor %}
+{% endif %}
 </header>
 {%- elsif include.headertype == "hero" -%}
   {%- if imghero -%}
