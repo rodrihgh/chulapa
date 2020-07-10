@@ -440,13 +440,12 @@ $value in $theme-colors {
         @include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
     }
 }
-
 .chulapa-toc-wrapper{
 
     .list-group-item {
-      background-color: $secondary;
+      background-color: $light;
       a {
-        color: color-contrast($secondary);
+        color: color-contrast($light);
         }
       &:first-child {
         @include border-top-radius($border-radius-lg);

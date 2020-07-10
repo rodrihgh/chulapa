@@ -43,7 +43,10 @@ algolia:
     - desc(title)
     - desc(content) 
     - desc(subtitle)
-disqus_shortname: chulapa
+    
+comments:
+  provider: disqus
+  disqus_shortname: chulapa
 
 
 # B. Navigation

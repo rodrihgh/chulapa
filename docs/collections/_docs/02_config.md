@@ -29,7 +29,7 @@ For some variables, a default value is provided. This value is shown at the end 
 - `og_image`: The default image to be displayed  when a page of your site is shared on any of the major social networks (Facebook, Twitter, etc.). If `header_img` or `og_image` are set on  the front matter of a page those images would be used instead. **Author avatar (if set, see below) or your Github avatar**.
 - `twitter_site`: The twitter username **without @!** of the owner of the site. Useful when sharing on Twitter.
 - `author` of the site:
-  - `name` of the author, it will be injected on several parts of your site, as the footer or different `<meta>` tags.
+  - `name` of the author, it will be injected on several parts of your site, as the footer or different `<meta>` tags. **github username** for metadata.
   - `avatar`:  The avatar of the author, note that your github avatar is available on https://github.com/[USERNAME].png. Square images preferred.
   - `location`: As a nice touch, this would link to Google Maps 😉.
   - `links`: A list of social links. You may set an url and a [Fontawesome 5](https://fontawesome.com/icons?d=gallery) code for each social link.
@@ -112,8 +112,11 @@ If you are deploying your site with Github Pages, you need to create and update 
 
 ### Comments
 
-You can add a comment feature via [Disqus](https://disqus.com/):
-- `disqus_shortname`: Add your site id, on `https://DISQUS_SHORTNAME.disqus.com/admin/`.
+You can add a comment feature to a page. Currently only [Disqus](https://disqus.com/) is supported:
+
+- `comments`:
+  - `provider`: Use `disqus` to enable it.
+  - `disqus_shortname`: Add your site id, on `https://DISQUS_SHORTNAME.disqus.com/admin/`.
 
 
 ## B. Navigation

@@ -95,7 +95,7 @@ chulapa-skin:
     font-family-base: "Montserrat"
 ```
 
-`chulapa-skin vars` usually overrides any other value provided by `autothemer` of `theme`, meaning that you can modify any parameter of a skin via this method, i.e, changing the default font or primary color of a specific skin.
+`chulapa-skin vars` usually overrides any other value provided by `autothemer` or `theme`, meaning that you can modify any parameter of a skin via this method, i.e, changing the default font or primary color of a specific skin.
 
 
 On top of the default [Bootstrap variables](https://github.com/dieghernan/chulapa/blob/master/_sass/bootstrap/_variables.scss) (500+!) this theme has specific variables that makes the customization of specific components easier. See the `vars` dictionary [here]({{ "./docs/variable-dictionary" | absolute_url }}).
@@ -108,15 +108,15 @@ The critical variable for `autothemer` is `primary`, so you can create a full th
 
 It is available an online tool for fast-theming your site. The drawback is that you have to work with SASS/SCSS and translate it to your `_config.yml`, but as explained before, the conversion is not complicated. 
 
-<div class="text-center mt-3 mb-5">
-  <a class="btn btn-dark mx-1 text-primary" href="https://www.codeply.com/p/qhEml875ge" role="button">Go to the Codeply sandbox</a>
+<div class="text-center my-4">
+  <a class="btn btn-lg btn-dark mx-1 text-primary" href="https://www.codeply.com/p/qhEml875ge" role="button">Go to the Codeply sandbox</a>
 </div>
 
-There are two pages on that **ply**, one name **INDEX** and the **CLASSICNAVBARDEMO**, so both navbars styles can be previewed.
+There are two pages on that **ply** (**HTML** window), one named **INDEX** and the **CLASSICNAVBARDEMO**, so both navbars styles can be previewed.
 
 ### Step-by-step example
 
-Let's say we want to implement the [Sunset theme](https://themesguide.github.io/top-hat/dist/sunset/) by TopHat on our site. Having a look to the `theme.scss`:
+Let's say we want to implement the [Sunset theme](https://themesguide.github.io/top-hat/dist/sunset/) by TopHat on our site. Having a look to the `theme.scss`, it looks like this:
 
 ```scss
 /*! Tophat `Sunset` Bootstrap 4.3.1 theme */
@@ -140,7 +140,7 @@ $dark:#000633;
 
 #### 1. On the tool
 
-1. Open the **ply** and copy that code on tp of the **CSS** window.
+1. Open the **ply** and copy that code on top of the **CSS** window.
 2. Save the changes and run the **ply**. You would have a preview of the most relevant Markdown and Bootstrap components.
 3. Modify until you are happy with your configuration.
 
@@ -174,7 +174,15 @@ The skin is already implemented on your theme. Please remember to remove `$` and
 
 ### Using Autothemer on Codeply
 
-The Autothemer is already installed in the **ply**, but you must activate it to use it. Just uncomment the lines between `/* Start autothemer */` and `/* End autothemer */`.
+The Autothemer is already installed in the **ply**, to activate it just uncomment the lines between `/* Start autothemer */` and `/* End autothemer */` on the **CSS** window.
+
+## Themestr.app
+
+[**Theme**str.app](https://themestr.app/) is a fantastic site that allows you to quickly create a Bootstrap theme with a nice and friendly UI. You can create a theme there and pick up the generated  SCSS code. A good practice is to test it before implementing on the <a href="https://www.codeply.com/p/qhEml875ge"><span class="chulapa">Chulapa</span> theming tool</a>.
+
+
+**Ignore the** `@import "bootstrap";` **and** `$enable-grid-classes:false;` **lines!** Those lines cause an error when deploying this theme.
+{: .alert .alert-warning .p-3 .mx-2 mb-3}
 
 
 

@@ -1,6 +1,5 @@
 ---
 title: Variables dictionary
-subtitle: An example 
 permalink: /docs/variable-dictionary
 show_toc: true
 h_min: 2
