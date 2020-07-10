@@ -148,7 +148,7 @@ $value in $theme-colors {
     font-family: $headings-font-family;
     background-color: $hero-chulapa-bg-color;
     text-align: center;
-    height: 40vh;
+    min-height: 40vh;
 
     * {
         color: $hero-chulapa-text-color;
