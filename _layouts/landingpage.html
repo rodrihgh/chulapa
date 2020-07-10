@@ -2,7 +2,7 @@
 layout: minimal
 ---
 <div class="chulapa-bg-hero">
-{%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
+{%- include components/headers.html headertype= page.header_type imghero=page.header_img projects=page.project_links -%}
 	<main class="container-lg pb-3 flex-fill chulapa-landingpage-color">
 		{%- if page.show_date or page.show_sociallinks -%}
 		  {%- include components/datesocial.html -%}

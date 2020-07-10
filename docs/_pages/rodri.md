@@ -20,12 +20,12 @@ mathjax: true
 show_toc: true
 show_sociallinks  : true
 show_author  : true
-project_link:
+project_links:
     - url: https://github.com/rodrihgh/music-scales-playground
-      icon: "fab fa-github"
+      icon: fab fa-github
       label: View on Github
     - url: https://colab.research.google.com/github/rodrihgh/music-scales-playground/blob/master/music-scales.ipynb
-      icon: "fas fa-code"
+      icon: fab fa-python
       label: Open in Colab
 ---
 
