@@ -1,9 +1,10 @@
 ---
+layout: minimal
 title: Playground
 subtitle: Liquid 
 permalink: /liquid
 show_author : true
-project_link:
+project_links:
     - url: https://github.com/rodrihgh/music-scales-playground
       icon: "fab fa-github"
       label: View on Github
@@ -11,6 +12,10 @@ project_link:
       icon: "fas fa-code"
       label: Open in Colab
 ---
+
+{%- include headers2.html headertype="splash" imghero=page.header_img projects=page.project_links -%}
+
+
 {% if page.project_link %}
   {% for project in page.project_link  %}
 - {{ project.icon }} {{ project.url }}  {{ project.icon }}
