@@ -53,6 +53,13 @@
             {%- if page.subtitle -%}
             <p class="lead">{{- page.subtitle -}}</p>
             {%- endif -%}
+            {% if include.projects %}
+    <div class="btn-group my-2 text-center" role="group">
+      {% for project in include.projects  %}
+      <a href="{{ project.url | absolute_url }}" class="btn btn-primary" role="button" aria-disabled="true"><i class="{{ project.icon }}"></i> {{ project.label }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
             <hr class="mb-0">
 			</div>
 		</div>
@@ -71,6 +78,14 @@
             {%- if page.subtitle -%}
             <p class="lead">{{- page.subtitle -}}</p>
             {%- endif -%}
+                        {% if include.projects %}
+    <div class="btn-group my-2 text-center" role="group">
+      {% for project in include.projects  %}
+      <a href="{{ project.url | absolute_url }}" class="btn btn-primary" role="button" aria-disabled="true"><i class="{{ project.icon }}"></i> {{ project.label }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+            
             <hr class="mb-0">
 			</div>
 		</div>

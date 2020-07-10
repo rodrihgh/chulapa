@@ -25,11 +25,4 @@ project_links:
 {%- include headers2.html headertype="post"   projects=page.project_links -%}
 {%- include headers2.html headertype="post"   projects=page.project_links imghero=img -%}
 
-{% if page.project_links %}
-  {% for project in page.project_links  %}
-- {{ project.label }} {{ project.url }}  {{ project.icon }}
-  {% endfor %}
-{% endif %}
-
-
             
