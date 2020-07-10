@@ -215,6 +215,8 @@ $value in $theme-colors {
       @include button-variant($hero-chulapa-bg-color, $hero-chulapa-text-color);
       color: $white;
       background-color: transparent;
+      border-color: $white;
+      text-shadow: none;
       }
 }
 
@@ -257,6 +259,8 @@ $value in $theme-colors {
       @include button-variant($hero-chulapa-bg-color, $hero-chulapa-text-color);
       color: $white;
       background-color: transparent;
+      border-color: $white;
+      text-shadow: none;
       }
 }
 
