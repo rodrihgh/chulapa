@@ -16,13 +16,13 @@ project_links:
 
 {% assign img = "https://images.unsplash.com/photo-1545290614-5ceedf604139?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60" %}
 
-{%- include headers2.html headertype="splash" projects=page.project_links -%}
-{%- include headers2.html headertype="splash" projects=page.project_links imghero=img -%}
-{%- include headers2.html headertype="hero"   projects=page.project_links -%}
-{%- include headers2.html headertype="hero"   projects=page.project_links imghero=img -%}
-{%- include headers2.html headertype="base"   projects=page.project_links -%}
-{%- include headers2.html headertype="base"   projects=page.project_links imghero=img -%}
-{%- include headers2.html headertype="post"   projects=page.project_links -%}
-{%- include headers2.html headertype="post"   projects=page.project_links imghero=img -%}
+{%- include components/headers.html headertype="splash" projects=page.project_links -%}
+{%- include components/headers.html headertype="splash" projects=page.project_links imghero=img -%}
+{%- include components/headers.html headertype="hero"   projects=page.project_links -%}
+{%- include components/headers.html headertype="hero"   projects=page.project_links imghero=img -%}
+{%- include components/headers.html headertype="base"   projects=page.project_links -%}
+{%- include components/headers.html headertype="base"   projects=page.project_links imghero=img -%}
+{%- include components/headers.html headertype="post"   projects=page.project_links -%}
+{%- include components/headers.html headertype="post"   projects=page.project_links imghero=img -%}
 
             
