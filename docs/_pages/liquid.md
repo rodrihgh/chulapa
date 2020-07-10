@@ -27,6 +27,8 @@ EMBED_PARAMS.width =“100%”;
 EMBED_PARAMS.height = null;
 EMBED_PARAMS.border = “hidden”;
 </script>
-<div id=“div_7503581”></div>
-<script src=“//www.questionpro.com/javascript/embedsurvey.js?version=1”></script>
+<div id=“div_7503581”>
+</div>
+<script src=“//www.questionpro.com/javascript/embedsurvey.js?version=1”>
+</script>
             
