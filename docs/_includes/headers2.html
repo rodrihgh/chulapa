@@ -1,11 +1,6 @@
-{%- if include.imghero -%}
-  {%- capture imghero -%}
-  {{ include.imghero | absolute_url  }}
-  {%- endcapture -%}
-{%- endif -%}
 {%- if include.headertype =="splash" -%}
-  {%- if imghero -%}
-<header class="d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ imghero }}')">
+  {%- if include.imghero -%}
+<header class="d-flex align-items-center splash-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ include.imghero | absolute_url }}')">
   {%- else -%}
 <header class="d-flex align-items-center splash-chulapa">
   {%- endif -%}
@@ -25,8 +20,8 @@
   </div>
 </header>
 {%- elsif include.headertype == "hero" -%}
-  {%- if imghero -%}
-<header class="d-flex align-items-center hero-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ imghero }}')">
+  {%- if include.imghero -%}
+<header class="d-flex align-items-center hero-chulapa-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ include.imghero | absolute_url }}')">
   {%- else -%}
 <header class="d-flex align-items-center hero-chulapa">
   {%- endif -%}
@@ -40,8 +35,8 @@
 </header>
 {%- elsif include.headertype == "base" -%}
 <header class="text-sm-center header-chulapa">
-      {%- if imghero -%}
-      <div class="container-fluid header-chulapa-img" style="background-image: url('{{ imghero }}')">
+      {%- if nclude.imghero -%}
+      <div class="container-fluid header-chulapa-img" style="background-image: url('{{ include.imghero | absolute_url }}')">
       </div>
       {%- endif -%}
       <div class="container-lg pt-4">
@@ -58,8 +53,8 @@
 </header>
 {%- elsif include.headertype == "post" -%}
 <header class="header-chulapa">
-      {%- if imghero -%}
-      <div class="container-fluid header-chulapa-img" style="background-image: url('{{ imghero }}')">
+      {%- if include.imghero -%}
+      <div class="container-fluid header-chulapa-img" style="background-image: url('{{ include.imghero | absolute_url }}')">
       </div>
       {%- endif -%}
       <div class="container-lg pt-4">
