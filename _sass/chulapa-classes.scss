@@ -168,7 +168,7 @@ $value in $theme-colors {
     }
     
     .chulapa-btn-project{
-      @include button-variant($hero-chulapa-bg-color, $hero-chulapa-text-color);
+      border-color:$hero-chulapa-text-color;
       color: $hero-chulapa-text-color;
       @include fluid-type(font-size, breakpoint-min("md"), breakpoint-min("lg"), $font-size-sm, $font-size-base);
     }
@@ -209,9 +209,7 @@ $value in $theme-colors {
     }
     
     .chulapa-btn-project{
-      @include button-variant($hero-chulapa-bg-color, $hero-chulapa-text-color);
       color: $white;
-      background-color: transparent;
       border-color: $white;
       text-shadow: none;
       @include hover-focus() {
@@ -219,15 +217,6 @@ $value in $theme-colors {
             color: $hero-chulapa-text-color;
             text-shadow: none;
         }
-        i {
-          color: $white;
-          text-shadow: none;
-          @include hover-focus() {
-            color: color-contrast($hero-chulapa-bg-color);
-            text-shadow: none;
-            }
-        }
-      
       }
 }
 
@@ -267,24 +256,10 @@ $value in $theme-colors {
     }
     
     .chulapa-btn-project{
-      @include button-variant($hero-chulapa-bg-color, $hero-chulapa-text-color);
       color: $white;
       background-color: transparent;
       border-color: $white;
       text-shadow: none;
-      @include hover-focus() {
-        border: transparent;
-        color: $hero-chulapa-text-color;
-        text-shadow: none;
-        }
-        i {
-          color: $white;
-          text-shadow: none;
-          @include hover-focus() {
-            color: color-contrast($hero-chulapa-bg-color);
-            text-shadow: none;
-            }
-        }
       }
 }
 
