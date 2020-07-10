@@ -226,7 +226,7 @@ $value in $theme-colors {
           color: $white;
           text-shadow: none;
           @include hover-focus() {
-            color: inherit;
+            color: color-contrast($hero-chulapa-bg-color);
             text-shadow: none;
             }
         }
@@ -284,7 +284,7 @@ $value in $theme-colors {
           color: $white;
           text-shadow: none;
           @include hover-focus() {
-            color: inherit;
+            color: color-contrast($hero-chulapa-bg-color);
             text-shadow: none;
             }
         }
