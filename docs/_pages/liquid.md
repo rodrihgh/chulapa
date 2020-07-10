@@ -17,7 +17,7 @@ project_links:
 
 
 {% if page.project_links %}
-  {% for project in page.project_link  %}
+  {% for project in page.project_links  %}
 - {{ project.label }} {{ project.url }}  {{ project.icon }}
   {% endfor %}
 {% endif %}

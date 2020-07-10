@@ -17,15 +17,16 @@
     {%- endif -%}
   </div>
   {% if includes.projects %}
+  <p> Entro aqui</p>
   <div class="btn-group btn-lg text-center" role="group">
     {% for project in includes.projects  %}
     <a href="{{ project.url | absolute_url }}" class="btn chulapa-btn-project" role="button" aria-disabled="true"><i class="{{ project.icon }}"></i> {{ project.label }}</a>
     {% endfor %}
   </div>
   {% endif %}
-  
+  <p>Aqui deberia ir</p>
   {% if page.project_links %}
-  {% for project in page.project_link  %}
+  {% for project in page.project_links  %}
 - {{ project.label }} {{ project.url }}  {{ project.icon }}
   {% endfor %}
 {% endif %}
