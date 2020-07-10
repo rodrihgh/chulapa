@@ -174,7 +174,7 @@ The skin is already implemented on your theme. Please remember to remove `$` and
 
 ### Using Autothemer on Codeply
 
-The Autothemer is already installed in the **ply**, but you must activate it to use it. Just uncomment the lines between `/* Start autothemer */` and `/* End autothemer */`.
+The Autothemer is already installed in the **ply**, to activate it just uncomment the lines between `/* Start autothemer */` and `/* End autothemer */` on the **CSS** window.
 
 ## Themestr.app
 
