@@ -16,7 +16,7 @@
     <p>{{- page.subtitle -}}</p>
     {%- endif -%}
     {% if include.projects %}
-    <div class="btn-group btn-lg mt-5 text-center" role="group">
+    <div class="btn-group mt-5 text-center" role="group">
       {% for project in include.projects  %}
       <a href="{{ project.url | absolute_url }}" class="btn chulapa-btn-project" role="button" aria-disabled="true"><i class="{{ project.icon }}"></i> {{ project.label }}</a>
       {% endfor %}
