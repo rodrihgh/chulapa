@@ -171,6 +171,12 @@ $value in $theme-colors {
       border-color:$hero-chulapa-text-color;
       color: $hero-chulapa-text-color;
       @include fluid-type(font-size, breakpoint-min("md"), breakpoint-min("lg"), $font-size-sm, $font-size-base);
+      @include hover-focus() {
+            border: transparent;
+            color: $hero-chulapa-bg-color;
+            background-color:  $hero-chulapa-text-color;
+            text-shadow: none;
+        }
     }
 }
 
@@ -214,7 +220,8 @@ $value in $theme-colors {
       text-shadow: none;
       @include hover-focus() {
             border: transparent;
-            color: $hero-chulapa-text-color;
+            color: $hero-chulapa-bg-color;
+            background-color:  $hero-chulapa-text-color;
             text-shadow: none;
         }
       }
@@ -260,6 +267,13 @@ $value in $theme-colors {
       background-color: transparent;
       border-color: $white;
       text-shadow: none;
+      @include hover-focus() {
+            border: transparent;
+            color: $hero-chulapa-bg-color;
+            background-color:  $hero-chulapa-text-color;
+            text-shadow: none;
+        }
+      
       }
 }
 
