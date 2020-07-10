@@ -16,7 +16,7 @@ project_links:
 
 {%- include headers2.html headertype="splash" imghero=page.header_img projects=page.project_links -%}
 
-{%- include headers2.html headertype="splash" projects=page.project_links -%}
+{%- include headers2.html headertype="splash" projects=page.project_links imghero=false  -%}
 
 
 {% if page.project_links %}
