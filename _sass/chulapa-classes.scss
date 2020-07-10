@@ -219,9 +219,9 @@ $value in $theme-colors {
       border-color: $white;
       text-shadow: none;
       @include hover-focus() {
-            border-color: $hero-chulapa-bg-color;
+            border: transparent;
             color: $hero-chulapa-bg-color;
-            background-color:  transparent;
+            background-color:  $hero-chulapa-text-color;
             text-shadow: none;
         }
     }
@@ -268,9 +268,9 @@ $value in $theme-colors {
       border-color: $white;
       text-shadow: none;
       @include hover-focus() {
-            border-color: $hero-chulapa-bg-color;
+            border: transparent;
             color: $hero-chulapa-bg-color;
-            background-color:  transparent;
+            background-color:  $hero-chulapa-text-color;
             text-shadow: none;
         }
     }
