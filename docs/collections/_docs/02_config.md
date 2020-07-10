@@ -112,8 +112,11 @@ If you are deploying your site with Github Pages, you need to create and update 
 
 ### Comments
 
-You can add a comment feature via [Disqus](https://disqus.com/):
-- `disqus_shortname`: Add your site id, on `https://DISQUS_SHORTNAME.disqus.com/admin/`.
+You can add a comment feature to a page. Currently only [Disqus](https://disqus.com/) is supported:
+
+- `comments`:
+  - `provider`: Use `disqus` to enable it.
+  - `disqus_shortname`: Add your site id, on `https://DISQUS_SHORTNAME.disqus.com/admin/`.
 
 
 ## B. Navigation
