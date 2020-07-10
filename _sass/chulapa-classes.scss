@@ -217,6 +217,13 @@ $value in $theme-colors {
       background-color: transparent;
       border-color: $white;
       text-shadow: none;
+      @include hover-focus() {
+            border: transparent;
+            color: $hero-chulapa-text-color;
+            text-shadow: none;
+        }
+      
+      
       }
 }
 
@@ -261,6 +268,11 @@ $value in $theme-colors {
       background-color: transparent;
       border-color: $white;
       text-shadow: none;
+      @include hover-focus() {
+        border: transparent;
+        color: $hero-chulapa-text-color;
+        text-shadow: none;
+        }
       }
 }
 
