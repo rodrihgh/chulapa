@@ -212,7 +212,9 @@ $value in $theme-colors {
     }
     
     .chulapa-btn-project{
-      @include button-outline-variant($hero-chulapa-text-color);
+      @include button-variant($hero-chulapa-bg-color, $hero-chulapa-text-color);
+      color: $white;
+      background-color: transparent;
       }
 }
 
@@ -252,7 +254,9 @@ $value in $theme-colors {
     }
     
     .chulapa-btn-project{
-      @include button-outline-variant($hero-chulapa-text-color);
+      @include button-variant($hero-chulapa-bg-color, $hero-chulapa-text-color);
+      color: $white;
+      background-color: transparent;
       }
 }
 
