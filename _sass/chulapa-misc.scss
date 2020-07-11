@@ -46,8 +46,8 @@ blockquote {
 .footnotes {
   font-size:$font-size-sm;
   color: $footnote-chulapa-text-color;
-  margin-left: 3*$spacer;
-  margin-right: 3*$spacer;
+  margin-left: 1.5*$spacer;
+  margin-right: 1.5*$spacer;
   border-top: $border-width solid $secondary;
   
   ol {
