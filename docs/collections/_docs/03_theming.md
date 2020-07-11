@@ -33,7 +33,7 @@ If you use another provider, or you prefer another method, there are two feature
 
 ## Code highlighting
 
-Several highlighting styles available thanks to [@jwarby](http://jwarby.github.io/jekyll-pygments-themes). Just follow the link and choose the one you want. **default**
+Pygments highlighting styles available thanks to [@jwarby](http://jwarby.github.io/jekyll-pygments-themes). Just follow the link and choose the one you want. **default**
 
 ```yaml
 chulapa-skin: 
